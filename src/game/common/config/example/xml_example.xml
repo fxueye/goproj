@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+	<Server>
+		<Addr>127.0.0.1</Addr> <!-- address -->
+		<Port>8888</Port>
+	</Server>
+	<Database>
+		<Url>127.0.0.1</Url>
+		<User>root</User>
+		<Password>root</Password>
+	</Database>
+</Config>
