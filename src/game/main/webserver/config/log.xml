@@ -4,10 +4,10 @@
             <console />
         </filter>
         <filter levels="debug,info,warn">
-        	<rollingfile type="date" filename="logs/server.log" datepattern="2006-01-02" maxrolls="7" />
+        	<rollingfile type="date" filename="logs/web.log" datepattern="2006-01-02" maxrolls="7" />
         </filter>
         <filter levels="critical,error">
-            <file path="logs/error.log"/>
+            <file path="logs/web-error.log"/>
         </filter>
     </outputs>
 

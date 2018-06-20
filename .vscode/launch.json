@@ -11,7 +11,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/webserver",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         },
@@ -24,7 +24,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/server",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }
@@ -38,7 +38,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/client",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }
@@ -52,7 +52,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/apps",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }
@@ -66,7 +66,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/smp",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }
@@ -80,7 +80,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/gameserver",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }
@@ -94,7 +94,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/gateway",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         },
@@ -107,7 +107,7 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/web/main",
-            "env": {},
+            "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
         }

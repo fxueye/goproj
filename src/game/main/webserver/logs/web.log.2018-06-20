@@ -1,0 +1,174 @@
+[2018-06-20 10:23:38] C:/work/goproj/src/game/web/web.go:38 [INF] server start!
+[2018-06-20 10:24:08] C:/work/goproj/src/game/web/web.go:38 [INF] server start!
+[2018-06-20 10:24:48] C:/work/goproj/src/game/web/web.go:40 [INF] server start!
+[2018-06-20 10:25:24] C:/work/goproj/src/game/web/web.go:40 [INF] server start!
+[2018-06-20 16:53:30] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:0
+[2018-06-20 16:55:00] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 16:59:13] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 16:59:20] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-998.1µs
+[2018-06-20 16:59:21] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:27] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:50] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 16:59:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-998.1µs
+[2018-06-20 16:59:53] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-499µs
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-994.9µs
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-999.1µs
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-488.9µs
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-998.1µs
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-996.9µs
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-998.1µs
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 16:59:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 16:59:56] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-495.8µs
+[2018-06-20 16:59:56] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:28] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:28] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:29] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-997.5µs
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-0s
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-502.9µs
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /-499.1µs
+[2018-06-20 17:00:30] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:40] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /你好-0s
+[2018-06-20 17:00:40] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:43] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /你好-0s
+[2018-06-20 17:00:43] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:00:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /你好-0s
+[2018-06-20 17:00:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-998.4µs
+[2018-06-20 17:00:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /你好-0s
+[2018-06-20 17:00:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:04:31] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:04:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-1.9934ms
+[2018-06-20 17:04:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:05:28] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:05:31] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-996.7µs
+[2018-06-20 17:05:31] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-996.7µs
+[2018-06-20 17:05:33] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:05:33] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:05:33] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:05:34] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:05:34] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-996.4µs
+[2018-06-20 17:05:34] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-997µs
+[2018-06-20 17:05:34] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:02] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:06:04] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:05] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:05] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-996.9µs
+[2018-06-20 17:06:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-1.0135ms
+[2018-06-20 17:06:07] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:08] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:11] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:11] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-996.9µs
+[2018-06-20 17:06:46] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:06:47] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-995.2µs
+[2018-06-20 17:06:48] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:48] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:48] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:06:49] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-1.007ms
+[2018-06-20 17:06:49] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:07:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:07:13] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:09:03] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:10:39] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:10:48] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png
+[2018-06-20 17:11:19] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:11:36] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png
+[2018-06-20 17:11:36] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png
+[2018-06-20 17:11:36] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.html
+[2018-06-20 17:11:37] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.html
+[2018-06-20 17:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.htm
+[2018-06-20 17:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.htm
+[2018-06-20 17:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /static/1280.png-5.8572929s
+[2018-06-20 17:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /static/1280.png-4.2373288s
+[2018-06-20 17:12:03] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:13:31] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png
+[2018-06-20 17:13:31] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png/index.html
+[2018-06-20 17:13:31] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png/index.htm
+[2018-06-20 17:13:31] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /1280.png-997.9µs
+[2018-06-20 17:15:53] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png
+[2018-06-20 17:15:54] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /1280.png-743.5748ms
+[2018-06-20 17:16:09] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:16:12] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png
+[2018-06-20 17:16:12] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /1280.png-302.5921ms
+[2018-06-20 17:16:17] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/1280.png
+[2018-06-20 17:16:17] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /1280.png-224.5704ms
+[2018-06-20 17:16:35] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png
+[2018-06-20 17:16:35] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.html
+[2018-06-20 17:16:35] C:/work/goproj/src/game/common/server/web/service_server.go:182 [INF] static/static/1280.png/index.htm
+[2018-06-20 17:16:35] C:/work/goproj/src/game/common/server/web/service_server.go:208 [INF] [::1]-GET /static/1280.png-997.8µs
+[2018-06-20 17:20:14] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:181 [INF] /static/1280.png
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] static/static/1280.png
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:181 [INF] /static/1280.png/index.html
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] static/static/1280.png/index.html
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:181 [INF] /static/1280.png/index.htm
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] static/static/1280.png/index.htm
+[2018-06-20 17:20:17] C:/work/goproj/src/game/common/server/web/service_server.go:209 [INF] [::1]-GET /static/1280.png-1.5011ms
+[2018-06-20 17:30:12] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:30:14] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-65.2276ms
+[2018-06-20 17:32:39] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:32:42] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-998.1µs
+[2018-06-20 17:32:43] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:32:43] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-996.2µs
+[2018-06-20 17:32:43] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-998.2µs
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-1.0003ms
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-978.6µs
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-981.8µs
+[2018-06-20 17:32:44] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:32:56] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:33:00] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-60.8842ms
+[2018-06-20 17:33:48] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:33:50] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-997.2µs
+[2018-06-20 17:33:51] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-998.4µs
+[2018-06-20 17:33:51] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-63.8806ms
+[2018-06-20 17:33:51] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-998.2µs
+[2018-06-20 17:33:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-998.4µs
+[2018-06-20 17:33:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-998.8µs
+[2018-06-20 17:33:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:33:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:33:52] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /1280.png-0s
+[2018-06-20 17:34:48] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:35:39] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:36:01] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:36:05] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-95.2104ms
+[2018-06-20 17:36:06] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:36:07] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:36:07] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-3.0048ms
+[2018-06-20 17:36:07] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-998.4µs
+[2018-06-20 17:36:07] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:36:43] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:37:20] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /static/1280.png-0s
+[2018-06-20 17:37:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] 192.168.1.143-GET /-999.5µs
+[2018-06-20 17:42:37] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-20 17:42:37] C:/work/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8081
+[2018-06-20 17:42:48] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:42:53] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-61.9033ms
+[2018-06-20 17:42:53] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-20 17:42:54] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-0s
+[2018-06-20 17:42:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-989.3µs
+[2018-06-20 17:42:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-994.7µs
+[2018-06-20 17:42:55] C:/work/goproj/src/game/common/server/web/service_server.go:207 [INF] [::1]-GET /img/1280.png-998.5µs

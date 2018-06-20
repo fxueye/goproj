@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	web.Start()
+	web.Run()
 }
