@@ -1,0 +1,115 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "web",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/webserver",
+            "env": {},
+            "args": [],
+            "showLog": true
+        },
+        {
+            "name": "server",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/server",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+        ,
+        {
+            "name": "client",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/client",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+         ,
+        {
+            "name": "app",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/apps",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+        ,
+        {
+            "name": "smp",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/smp",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+        ,
+        {
+            "name": "gameserver",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/gameserver",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+                ,
+        {
+            "name": "gateway",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/gateway",
+            "env": {},
+            "args": [],
+            "showLog": true
+        },
+        {
+            "name": "web_app",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/web/main",
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
+    ]
+}
