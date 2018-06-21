@@ -21,7 +21,7 @@ func Init() {
 	}
 	conf.LoadConfig("json", "config/web_config.json", &config)
 	webInstance = newWebService(config.ServerPort, config.StaticDir)
-	webInstance.Get("/index", index)
+	webInstance.Get("/index/(.*)", index)
 	Instance.RegServ("web", webInstance)
 	Instance.RegSigCallback(GWOnSignal)
 }

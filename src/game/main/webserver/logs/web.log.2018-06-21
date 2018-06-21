@@ -1,1 +1,175 @@
 [2018-06-21 07:55:27] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 20:57:19] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:02:27] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /-0s
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:02:33] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-2.0001ms
+[2018-06-21 21:03:13] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/-0s
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:03:21] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-3.0001ms
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-2.0001ms
+[2018-06-21 21:03:22] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /favicon.ico-0s
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-1ms
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:03:23] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-2.0001ms
+[2018-06-21 21:04:04] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:04:08] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-2.0001ms
+[2018-06-21 21:05:33] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:06:02] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:06:10] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:06:33] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:06:54] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:07:35] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-57.9603152s
+[2018-06-21 21:08:18] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:08:23] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-2.0001ms
+[2018-06-21 21:13:02] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:13:21] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-3.0001ms
+[2018-06-21 21:15:42] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /-1.0001ms
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:15:46] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-4.0002ms
+[2018-06-21 21:16:40] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/123-1.0001ms
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:171 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=514)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=489)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=181)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=134)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] D:/soft/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=82)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2238)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2568)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1825)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:177 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2197)
+[2018-06-21 21:16:48] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index-3.0001ms-Params: map[:1]
+
+[2018-06-21 21:52:30] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:58:27] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 21:58:48] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-1.0001ms
+[2018-06-21 21:58:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 21:58:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 21:58:51] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-1ms
