@@ -27,8 +27,7 @@
             "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
-        }
-        ,
+        },
         {
             "name": "client",
             "type": "go",
@@ -41,36 +40,7 @@
             "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
-        }
-         ,
-        {
-            "name": "app",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "remotePath": "",
-            "port": 2345,
-            "host": "127.0.0.1",
-            "program": "${workspaceRoot}/src/apps",
-            "env": {"gopath":"${workspaceRoot}"},
-            "args": [],
-            "showLog": true
-        }
-        ,
-        {
-            "name": "smp",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "remotePath": "",
-            "port": 2345,
-            "host": "127.0.0.1",
-            "program": "${workspaceRoot}/src/smp",
-            "env": {"gopath":"${workspaceRoot}"},
-            "args": [],
-            "showLog": true
-        }
-        ,
+        },
         {
             "name": "gameserver",
             "type": "go",
@@ -83,8 +53,7 @@
             "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true
-        }
-                ,
+        },
         {
             "name": "gateway",
             "type": "go",
@@ -94,19 +63,6 @@
             "port": 2345,
             "host": "127.0.0.1",
             "program": "${workspaceRoot}/src/game/main/gateway",
-            "env": {"gopath":"${workspaceRoot}"},
-            "args": [],
-            "showLog": true
-        },
-        {
-            "name": "web_app",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "remotePath": "",
-            "port": 2345,
-            "host": "127.0.0.1",
-            "program": "${workspaceRoot}/src/game/web/main",
             "env": {"gopath":"${workspaceRoot}"},
             "args": [],
             "showLog": true

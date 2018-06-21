@@ -1,0 +1,12 @@
+go get github.com/nsf/gocode
+go get github.com/rogpeppe/godef
+go get github.com/zmb3/gogetdoc
+go get github.com/golang/lint/golint
+go get github.com/lukehoban/go-outline
+go get sourcegraph.com/sqs/goreturns
+go get golang.org/x/tools/cmd/gorename
+go get github.com/tpng/gopkgs
+go get github.com/newhook/go-symbols
+go get github.com/cweill/gotests/...
+go get golang.org/x/tools/cmd/guru
+go get github.com/derekparker/delve/cmd/dlv
