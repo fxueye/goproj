@@ -82,8 +82,6 @@ func (s *Server) OnSignal(sig os.Signal) bool {
 }
 
 func (s *Server) Close() {
-	fmt.Printf("close server")
-
 	//	wg := sync.WaitGroup{}
 	//	for _, v := range s.services {
 	//		wg.Add(1)

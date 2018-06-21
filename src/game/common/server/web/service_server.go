@@ -59,6 +59,7 @@ func (s *WebService) Start() error {
 		defer func() {
 			recover()
 			if s.listener != nil {
+				log.Infof("defer web server close!")
 				s.listener.Close()
 				s.listener = nil
 			}
@@ -73,7 +74,10 @@ func (s *WebService) Start() error {
 	return nil
 
 }
-
+func (s *WebService) Close() {
+	log.Infof("web server close!")
+	s.BaseService.Close()
+}
 func (s *WebService) ServeHTTP(c http.ResponseWriter, req *http.Request) {
 	s.Process(c, req)
 }
