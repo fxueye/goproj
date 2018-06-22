@@ -3,6 +3,9 @@ package server
 import (
 	conf "game/common/config"
 	"game/common/server"
+	"reflect"
+
+	log "github.com/cihub/seelog"
 )
 
 type WebServer struct {
@@ -26,5 +29,9 @@ func Init() {
 	Instance.RegSigCallback(GWOnSignal)
 }
 func index(val string) string {
+	var i int
+	value := reflect.ValueOf(i)
+	log.Infof("%v", value.Kind())
+	log.Infof("%v", value.Type())
 	return "hello " + val + "\n"
 }

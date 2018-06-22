@@ -173,3 +173,22 @@
 [2018-06-21 21:58:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
 [2018-06-21 21:58:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
 [2018-06-21 21:58:51] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-1ms
+[2018-06-21 22:27:47] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 22:27:49] D:/soft/goproj/src/game/web/server/server.go:34 [INF] 0
+[2018-06-21 22:27:49] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-1.0001ms
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/web/server/server.go:34 [INF] 0
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/web/server/server.go:34 [INF] 0
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/web/server/server.go:34 [INF] 0
+[2018-06-21 22:27:50] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 22:31:03] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 22:31:37] D:/soft/goproj/src/game/web/server/server.go:34 [INF] int
+[2018-06-21 22:31:37] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/common/server/web/service_server.go:56 [INF] listen tcp, port=:8080
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/web/server/server.go:34 [INF] int
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/web/server/server.go:35 [INF] int
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-1ms
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/web/server/server.go:34 [INF] int
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/web/server/server.go:35 [INF] int
+[2018-06-21 22:32:40] D:/soft/goproj/src/game/common/server/web/service_server.go:211 [INF] [::1]-GET /index/hello-0s
