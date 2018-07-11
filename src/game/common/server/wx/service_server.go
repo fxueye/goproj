@@ -22,7 +22,7 @@ import (
 )
 
 var (
-	fs                   = &FileStore{"/tmp/s.secret"}
+	fs                   = &FileStore{"/tmp/wx.secret"}
 	LoginUri             = "https://login.weixin.qq.com"
 	ErrUnknow            = errors.New("Unknow Error")
 	ErrUserNotExists     = errors.New("Error User Not Exist")
@@ -175,7 +175,15 @@ func (s *WxService) HandleMsg(m *Message) {
 		s.handler.OnMessage(m)
 	}
 }
-func (s *WxService) GetUserName(userName string) string {
+func (s *WxService) GetUserByNickName(nickName string) (*User, error) {
+	for _, user := range s.contacts {
+		if user.NickName == nickName {
+			return user, nil
+		}
+	}
+	return nil, ErrUserNotExists
+}
+func (s *WxService) GetNickName(userName string) string {
 	u, err := s.GetUser(userName)
 	if err != nil {
 		return userName
@@ -186,8 +194,8 @@ func (s *WxService) GetUserName(userName string) string {
 		return u.NickName
 	}
 }
-func (wx *WxService) GetUser(userName string) (*User, error) {
-	u, ok := wx.contacts[userName]
+func (s *WxService) GetUser(userName string) (*User, error) {
+	u, ok := s.contacts[userName]
 	if ok {
 		return u, nil
 	} else {
@@ -281,7 +289,7 @@ func (s *WxService) GetContacts() error {
 		return errors.New("Get Contacts error")
 	}
 	log.Infof("update %d contacts", r.MemberCount)
-	s.contacts = make(map[string]*User, r.MemberCount)
+	// s.contacts = make(map[string]*User, r.MemberCount)
 	return s.updateContacts(r.MemberList)
 }
 
@@ -475,4 +483,30 @@ func (s *WxService) getUuid() (string, error) {
 	} else {
 		return "", fmt.Errorf("get uuid error, response: %s", b)
 	}
+}
+
+func (s *WxService) SendMsgToMyself(msg string) error {
+	return s.SendMsg(s.user.UserName, msg)
+}
+func (s *WxService) SendMsg(userName, msg string) error {
+	values := &url.Values{}
+	values.Set("pass_ticket", s.secret.PassTicket)
+	url := fmt.Sprintf("%s/webwxsendmsg?%s", s.secret.BaseUri, values.Encode())
+	msgId := fmt.Sprintf("%d%s", Timestamp()*1000, RandNumbers(4))
+	b, err := s.httpClient.PostJson(url, map[string]interface{}{
+		"BaseRequest": s.baseRequest,
+		"Msg": map[string]interface{}{
+			"Type":         1,
+			"Content":      msg,
+			"FromUserName": s.user.UserName,
+			"ToUserName":   userName,
+			"LocalID":      msgId,
+			"ClientMsgId":  msgId,
+		},
+		"Scene": 0,
+	})
+	if err != nil {
+		return err
+	}
+	return s.CheckCode(b, "发送消息失败")
 }

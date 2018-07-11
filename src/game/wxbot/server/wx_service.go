@@ -18,8 +18,17 @@ func newWxService(qrcodeDir string) *WxService {
 }
 
 func (s *WxService) OnMessage(m *wx.Message) {
+	log.Infof("%v", m)
 	if m.MsgType == 1 { // 文本消息
-		log.Infof("%s: %s", s.GetUserName(m.FromUserName), m.Content)
+		for _, nickName := range config.ForwardUserNames {
+			user, err := s.GetUserByNickName(nickName)
+			if err != nil {
+				continue
+			}
+			s.SendMsg(user.UserName, m.Content)
+		}
+
+		log.Infof("%s: %s", s.GetNickName(m.FromUserName), m.Content)
 	} else if m.MsgType == 3 { // 图片消息
 	} else if m.MsgType == 34 { // 语音消息
 	} else if m.MsgType == 43 { // 表情消息
@@ -27,6 +36,7 @@ func (s *WxService) OnMessage(m *wx.Message) {
 	} else if m.MsgType == 49 { // 链接消息
 	} else if m.MsgType == 51 { // 用户在手机进入某个联系人聊天界面时收到的消息
 	} else {
-		log.Infof("%s: MsgType: %d", s.GetUserName(m.FromUserName), m.MsgType)
+		log.Infof("%s: MsgType: %d", s.GetNickName(m.FromUserName), m.MsgType)
 	}
+	// s.SendMsg(m.FromUserName, "您好！有什么能为您效劳的？")
 }

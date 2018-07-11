@@ -1,3 +1,4 @@
 {
-    "QrcodeDir":"./qrcode"
+    "QrcodeDir":"./qrcode",
+    "ForwardUserNames":["长慧"]
 }
