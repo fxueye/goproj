@@ -44,11 +44,14 @@ type WxService struct {
 	baseRequest *BaseRequest
 	user        *User
 	contacts    map[string]*User
-	qrcode      string
 	qrcodeDir   string
+	handler     IMessgeHandler
+}
+type IMessgeHandler interface {
+	OnMessage(*Message)
 }
 
-func NewWxService(qrcodeDir string) *WxService {
+func NewWxService(qrcodeDir string, handler IMessgeHandler) *WxService {
 	s := new(WxService)
 	s.httpClient = NewClient()
 	s.secret = &wxSecret{}
@@ -56,6 +59,7 @@ func NewWxService(qrcodeDir string) *WxService {
 	s.user = &User{}
 	s.contacts = make(map[string]*User)
 	s.qrcodeDir = qrcodeDir
+	s.handler = handler
 	return s
 }
 
@@ -166,17 +170,9 @@ func (s *WxService) Listening() error {
 	}
 }
 
-func (wx *WxService) HandleMsg(m *Message) {
-	if m.MsgType == 1 { // 文本消息
-		log.Infof("%s: %s", wx.GetUserName(m.FromUserName), m.Content)
-	} else if m.MsgType == 3 { // 图片消息
-	} else if m.MsgType == 34 { // 语音消息
-	} else if m.MsgType == 43 { // 表情消息
-	} else if m.MsgType == 47 { // 表情消息
-	} else if m.MsgType == 49 { // 链接消息
-	} else if m.MsgType == 51 { // 用户在手机进入某个联系人聊天界面时收到的消息
-	} else {
-		log.Infof("%s: MsgType: %d", wx.GetUserName(m.FromUserName), m.MsgType)
+func (s *WxService) HandleMsg(m *Message) {
+	if s.handler != nil {
+		s.handler.OnMessage(m)
 	}
 }
 func (s *WxService) GetUserName(userName string) string {
