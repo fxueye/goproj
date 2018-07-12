@@ -1,4 +1,5 @@
 {
     "QrcodeDir":"./qrcode",
-    "ForwardUserNames":["长慧"]
+    "ForwardUserNames":[],
+    "LoginUrl":"https://login.weixin.qq.com"
 }

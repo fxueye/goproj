@@ -22,8 +22,6 @@ import (
 )
 
 var (
-	fs                   = &FileStore{"/tmp/wx.secret"}
-	LoginUri             = "https://login.weixin.qq.com"
 	ErrUnknow            = errors.New("Unknow Error")
 	ErrUserNotExists     = errors.New("Error User Not Exist")
 	ErrNotLogin          = errors.New("Not Login")
@@ -38,7 +36,7 @@ type syncStatus struct {
 
 type WxService struct {
 	server.BaseService
-
+	loginUrl    string
 	httpClient  *Client
 	secret      *wxSecret
 	baseRequest *BaseRequest
@@ -51,7 +49,7 @@ type IMessgeHandler interface {
 	OnMessage(*Message)
 }
 
-func NewWxService(qrcodeDir string, handler IMessgeHandler) *WxService {
+func NewWxService(loginUrl, qrcodeDir string, handler IMessgeHandler) *WxService {
 	s := new(WxService)
 	s.httpClient = NewClient()
 	s.secret = &wxSecret{}
@@ -60,6 +58,7 @@ func NewWxService(qrcodeDir string, handler IMessgeHandler) *WxService {
 	s.contacts = make(map[string]*User)
 	s.qrcodeDir = qrcodeDir
 	s.handler = handler
+	s.loginUrl = loginUrl
 	return s
 }
 
@@ -268,6 +267,28 @@ func (s *WxService) SyncCheck() (*syncStatus, error) {
 	return syncStatus, nil
 }
 
+//获取群成员
+func (s *WxService) GetGroupContacts() error {
+	values := &url.Values{}
+	values.Set("type", "ex")
+	values.Set("pass_ticket", s.secret.PassTicket)
+	values.Set("r", TimestampStr())
+	url := fmt.Sprintf("%s/webwxbatchgetcontact?%s", s.secret.BaseUri, values.Encode())
+	b, err := s.httpClient.PostJson(url, map[string]interface{}{})
+	if err != nil {
+		return err
+	}
+	var r ContactResponse
+	err = json.Unmarshal(b, &r)
+	if err != nil {
+		return err
+	}
+	if r.BaseResponse.Ret != 0 {
+		return errors.New("Get Groups error")
+	}
+	return nil
+}
+
 //获取联系人
 func (s *WxService) GetContacts() error {
 	values := &url.Values{}
@@ -392,7 +413,8 @@ func (s *WxService) WaitingForLoginConfirm(uuid string) (string, error) {
 		values.Set("uuid", uuid)
 		values.Set("tip", tip)
 		values.Set("_", TimestampStr())
-		b, err := s.httpClient.Get("https://login.wx.qq.com/cgi-bin/mmwebwx-bin/login", values)
+		uri := fmt.Sprintf("%s/cgi-bin/mmwebwx-bin/login", s.loginUrl)
+		b, err := s.httpClient.Get(uri, values)
 		if err != nil {
 			log.Errorf("HTTP GET err: %s", err.Error())
 			return "", err
@@ -406,8 +428,8 @@ func (s *WxService) WaitingForLoginConfirm(uuid string) (string, error) {
 			code := codes[1]
 			if code == "408" {
 				log.Info("login timeout, reconnecting...")
-				// }else if code == "400" {
-				// 	log.Info("login timeout, need refresh qrcode")
+			} else if code == "400" {
+				log.Info("login timeout, need refresh qrcode")
 			} else if code == "201" {
 				log.Info("scan success, please confirm login on your phone")
 				tip = "0"
@@ -430,7 +452,7 @@ func (s *WxService) WaitingForLoginConfirm(uuid string) (string, error) {
 }
 
 func (s *WxService) ShowQRcodeUrl(uuid string) error {
-	uri := fmt.Sprintf("%s/qrcode/%s", LoginUri, uuid)
+	uri := fmt.Sprintf("%s/qrcode/%s", s.loginUrl, uuid)
 	if s.qrcodeDir != "" {
 		path, err := s.getImg(uri)
 		path, _ = filepath.Abs(path)
@@ -471,7 +493,7 @@ func (s *WxService) getUuid() (string, error) {
 	values.Set("fun", "new")
 	values.Set("lang", "zh_CN")
 	values.Set("_", TimestampStr())
-	uri := fmt.Sprintf("%s/jslogin", LoginUri)
+	uri := fmt.Sprintf("%s/jslogin", s.loginUrl)
 	b, err := s.httpClient.Get(uri, values)
 	if err != nil {
 		return "", err

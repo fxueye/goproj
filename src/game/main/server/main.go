@@ -9,16 +9,18 @@ import (
 )
 
 func main() {
-	service := ":1200"
-	listener, err := net.Listen("tcp", service)
-	checkErr(err)
-	for {
-		conn, err := listener.Accept()
-		if err != nil {
-			continue
-		}
-		go handleConn(conn)
-	}
+	// service := ":1200"
+	// listener, err := net.Listen("tcp", service)
+	// checkErr(err)
+	// for {
+	// 	conn, err := listener.Accept()
+	// 	if err != nil {
+	// 		continue
+	// 	}
+	// 	go handleConn(conn)
+	// }
+	fmt.Print("hello")
+
 }
 func checkErr(err error) {
 	if err != nil {

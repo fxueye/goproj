@@ -11,14 +11,14 @@ type WxService struct {
 	*wx.WxService
 }
 
-func newWxService(qrcodeDir string) *WxService {
+func newWxService(loginUrl, qrcodeDir string) *WxService {
 	s := new(WxService)
-	s.WxService = wx.NewWxService(qrcodeDir, s)
+	s.WxService = wx.NewWxService(loginUrl, qrcodeDir, s)
 	return s
 }
 
 func (s *WxService) OnMessage(m *wx.Message) {
-	log.Infof("%v", m)
+	log.Infof("%v", *m)
 	if m.MsgType == 1 { // 文本消息
 		for _, nickName := range config.ForwardUserNames {
 			user, err := s.GetUserByNickName(nickName)
