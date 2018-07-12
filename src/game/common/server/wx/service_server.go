@@ -36,14 +36,19 @@ type syncStatus struct {
 
 type WxService struct {
 	server.BaseService
-	loginUrl    string
-	httpClient  *Client
-	secret      *wxSecret
-	baseRequest *BaseRequest
-	user        *User
-	contacts    map[string]*User
-	qrcodeDir   string
-	handler     IMessgeHandler
+	loginUrl     string
+	httpClient   *Client
+	secret       *wxSecret
+	baseRequest  *BaseRequest
+	user         *User
+	members      map[string]*User //好友+群聊+公众号+特殊账号
+	contacts     map[string]*User //好友
+	groups       map[string]*User //群
+	groupUsers   map[string]*User //群聊成员
+	publicUsers  map[string]*User //公众号／服务号
+	specialUsers map[string]*User //特殊账号
+	qrcodeDir    string
+	handler      IMessgeHandler
 }
 type IMessgeHandler interface {
 	OnMessage(*Message)
@@ -73,6 +78,10 @@ func (s *WxService) Start() error {
 		return err
 	}
 	err = s.Init()
+	if err != nil {
+		return err
+	}
+	err = s.StatusNotify()
 	if err != nil {
 		return err
 	}
@@ -292,7 +301,7 @@ func (s *WxService) GetGroupContacts() error {
 //获取联系人
 func (s *WxService) GetContacts() error {
 	values := &url.Values{}
-	values.Set("seq", "0")
+	// values.Set("seq", "0")
 	values.Set("pass_ticket", s.secret.PassTicket)
 	values.Set("skey", s.secret.Skey)
 	values.Set("r", TimestampStr())
