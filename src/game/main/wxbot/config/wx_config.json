@@ -1,6 +1,6 @@
 {
     "QrcodeDir":"./qrcode",
-    "ForwardUserNames":[],
+    "ForwardUserNames":["最爱傻妞"],
     "LoginUrl":"https://login.weixin.qq.com",
     "Special":["newsapp", "filehelper", "weibo", "qqmail","fmessage", "tmessage", "qmessage", "qqsync","floatbottle", "lbsapp", "shakeapp", "medianote","qqfriend", "readerapp", "blogapp", "facebookapp","masssendapp", "meishiapp", "feedsapp", "voip","blogappweixin", "brandsessionholder", "weixin","weixinreminder", "officialaccounts", "wxitil","notification_messages", "wxid_novlwrv3lqwv11","gh_22b87fa7cb3c", "userexperience_alarm"]
 }

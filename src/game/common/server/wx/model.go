@@ -41,7 +41,8 @@ type Group struct {
 	Sex         int64   `json:"Sex"`         // 1:man, 2:female
 	Signature   string  `json:"Signature"`   // 个性签名
 	ContactFlag int64   `json:"ContactFlag"` // 1:公众号，65537:个人号
-	MemberCount int64   `json:MemberCount`   //成员数
+	OwnerUin    int64   `json:"OwnerUin"`
+	MemberCount int64   `json:MemberCount` //成员数
 	MemberList  []*User `json:"MemberList"`
 }
 

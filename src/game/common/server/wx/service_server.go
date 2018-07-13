@@ -23,6 +23,7 @@ import (
 
 var (
 	ErrUnknow            = errors.New("Unknow Error")
+	ErrGroupNotExists    = errors.New("Error Group Not Exist")
 	ErrUserNotExists     = errors.New("Error User Not Exist")
 	ErrNotLogin          = errors.New("Not Login")
 	ErrLoginTimeout      = errors.New("Login Timeout")
@@ -200,7 +201,7 @@ func (s *WxService) HandleMsg(m *Message) {
 	}
 }
 func (s *WxService) GetUserByNickName(nickName string) (*User, error) {
-	for _, user := range s.contacts {
+	for _, user := range s.members {
 		if user.NickName == nickName {
 			return user, nil
 		}
@@ -216,6 +217,22 @@ func (s *WxService) GetNickName(userName string) string {
 		return u.RemarkName
 	} else {
 		return u.NickName
+	}
+}
+func (s *WxService) GetGroup(userName string) (*User, error) {
+	g, ok := s.groups[userName]
+	if ok {
+		return g, nil
+	} else {
+		return nil, ErrGroupNotExists
+	}
+}
+func (s *WxService) GetGroupMembers(userName string) (map[string]*User, error) {
+	members, ok := s.groupUsers[userName]
+	if ok {
+		return members, nil
+	} else {
+		return nil, ErrGroupNotExists
 	}
 }
 func (s *WxService) GetUser(userName string) (*User, error) {
@@ -314,7 +331,6 @@ func (s *WxService) Webwxbatchgetcontact(gids []string) error {
 		if err != nil {
 			return err
 		}
-		log.Infof("webwx:%v", string(b))
 		var r GroupContactResponse
 		err = json.Unmarshal(b, &r)
 		if err != nil {
@@ -380,6 +396,8 @@ func (s *WxService) GetContacts() error {
 			s.specialUsers[u.UserName] = u
 		} else if strings.Index(u.UserName, "@@") != -1 {
 			s.groups[u.UserName] = u
+		} else {
+			s.contacts[u.UserName] = u
 		}
 	}
 	return nil
@@ -421,7 +439,6 @@ func (s *WxService) StatusNotify() error {
 }
 func (s *WxService) CheckCode(b []byte, errmsg string) error {
 	var r InitResponse
-	log.Infof("%s", string(b))
 	err := json.Unmarshal(b, &r)
 	if err != nil {
 		return err
