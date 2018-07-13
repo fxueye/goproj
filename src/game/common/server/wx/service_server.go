@@ -41,29 +41,41 @@ type WxService struct {
 	secret       *wxSecret
 	baseRequest  *BaseRequest
 	user         *User
-	members      map[string]*User //好友+群聊+公众号+特殊账号
-	contacts     map[string]*User //好友
-	groups       map[string]*User //群
-	groupUsers   map[string]*User //群聊成员
-	publicUsers  map[string]*User //公众号／服务号
-	specialUsers map[string]*User //特殊账号
+	members      map[string]*User            //好友+群聊+公众号+特殊账号
+	contacts     map[string]*User            //好友
+	groups       map[string]*User            //群
+	groupUsers   map[string]map[string]*User //群聊成员
+	publicUsers  map[string]*User            //公众号／服务号
+	specialUsers map[string]*User            //特殊账号
 	qrcodeDir    string
 	handler      IMessgeHandler
+	special      map[string]interface{}
 }
 type IMessgeHandler interface {
 	OnMessage(*Message)
 }
 
-func NewWxService(loginUrl, qrcodeDir string, handler IMessgeHandler) *WxService {
+func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeHandler) *WxService {
 	s := new(WxService)
 	s.httpClient = NewClient()
 	s.secret = &wxSecret{}
 	s.baseRequest = &BaseRequest{}
 	s.user = &User{}
+
+	s.members = make(map[string]*User)
 	s.contacts = make(map[string]*User)
+	s.groups = make(map[string]*User)
+	s.groupUsers = make(map[string]map[string]*User)
+	s.publicUsers = make(map[string]*User)
+	s.specialUsers = make(map[string]*User)
+
 	s.qrcodeDir = qrcodeDir
 	s.handler = handler
 	s.loginUrl = loginUrl
+	s.special = make(map[string]interface{})
+	for _, str := range special {
+		s.special[str] = str
+	}
 	return s
 }
 
@@ -81,11 +93,15 @@ func (s *WxService) Start() error {
 	if err != nil {
 		return err
 	}
-	err = s.StatusNotify()
+	// err = s.StatusNotify()
+	// if err != nil {
+	// 	return err
+	// }
+	err = s.GetContacts()
 	if err != nil {
 		return err
 	}
-	err = s.GetContacts()
+	err = s.GetGroupContacts()
 	if err != nil {
 		return err
 	}
@@ -276,24 +292,57 @@ func (s *WxService) SyncCheck() (*syncStatus, error) {
 	return syncStatus, nil
 }
 
-//获取群成员
+//获取群成员 后期优化
+func (s *WxService) Webwxbatchgetcontact(gids []string) error {
+	for _, gid := range gids {
+
+		values := &url.Values{}
+		values.Set("type", "ex")
+		values.Set("r", TimestampStr())
+		values.Set("pass_ticket", s.secret.PassTicket)
+		url := fmt.Sprintf("%s/webwxbatchgetcontact?%s", s.secret.BaseUri, values.Encode())
+		var list []map[string]interface{}
+		gname := make(map[string]interface{})
+		gname["UserName"] = gid
+		gname["EncryChatRoomId"] = ""
+		list = append(list, gname)
+		b, err := s.httpClient.PostJson(url, map[string]interface{}{
+			"BaseRequest": s.baseRequest,
+			"Count":       len(list),
+			"List":        list,
+		})
+		if err != nil {
+			return err
+		}
+		log.Infof("webwx:%v", string(b))
+		var r GroupContactResponse
+		err = json.Unmarshal(b, &r)
+		if err != nil {
+			return err
+		}
+		if r.BaseResponse.Ret != 0 {
+			return errors.New("Get Groups error")
+		}
+		for _, group := range r.ContactList {
+			members := make(map[string]*User)
+			for _, m := range group.MemberList {
+				members[m.UserName] = m
+			}
+			s.groupUsers[group.UserName] = members
+		}
+		// time.Sleep(time.Second)
+	}
+	return nil
+}
+
 func (s *WxService) GetGroupContacts() error {
-	values := &url.Values{}
-	values.Set("type", "ex")
-	values.Set("pass_ticket", s.secret.PassTicket)
-	values.Set("r", TimestampStr())
-	url := fmt.Sprintf("%s/webwxbatchgetcontact?%s", s.secret.BaseUri, values.Encode())
-	b, err := s.httpClient.PostJson(url, map[string]interface{}{})
+	var gids []string
+	for _, u := range s.groups {
+		gids = append(gids, u.UserName)
+	}
+	err := s.Webwxbatchgetcontact(gids)
 	if err != nil {
 		return err
-	}
-	var r ContactResponse
-	err = json.Unmarshal(b, &r)
-	if err != nil {
-		return err
-	}
-	if r.BaseResponse.Ret != 0 {
-		return errors.New("Get Groups error")
 	}
 	return nil
 }
@@ -320,7 +369,20 @@ func (s *WxService) GetContacts() error {
 	}
 	log.Infof("update %d contacts", r.MemberCount)
 	// s.contacts = make(map[string]*User, r.MemberCount)
-	return s.updateContacts(r.MemberList)
+
+	// return s.updateContacts(r.MemberList)
+
+	for _, u := range r.MemberList {
+		s.members[u.UserName] = u
+		if u.VerifyFlag&8 != 0 {
+			s.publicUsers[u.UserName] = u
+		} else if _, ok := s.special[u.UserName]; ok {
+			s.specialUsers[u.UserName] = u
+		} else if strings.Index(u.UserName, "@@") != -1 {
+			s.groups[u.UserName] = u
+		}
+	}
+	return nil
 }
 
 //更新联系人
@@ -359,6 +421,7 @@ func (s *WxService) StatusNotify() error {
 }
 func (s *WxService) CheckCode(b []byte, errmsg string) error {
 	var r InitResponse
+	log.Infof("%s", string(b))
 	err := json.Unmarshal(b, &r)
 	if err != nil {
 		return err

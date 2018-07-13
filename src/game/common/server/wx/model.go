@@ -28,6 +28,21 @@ type User struct {
 	Sex         int64  `json:"Sex"`         // 1:man, 2:female
 	Signature   string `json:"Signature"`   // 个性签名
 	ContactFlag int64  `json:"ContactFlag"` // 1:公众号，65537:个人号
+	MemberCount int64  `json:MemberCount`   //成员数
+	VerifyFlag  int64  `json:VerifyFlag`    //
+}
+
+type Group struct {
+	Uin         int64   `json:"Uin"`         // 777252808,
+	UserName    string  `json:"UserName"`    // userid
+	NickName    string  `json:"NickName"`    // 昵称,
+	HeadImgUrl  string  `json:"HeadImgUrl"`  // "/cgi-bin/mmwebwx-bin/webwxgeticon?seq=1092670198&username=@78c2c1f76b86e1db6a1628f9eeae0f398c1c8a9d49a486ba4f1817c43347218a&skey=@crypt_e9f8e332_78afd5f296b76c1768bcc737088f33e6",
+	RemarkName  string  `json:"RemarkName"`  // 备注名,
+	Sex         int64   `json:"Sex"`         // 1:man, 2:female
+	Signature   string  `json:"Signature"`   // 个性签名
+	ContactFlag int64   `json:"ContactFlag"` // 1:公众号，65537:个人号
+	MemberCount int64   `json:MemberCount`   //成员数
+	MemberList  []*User `json:"MemberList"`
 }
 
 type BaseRequest struct {
@@ -69,6 +84,12 @@ type ContactResponse struct {
 	MemberCount  int64         `json:"MemberCount"`
 	MemberList   []*User       `json:"MemberList"`
 	Seq          int64         `json:"Seq"`
+}
+
+type GroupContactResponse struct {
+	BaseResponse *BaseResponse `json:"BaseResponse"`
+	Count        int64         `json:"MemberCount"`
+	ContactList  []*Group      `json:"MemberList"`
 }
 
 type Message struct {

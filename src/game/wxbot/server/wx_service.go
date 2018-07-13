@@ -13,7 +13,7 @@ type WxService struct {
 
 func newWxService(loginUrl, qrcodeDir string) *WxService {
 	s := new(WxService)
-	s.WxService = wx.NewWxService(loginUrl, qrcodeDir, s)
+	s.WxService = wx.NewWxService(loginUrl, qrcodeDir, config.Special, s)
 	return s
 }
 
