@@ -54,10 +54,9 @@ func (s *WxService) OnMessage(m *wx.Message) {
 					continue
 				}
 
-				content := strings.Replace(m.Content, "<br/>", "\n", -1)
-				exp := regexp.MustCompile(`<span class=".*?"></span>`)
-				content = exp.ReplaceAllString(content, "")
+				content := s.ClearCharactert(m.Content)
 				friendNickName := s.GetNickName(m.FromUserName)
+
 				content = fmt.Sprintf("来自好友:%s:\n%s", s.ClearCharactert(friendNickName), content)
 				s.SendMsg(user.UserName, content)
 			}
