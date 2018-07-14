@@ -89,8 +89,8 @@ type ContactResponse struct {
 
 type GroupContactResponse struct {
 	BaseResponse *BaseResponse `json:"BaseResponse"`
-	Count        int64         `json:"MemberCount"`
-	ContactList  []*Group      `json:"MemberList"`
+	Count        int64         `json:"Count"`
+	ContactList  []*Group      `json:"ContactList"`
 }
 
 type Message struct {

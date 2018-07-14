@@ -26,6 +26,7 @@ func (s *WxService) OnMessage(m *wx.Message) {
 		if strings.Index(formUserName, "@@") != -1 {
 			log.Infof("%s", formUserName)
 			group, err := s.GetGroup(formUserName)
+
 			if err != nil {
 				log.Errorf("%v", err)
 				return
@@ -35,16 +36,18 @@ func (s *WxService) OnMessage(m *wx.Message) {
 			sendUserName := string([]byte(m.Content)[0:index])
 			content := string([]byte(m.Content)[index+1:])
 			content = s.ClearCharactert(content)
-
-			log.Infof("content:%s", content)
-			log.Infof("sendUserName:%s", sendUserName)
+			sendUser, err := s.GetGroupMember(formUserName, sendUserName)
+			if err != nil {
+				log.Errorf("%v", err)
+				return
+			}
 			//消息转发
 			for _, nickName := range config.ForwardUserNames {
 				user, err := s.GetUserByNickName(nickName)
 				if err != nil {
 					continue
 				}
-				content = fmt.Sprintf("来自群:%s:\n%s", s.ClearCharactert(group.NickName), content)
+				content = fmt.Sprintf("来自群:%s[%s]:\n%s", s.ClearCharactert(group.NickName), s.ClearCharactert(sendUser.NickName), content)
 				s.SendMsg(user.UserName, content)
 			}
 		} else {

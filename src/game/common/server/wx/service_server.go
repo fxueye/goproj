@@ -2,6 +2,7 @@ package wx
 
 import (
 	"bytes"
+	"container/list"
 	"encoding/json"
 	"encoding/xml"
 	"errors"
@@ -22,17 +23,23 @@ import (
 )
 
 var (
-	ErrUnknow            = errors.New("Unknow Error")
-	ErrGroupNotExists    = errors.New("Error Group Not Exist")
-	ErrUserNotExists     = errors.New("Error User Not Exist")
-	ErrNotLogin          = errors.New("Not Login")
-	ErrLoginTimeout      = errors.New("Login Timeout")
-	ErrWaitingForConfirm = errors.New("Waiting For Confirm")
+	ErrUnknow                = errors.New("Unknow Error")
+	ErrGroupNotExists        = errors.New("Error Group Not Exist")
+	ErrGroupMembersNotExists = errors.New("Error Group Members Not Exist")
+	ErrUserNotExists         = errors.New("Error User Not Exist")
+	ErrNotLogin              = errors.New("Not Login")
+	ErrLoginTimeout          = errors.New("Login Timeout")
+	ErrWaitingForConfirm     = errors.New("Waiting For Confirm")
 )
 
 type syncStatus struct {
 	Retcode  string
 	Selector string
+}
+
+type getGroupCmd struct {
+	Gid   string
+	Times int16
 }
 
 type WxService struct {
@@ -51,6 +58,7 @@ type WxService struct {
 	qrcodeDir    string
 	handler      IMessgeHandler
 	special      map[string]interface{}
+	cmds         *list.List
 }
 type IMessgeHandler interface {
 	OnMessage(*Message)
@@ -74,6 +82,7 @@ func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeH
 	s.handler = handler
 	s.loginUrl = loginUrl
 	s.special = make(map[string]interface{})
+	s.cmds = list.New()
 	for _, str := range special {
 		s.special[str] = str
 	}
@@ -232,7 +241,19 @@ func (s *WxService) GetGroupMembers(userName string) (map[string]*User, error) {
 	if ok {
 		return members, nil
 	} else {
-		return nil, ErrGroupNotExists
+		return nil, ErrGroupMembersNotExists
+	}
+}
+func (s *WxService) GetGroupMember(guserName string, userName string) (*User, error) {
+	members, err := s.GetGroupMembers(guserName)
+	if err != nil {
+		return nil, err
+	}
+	member, ok := members[userName]
+	if ok {
+		return member, nil
+	} else {
+		return nil, ErrUserNotExists
 	}
 }
 func (s *WxService) GetUser(userName string) (*User, error) {
@@ -310,43 +331,46 @@ func (s *WxService) SyncCheck() (*syncStatus, error) {
 }
 
 //获取群成员 后期优化
-func (s *WxService) Webwxbatchgetcontact(gids []string) error {
-	for _, gid := range gids {
-
-		values := &url.Values{}
-		values.Set("type", "ex")
-		values.Set("r", TimestampStr())
-		values.Set("pass_ticket", s.secret.PassTicket)
-		url := fmt.Sprintf("%s/webwxbatchgetcontact?%s", s.secret.BaseUri, values.Encode())
-		var list []map[string]interface{}
-		gname := make(map[string]interface{})
-		gname["UserName"] = gid
-		gname["EncryChatRoomId"] = ""
-		list = append(list, gname)
-		b, err := s.httpClient.PostJson(url, map[string]interface{}{
-			"BaseRequest": s.baseRequest,
-			"Count":       len(list),
-			"List":        list,
-		})
-		if err != nil {
-			return err
+func (s *WxService) Webwxbatchgetcontact(cmd *getGroupCmd) error {
+	values := &url.Values{}
+	values.Set("type", "ex")
+	values.Set("r", TimestampStr())
+	values.Set("pass_ticket", s.secret.PassTicket)
+	url := fmt.Sprintf("%s/webwxbatchgetcontact?%s", s.secret.BaseUri, values.Encode())
+	var list []map[string]interface{}
+	gname := make(map[string]interface{})
+	gname["UserName"] = cmd.Gid
+	gname["EncryChatRoomId"] = ""
+	list = append(list, gname)
+	b, err := s.httpClient.PostJson(url, map[string]interface{}{
+		"BaseRequest": s.baseRequest,
+		"Count":       len(list),
+		"List":        list,
+	})
+	if err != nil {
+		log.Errorf("%v", err)
+		cmd.Times++
+		return err
+	}
+	var r GroupContactResponse
+	err = json.Unmarshal(b, &r)
+	if err != nil {
+		log.Errorf("%v", err)
+		cmd.Times++
+		return err
+	}
+	if r.BaseResponse.Ret != 0 {
+		cmd.Times++
+		err = errors.New("Get Groups error")
+		log.Errorf("%v", err)
+		return err
+	}
+	for _, group := range r.ContactList {
+		members := make(map[string]*User)
+		for _, m := range group.MemberList {
+			members[m.UserName] = m
 		}
-		var r GroupContactResponse
-		err = json.Unmarshal(b, &r)
-		if err != nil {
-			return err
-		}
-		if r.BaseResponse.Ret != 0 {
-			return errors.New("Get Groups error")
-		}
-		for _, group := range r.ContactList {
-			members := make(map[string]*User)
-			for _, m := range group.MemberList {
-				members[m.UserName] = m
-			}
-			s.groupUsers[group.UserName] = members
-		}
-		// time.Sleep(time.Second)
+		s.groupUsers[group.UserName] = members
 	}
 	return nil
 }
@@ -356,9 +380,21 @@ func (s *WxService) GetGroupContacts() error {
 	for _, u := range s.groups {
 		gids = append(gids, u.UserName)
 	}
-	err := s.Webwxbatchgetcontact(gids)
-	if err != nil {
-		return err
+	for _, gid := range gids {
+		cmd := &getGroupCmd{}
+		cmd.Gid = gid
+		cmd.Times = 0
+		s.cmds.PushBack(cmd)
+	}
+	for s.cmds.Len() > 0 {
+		em := s.cmds.Front()
+		s.cmds.Remove(em)
+		curCmd := em.Value.(*getGroupCmd)
+		err := s.Webwxbatchgetcontact(curCmd)
+		if err != nil && curCmd.Times < GET_GROUP_MEMBERS_TIMES {
+			log.Infof("push %v", curCmd)
+			s.cmds.PushBack(em)
+		}
 	}
 	return nil
 }

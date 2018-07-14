@@ -38,4 +38,6 @@ const (
 	MSGTYPE_SHARECARD          = 42
 	MSGTYPE_SYS                = 10000
 	MSGTYPE_RECALLED           = 10002
+	//获取群组次数
+	GET_GROUP_MEMBERS_TIMES = 6
 )
