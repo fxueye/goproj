@@ -330,7 +330,7 @@ func (s *WxService) SyncCheck() (*syncStatus, error) {
 	return syncStatus, nil
 }
 
-//获取群成员 后期优化
+//获取群成员
 func (s *WxService) Webwxbatchgetcontact(cmd *getGroupCmd) error {
 	values := &url.Values{}
 	values.Set("type", "ex")

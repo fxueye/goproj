@@ -22,6 +22,7 @@ func Run() {
 		}
 		if err := recover(); err != nil {
 			log.Critical(err)
+			server.ShowStack()
 			os.Exit(0)
 		}
 	}()

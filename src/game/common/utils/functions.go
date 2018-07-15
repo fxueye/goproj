@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"math"
 	"math/rand"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -333,4 +334,21 @@ func IsRepeat(ids []int) bool {
 		}
 	}
 	return false
+}
+
+func GetTelNum(s string) []string {
+	reg := "(((\\+\\d{2}-)?0\\d{2,3}-\\d{7,8})|((\\+\\d{2}-)?(\\d{2,3}-)?([1][3,4,5,7,8][0-9]\\d{8})))"
+	rgx := regexp.MustCompile(reg)
+	return rgx.FindAllString(s, -1)
+}
+
+func RemoveDuplicatesAndEmpty(a []string) (ret []string) {
+	a_len := len(a)
+	for i := 0; i < a_len; i++ {
+		if (i > 0 && a[i-1] == a[i]) || len(a[i]) == 0 {
+			continue
+		}
+		ret = append(ret, a[i])
+	}
+	return
 }

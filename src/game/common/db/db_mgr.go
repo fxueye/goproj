@@ -4,8 +4,9 @@ import (
 	//	"database/sql"
 	//	"fmt"
 	//	log "github.com/cihub/seelog"
-	_ "github.com/go-sql-driver/mysql"
 	"time"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type DBMgr struct {
@@ -25,50 +26,11 @@ func (dbm *DBMgr) Init() error {
 func (dbm *DBMgr) CreateUserMapDB(ip string, port int, user string, passwd string, dbname string, maxOpen int, maxIdle int) error {
 	dbm.UserMapDB = new(DBInstance)
 	return dbm.UserMapDB.Init(ip, port, user, passwd, dbname, maxOpen, maxIdle)
-	//	s := fmt.Sprintf("%s:%s@(%s:%d)/%s", user, passwd, ip, port, dbname)
-	//	db, err := sql.Open("mysql", s)
-	//	if err != nil {
-	//		return err
-	//	}
-	//	err = db.Ping()
-	//	if err != nil {
-	//		return err
-	//	}
-	//	if maxOpen > 0 {
-	//		db.SetMaxOpenConns(maxOpen)
-	//	}
-	//	if maxIdle > 0 {
-	//		db.SetMaxIdleConns(maxIdle)
-	//	}
-	//	dbm.UserMapDB = &DBInstance{
-	//		MyDB: db,
-	//	}
-	//	return nil
 }
 
 func (dbm *DBMgr) CreateUserDB(idx int, ip string, port int, user string, passwd string, dbname string, maxOpen int, maxIdle int) error {
 	dbm.UserDBs[idx] = new(DBInstance)
 	return dbm.UserDBs[idx].Init(ip, port, user, passwd, dbname, maxOpen, maxIdle)
-
-	//	s := fmt.Sprintf("%s:%s@(%s:%d)/%s", user, passwd, ip, port, dbname)
-	//	db, err := sql.Open("mysql", s)
-	//	if err != nil {
-	//		return err
-	//	}
-	//	err = db.Ping()
-	//	if err != nil {
-	//		return err
-	//	}
-	//	if maxOpen > 0 {
-	//		db.SetMaxOpenConns(maxOpen)
-	//	}
-	//	if maxIdle > 0 {
-	//		db.SetMaxIdleConns(maxIdle)
-	//	}
-	//	dbm.UserDBs[idx] = &DBInstance{
-	//		MyDB: db,
-	//	}
-	//	return nil
 }
 
 func (dbm *DBMgr) GetUserMapDBInstance() *DBInstance {
