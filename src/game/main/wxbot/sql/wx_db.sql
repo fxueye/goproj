@@ -25,7 +25,8 @@ CREATE TABLE `stroke` (
   `UID` int(11) NOT NULL DEFAULT '0',
   `Send` varchar(200) NOT NULL DEFAULT '',
   `Tel` varchar(200) NOT NULL DEFAULT '',
-  `Content` varchar(200) NOT NULL DEFAULT '',
+  `Content` text NOT NULL,
+  `Timestamp` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`UID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

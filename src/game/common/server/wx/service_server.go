@@ -24,6 +24,7 @@ import (
 
 var (
 	ErrUnknow                = errors.New("Unknow Error")
+	ErrNeedIngReconning      = errors.New("Error Needing Reconning")
 	ErrGroupNotExists        = errors.New("Error Group Not Exist")
 	ErrGroupMembersNotExists = errors.New("Error Group Members Not Exist")
 	ErrUserNotExists         = errors.New("Error User Not Exist")
@@ -91,37 +92,48 @@ func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeH
 
 func (s *WxService) Start() error {
 	s.BaseService.Start()
-	newLoginUri, err := s.GetNewLoginUrl()
-	if err != nil {
-		return err
-	}
-	err = s.NewLoginPage(newLoginUri)
-	if err != nil {
-		return err
-	}
-	err = s.Init()
-	if err != nil {
-		return err
-	}
-	// err = s.StatusNotify()
-	// if err != nil {
-	// 	return err
-	// }
-	err = s.GetContacts()
-	if err != nil {
-		return err
-	}
-	err = s.GetGroupContacts()
-	if err != nil {
-		return err
-	}
+	c := make(chan bool)
 	s.AsyncDo(func() {
 		defer func() {
 			recover()
 		}()
-		err = s.Listening()
+		newLoginUri, err := s.GetNewLoginUrl()
 		if err != nil {
 			return
+		}
+		err = s.NewLoginPage(newLoginUri)
+		if err != nil {
+			return
+		}
+		err = s.Init()
+		if err != nil {
+			return
+		}
+		// err = s.StatusNotify()
+		// if err != nil {
+		// 	return err
+		// }
+		err = s.GetContacts()
+		if err != nil {
+			return
+		}
+		err = s.GetGroupContacts()
+		if err != nil {
+			return
+		}
+		c <- true
+	})
+
+	s.AsyncDo(func() {
+		defer func() {
+			recover()
+		}()
+		run := <-c
+		if run {
+			err := s.Listening()
+			if err != nil {
+				return
+			}
 		}
 	})
 	return nil
@@ -526,6 +538,9 @@ func (s *WxService) GetNewLoginUrl() (string, error) {
 	}
 	newLoginUri, err := s.WaitingForLoginConfirm(uuid)
 	if err != nil {
+		if err == ErrNeedIngReconning {
+			return s.GetNewLoginUrl()
+		}
 		return "", err
 	}
 	return newLoginUri, nil
@@ -553,8 +568,10 @@ func (s *WxService) WaitingForLoginConfirm(uuid string) (string, error) {
 			code := codes[1]
 			if code == "408" {
 				log.Info("login timeout, reconnecting...")
+				return "", ErrNeedIngReconning
 			} else if code == "400" {
 				log.Info("login timeout, need refresh qrcode")
+				return "", ErrNeedIngReconning
 			} else if code == "201" {
 				log.Info("scan success, please confirm login on your phone")
 				tip = "0"

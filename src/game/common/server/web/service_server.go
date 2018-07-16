@@ -28,13 +28,16 @@ type WebService struct {
 	listener      *net.TCPListener
 	StaticDir     string
 	routes        []route
+	mux           *http.ServeMux
 }
+
 type route struct {
 	r           string
 	cr          *regexp.Regexp
 	method      string
 	handler     reflect.Value
 	httpHandler http.Handler
+	handleFunc  func(http.ResponseWriter, *http.Request)
 }
 
 func NewWebService(port int, acceptTimeout time.Duration, staticDir string) *WebService {
@@ -42,6 +45,7 @@ func NewWebService(port int, acceptTimeout time.Duration, staticDir string) *Web
 	s.port = port
 	s.acceptTimeout = acceptTimeout
 	s.StaticDir = staticDir
+	s.mux = http.NewServeMux()
 	return s
 }
 func (s *WebService) Start() error {
@@ -64,9 +68,8 @@ func (s *WebService) Start() error {
 				s.listener = nil
 			}
 		}()
-		mux := http.NewServeMux()
-		mux.Handle("/", s)
-		err = http.Serve(s.listener, mux)
+		s.mux.Handle("/", s)
+		err = http.Serve(s.listener, s.mux)
 		if err != nil {
 			return
 		}
@@ -83,8 +86,10 @@ func (s *WebService) ServeHTTP(c http.ResponseWriter, req *http.Request) {
 }
 func (s *WebService) Process(c http.ResponseWriter, req *http.Request) {
 	route := s.routeHandler(req, c)
-	if route != nil {
+	if route != nil && route.httpHandler != nil {
 		route.httpHandler.ServeHTTP(c, req)
+	} else if route != nil && route.handleFunc != nil {
+		route.handleFunc(c, req)
 	}
 }
 func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unused *route) {
@@ -108,9 +113,12 @@ func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unu
 	for i := 0; i < len(s.routes); i++ {
 		route := s.routes[i]
 		cr := route.cr
-		if req.Method != route.method && !(req.Method == "HEAD" && route.method == "GET") {
-			continue
+		if route.method != "" {
+			if req.Method != route.method && !(req.Method == "HEAD" && route.method == "GET") {
+				continue
+			}
 		}
+
 		if !cr.MatchString(requestPath) {
 			continue
 		}
@@ -118,10 +126,15 @@ func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unu
 		if len(match[0]) != len(requestPath) {
 			continue
 		}
+		if route.handleFunc != nil {
+			unused = &route
+			return
+		}
 		if route.httpHandler != nil {
 			unused = &route
 			return
 		}
+
 		ctx.SetHeader("Content-Type", "text/html; charset=utf-8", true)
 		var args []reflect.Value
 		handlerType := route.handler.Type()
@@ -216,9 +229,12 @@ func (s *WebService) addRoute(r string, method string, handler interface{}) {
 		log.Errorf("Error in route regex %q\n", r)
 		return
 	}
+
 	switch handler.(type) {
 	case http.Handler:
 		s.routes = append(s.routes, route{r: r, cr: cr, method: method, httpHandler: handler.(http.Handler)})
+	case func(http.ResponseWriter, *http.Request):
+		s.routes = append(s.routes, route{r: r, cr: cr, method: method, handleFunc: handler.(func(http.ResponseWriter, *http.Request))})
 	case reflect.Value:
 		fv := handler.(reflect.Value)
 		s.routes = append(s.routes, route{r: r, cr: cr, method: method, handler: fv})
@@ -226,6 +242,11 @@ func (s *WebService) addRoute(r string, method string, handler interface{}) {
 		fv := reflect.ValueOf(handler)
 		s.routes = append(s.routes, route{r: r, cr: cr, method: method, handler: fv})
 	}
+}
+
+func (s *WebService) HandleFunc(route, method string, handler interface{}) {
+	// s.mux.HandleFunc(pattern, handler)
+	s.addRoute(route, method, handler)
 }
 
 // Get adds a handler for the 'GET' http method for server s.

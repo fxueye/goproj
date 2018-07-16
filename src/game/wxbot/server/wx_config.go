@@ -7,6 +7,7 @@ type WxConfig struct {
 	Special          []string
 	DBConfig         DBConfig
 	EmailConfig      EmailConfig
+	WebConfig        WebConfig
 }
 type DBConfig struct {
 	DBHost     string
@@ -22,4 +23,9 @@ type EmailConfig struct {
 	EmailPassword string
 	SmtpServer    string
 	ToEmail       []string
+}
+
+type WebConfig struct {
+	ServerPort int
+	StaticDir  string
 }
