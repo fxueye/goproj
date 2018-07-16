@@ -14,11 +14,15 @@ type WxServer struct {
 	server.Server
 }
 
+const WXSERVICE = "wx"
+const WEBSERVICE = "web"
+
 var (
-	Instance   *WxServer
-	config     WxConfig
-	wxInstance *WxService
-	DBMgr      *db.DBMgr
+	Instance    *WxServer
+	config      WxConfig
+	wxInstance  *WxService
+	webInstance *WebService
+	DBMgr       *db.DBMgr
 )
 
 func Init() {
@@ -34,7 +38,11 @@ func Init() {
 		return
 	}
 	wxInstance = newWxService(config.LoginUrl, config.QrcodeDir)
-	Instance.RegServ("wx", wxInstance)
+	webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
+
+	Instance.RegServ(WXSERVICE, wxInstance)
+	Instance.RegServ(WEBSERVICE, webInstance)
+
 	Instance.RegSigCallback(GWOnSignal)
 }
 func ShowStack() {

@@ -4,7 +4,7 @@
     "LoginUrl":"https://login.weixin.qq.com",
     "Special":["newsapp", "filehelper", "weibo", "qqmail","fmessage", "tmessage", "qmessage", "qqsync","floatbottle", "lbsapp", "shakeapp", "medianote","qqfriend", "readerapp", "blogapp", "facebookapp","masssendapp", "meishiapp", "feedsapp", "voip","blogappweixin", "brandsessionholder", "weixin","weixinreminder", "officialaccounts", "wxitil","notification_messages", "wxid_novlwrv3lqwv11","gh_22b87fa7cb3c", "userexperience_alarm"],
     "DBConfig":{
-		"DBHost":"192.168.1.121",
+		"DBHost":"192.168.1.143",
 		"DBPort":3306,
 		"DBName":"wx_db",
 		"DBUser":"root",
@@ -17,5 +17,9 @@
         "EmailPassword":"skw0103",
         "SmtpServer":"smtp.exmail.qq.com:25",
         "ToEmail":["281431280@qq.com"]
+    },
+    "WebConfig":{
+        "ServerPort":8080,
+        "StaticDir":"./static"
     }
 }

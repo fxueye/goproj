@@ -1,0 +1,622 @@
+[11:21:06] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[11:21:06] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4amKkQ1Dbg==.jpg
+[11:21:31] service_server.go:555 [INF] login timeout, reconnecting...
+[11:22:37] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[11:23:22] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AfFAqCVsmg==.jpg
+[11:31:19] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[11:31:19] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4ZL9UNWMmA==.jpg
+[11:31:50] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[11:32:23] service_server.go:56 [INF] listen tcp, port=:8080
+[11:32:23] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\ge_kI7niqQ==.jpg
+[11:32:29] service_server.go:211 [INF] 127.0.0.1-GET /api/-998.8µs
+[11:32:29] service_server.go:211 [INF] 127.0.0.1-GET /favicon.ico-499.1µs
+[11:32:48] service_server.go:555 [INF] login timeout, reconnecting...
+[11:33:13] service_server.go:555 [INF] login timeout, reconnecting...
+[11:33:14] service_server.go:211 [INF] 127.0.0.1-GET /api/get_stroke-998.2µs
+[13:31:17] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:31:17] web_service.go:26 [INF] t:*server.WebHandler
+[13:31:17] web_service.go:28 [INF] v:&{}
+[13:31:17] service_server.go:56 [INF] listen tcp, port=:8080
+[13:31:17] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4cI-hsX8XA==.jpg
+[13:37:15] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:37:15] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\obKcNftDaA==.jpg
+[13:37:27] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:37:27] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\If9V_dIMvg==.jpg
+[13:39:26] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:39:26] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YacQP-0C0g==.jpg
+[13:39:52] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:39:54] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QYdf-NfiDg==.jpg
+[13:41:05] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:41:20] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gfR1oC2F5A==.jpg
+[13:43:11] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:43:32] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Ie5cBsGFCQ==.jpg
+[13:44:20] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:44:22] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IbyDJiab7w==.jpg
+[13:44:46] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:44:46] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gdZxXTl3xg==.jpg
+[13:46:37] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:46:37] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4aWavvM1mA==.jpg
+[13:48:30] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:48:30] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QfVH2rqYlA==.jpg
+[13:50:46] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:53:09] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wfG9rWE1_w==.jpg
+[13:54:52] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:54:57] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Qb48whksGw==.jpg
+[13:57:24] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:57:29] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Qb_xNefd4g==.jpg
+[13:57:58] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[13:57:59] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wdHNyIQEaA==.jpg
+[14:02:59] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:03:06] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AYhqOfctvA==.jpg
+[14:03:21] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:04:03] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:04:03] server.go:48 [INF] v:&{<nil> 0xc0420ca840 map[]}
+[14:04:09] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wZ8Y9bYlIg==.jpg
+[14:05:39] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:05:39] server.go:48 [INF] k:wx
+[14:05:39] server.go:49 [INF] v:&{<nil> 0xc04200a900 map[]}
+[14:05:39] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Yeh6cbPXmQ==.jpg
+[14:06:21] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:07:41] server.go:48 [INF] k:wx
+[14:07:42] server.go:49 [INF] v:&{<nil> 0xc0420ca840 map[]}
+[14:07:46] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gcKVIJToOQ==.jpg
+[14:08:19] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:08:24] server.go:48 [INF] k:web
+[14:08:25] server.go:49 [INF] v:&{0xc0420c1a40}
+[14:08:27] web_service.go:26 [INF] t:*server.WebHandler
+[14:08:27] web_service.go:28 [INF] v:&{}
+[14:08:27] web_service.go:32 [INF] vt:0x4eec20
+[14:08:27] web_service.go:34 [INF] vi:0x4eec20
+[14:08:27] service_server.go:58 [INF] listen tcp, port=:8080
+[14:08:52] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:08:57] server.go:48 [INF] k:web
+[14:08:57] server.go:49 [INF] v:&{0xc042017b20}
+[14:08:57] web_service.go:26 [INF] t:*server.WebHandler
+[14:08:57] web_service.go:28 [INF] v:&{}
+[14:08:57] web_service.go:32 [INF] vt:0x4eec70
+[14:08:57] web_service.go:34 [INF] vi:0x4eec70
+[14:08:57] service_server.go:58 [INF] listen tcp, port=:8080
+[14:08:57] server.go:48 [INF] k:wx
+[14:08:57] server.go:49 [INF] v:&{<nil> 0xc04200a900 map[]}
+[14:08:58] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\ga8k9jXrzA==.jpg
+[14:09:59] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:09:59] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IaKrBdHQVw==.jpg
+[14:10:38] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:10:38] web_service.go:26 [INF] t:*server.WebHandler
+[14:10:38] web_service.go:28 [INF] v:&{}
+[14:10:38] web_service.go:32 [INF] vt:0x4ef3f0
+[14:10:38] web_service.go:34 [INF] vi:0x4ef3f0
+[14:10:38] service_server.go:58 [INF] listen tcp, port=:8080
+[14:10:42] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\we5dbzVYDg==.jpg
+[14:10:54] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:10:57] service_server.go:585 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4d4TQCTs_g==.jpg
+[14:37:12] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:37:12] web_service.go:26 [INF] t:*server.WebHandler
+[14:37:12] web_service.go:28 [INF] v:&{}
+[14:37:12] web_service.go:32 [INF] vt:0x4ef130
+[14:37:12] web_service.go:34 [INF] vi:0x4ef130
+[14:37:12] service_server.go:58 [INF] listen tcp, port=:8080
+[14:37:12] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AfZt7pHYoA==.jpg
+[14:37:59] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:37:59] web_service.go:26 [INF] t:*server.WebHandler
+[14:37:59] web_service.go:28 [INF] v:&{}
+[14:37:59] web_service.go:32 [INF] vt:0x4ef130
+[14:37:59] web_service.go:34 [INF] vi:0x4ef130
+[14:37:59] service_server.go:58 [INF] listen tcp, port=:8080
+[14:37:59] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YZTSoX0BDg==.jpg
+[14:38:20] service_server.go:576 [INF] scan success, please confirm login on your phone
+[14:38:26] service_server.go:579 [INF] login success
+[14:38:30] service_server.go:434 [INF] update 171 contacts
+[14:38:51] service_server.go:199 [INF] []
+[14:38:53] service_server.go:212 [INF] 127.0.0.1-GET /-1.0012ms
+[14:38:57] service_server.go:212 [INF] 127.0.0.1-GET /api-2.0016ms
+[14:39:25] service_server.go:199 [INF] [0xc042083180]
+[14:39:25] wx_service.go:31 [INF] @@515e9ba90cc894eca7a172594f7bc0782d9ec5a7918735a7bbbc61623eca1d9a
+[14:39:26] service_server.go:199 [INF] [0xc0421e1600 0xc0421e1680]
+[14:39:26] wx_service.go:31 [INF] @@1ee9836f9a6d6adb860ee1f19bd4f75c50cf7b69ed12e205caa775d1bb132c93
+[14:39:26] wx_service.go:31 [INF] @@a18f0ec10a19aa49afe66f5d0e47b9083131d3c117156e9e4396c8d511041a43
+[14:39:43] service_server.go:199 [INF] [0xc0424b2100]
+[14:39:43] wx_service.go:31 [INF] @@17e5fe92ae5deab6fdd67ebc8c12c57e6d93184a45c9a04fd1c2681467b82f30
+[14:39:54] service_server.go:199 [INF] [0xc042406380]
+[14:39:54] wx_service.go:31 [INF] @@17e5fe92ae5deab6fdd67ebc8c12c57e6d93184a45c9a04fd1c2681467b82f30
+[14:39:55] service_server.go:199 [INF] []
+[14:40:05] service_server.go:199 [INF] [0xc04218a980]
+[14:40:05] wx_service.go:31 [INF] @@17e5fe92ae5deab6fdd67ebc8c12c57e6d93184a45c9a04fd1c2681467b82f30
+[14:40:06] service_server.go:199 [INF] []
+[14:41:08] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:41:08] web_service.go:26 [INF] t:*server.WebHandler
+[14:41:08] web_service.go:28 [INF] v:&{}
+[14:41:08] web_service.go:32 [INF] vt:0x4ef130
+[14:41:08] web_service.go:34 [INF] vi:0x4ef130
+[14:41:08] service_server.go:58 [INF] listen tcp, port=:8080
+[14:41:08] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\weaorTk1rg==.jpg
+[14:41:38] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:41:38] web_service.go:26 [INF] t:0xc042124b90
+[14:41:38] web_service.go:28 [INF] v:<*server.WebHandler Value>
+[14:41:38] web_service.go:32 [INF] vt:0x4eeb40
+[14:41:38] web_service.go:34 [INF] vi:0x4eeb40
+[14:41:38] service_server.go:58 [INF] listen tcp, port=:8080
+[14:41:38] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4bh8-gtfgQ==.jpg
+[14:43:28] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:43:28] web_service.go:30 [INF] vt:0x4ee9e0
+[14:43:28] web_service.go:32 [INF] vi:0x4ee9e0
+[14:43:28] web_service.go:33 [INF] name:Api
+[14:43:28] service_server.go:58 [INF] listen tcp, port=:8080
+[14:43:28] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AZ_enxXrSA==.jpg
+[14:53:35] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[14:53:35] service_server.go:58 [INF] listen tcp, port=:8080
+[14:53:35] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gdsZ5lj6sQ==.jpg
+[14:53:39] service_server.go:212 [INF] 127.0.0.1-GET /api/get_stroke-988.6µs
+[14:53:39] service_server.go:212 [INF] 127.0.0.1-GET /api/get_stroke-0s
+[14:53:40] service_server.go:212 [INF] 127.0.0.1-GET /api/get_stroke-500.3µs
+[14:53:40] service_server.go:212 [INF] 127.0.0.1-GET /favicon.ico-0s
+[14:53:44] service_server.go:212 [INF] 127.0.0.1-GET /api-0s
+[14:53:49] service_server.go:212 [INF] 127.0.0.1-GET /api/-1.0004ms
+[14:54:00] service_server.go:570 [INF] login timeout, reconnecting...
+[14:54:01] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AetsZIMSHw==.jpg
+[14:54:13] service_server.go:212 [INF] 127.0.0.1-GET /api-0s
+[14:54:21] service_server.go:212 [INF] 127.0.0.1-GET /api/-0s
+[14:54:26] service_server.go:570 [INF] login timeout, reconnecting...
+[14:54:26] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YZ0UC0nnAQ==.jpg
+[14:54:51] service_server.go:570 [INF] login timeout, reconnecting...
+[14:54:51] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\geoO92M9Ng==.jpg
+[14:55:16] service_server.go:570 [INF] login timeout, reconnecting...
+[14:55:16] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wd0-HxIrpw==.jpg
+[14:55:41] service_server.go:570 [INF] login timeout, reconnecting...
+[14:55:41] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oY6684HIJQ==.jpg
+[14:56:06] service_server.go:570 [INF] login timeout, reconnecting...
+[14:56:06] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gc49kqZYMA==.jpg
+[14:56:31] service_server.go:570 [INF] login timeout, reconnecting...
+[14:56:31] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QeTPSn8sLw==.jpg
+[14:56:57] service_server.go:570 [INF] login timeout, reconnecting...
+[14:56:57] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4fl69x3rbQ==.jpg
+[14:57:22] service_server.go:570 [INF] login timeout, reconnecting...
+[14:57:22] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gb8xfGvO9w==.jpg
+[14:57:47] service_server.go:570 [INF] login timeout, reconnecting...
+[14:57:47] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\odrfdr8Uug==.jpg
+[14:58:12] service_server.go:570 [INF] login timeout, reconnecting...
+[14:58:12] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Ybq3fqFe0g==.jpg
+[14:58:37] service_server.go:570 [INF] login timeout, reconnecting...
+[14:58:37] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Ia_3ppylsw==.jpg
+[14:59:02] service_server.go:570 [INF] login timeout, reconnecting...
+[14:59:02] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4d5B2HVX1g==.jpg
+[14:59:27] service_server.go:570 [INF] login timeout, reconnecting...
+[14:59:28] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gcRcaReuvQ==.jpg
+[14:59:53] service_server.go:570 [INF] login timeout, reconnecting...
+[14:59:53] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4YOcaROD1w==.jpg
+[15:00:18] service_server.go:570 [INF] login timeout, reconnecting...
+[15:00:18] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\garAmPEQdg==.jpg
+[15:00:43] service_server.go:570 [INF] login timeout, reconnecting...
+[15:00:43] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QZfDPAGbxg==.jpg
+[15:01:08] service_server.go:570 [INF] login timeout, reconnecting...
+[15:01:08] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wch3aAIa2Q==.jpg
+[15:01:38] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:01:38] service_server.go:58 [INF] listen tcp, port=:8080
+[15:01:38] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\obCtWl2gdw==.jpg
+[15:01:48] service_server.go:212 [INF] 127.0.0.1-GET /test/-0s
+[15:01:54] service_server.go:212 [INF] 127.0.0.1-GET /Test/-1.0005ms
+[15:01:57] web_handler.go:15 [INF] text
+[15:02:03] service_server.go:570 [INF] login timeout, reconnecting...
+[15:02:03] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4cz0qLSdsw==.jpg
+[15:22:01] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:22:01] service_server.go:244 [INF] handle:%vfunc(http.ResponseWriter, *http.Request)
+[15:22:01] service_server.go:60 [INF] listen tcp, port=:8080
+[15:22:02] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gd5pm3GJ5g==.jpg
+[15:22:32] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:22:32] service_server.go:244 [INF] handle:func(http.ResponseWriter, *http.Request)
+[15:22:32] service_server.go:60 [INF] listen tcp, port=:8080
+[15:22:33] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4buiZ1G5oQ==.jpg
+[15:27:30] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:27:30] service_server.go:60 [INF] listen tcp, port=:8080
+[15:27:30] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Yf9E6V8fNw==.jpg
+[15:27:34] service_server.go:220 [INF] 127.0.0.1-GET /Test-981.2µs
+[15:27:34] service_server.go:220 [INF] 127.0.0.1-GET /Test-0s
+[15:27:35] service_server.go:220 [INF] 127.0.0.1-GET /Test-0s
+[15:27:35] service_server.go:220 [INF] 127.0.0.1-GET /favicon.ico-0s
+[15:27:35] service_server.go:220 [INF] 127.0.0.1-GET /Test-0s
+[15:27:55] service_server.go:570 [INF] login timeout, reconnecting...
+[15:27:55] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oaWI_7tPaQ==.jpg
+[15:28:06] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:28:27] service_server.go:60 [INF] listen tcp, port=:8080
+[15:28:27] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wY0G62y1_A==.jpg
+[15:28:33] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:28:52] service_server.go:60 [INF] listen tcp, port=:8080
+[15:28:52] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IcgI_9oKeQ==.jpg
+[15:29:04] service_server.go:220 [INF] 127.0.0.1-GET /test-994.3µs
+[15:29:07] service_server.go:220 [INF] 127.0.0.1-GET /test-994.7µs
+[15:29:07] service_server.go:220 [INF] 127.0.0.1-GET /test-994.5µs
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-994.5µs
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-994.2µs
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-994.8µs
+[15:29:08] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:29:14] service_server.go:220 [INF] 127.0.0.1-GET /api/-995.6µs
+[15:29:17] service_server.go:570 [INF] login timeout, reconnecting...
+[15:29:18] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YcXwWwLJXA==.jpg
+[15:29:19] service_server.go:220 [INF] 127.0.0.1-GET /api-995.4µs
+[15:29:23] service_server.go:220 [INF] 127.0.0.1-GET /test-1.9897ms
+[15:29:42] service_server.go:570 [INF] login timeout, reconnecting...
+[15:29:43] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\obIYgbURyQ==.jpg
+[15:30:06] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:31:02] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:31:06] web_service.go:41 [INF] name:/test
+[15:31:13] service_server.go:60 [INF] listen tcp, port=:8080
+[15:31:14] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wavKxqFNig==.jpg
+[15:31:18] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:31:19] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:31:20] service_server.go:220 [INF] 127.0.0.1-GET /test-996.7µs
+[15:31:21] service_server.go:220 [INF] 127.0.0.1-GET /test-998µs
+[15:31:22] service_server.go:220 [INF] 127.0.0.1-GET /test-997.1µs
+[15:31:22] service_server.go:220 [INF] 127.0.0.1-GET /test-998µs
+[15:31:23] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:31:24] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:31:38] service_server.go:570 [INF] login timeout, reconnecting...
+[15:31:39] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QaNqLjHI_Q==.jpg
+[15:32:04] service_server.go:570 [INF] login timeout, reconnecting...
+[15:32:04] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AY_U3DSNnw==.jpg
+[15:32:14] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:32:22] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:32:22] web_service.go:41 [INF] name:/test
+[15:32:22] service_server.go:60 [INF] listen tcp, port=:8080
+[15:32:22] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4fL3x6Jvxw==.jpg
+[15:32:59] service_server.go:570 [INF] login timeout, reconnecting...
+[15:32:59] service_server.go:220 [INF] 127.0.0.1-GET /test-21.765301s
+[15:32:59] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IfPewiwDIw==.jpg
+[15:33:09] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:33:12] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:33:24] service_server.go:570 [INF] login timeout, reconnecting...
+[15:33:24] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YcIPnAsfIA==.jpg
+[15:33:49] service_server.go:570 [INF] login timeout, reconnecting...
+[15:33:49] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wY0scUaJEw==.jpg
+[15:34:14] service_server.go:570 [INF] login timeout, reconnecting...
+[15:34:14] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wbyU7nYxiQ==.jpg
+[15:34:25] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:34:25] web_service.go:41 [INF] name:/test
+[15:34:25] service_server.go:60 [INF] listen tcp, port=:8080
+[15:34:25] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IdAUtP3XQQ==.jpg
+[15:34:28] service_server.go:220 [INF] 127.0.0.1-GET /test-981.1µs
+[15:34:28] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:29] service_server.go:220 [INF] 127.0.0.1-GET /test-997.4µs
+[15:34:29] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:29] service_server.go:220 [INF] 127.0.0.1-GET /test-1.0013ms
+[15:34:30] service_server.go:220 [INF] 127.0.0.1-GET /test-997.5µs
+[15:34:30] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:31] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:32] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:33] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:33] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:33] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:33] service_server.go:220 [INF] 127.0.0.1-GET /test-1.9955ms
+[15:34:34] service_server.go:220 [INF] 127.0.0.1-GET /test-499.9µs
+[15:34:50] service_server.go:570 [INF] login timeout, reconnecting...
+[15:34:50] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IfBCCPLfhw==.jpg
+[15:34:54] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:55] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:55] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:55] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:55] service_server.go:220 [INF] 127.0.0.1-GET /test-498.4µs
+[15:34:55] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:34:56] service_server.go:220 [INF] 127.0.0.1-GET /test-998.5µs
+[15:35:15] service_server.go:570 [INF] login timeout, reconnecting...
+[15:35:16] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AcXF5XHlwg==.jpg
+[15:35:41] service_server.go:570 [INF] login timeout, reconnecting...
+[15:35:41] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wdMdd2R4wQ==.jpg
+[15:36:06] service_server.go:570 [INF] login timeout, reconnecting...
+[15:36:06] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gdrmbYQyTQ==.jpg
+[15:36:31] service_server.go:570 [INF] login timeout, reconnecting...
+[15:36:31] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4fW9HODUug==.jpg
+[15:36:56] service_server.go:570 [INF] login timeout, reconnecting...
+[15:36:56] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gcXctl8YaA==.jpg
+[15:37:19] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:37:19] web_service.go:41 [INF] name:/test
+[15:37:19] service_server.go:60 [INF] listen tcp, port=:8080
+[15:37:19] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oZoKgkAb5g==.jpg
+[15:37:57] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:37:57] web_service.go:41 [INF] name:/test
+[15:37:57] service_server.go:60 [INF] listen tcp, port=:8080
+[15:37:58] service_server.go:220 [INF] 127.0.0.1-GET /test-985.1µs
+[15:37:58] web_handler.go:15 [INF] text
+[15:37:58] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Ae0FMY5xCQ==.jpg
+[15:38:00] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:00] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-998.6µs
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-997.9µs
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:01] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:01] web_handler.go:15 [INF] text
+[15:38:02] service_server.go:220 [INF] 127.0.0.1-GET /test-997.3µs
+[15:38:02] web_handler.go:15 [INF] text
+[15:38:02] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:02] web_handler.go:15 [INF] text
+[15:38:02] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:02] web_handler.go:15 [INF] text
+[15:38:02] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:02] web_handler.go:15 [INF] text
+[15:38:03] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:03] web_handler.go:15 [INF] text
+[15:38:03] service_server.go:220 [INF] 127.0.0.1-GET /test-0s
+[15:38:03] web_handler.go:15 [INF] text
+[15:41:54] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:41:54] web_service.go:41 [INF] name:/test
+[15:41:54] service_server.go:60 [INF] listen tcp, port=:8080
+[15:41:54] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IZLg9vz8Dg==.jpg
+[15:41:59] service_server.go:221 [INF] 127.0.0.1-GET /test-0s
+[15:41:59] web_handler.go:15 [INF] text
+[15:42:01] service_server.go:221 [INF] 127.0.0.1-GET /test-0s
+[15:42:01] web_handler.go:15 [INF] text
+[15:42:19] service_server.go:570 [INF] login timeout, reconnecting...
+[15:42:20] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AZWlwY4BkA==.jpg
+[15:42:45] service_server.go:570 [INF] login timeout, reconnecting...
+[15:42:45] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4bJXY4aXoQ==.jpg
+[15:43:10] service_server.go:570 [INF] login timeout, reconnecting...
+[15:43:10] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wYjPysV3Tw==.jpg
+[15:43:35] service_server.go:570 [INF] login timeout, reconnecting...
+[15:43:35] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wZr_3zSlOA==.jpg
+[15:44:00] service_server.go:570 [INF] login timeout, reconnecting...
+[15:44:00] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oc1O07Xheg==.jpg
+[15:44:25] service_server.go:570 [INF] login timeout, reconnecting...
+[15:44:25] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\ga5MKYOKNQ==.jpg
+[15:46:26] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:46:26] web_service.go:41 [INF] name:/test
+[15:46:26] service_server.go:60 [INF] listen tcp, port=:8080
+[15:46:26] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YcD_d3F2aQ==.jpg
+[15:46:30] service_server.go:184 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[15:46:30] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=479)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=458)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[15:46:30] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=194)
+[15:46:30] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=147)
+[15:46:30] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=88)
+[15:46:30] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2022)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2202)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1579)
+[15:46:30] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2086)
+[15:46:30] service_server.go:224 [INF] 127.0.0.1-GET /test-998.5µs
+[15:46:31] service_server.go:184 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[15:46:31] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=479)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=458)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[15:46:31] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=194)
+[15:46:31] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=147)
+[15:46:31] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=88)
+[15:46:31] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2022)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2202)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1579)
+[15:46:31] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2086)
+[15:46:31] service_server.go:224 [INF] 127.0.0.1-GET /test-998.5µs
+[15:46:51] service_server.go:570 [INF] login timeout, reconnecting...
+[15:46:51] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YZzPgEPZUQ==.jpg
+[15:47:16] service_server.go:570 [INF] login timeout, reconnecting...
+[15:47:16] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gYjD_xa6kA==.jpg
+[15:47:41] service_server.go:570 [INF] login timeout, reconnecting...
+[15:47:41] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AbU0ohak4w==.jpg
+[15:48:06] service_server.go:570 [INF] login timeout, reconnecting...
+[15:48:06] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IYPovpCg7g==.jpg
+[15:48:25] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:48:25] web_service.go:41 [INF] name:/test
+[15:48:25] service_server.go:60 [INF] listen tcp, port=:8080
+[15:48:25] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Yd_5n1qlrg==.jpg
+[15:48:29] service_server.go:184 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[15:48:29] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=479)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=458)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[15:48:29] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=194)
+[15:48:29] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=147)
+[15:48:29] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=88)
+[15:48:29] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2022)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2202)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1579)
+[15:48:29] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2086)
+[15:48:29] service_server.go:224 [INF] 127.0.0.1-GET /test-998.8µs
+[15:48:40] service_server.go:224 [INF] 127.0.0.1-GET /api/-0s
+[15:48:50] service_server.go:570 [INF] login timeout, reconnecting...
+[15:48:50] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gb6Gz0htog==.jpg
+[15:49:15] service_server.go:570 [INF] login timeout, reconnecting...
+[15:49:15] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IbqpELyOnw==.jpg
+[15:49:40] service_server.go:570 [INF] login timeout, reconnecting...
+[15:49:41] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4ZuAlrzoLg==.jpg
+[15:50:06] service_server.go:570 [INF] login timeout, reconnecting...
+[15:50:06] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YZTnwRz9Vg==.jpg
+[15:50:31] service_server.go:570 [INF] login timeout, reconnecting...
+[15:50:31] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wcC-7DwM7A==.jpg
+[15:50:56] service_server.go:570 [INF] login timeout, reconnecting...
+[15:50:56] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4fgIKCTAlQ==.jpg
+[15:51:01] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:51:04] web_service.go:41 [INF] name:/test
+[15:51:06] service_server.go:60 [INF] listen tcp, port=:8080
+[15:51:06] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\ocKz9IrfSw==.jpg
+[15:51:31] service_server.go:570 [INF] login timeout, reconnecting...
+[15:51:31] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\AflXeOR9Qg==.jpg
+[15:51:56] service_server.go:570 [INF] login timeout, reconnecting...
+[15:51:56] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\geu_ENPkNw==.jpg
+[15:52:21] service_server.go:570 [INF] login timeout, reconnecting...
+[15:52:21] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oaPCilhNfA==.jpg
+[15:52:46] service_server.go:570 [INF] login timeout, reconnecting...
+[15:52:46] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QYGJCaEaoA==.jpg
+[15:53:11] service_server.go:570 [INF] login timeout, reconnecting...
+[15:53:11] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Aaw-U4xZNg==.jpg
+[15:53:37] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:53:37] web_service.go:41 [INF] name:/test
+[15:53:37] service_server.go:60 [INF] listen tcp, port=:8080
+[15:53:37] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YfHKpIu7aA==.jpg
+[15:53:44] service_server.go:224 [INF] 127.0.0.1-GET /api/-1.0003ms
+[15:53:49] service_server.go:184 [INF] Handler crashed with error :reflect: Call with too few input arguments
+[15:53:49] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=479)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=458)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=358)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[15:53:49] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=194)
+[15:53:49] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=147)
+[15:53:49] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=88)
+[15:53:49] service_server.go:190 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=85)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2022)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2202)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1579)
+[15:53:49] service_server.go:190 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2086)
+[15:53:49] service_server.go:224 [INF] 127.0.0.1-GET /test-1.9989ms
+[15:54:02] service_server.go:570 [INF] login timeout, reconnecting...
+[15:54:02] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oddf46fieQ==.jpg
+[15:54:12] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:54:12] web_service.go:41 [INF] name:/test
+[15:54:12] service_server.go:60 [INF] listen tcp, port=:8080
+[15:54:12] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YeUQQka0IQ==.jpg
+[15:55:47] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:55:47] service_server.go:60 [INF] listen tcp, port=:8080
+[15:55:47] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4ecIxe7KMw==.jpg
+[15:55:53] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:55:55] service_server.go:224 [INF] 127.0.0.1-GET /test-1.0001ms
+[15:55:56] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:55:57] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:55:58] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:55:58] service_server.go:224 [INF] 127.0.0.1-GET /test-997.9µs
+[15:56:12] service_server.go:570 [INF] login timeout, reconnecting...
+[15:56:12] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IY_jw3EZBA==.jpg
+[15:56:27] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:56:52] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:56:52] service_server.go:60 [INF] listen tcp, port=:8080
+[15:56:53] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gdMFNg9-Qg==.jpg
+[15:57:23] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:58:45] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[15:58:45] web_service.go:41 [INF] name:/test
+[15:58:45] service_server.go:60 [INF] listen tcp, port=:8080
+[15:58:45] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\odiy9FzR2w==.jpg
+[15:58:49] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:58:49] web_handler.go:15 [INF] text
+[15:58:49] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:58:49] web_handler.go:15 [INF] text
+[15:58:50] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:58:50] web_handler.go:15 [INF] text
+[15:58:51] service_server.go:224 [INF] 127.0.0.1-GET /test-0s
+[15:58:51] web_handler.go:15 [INF] text
+[15:58:57] service_server.go:224 [INF] 127.0.0.1-GET /api/-0s
+[16:33:21] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[16:33:21] service_server.go:60 [INF] listen tcp, port=:8080
+[16:33:21] service_server.go:224 [INF] 127.0.0.1-GET /api-996.5µs-Params: map[abc:1]
+
+[16:33:21] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oa2st57TTQ==.jpg
+[16:33:22] service_server.go:224 [INF] 127.0.0.1-GET /api-0s-Params: map[abc:1]
+
+[16:33:32] service_server.go:224 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:33:46] service_server.go:570 [INF] login timeout, reconnecting...
+[16:33:46] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wdtEhiVkTw==.jpg
+[16:34:11] service_server.go:570 [INF] login timeout, reconnecting...
+[16:34:12] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QbKBTvu99g==.jpg
+[16:34:37] service_server.go:570 [INF] login timeout, reconnecting...
+[16:34:37] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IaVdLxgrRA==.jpg
+[16:35:02] service_server.go:570 [INF] login timeout, reconnecting...
+[16:35:02] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IdQKFbIrww==.jpg
+[16:35:27] service_server.go:570 [INF] login timeout, reconnecting...
+[16:35:27] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\ocAmzrpvbw==.jpg
+[16:35:52] service_server.go:570 [INF] login timeout, reconnecting...
+[16:35:52] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Qdci1BJ4Ng==.jpg
+[16:36:17] service_server.go:570 [INF] login timeout, reconnecting...
+[16:36:17] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IbyDGYZ8dw==.jpg
+[16:36:42] service_server.go:570 [INF] login timeout, reconnecting...
+[16:36:42] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gblMdY5KiA==.jpg
+[16:37:07] service_server.go:570 [INF] login timeout, reconnecting...
+[16:37:07] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wZRJA9Zegw==.jpg
+[16:37:32] service_server.go:570 [INF] login timeout, reconnecting...
+[16:37:32] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IYkyiDp3-Q==.jpg
+[16:37:57] service_server.go:570 [INF] login timeout, reconnecting...
+[16:37:57] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YaGH4fRtrA==.jpg
+[16:38:22] service_server.go:570 [INF] login timeout, reconnecting...
+[16:38:23] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gbG8lm-P6Q==.jpg
+[16:38:48] service_server.go:570 [INF] login timeout, reconnecting...
+[16:38:48] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YZhTwiGdXg==.jpg
+[16:39:13] service_server.go:570 [INF] login timeout, reconnecting...
+[16:39:13] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gbo_zfacPQ==.jpg
+[16:39:38] service_server.go:570 [INF] login timeout, reconnecting...
+[16:39:38] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IaiHmRmxTQ==.jpg
+[16:40:03] service_server.go:570 [INF] login timeout, reconnecting...
+[16:40:03] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4bAh2YETUQ==.jpg
+[16:40:28] service_server.go:570 [INF] login timeout, reconnecting...
+[16:40:28] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QbuOq729Bw==.jpg
+[16:40:53] service_server.go:570 [INF] login timeout, reconnecting...
+[16:40:53] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QaW0zW2aCQ==.jpg
+[16:41:18] service_server.go:570 [INF] login timeout, reconnecting...
+[16:41:18] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wc-El1Zylw==.jpg
+[16:41:43] service_server.go:570 [INF] login timeout, reconnecting...
+[16:41:43] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4ewGsIvlPg==.jpg
+[16:42:08] service_server.go:570 [INF] login timeout, reconnecting...
+[16:42:08] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YYffC-b4MQ==.jpg
+[16:42:33] service_server.go:570 [INF] login timeout, reconnecting...
+[16:42:34] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\QbrD0nGSmA==.jpg
+[16:42:59] service_server.go:570 [INF] login timeout, reconnecting...
+[16:42:59] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\gcF1cY01lQ==.jpg
+[16:43:24] service_server.go:570 [INF] login timeout, reconnecting...
+[16:43:24] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IZyXHZoiig==.jpg
+[16:43:49] service_server.go:570 [INF] login timeout, reconnecting...
+[16:43:49] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wYvsohsc3Q==.jpg
+[16:44:14] service_server.go:570 [INF] login timeout, reconnecting...
+[16:44:14] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\Qew6h-t6MQ==.jpg
+[16:44:39] service_server.go:570 [INF] login timeout, reconnecting...
+[16:44:39] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IZqeVa6zOg==.jpg
+[16:45:04] service_server.go:570 [INF] login timeout, reconnecting...
+[16:45:04] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YfRnlidmBA==.jpg
+[16:45:29] service_server.go:570 [INF] login timeout, reconnecting...
+[16:45:29] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\weZJCOsFKQ==.jpg
+[16:45:54] service_server.go:570 [INF] login timeout, reconnecting...
+[16:45:54] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wfmSMDvi6g==.jpg
+[16:46:19] service_server.go:570 [INF] login timeout, reconnecting...
+[16:46:20] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IbVZ5Gz9lw==.jpg
+[16:46:39] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[16:46:39] service_server.go:60 [INF] listen tcp, port=:8080
+[16:46:39] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\YeZqgTrBJQ==.jpg
+[16:46:39] web_handler.go:13 [INF] ctx : &{0xc0422789c0 0xc0422ee2d0 map[abc:1] 0xc0421300e0}
+[16:46:39] service_server.go:224 [INF] 127.0.0.1-GET /api/stroke-994.7µs-Params: map[abc:1]
+
+[16:46:43] web_handler.go:13 [INF] ctx : &{0xc04233a000 0xc0422ee3c0 map[abc:1] 0xc0421300e0}
+[16:46:43] service_server.go:224 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:54:32] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[16:54:32] service_server.go:59 [INF] listen tcp, port=:8080
+[16:54:33] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wbe-Z0wojQ==.jpg
+[16:54:37] service_server.go:217 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:54:39] service_server.go:217 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:54:39] service_server.go:217 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:54:41] service_server.go:217 [INF] 127.0.0.1-GET /api/stroke-0s-Params: map[abc:1]
+
+[16:54:58] service_server.go:570 [INF] login timeout, reconnecting...
+[16:54:58] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oeyUvjUNMg==.jpg
+[16:55:23] service_server.go:570 [INF] login timeout, reconnecting...
+[16:55:23] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\oeCTmG8Vtg==.jpg
+[16:55:48] service_server.go:570 [INF] login timeout, reconnecting...
+[16:55:48] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\If34gjtP4w==.jpg
+[16:56:13] service_server.go:570 [INF] login timeout, reconnecting...
+[16:56:13] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IeNDzfvMFA==.jpg
+[16:56:38] service_server.go:570 [INF] login timeout, reconnecting...
+[16:56:38] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\IeRZkCWR5A==.jpg
+[16:57:03] service_server.go:570 [INF] login timeout, reconnecting...
+[16:57:03] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\wYP3833gdQ==.jpg
+[16:58:00] db_instance.go:67 [INF] DBInstance Init root:root@(192.168.1.143:3306)/wx_db,200,100
+[16:58:00] service_server.go:59 [INF] listen tcp, port=:8080
+[16:58:00] service_server.go:602 [INF] Please open img C:\work\goproj\src\game\main\wxbot\qrcode\4aVq4nd98Q==.jpg
+[16:58:00] web_handler.go:21 [INF] ctx : &{0xc04219e410 0xc0422f4000 map[abc:1] 0xc04212c150}
+[16:58:00] service_server.go:217 [INF] 127.0.0.1-GET /api-0s-Params: map[abc:1]
+
+[16:58:02] web_handler.go:21 [INF] ctx : &{0xc0421665b0 0xc0420da5a0 map[abc:1] 0xc04212c150}
+[16:58:02] service_server.go:217 [INF] 127.0.0.1-GET /api-998.2µs-Params: map[abc:1]
+
+[16:58:05] web_handler.go:21 [INF] ctx : &{0xc042166680 0xc0421601e0 map[abc:1] 0xc04212c150}
+[16:58:05] service_server.go:217 [INF] 127.0.0.1-GET /api-998.9µs-Params: map[abc:1]
+

@@ -20,14 +20,14 @@ use `wx_db`;
 -- ----------------------------
 -- Table structure for `stroke`
 -- ----------------------------
-DROP TABLE IF EXISTS `stroke`;
 CREATE TABLE `stroke` (
-  `UID` int(11) NOT NULL DEFAULT '0',
+  `UID` int(11) NOT NULL AUTO_INCREMENT,
   `Send` varchar(200) NOT NULL DEFAULT '',
   `Tel` varchar(200) NOT NULL DEFAULT '',
-  `Content` varchar(200) NOT NULL DEFAULT '',
+  `Content` text CHARACTER SET utf8mb4 NOT NULL,
+  `Timestamp` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`UID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stroke
