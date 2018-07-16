@@ -1,0 +1,14 @@
+[15:05:51] service_server.go:184 [ERR] New Message, Unknow type: &{Retcode:0 Selector:6}
+[15:31:51] service_server.go:184 [ERR] New Message, Unknow type: &{Retcode:0 Selector:6}
+[10:55:13] server.go:37 [ERR] dial tcp 192.168.1.121:3306: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[11:01:39] server.go:37 [ERR] dial tcp 192.168.1.143:3306: connectex: No connection could be made because the target machine actively refused it.
+[11:06:36] server.go:37 [ERR] dial tcp 192.168.1.143:3306: connectex: No connection could be made because the target machine actively refused it.
+[11:08:39] server.go:37 [ERR] dial tcp 192.168.1.143:3306: connectex: No connection could be made because the target machine actively refused it.
+[11:10:09] server.go:37 [ERR] dial tcp 192.168.1.143:3306: connectex: No connection could be made because the target machine actively refused it.
+[14:39:43] stroke.go:27 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'
+[14:39:43] wx_service.go:68 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'
+[14:39:44] service_server.go:205 [ERR] New Message, Unknow type: &{Retcode:0 Selector:3}
+[14:39:54] stroke.go:27 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'
+[14:39:54] wx_service.go:68 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'
+[14:40:05] stroke.go:27 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'
+[14:40:05] wx_service.go:68 [ERR] Error 1062: Duplicate entry '0' for key 'PRIMARY'

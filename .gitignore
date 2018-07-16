@@ -1,4 +1,4 @@
-bin
-pkg
-logs/
-debug
+bin/*
+pkg/*
+logs/*
+debug*
