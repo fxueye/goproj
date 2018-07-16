@@ -37,7 +37,6 @@ type route struct {
 	method      string
 	handler     reflect.Value
 	httpHandler http.Handler
-	handleFunc  func(http.ResponseWriter, *http.Request)
 }
 
 func NewWebService(port int, acceptTimeout time.Duration, staticDir string) *WebService {
@@ -88,8 +87,6 @@ func (s *WebService) Process(c http.ResponseWriter, req *http.Request) {
 	route := s.routeHandler(req, c)
 	if route != nil && route.httpHandler != nil {
 		route.httpHandler.ServeHTTP(c, req)
-	} else if route != nil && route.handleFunc != nil {
-		route.handleFunc(c, req)
 	}
 }
 func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unused *route) {
@@ -125,10 +122,6 @@ func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unu
 		match := cr.FindStringSubmatch(requestPath)
 		if len(match[0]) != len(requestPath) {
 			continue
-		}
-		if route.handleFunc != nil {
-			unused = &route
-			return
 		}
 		if route.httpHandler != nil {
 			unused = &route
@@ -233,8 +226,6 @@ func (s *WebService) addRoute(r string, method string, handler interface{}) {
 	switch handler.(type) {
 	case http.Handler:
 		s.routes = append(s.routes, route{r: r, cr: cr, method: method, httpHandler: handler.(http.Handler)})
-	case func(http.ResponseWriter, *http.Request):
-		s.routes = append(s.routes, route{r: r, cr: cr, method: method, handleFunc: handler.(func(http.ResponseWriter, *http.Request))})
 	case reflect.Value:
 		fv := handler.(reflect.Value)
 		s.routes = append(s.routes, route{r: r, cr: cr, method: method, handler: fv})
