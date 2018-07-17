@@ -6,11 +6,7 @@ import (
 	"crypto/des"
 )
 
-var (
-	ivKeys = []byte{0x12, 0x34, 0x56, 0x78, 0x90, 0xAB, 0xCD, 0xEF}
-)
-
-func DesEncrypt(origData, key []byte) ([]byte, error) {
+func DesEncrypt(origData, key, ivKeys []byte) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {
 		return nil, err
@@ -24,7 +20,7 @@ func DesEncrypt(origData, key []byte) ([]byte, error) {
 	blockMode.CryptBlocks(crypted, origData)
 	return crypted, nil
 }
-func DesDecrypt(crypted, key []byte) ([]byte, error) {
+func DesDecrypt(crypted, key, ivKeys []byte) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {
 		return nil, err
