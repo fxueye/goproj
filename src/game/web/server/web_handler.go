@@ -78,7 +78,7 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		}
 		log.Infof("json: %v", string(byte))
 
-		getUrl := "version_id=1.0.0&partner_id=1&timestamp=123456&sign=qwe+qwe"
+		// getUrl := "version_id=1.0.0&partner_id=1&timestamp=123456&sign=qwe+qwe"
 		// u, err := url.Parse(getUrl)
 		// if err != nil {
 		// 	fmt.Print(err)
