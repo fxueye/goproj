@@ -40,6 +40,7 @@ func MakeGetParams(params map[string]interface{}) (string, error) {
 func HttpGet(baseUrl string, params map[string]interface{}) (string, error) {
 	paramsStr, err := MakeGetParams(params)
 	url := fmt.Sprintf("%s?%s", baseUrl, paramsStr)
+
 	body, err := http.Get(url)
 	defer body.Body.Close()
 	respBody, err := ioutil.ReadAll(body.Body)

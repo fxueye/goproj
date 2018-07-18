@@ -2,6 +2,7 @@ package server
 
 import (
 	"encoding/base64"
+	"fmt"
 	"game/common/server/web"
 	"game/common/utils"
 	"net/http"
@@ -12,10 +13,10 @@ import (
 type WebHandler struct{}
 
 var (
-	appid      = "wx2f7a41ab7dac20d0"
-	secret     = "fe7676c20068470a5b0074490876c13f"
-	sessionKey = ""
-	apiUrl     = "https://api.weixin.qq.com/sns/jscode2session"
+	appid             = "wxbfdac7331dafd481"
+	secret            = "c96533730072f3a9be92900b5f453f95"
+	apiUrl            = "https://api.weixin.qq.com/sns/jscode2session"
+	openid2SessionKey = make(map[string]string)
 )
 
 // func (*WebHandler) Api(val string) string {
@@ -26,16 +27,17 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 	log.Infof("ctx : %v", ctx)
 	if val == "aes" {
 		iv := ctx.Params["iv"]
+		openid := ctx.Params["openid"]
 		encryptedData := ctx.Params["encryptedData"]
-
-		aesKey := base64.StdEncoding.EncodeToString([]byte(sessionKey))
+		aesKey := base64.StdEncoding.EncodeToString([]byte(openid2SessionKey[openid]))
 		aseIv := base64.StdEncoding.EncodeToString([]byte(iv))
 		ret, err := utils.DesDecrypt([]byte(encryptedData), []byte(aesKey), []byte(aseIv))
 		if err != nil {
+			log.Errorf("%v", err)
 			return ""
 		}
 		return string(ret)
-	} else if val == "login" {
+	} else if val == "openid" {
 		log.Infof("params : %v", ctx.Params)
 		code := ctx.Params["code"]
 		log.Infof("params : %v", code)
@@ -45,29 +47,31 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		params["js_code"] = code
 		params["grant_type"] = "authorization_code"
 		ret, err := utils.HttpGet(apiUrl, params)
+		retMap := make(map[string]interface{})
 		if err != nil {
 			log.Errorf("%+v", err)
 			return ""
 		}
-		log.Infof("ret:%v", ret)
-		// getUrl := "version_id=1.0.0&partner_id=1&timestamp=123456&sign=qwe+qwe"
-		// u, err := url.Parse(getUrl)
-		// if err != nil {
-		// 	fmt.Print(err)
-		// 	return ""
-		// }
-		// ms, _ := url.ParseQuery(u.RawQuery)
-		// for k, v := range ms {
-		// 	log.Infof("k:%v  v:%v", k, v)
-		// }
-		// log.Infof("%v", makeGetString(getUrl))
-		// num := 1000000
-		// for i := 0; i < 99999; i++ {
-		// 	num = num + 1
-		// 	fmt.Printf("before:%d\n", num)
-		// 	fmt.Printf("after:%e\n", float64(num))
-		// }
+		err = utils.JsonDecode(ret, &retMap)
+		if err != nil {
+			log.Errorf("%+v", err)
+			return ""
+		}
+		if _, ok := retMap["errcode"]; ok {
+			return ""
+		}
+		if _, ok := retMap["session_key"]; !ok {
+			return ""
+		}
+		if _, ok := retMap["openid"]; !ok {
+			return ""
+		}
+		sessionKey := retMap["session_key"].(string)
+		openid := retMap["openid"].(string)
+		openid2SessionKey[openid] = sessionKey
 
+		log.Infof("ret:%v", ret)
+		return fmt.Sprintf(`{"openid":"%s"}`, openid)
 	}
 	return ""
 }
