@@ -16,3 +16,65 @@
 [2018-07-18 12:27:56] C:/work/goproj/src/game/web/server/web_handler.go:87 [INF] json: {"body":{"openid":"1109261"},"return_code":1}
 [2018-07-18 12:27:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-29.7379497s-Params: map[code:081DUGEk1F4s9m0GSgBk1lPREk1DUGEy]
 
+[2018-07-18 14:47:13] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:47:18] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc0421360d0 0xc042132000 map[code:071HQ85Y0Si3L22TMK4Y097a5Y0HQ850] 0xc0420c1730}
+[2018-07-18 14:47:18] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:071HQ85Y0Si3L22TMK4Y097a5Y0HQ850]
+[2018-07-18 14:47:18] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 071HQ85Y0Si3L22TMK4Y097a5Y0HQ850
+[2018-07-18 14:47:18] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-328.1478ms-Params: map[code:071HQ85Y0Si3L22TMK4Y097a5Y0HQ850]
+
+[2018-07-18 14:48:01] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:48:04] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc0421245b0 0xc0420fe2d0 map[code:011tstf406G0ZC11k3d407cwf40tstfH] 0xc0420bf730}
+[2018-07-18 14:48:04] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:011tstf406G0ZC11k3d407cwf40tstfH]
+[2018-07-18 14:48:04] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 011tstf406G0ZC11k3d407cwf40tstfH
+[2018-07-18 14:48:05] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-448.3389ms-Params: map[code:011tstf406G0ZC11k3d407cwf40tstfH]
+
+[2018-07-18 14:48:22] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:49:44] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:49:54] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc042126410 0xc0420fe2d0 map[code:0811B4x82WYTrS0Wrlu82uMcx821B4xD] 0xc0420bf730}
+[2018-07-18 14:49:54] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:0811B4x82WYTrS0Wrlu82uMcx821B4xD]
+[2018-07-18 14:49:54] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 0811B4x82WYTrS0Wrlu82uMcx821B4xD
+[2018-07-18 14:49:54] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-426.6179ms-Params: map[code:0811B4x82WYTrS0Wrlu82uMcx821B4xD]
+
+[2018-07-18 14:50:22] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:50:27] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc0421380d0 0xc0421042d0 map[code:001ImkkO1xxHq31iLgkO1mGKkO1Imkk9] 0xc0420bf730}
+[2018-07-18 14:50:27] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:001ImkkO1xxHq31iLgkO1mGKkO1Imkk9]
+[2018-07-18 14:50:27] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 001ImkkO1xxHq31iLgkO1mGKkO1Imkk9
+[2018-07-18 14:50:28] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-434.3436ms-Params: map[code:001ImkkO1xxHq31iLgkO1mGKkO1Imkk9]
+
+[2018-07-18 14:51:17] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:52:00] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc04212c0d0 0xc042128000 map[code:071KyH7c2l41JO0fmhac22mH7c2KyH7h] 0xc0420c1730}
+[2018-07-18 14:52:00] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:071KyH7c2l41JO0fmhac22mH7c2KyH7h]
+[2018-07-18 14:52:00] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 071KyH7c2l41JO0fmhac22mH7c2KyH7h
+[2018-07-18 14:52:00] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-429.1457ms-Params: map[code:071KyH7c2l41JO0fmhac22mH7c2KyH7h]
+
+[2018-07-18 14:53:55] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:56:00] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc04210c4e0 0xc0420e22d0 map[code:0219Xdq511lWcL1POHs51yUWp519XdqK] 0xc042017810}
+[2018-07-18 14:56:00] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:0219Xdq511lWcL1POHs51yUWp519XdqK]
+[2018-07-18 14:56:00] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 0219Xdq511lWcL1POHs51yUWp519XdqK
+[2018-07-18 14:56:01] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-545.3181ms-Params: map[code:0219Xdq511lWcL1POHs51yUWp519XdqK]
+
+[2018-07-18 14:57:31] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:57:44] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc042041e10 0xc0420e22d0 map[code:071S1PrD1Q6en20yu9qD1mwzrD1S1PrT] 0xc042017810}
+[2018-07-18 14:57:44] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:071S1PrD1Q6en20yu9qD1mwzrD1S1PrT]
+[2018-07-18 14:57:44] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 071S1PrD1Q6en20yu9qD1mwzrD1S1PrT
+[2018-07-18 14:57:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-641.8055ms-Params: map[code:071S1PrD1Q6en20yu9qD1mwzrD1S1PrT]
+
+[2018-07-18 14:58:30] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 14:58:34] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc04210a270 0xc0420d42d0 map[code:021roOUa2Q68NP07R6Va2wprUa2roOU2] 0xc042017810}
+[2018-07-18 14:58:34] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:021roOUa2Q68NP07R6Va2wprUa2roOU2]
+[2018-07-18 14:58:34] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 021roOUa2Q68NP07R6Va2wprUa2roOU2
+[2018-07-18 14:58:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-526.7875ms-Params: map[code:021roOUa2Q68NP07R6Va2wprUa2roOU2]
+
+[2018-07-18 15:37:21] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 15:37:27] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc042126410 0xc0420fe2d0 map[code:0719uMYd2ksCuD0TN0Yd2LZRYd29uMYa] 0xc0420bf730}
+[2018-07-18 15:37:27] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:0719uMYd2ksCuD0TN0Yd2LZRYd29uMYa]
+[2018-07-18 15:37:27] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 0719uMYd2ksCuD0TN0Yd2LZRYd29uMYa
+[2018-07-18 15:37:27] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-997µs-Params: map[code:0719uMYd2ksCuD0TN0Yd2LZRYd29uMYa]
+
+[2018-07-18 15:40:56] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 15:41:01] C:/work/goproj/src/game/web/server/web_handler.go:26 [INF] ctx : &{0xc04211c410 0xc0420fe2d0 map[code:021c3gq30vaZfC1rcCp30hU6q30c3gqO] 0xc0420bf730}
+[2018-07-18 15:41:01] C:/work/goproj/src/game/web/server/web_handler.go:39 [INF] params : map[code:021c3gq30vaZfC1rcCp30hU6q30c3gqO]
+[2018-07-18 15:41:01] C:/work/goproj/src/game/web/server/web_handler.go:41 [INF] params : 021c3gq30vaZfC1rcCp30hU6q30c3gqO
+[2018-07-18 15:41:02] C:/work/goproj/src/game/web/server/web_handler.go:52 [INF] ret:{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: V9NYEa0681hb32 ]"}
+[2018-07-18 15:41:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-186.5418ms-Params: map[code:021c3gq30vaZfC1rcCp30hU6q30c3gqO]
+

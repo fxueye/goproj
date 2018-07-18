@@ -2,13 +2,9 @@ package server
 
 import (
 	"encoding/base64"
-	"encoding/json"
-	"fmt"
 	"game/common/server/web"
 	"game/common/utils"
 	"net/http"
-	"strconv"
-	"strings"
 
 	log "github.com/cihub/seelog"
 )
@@ -16,7 +12,8 @@ import (
 type WebHandler struct{}
 
 var (
-	appid      = "wxcb74c9581beb6739"
+	appid      = "wx2f7a41ab7dac20d0"
+	secret     = "fe7676c20068470a5b0074490876c13f"
 	sessionKey = ""
 	apiUrl     = "https://api.weixin.qq.com/sns/jscode2session"
 )
@@ -40,52 +37,19 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		return string(ret)
 	} else if val == "login" {
 		log.Infof("params : %v", ctx.Params)
-		sessionKey = ctx.Params["code"]
-		log.Infof("params : %v", sessionKey)
+		code := ctx.Params["code"]
+		log.Infof("params : %v", code)
 		params := make(map[string]interface{})
-		// params["appid"] =
-		// utils.HttpGet(apiUrl)
-		jsMap := make(map[string]interface{})
-		retMap := make(map[string]interface{})
-
-		str := `{"errno":0,"msg":"成功","data":{"user_id":1109261,"user_name":"F143001040223","uuid":"ffffffff-cfe9-f796-ffff-ffffef05ac4a","mobile":"","nickname":"","avatar":"","gid":211}}`
-
-		err := json.Unmarshal([]byte(str), &retMap)
+		params["appid"] = appid
+		params["secret"] = secret
+		params["js_code"] = code
+		params["grant_type"] = "authorization_code"
+		ret, err := utils.HttpGet(apiUrl, params)
 		if err != nil {
-			log.Error(err)
+			log.Errorf("%+v", err)
 			return ""
 		}
-		dec := json.NewDecoder(strings.NewReader(str))
-		dec.UseNumber()
-		err = dec.Decode(&jsMap)
-		log.Infof("jsMap : %v", jsMap)
-		if err != nil {
-			log.Error(err)
-			return ""
-		}
-		errno, err := strconv.Atoi(jsMap["errno"].(json.Number).String())
-		if err != nil {
-			return ""
-		}
-		if errno > 0 {
-			return ""
-		}
-		data := jsMap["data"].(map[string]interface{})
-		params["openid"] = fmt.Sprintf("%v", data["user_id"])
-		log.Infof("%v", params)
-
-		ret := make(map[string]interface{})
-
-		ret["return_code"] = 1
-		ret["body"] = params
-
-		byte, err := json.Marshal(ret)
-		if err != nil {
-			log.Error(err)
-			return ""
-		}
-		log.Infof("json: %v", string(byte))
-
+		log.Infof("ret:%v", ret)
 		// getUrl := "version_id=1.0.0&partner_id=1&timestamp=123456&sign=qwe+qwe"
 		// u, err := url.Parse(getUrl)
 		// if err != nil {
@@ -97,6 +61,13 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		// 	log.Infof("k:%v  v:%v", k, v)
 		// }
 		// log.Infof("%v", makeGetString(getUrl))
+		// num := 1000000
+		// for i := 0; i < 99999; i++ {
+		// 	num = num + 1
+		// 	fmt.Printf("before:%d\n", num)
+		// 	fmt.Printf("after:%e\n", float64(num))
+		// }
+
 	}
 	return ""
 }

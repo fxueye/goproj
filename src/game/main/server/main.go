@@ -1,57 +1,50 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"game/common/utils"
-	"net"
+	"io"
 	"os"
-
-	"game/common/protocol"
+	"strconv"
+	"strings"
 )
 
 func main() {
-	// service := ":1200"
-	// listener, err := net.Listen("tcp", service)
-	// checkErr(err)
-	// for {
-	// 	conn, err := listener.Accept()
-	// 	if err != nil {
-	// 		continue
-	// 	}
-	// 	go handleConn(conn)
-	// }
-
-	contentAll := "群:[椰晖同业交流群]:[和信芽庄岘港香香17303713401]:江湖救急~超低特价明天出发16号惠享芽庄拿起护照，说走就走直客999，不含签，同行高返！没有必消！没有现收!和信国旅香香：17303713401"
-	fmt.Printf("%v", utils.RemoveDuplicatesAndEmpty(utils.GetTelNum(contentAll)))
-
-}
-func checkErr(err error) {
+	file, err := os.Open("./update_mysql.txt")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Fatal error:%s", err.Error())
-		os.Exit(1)
+		return
 	}
-}
-func handleConn(conn net.Conn) {
-	tmpBuffer := make([]byte, 0)
-	readerChannel := make(chan []byte, 16)
-	defer conn.Close()
-	go reader(readerChannel)
-	buffer := make([]byte, 2048)
+	defer file.Close()
+	wfile, err := os.Create("./update_mysql_.txt")
+	if err != nil {
+		return
+	}
+	defer wfile.Close()
+
+	reader := bufio.NewReader(file)
 	for {
-		n, err := conn.Read(buffer)
-		if err != nil {
-			fmt.Println(conn.RemoteAddr().String(), "connection error:", err)
+		line, _, err := reader.ReadLine()
+		if err != nil && err != io.EOF {
 			return
 		}
-		tmpBuffer = protocol.Depack(append(tmpBuffer, buffer[:n]...), readerChannel)
-	}
+		strs := strings.Split(string(line), "	")
+		if len(strs) == 2 {
+			enum, _ := strconv.ParseFloat(strs[1], 64)
+			estr := fmt.Sprintf("%e", enum)
+			b := strs[0] == estr
+			wstr := fmt.Sprintf("%s	%s	%s	%v\n", strs[0], strs[1], estr, b)
+			if !b {
+				fmt.Sprintf("not == :%v", wstr)
+			}
+			wfile.WriteString(wstr)
+		} else {
+			fmt.Sprintf("error line:%v", string(line))
+		}
 
-}
-func reader(readerChannel chan []byte) {
-	for {
-		select {
-		case data := <-readerChannel:
-			fmt.Println(string(data))
+		// fmt.Println(string(line))
+		if err == io.EOF {
+			break
 		}
 	}
+
 }

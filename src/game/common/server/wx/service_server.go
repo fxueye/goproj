@@ -623,6 +623,7 @@ func (s *WxService) getImg(uri string) (string, error) {
 	if len > 0 {
 		name = strs[len-1]
 	}
+	name = "qrcode"
 	path := fmt.Sprintf("%s/%s.jpg", s.qrcodeDir, name)
 	out, err := os.Create(path)
 	defer out.Close()

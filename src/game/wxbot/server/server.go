@@ -38,10 +38,10 @@ func Init() {
 	// 	return
 	// }
 	wxInstance = newWxService(config.LoginUrl, config.QrcodeDir)
-	webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
+	// webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
 
 	Instance.RegServ(WXSERVICE, wxInstance)
-	Instance.RegServ(WEBSERVICE, webInstance)
+	// Instance.RegServ(WEBSERVICE, webInstance)
 
 	Instance.RegSigCallback(GWOnSignal)
 }
