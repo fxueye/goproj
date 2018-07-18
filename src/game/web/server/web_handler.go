@@ -46,10 +46,18 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		// params["appid"] =
 		// utils.HttpGet(apiUrl)
 		jsMap := make(map[string]interface{})
+		retMap := make(map[string]interface{})
+
 		str := `{"errno":0,"msg":"成功","data":{"user_id":1109261,"user_name":"F143001040223","uuid":"ffffffff-cfe9-f796-ffff-ffffef05ac4a","mobile":"","nickname":"","avatar":"","gid":211}}`
+
+		err := json.Unmarshal([]byte(str), &retMap)
+		if err != nil {
+			log.Error(err)
+			return ""
+		}
 		dec := json.NewDecoder(strings.NewReader(str))
 		dec.UseNumber()
-		err := dec.Decode(&jsMap)
+		err = dec.Decode(&jsMap)
 		log.Infof("jsMap : %v", jsMap)
 		if err != nil {
 			log.Error(err)

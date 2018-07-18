@@ -8,6 +8,7 @@ type WxConfig struct {
 	DBConfig         DBConfig
 	EmailConfig      EmailConfig
 	WebConfig        WebConfig
+	GroupMsg         bool
 }
 type DBConfig struct {
 	DBHost     string

@@ -1,0 +1,18 @@
+[2018-07-18 12:01:19] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:29 [INF] ctx : &{0xc042110a90 0xc0420fe2d0 map[code:071j0P0516zOkL1Dxd051ZyJ051j0P0-] 0xc0420bf730}
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:42 [INF] params : map[code:071j0P0516zOkL1Dxd051ZyJ051j0P0-]
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:44 [INF] params : 071j0P0516zOkL1Dxd051ZyJ051j0P0-
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] jsMap : map[errno:0 msg:成功 data:map[nickname: avatar: gid:211 user_id:1109261 user_name:F143001040223 uuid:ffffffff-cfe9-f796-ffff-ffffef05ac4a mobile:]]
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:67 [INF] map[openid:1109261]
+[2018-07-18 12:01:25] C:/work/goproj/src/game/web/server/web_handler.go:79 [INF] json: {"body":{"openid":"1109261"},"return_code":1}
+[2018-07-18 12:01:25] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-4.992ms-Params: map[code:071j0P0516zOkL1Dxd051ZyJ051j0P0-]
+
+[2018-07-18 12:27:13] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-18 12:27:27] C:/work/goproj/src/game/web/server/web_handler.go:29 [INF] ctx : &{0xc04210a270 0xc0420de2d0 map[code:081DUGEk1F4s9m0GSgBk1lPREk1DUGEy] 0xc042017810}
+[2018-07-18 12:27:27] C:/work/goproj/src/game/web/server/web_handler.go:42 [INF] params : map[code:081DUGEk1F4s9m0GSgBk1lPREk1DUGEy]
+[2018-07-18 12:27:27] C:/work/goproj/src/game/web/server/web_handler.go:44 [INF] params : 081DUGEk1F4s9m0GSgBk1lPREk1DUGEy
+[2018-07-18 12:27:56] C:/work/goproj/src/game/web/server/web_handler.go:61 [INF] jsMap : map[errno:0 msg:成功 data:map[user_id:1109261 user_name:F143001040223 uuid:ffffffff-cfe9-f796-ffff-ffffef05ac4a mobile: nickname: avatar: gid:211]]
+[2018-07-18 12:27:56] C:/work/goproj/src/game/web/server/web_handler.go:75 [INF] map[openid:1109261]
+[2018-07-18 12:27:56] C:/work/goproj/src/game/web/server/web_handler.go:87 [INF] json: {"body":{"openid":"1109261"},"return_code":1}
+[2018-07-18 12:27:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-29.7379497s-Params: map[code:081DUGEk1F4s9m0GSgBk1lPREk1DUGEy]
+

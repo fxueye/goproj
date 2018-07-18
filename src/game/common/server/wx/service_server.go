@@ -269,6 +269,9 @@ func (s *WxService) GetGroupMember(guserName string, userName string) (*User, er
 	}
 }
 func (s *WxService) GetUser(userName string) (*User, error) {
+	if userName == s.user.UserName {
+		return s.user, nil
+	}
 	u, ok := s.contacts[userName]
 	if ok {
 		return u, nil

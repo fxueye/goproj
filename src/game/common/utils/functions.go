@@ -322,6 +322,15 @@ func IsInArray(nums []int, num int) bool {
 	return false
 }
 
+func IsInStringArray(strs []string, str string) bool {
+	for _, s := range strs {
+		if s == str {
+			return true
+		}
+	}
+	return false
+}
+
 func IsRepeat(ids []int) bool {
 	sort.Ints(ids)
 	for i, id := range ids {
