@@ -63,6 +63,7 @@ type WxService struct {
 }
 type IMessgeHandler interface {
 	OnMessage(*Message)
+	OnWxInitSucces()
 }
 
 func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeHandler) *WxService {
@@ -121,6 +122,7 @@ func (s *WxService) Start() error {
 		if err != nil {
 			return
 		}
+		s.handler.OnWxInitSucces()
 		c <- true
 	})
 

@@ -31,6 +31,7 @@ type User struct {
 	MemberCount int64  `json:MemberCount`   //成员数
 	VerifyFlag  int64  `json:VerifyFlag`    //
 
+	Rec *User
 }
 
 type Group struct {

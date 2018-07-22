@@ -2,7 +2,6 @@ package server
 
 import (
 	conf "game/common/config"
-	"game/common/db"
 	"game/common/server"
 	"game/common/utils"
 	"runtime"
@@ -22,7 +21,6 @@ var (
 	config      WxConfig
 	wxInstance  *WxService
 	webInstance *WebService
-	DBMgr       *db.DBMgr
 )
 
 func Init() {

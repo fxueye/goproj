@@ -8,6 +8,7 @@ type WxConfig struct {
 	EmailConfig      EmailConfig
 	WebConfig        WebConfig
 	GroupMsg         bool
+	TextConfig       []string
 }
 type EmailConfig struct {
 	EmailAcc      string
