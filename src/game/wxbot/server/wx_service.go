@@ -14,13 +14,13 @@ type WxService struct {
 	wx.IMessgeHandler
 	*wx.WxService
 	//写入存储开启取出
-	datas map[string][]*Stroke
+	// datas map[string][]*Stroke
 }
 
 func newWxService(loginUrl, qrcodeDir string) *WxService {
 	s := new(WxService)
 	s.WxService = wx.NewWxService(loginUrl, qrcodeDir, config.Special, s)
-	s.datas = make(map[string][]*Stroke)
+	// s.datas = make(map[string][]*Stroke)
 	return s
 }
 
@@ -55,23 +55,23 @@ func (s *WxService) OnMessage(m *wx.Message) {
 				return
 			}
 
-			stroke := new(Stroke)
-			stroke.Send = s.ClearCharactert(sendUser.NickName)
-			iphones := utils.GetTelNum(content)
-			iphones = utils.RemoveDuplicatesAndEmpty(iphones)
-			stroke.Tel = strings.Join(iphones, ",")
-			stroke.Content = content
-			stroke.Timestamp = utils.NowTimestamp()
-			if _, ok := s.datas[stroke.Send]; ok {
-				strokes := s.datas[stroke.Send]
-				for _, s := range strokes {
-					if s.Content == stroke.Content {
-						return
-					}
-				}
-			}
+			// stroke := new(Stroke)
+			// stroke.Send = s.ClearCharactert(sendUser.NickName)
+			// iphones := utils.GetTelNum(content)
+			// iphones = utils.RemoveDuplicatesAndEmpty(iphones)
+			// stroke.Tel = strings.Join(iphones, ",")
+			// stroke.Content = content
+			// stroke.Timestamp = utils.NowTimestamp()
+			// if _, ok := s.datas[stroke.Send]; ok {
+			// 	strokes := s.datas[stroke.Send]
+			// 	for _, s := range strokes {
+			// 		if s.Content == stroke.Content {
+			// 			return
+			// 		}
+			// 	}
+			// }
 
-			s.datas[stroke.Send] = append(s.datas[stroke.Send], stroke)
+			// s.datas[stroke.Send] = append(s.datas[stroke.Send], stroke)
 			// err = CreateStroke(*stroke)
 			// if err != nil {
 			// 	log.Error(err)
