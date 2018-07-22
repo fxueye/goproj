@@ -13,18 +13,28 @@ import (
 type WxService struct {
 	wx.IMessgeHandler
 	*wx.WxService
-	//写入存储开启取出
-	// datas map[string][]*Stroke
+	receptionist map[string]*wx.User
 }
 
 func newWxService(loginUrl, qrcodeDir string) *WxService {
 	s := new(WxService)
 	s.WxService = wx.NewWxService(loginUrl, qrcodeDir, config.Special, s)
-	// s.datas = make(map[string][]*Stroke)
+	s.receptionist = make(map[string]*wx.User)
 	return s
 }
 
 func (s *WxService) OnMessage(m *wx.Message) {
+
+	if len(s.receptionist) == 0 {
+		for _, nickName := range config.ForwardUserNames {
+			user, err := s.GetUserByNickName(nickName)
+			if err != nil {
+				continue
+			}
+			s.receptionist[nickName] = user
+		}
+	}
+
 	formUserName := m.FromUserName
 	isGroupMsg := strings.Index(formUserName, "@@") != -1
 	if isGroupMsg && !config.GroupMsg {
@@ -54,28 +64,6 @@ func (s *WxService) OnMessage(m *wx.Message) {
 				log.Errorf("%v", err)
 				return
 			}
-
-			// stroke := new(Stroke)
-			// stroke.Send = s.ClearCharactert(sendUser.NickName)
-			// iphones := utils.GetTelNum(content)
-			// iphones = utils.RemoveDuplicatesAndEmpty(iphones)
-			// stroke.Tel = strings.Join(iphones, ",")
-			// stroke.Content = content
-			// stroke.Timestamp = utils.NowTimestamp()
-			// if _, ok := s.datas[stroke.Send]; ok {
-			// 	strokes := s.datas[stroke.Send]
-			// 	for _, s := range strokes {
-			// 		if s.Content == stroke.Content {
-			// 			return
-			// 		}
-			// 	}
-			// }
-
-			// s.datas[stroke.Send] = append(s.datas[stroke.Send], stroke)
-			// err = CreateStroke(*stroke)
-			// if err != nil {
-			// 	log.Error(err)
-			// }
 			//消息转发
 			content = fmt.Sprintf("群:[%s]:[%s]:\n%s", s.ClearCharactert(group.NickName), s.ClearCharactert(sendUser.NickName), content)
 		} else {
@@ -83,25 +71,49 @@ func (s *WxService) OnMessage(m *wx.Message) {
 		}
 
 	} else if m.MsgType == wx.MSGTYPE_IMAGE { // 图片消息
-		content = fmt.Sprintf("好友:%s:\n 图片消息", s.ClearCharactert(friendNickName))
+		if isGroupMsg {
+			content = fmt.Sprintf("好友:%s:\n 图片消息", s.ClearCharactert(friendNickName))
+		} else {
+			content = fmt.Sprintf("好友:%s:\n 图片消息", s.ClearCharactert(friendNickName))
+		}
 	} else if m.MsgType == wx.MSGTYPE_VOICE { // 语音消息
-		content = fmt.Sprintf("好友:%s:\n 语音消息", s.ClearCharactert(friendNickName))
+		if isGroupMsg {
+			content = fmt.Sprintf("好友:%s:\n 语音消息", s.ClearCharactert(friendNickName))
+		} else {
+			content = fmt.Sprintf("好友:%s:\n 语音消息", s.ClearCharactert(friendNickName))
+		}
 	} else if m.MsgType == wx.MSGTYPE_VIDEO { // 表情消息
-		content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		if isGroupMsg {
+			content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		} else {
+			content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		}
+
 	} else if m.MsgType == wx.MSGTYPE_EMOTICON { // 表情消息
-		content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		if isGroupMsg {
+			content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		} else {
+			content = fmt.Sprintf("好友:%s:\n 表情消息", s.ClearCharactert(friendNickName))
+		}
+
 	} else if m.MsgType == wx.MSGTYPE_APP { // 链接消息
-		content = fmt.Sprintf("好友:%s:\n 链接消息", s.ClearCharactert(friendNickName))
+		if isGroupMsg {
+			content = fmt.Sprintf("好友:%s:\n 链接消息", s.ClearCharactert(friendNickName))
+		} else {
+			content = fmt.Sprintf("好友:%s:\n 链接消息", s.ClearCharactert(friendNickName))
+		}
+
 	} else if m.MsgType == wx.MSGTYPE_STATUSNOTIFY { // 用户在手机进入某个联系人聊天界面时收到的消息
-		content = fmt.Sprintf("小手机有人在使用微信!\n")
+		if isGroupMsg {
+			content = fmt.Sprintf("小手机有人在使用微信!\n")
+		} else {
+			content = fmt.Sprintf("小手机有人在使用微信!\n")
+		}
+
 	} else {
 		log.Infof("%s: MsgType: %d", s.GetNickName(m.FromUserName), m.MsgType)
 	}
-	for _, nickName := range config.ForwardUserNames {
-		user, err := s.GetUserByNickName(nickName)
-		if err != nil {
-			continue
-		}
+	for _, user := range s.receptionist {
 		s.SendMsg(user.UserName, content)
 	}
 	// s.SendMsg(m.FromUserName, "您好！有什么能为您效劳的？")

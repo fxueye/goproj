@@ -1,0 +1,11 @@
+[10:43:08] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[10:43:23] service_server.go:579 [INF] scan success, please confirm login on your phone
+[10:43:25] service_server.go:582 [INF] login success
+[10:43:30] service_server.go:437 [INF] update 171 contacts
+[10:43:50] service_server.go:199 [INF] []
+[10:44:00] service_server.go:199 [INF] [0xc0424f4e80]
+[10:45:39] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[10:45:48] service_server.go:579 [INF] scan success, please confirm login on your phone
+[10:45:50] service_server.go:582 [INF] login success
+[10:45:52] service_server.go:437 [INF] update 251 contacts
+[10:46:10] service_server.go:199 [INF] [0xc042436e80]
