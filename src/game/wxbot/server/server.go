@@ -4,7 +4,6 @@ import (
 	conf "game/common/config"
 	"game/common/server"
 	"game/common/utils"
-	"game/wxbot/db"
 	"runtime"
 
 	log "github.com/cihub/seelog"
@@ -22,7 +21,6 @@ var (
 	config      WxConfig
 	wxInstance  *WxService
 	webInstance *WebService
-	DBMgr       *db.DBMgr
 )
 
 func Init() {
@@ -30,13 +28,6 @@ func Init() {
 		server.NewServer(),
 	}
 	conf.LoadConfig("json", "config/wx_config.json", &config)
-	// DBMgr = new(db.DBMgr)
-	// DBMgr.Init()
-	// err := DBMgr.CreateWxDB(config.DBConfig.DBHost, config.DBConfig.DBPort, config.DBConfig.DBUser, config.DBConfig.DBPassword, config.DBConfig.DBName, config.DBConfig.DBMaxOpen, config.DBConfig.DBMaxIdle)
-	// if err != nil {
-	// 	log.Error(err)
-	// 	return
-	// }
 	wxInstance = newWxService(config.LoginUrl, config.QrcodeDir)
 	// webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
 

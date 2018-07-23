@@ -30,6 +30,8 @@ type User struct {
 	ContactFlag int64  `json:"ContactFlag"` // 1:公众号，65537:个人号
 	MemberCount int64  `json:MemberCount`   //成员数
 	VerifyFlag  int64  `json:VerifyFlag`    //
+
+	Rec *User
 }
 
 type Group struct {

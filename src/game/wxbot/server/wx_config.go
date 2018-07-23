@@ -5,19 +5,10 @@ type WxConfig struct {
 	ForwardUserNames []string
 	LoginUrl         string
 	Special          []string
-	DBConfig         DBConfig
 	EmailConfig      EmailConfig
 	WebConfig        WebConfig
 	GroupMsg         bool
-}
-type DBConfig struct {
-	DBHost     string
-	DBPort     int
-	DBName     string
-	DBUser     string
-	DBPassword string
-	DBMaxOpen  int
-	DBMaxIdle  int
+	TextConfig       []string
 }
 type EmailConfig struct {
 	EmailAcc      string

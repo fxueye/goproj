@@ -1,0 +1,166 @@
+[10:43:08] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[10:43:23] service_server.go:579 [INF] scan success, please confirm login on your phone
+[10:43:25] service_server.go:582 [INF] login success
+[10:43:30] service_server.go:437 [INF] update 171 contacts
+[10:43:50] service_server.go:199 [INF] []
+[10:44:00] service_server.go:199 [INF] [0xc0424f4e80]
+[10:45:39] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[10:45:48] service_server.go:579 [INF] scan success, please confirm login on your phone
+[10:45:50] service_server.go:582 [INF] login success
+[10:45:52] service_server.go:437 [INF] update 251 contacts
+[10:46:10] service_server.go:199 [INF] [0xc042436e80]
+[10:47:22] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[10:47:36] service_server.go:579 [INF] scan success, please confirm login on your phone
+[10:47:38] service_server.go:582 [INF] login success
+[10:47:40] service_server.go:437 [INF] update 251 contacts
+[10:47:52] service_server.go:199 [INF] [0xc04205bd00]
+[10:47:53] service_server.go:199 [INF] []
+[10:47:54] service_server.go:199 [INF] [0xc04222c100]
+[10:47:54] service_server.go:199 [INF] []
+[11:19:08] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[11:19:25] service_server.go:579 [INF] scan success, please confirm login on your phone
+[11:19:27] service_server.go:582 [INF] login success
+[11:19:32] service_server.go:437 [INF] update 171 contacts
+[11:19:52] service_server.go:199 [INF] [0xc0421cf580 0xc0421cf600 0xc0421cf680 0xc0421cf700 0xc0421cf780]
+[11:19:53] service_server.go:199 [INF] []
+[11:19:53] service_server.go:199 [INF] [0xc0423a0f80]
+[11:19:55] service_server.go:199 [INF] [0xc04222ab00]
+[11:20:20] service_server.go:199 [INF] [0xc0424fe480]
+[11:20:21] service_server.go:199 [INF] [0xc0423a1580 0xc0423a1600]
+[11:20:23] service_server.go:199 [INF] [0xc0421cfc80]
+[11:20:30] service_server.go:199 [INF] [0xc0421ebd00]
+[12:04:27] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:04:38] service_server.go:579 [INF] scan success, please confirm login on your phone
+[12:04:40] service_server.go:582 [INF] login success
+[12:04:45] service_server.go:437 [INF] update 171 contacts
+[12:05:01] service_server.go:199 [INF] []
+[12:05:03] service_server.go:199 [INF] [0xc0422fe900]
+[12:05:04] service_server.go:199 [INF] []
+[12:05:10] service_server.go:199 [INF] [0xc0422ebd80]
+[12:05:24] service_server.go:199 [INF] [0xc0424cd400]
+[12:05:25] service_server.go:199 [INF] [0xc04228ca00]
+[12:05:31] service_server.go:199 [INF] [0xc04228c000]
+[12:05:47] service_server.go:199 [INF] [0xc0421f4c80]
+[12:05:48] service_server.go:199 [INF] [0xc042522300]
+[12:05:49] service_server.go:199 [INF] [0xc04228c180]
+[12:05:52] service_server.go:199 [INF] [0xc0422aa080 0xc0422aa180]
+[12:06:19] service_server.go:199 [INF] [0xc04220d980]
+[12:06:28] service_server.go:199 [INF] []
+[12:06:34] service_server.go:199 [INF] [0xc0422ab580]
+[12:06:35] service_server.go:199 [INF] []
+[12:06:39] service_server.go:199 [INF] [0xc04228c600 0xc04228c680]
+[12:06:40] service_server.go:199 [INF] [0xc0422ebc00]
+[12:06:45] service_server.go:199 [INF] [0xc04228c600 0xc04228c680]
+[12:06:46] service_server.go:199 [INF] [0xc04228d100]
+[12:06:47] service_server.go:199 [INF] [0xc0422ebc00]
+[12:06:48] service_server.go:199 [INF] [0xc042562180]
+[12:06:50] service_server.go:199 [INF] [0xc042588400]
+[12:06:52] service_server.go:199 [INF] [0xc0422eb800]
+[12:06:53] service_server.go:199 [INF] []
+[12:07:20] service_server.go:199 [INF] [0xc0422eb880]
+[12:07:23] service_server.go:199 [INF] [0xc042562b80]
+[12:07:43] service_server.go:199 [INF] [0xc0422a6c80]
+[12:08:27] service_server.go:199 [INF] [0xc042562480]
+[12:08:30] service_server.go:199 [INF] [0xc042562800 0xc042562880]
+[12:08:43] service_server.go:199 [INF] [0xc042563c80]
+[12:08:43] service_server.go:199 [INF] [0xc04228c600]
+[12:09:01] service_server.go:199 [INF] [0xc042170c00]
+[12:09:02] service_server.go:199 [INF] [0xc0422eb900]
+[12:09:07] service_server.go:199 [INF] [0xc04228c800]
+[12:09:10] service_server.go:199 [INF] [0xc042170a80]
+[12:10:27] service_server.go:199 [INF] [0xc042587780]
+[12:10:27] service_server.go:199 [INF] [0xc042586100]
+[12:10:29] service_server.go:199 [INF] [0xc042586480]
+[12:10:43] service_server.go:199 [INF] [0xc0422e9180]
+[12:13:34] service_server.go:199 [INF] [0xc0424a6b00]
+[12:15:09] service_server.go:199 [INF] [0xc0424ea280]
+[12:15:52] service_server.go:605 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:16:09] service_server.go:579 [INF] scan success, please confirm login on your phone
+[12:16:11] service_server.go:582 [INF] login success
+[12:16:16] service_server.go:437 [INF] update 171 contacts
+[12:16:32] service_server.go:199 [INF] [0xc042512980 0xc042512a00]
+[12:16:33] service_server.go:199 [INF] [0xc042512900]
+[12:16:41] service_server.go:199 [INF] [0xc0421c2780]
+[12:16:49] service_server.go:199 [INF] [0xc0421c3c00]
+[12:16:50] service_server.go:199 [INF] []
+[12:16:54] service_server.go:199 [INF] [0xc042166080]
+[12:17:00] service_server.go:199 [INF] [0xc0421c3180]
+[12:17:13] service_server.go:199 [INF] [0xc0422a1200]
+[12:17:14] service_server.go:199 [INF] []
+[12:17:20] service_server.go:199 [INF] [0xc0422a1900]
+[12:17:21] service_server.go:199 [INF] []
+[12:17:32] service_server.go:199 [INF] [0xc042166200]
+[12:17:33] service_server.go:199 [INF] []
+[12:17:40] service_server.go:199 [INF] [0xc0424f3280]
+[12:17:41] service_server.go:199 [INF] []
+[12:22:34] service_server.go:199 [INF] [0xc0424f3680]
+[12:22:35] service_server.go:199 [INF] [0xc042166200]
+[12:22:41] service_server.go:199 [INF] [0xc0424f2a00]
+[12:22:43] service_server.go:199 [INF] [0xc0424f3400]
+[12:22:57] service_server.go:199 [INF] [0xc042166800]
+[12:22:58] service_server.go:199 [INF] [0xc0424f2880 0xc0424f2900]
+[12:23:00] service_server.go:199 [INF] [0xc04244e300]
+[12:23:01] service_server.go:199 [INF] [0xc042148380]
+[12:25:01] service_server.go:199 [INF] [0xc04244e980]
+[12:28:30] service_server.go:199 [INF] [0xc04258a880]
+[12:29:30] service_server.go:607 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:29:51] service_server.go:581 [INF] scan success, please confirm login on your phone
+[12:29:53] service_server.go:584 [INF] login success
+[12:29:58] service_server.go:439 [INF] update 171 contacts
+[12:30:14] service_server.go:201 [INF] [0xc04245b280]
+[12:30:30] service_server.go:201 [INF] [0xc042170a80]
+[12:30:31] service_server.go:201 [INF] [0xc042171f00]
+[12:30:32] service_server.go:201 [INF] [0xc0424b9a80]
+[12:30:37] service_server.go:201 [INF] [0xc0421f6180]
+[12:30:37] service_server.go:201 [INF] [0xc04245ae80]
+[12:31:42] service_server.go:201 [INF] [0xc042570a80]
+[12:31:44] service_server.go:201 [INF] [0xc0424b2800]
+[12:31:45] service_server.go:201 [INF] [0xc042428a80]
+[12:32:17] service_server.go:201 [INF] [0xc042570b80]
+[12:33:38] service_server.go:201 [INF] [0xc04245be00]
+[12:33:43] service_server.go:201 [INF] [0xc042030100]
+[12:34:18] service_server.go:201 [INF] [0xc0424b9a80]
+[12:34:19] service_server.go:201 [INF] [0xc042428a80 0xc042428b00]
+[12:34:20] service_server.go:201 [INF] [0xc0422f2780]
+[12:34:46] service_server.go:607 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:34:52] service_server.go:581 [INF] scan success, please confirm login on your phone
+[12:34:53] service_server.go:584 [INF] login success
+[12:34:59] service_server.go:439 [INF] update 171 contacts
+[12:35:14] service_server.go:201 [INF] []
+[12:35:17] service_server.go:201 [INF] [0xc04239ba00]
+[12:36:12] service_server.go:607 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:36:23] service_server.go:581 [INF] scan success, please confirm login on your phone
+[12:36:25] service_server.go:584 [INF] login success
+[12:36:30] service_server.go:439 [INF] update 171 contacts
+[12:36:49] service_server.go:201 [INF] []
+[12:36:52] service_server.go:201 [INF] [0xc0424ae900]
+[12:36:53] service_server.go:201 [INF] []
+[12:41:20] service_server.go:607 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:41:31] service_server.go:581 [INF] scan success, please confirm login on your phone
+[12:41:33] service_server.go:584 [INF] login success
+[12:41:38] service_server.go:439 [INF] update 171 contacts
+[12:41:54] service_server.go:201 [INF] []
+[12:42:05] service_server.go:201 [INF] [0xc04231de00]
+[12:42:06] service_server.go:201 [INF] []
+[12:42:12] service_server.go:201 [INF] [0xc0423ce800]
+[12:42:13] service_server.go:201 [INF] []
+[12:42:27] service_server.go:201 [INF] [0xc042249a00]
+[12:42:28] service_server.go:201 [INF] []
+[12:42:51] service_server.go:607 [INF] Please open img D:\soft\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
+[12:43:05] service_server.go:581 [INF] scan success, please confirm login on your phone
+[12:43:06] service_server.go:584 [INF] login success
+[12:43:12] service_server.go:439 [INF] update 171 contacts
+[12:43:28] service_server.go:201 [INF] []
+[12:43:46] service_server.go:201 [INF] [0xc042256a80]
+[12:43:47] service_server.go:201 [INF] []
+[12:44:06] service_server.go:201 [INF] [0xc042256d80]
+[12:44:07] service_server.go:201 [INF] []
+[12:44:15] service_server.go:201 [INF] [0xc042256c00]
+[12:44:15] service_server.go:201 [INF] []
+[12:44:24] service_server.go:201 [INF] [0xc04246ad80]
+[12:44:25] service_server.go:201 [INF] []
+[12:44:49] service_server.go:201 [INF] [0xc04246a780]
+[12:44:50] service_server.go:201 [INF] []
+[12:45:05] service_server.go:201 [INF] [0xc0424ec600]
+[12:45:06] service_server.go:201 [INF] []
+[12:47:12] service_server.go:201 [INF] [0xc042437400 0xc042437480]
