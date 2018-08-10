@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"crypto/sha1"
 	"fmt"
 	"io/ioutil"
 	"math"
@@ -360,4 +361,11 @@ func RemoveDuplicatesAndEmpty(a []string) (ret []string) {
 		ret = append(ret, a[i])
 	}
 	return
+}
+
+func Sha1(s string) string {
+	h := sha1.New()
+	h.Write([]byte(s))
+	bs := h.Sum(nil)
+	return fmt.Sprintf("%x", bs)
 }

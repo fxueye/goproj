@@ -13,6 +13,8 @@ import (
 type WebHandler struct{}
 
 var (
+	// wx8844e8b0bc33183b
+	//1fe0ca7dc36651f64fc7de3fbeaafadd
 	appid             = "wxbfdac7331dafd481"
 	secret            = "c96533730072f3a9be92900b5f453f95"
 	apiUrl            = "https://api.weixin.qq.com/sns/jscode2session"
@@ -29,13 +31,25 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		iv := ctx.Params["iv"]
 		openid := ctx.Params["openid"]
 		encryptedData := ctx.Params["encryptedData"]
-		aesKey := base64.StdEncoding.EncodeToString([]byte(openid2SessionKey[openid]))
-		aseIv := base64.StdEncoding.EncodeToString([]byte(iv))
-		ret, err := utils.DesDecrypt([]byte(encryptedData), []byte(aesKey), []byte(aseIv))
+		log.Infof("sessiongKey:%v", openid2SessionKey[openid])
+		aesKey, err := base64.StdEncoding.DecodeString(openid2SessionKey[openid])
 		if err != nil {
 			log.Errorf("%v", err)
 			return ""
 		}
+		aesIv, err := base64.StdEncoding.DecodeString(iv)
+		if err != nil {
+			log.Errorf("%v", err)
+			return ""
+		}
+		dataBytes, err := base64.StdEncoding.DecodeString(encryptedData)
+		// log.Infof("%v,%v,%v", dataBytes, aesKey, aesIv)
+		ret, err := utils.AesDecrypt(dataBytes, aesKey, aesIv)
+		if err != nil {
+			log.Errorf("%v", err)
+			return ""
+		}
+		log.Infof("ret:%v", string(ret))
 		return string(ret)
 	} else if val == "openid" {
 		log.Infof("params : %v", ctx.Params)
@@ -72,6 +86,38 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 
 		log.Infof("ret:%v", ret)
 		return fmt.Sprintf(`{"openid":"%s"}`, openid)
+	} else if val == "login" {
+		iv := ctx.Params["iv"]
+		openid := ctx.Params["openid"]
+		encryptedData := ctx.Params["encryptedData"]
+		signature := ctx.Params["signature"]
+		rawData := ctx.Params["rawData"]
+		hstr := fmt.Sprintf("%s%s", rawData, openid2SessionKey[openid])
+		signature2 := utils.Sha1(hstr)
+		if signature != signature2 {
+			log.Errorf("signature:%s != signature2:%s", signature, signature2)
+			return ""
+		}
+		aesKey, err := base64.StdEncoding.DecodeString(openid2SessionKey[openid])
+		if err != nil {
+			log.Errorf("%v", err)
+			return ""
+		}
+		aesIv, err := base64.StdEncoding.DecodeString(iv)
+		if err != nil {
+			log.Errorf("%v", err)
+			return ""
+		}
+		dataBytes, err := base64.StdEncoding.DecodeString(encryptedData)
+		// log.Infof("%v,%v,%v", dataBytes, aesKey, aesIv)
+		ret, err := utils.AesDecrypt(dataBytes, aesKey, aesIv)
+		if err != nil {
+			log.Errorf("%v", err)
+			return ""
+		}
+		log.Infof("ret:%v", string(ret))
+		return string(ret)
+
 	}
 	return ""
 }

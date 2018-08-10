@@ -1,0 +1,756 @@
+[2018-07-19 09:46:47] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 09:46:54] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c9c0 0xc0420fe2d0 map[code:071yXzSe0COl1A1C4nQe02SFSe0yXzSa] 0xc0420bf730}
+[2018-07-19 09:46:54] C:/work/goproj/src/game/web/server/web_handler.go:49 [INF] params : map[code:071yXzSe0COl1A1C4nQe02SFSe0yXzSa]
+[2018-07-19 09:46:54] C:/work/goproj/src/game/web/server/web_handler.go:51 [INF] params : 071yXzSe0COl1A1C4nQe02SFSe0yXzSa
+[2018-07-19 09:46:55] C:/work/goproj/src/game/web/server/web_handler.go:81 [INF] ret:{"session_key":"G\/MtNPIDkO3WW+df4H5QMA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 09:46:55] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-276.4678ms-Params: map[code:071yXzSe0COl1A1C4nQe02SFSe0yXzSa]
+
+[2018-07-19 09:46:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc04222e000 map[iv:QxwkUCgK47tgK2IJtQZjLA== encryptedData:pdA3Sa2z18bn4D0lJF6tV0nN5t/zQG1QLPYAUgk0fVSXJXSk8Gv6fsJkoJH9Q9cDLBI8maD4l0uHIhni7pTT5y3dU2zwllaKQUBf9Nhw0itnHUA+pccuMuFA+Lzbfm1NzCjbCqExw6bjHKWBmVMo0Q== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420bf730}
+[2018-07-19 09:46:55] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-1.9965ms-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:QxwkUCgK47tgK2IJtQZjLA== encryptedData:pdA3Sa2z18bn4D0lJF6tV0nN5t/zQG1QLPYAUgk0fVSXJXSk8Gv6fsJkoJH9Q9cDLBI8maD4l0uHIhni7pTT5y3dU2zwllaKQUBf9Nhw0itnHUA+pccuMuFA+Lzbfm1NzCjbCqExw6bjHKWBmVMo0Q==]
+
+[2018-07-19 09:48:45] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 09:48:49] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042041ee0 0xc0420e22d0 map[code:08141c0j07oBeo1dVwXi0jb80j041c05] 0xc042017810}
+[2018-07-19 09:48:49] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] params : map[code:08141c0j07oBeo1dVwXi0jb80j041c05]
+[2018-07-19 09:48:49] C:/work/goproj/src/game/web/server/web_handler.go:52 [INF] params : 08141c0j07oBeo1dVwXi0jb80j041c05
+[2018-07-19 09:48:50] C:/work/goproj/src/game/web/server/web_handler.go:82 [INF] ret:{"session_key":"G\/MtNPIDkO3WW+df4H5QMA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 09:48:50] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-151.8438ms-Params: map[code:08141c0j07oBeo1dVwXi0jb80j041c05]
+
+[2018-07-19 09:48:50] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213e680 0xc042220000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:ekq5LYl5CSuP30z/E2BBuQ== encryptedData:EhHcUHrUrGc5ibrPGiH01FDqm703x7dfNM1B01uIZtODw5lStopPUgs3+zfEVEQkvpbrNo8AtKT2vvzWuoRrRzG2LSLBBM90KcGLgzHQK28zpSg9oT11puy9bFmwVz3C6Uy1lOnEGGB5dALDOfBlVA==] 0xc042017810}
+[2018-07-19 09:48:50] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-992.1µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:ekq5LYl5CSuP30z/E2BBuQ== encryptedData:EhHcUHrUrGc5ibrPGiH01FDqm703x7dfNM1B01uIZtODw5lStopPUgs3+zfEVEQkvpbrNo8AtKT2vvzWuoRrRzG2LSLBBM90KcGLgzHQK28zpSg9oT11puy9bFmwVz3C6Uy1lOnEGGB5dALDOfBlVA==]
+
+[2018-07-19 10:00:35] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210a1a0 0xc0420de2d0 map[code:001K4ve81PI8tS1wmFf81tDge81K4veH] 0xc042017810}
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:51 [INF] params : map[code:001K4ve81PI8tS1wmFf81tDge81K4veH]
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : 001K4ve81PI8tS1wmFf81tDge81K4veH
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:83 [INF] ret:{"session_key":"G+xYAYjdSDfV1X\/vwZHJqg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:00:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-356.2988ms-Params: map[code:001K4ve81PI8tS1wmFf81tDge81K4veH]
+
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422421a0 0xc042246000 map[encryptedData:UCl/qIUR5kRLRG0At34XWHP24ftdrRkjbSObZASFvN5j8SdX9qicvvvAZKkmAZIe3RqbPEurpvHhQ3PiuMn7uf8FYeJvvo0sBRrgKIfXfzBoE+tyiwZGf9ReahuXu0HOWZdEzrwU0VWbxnn/zqtuCA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:sLc01cbpbP8toLIwiJMAZQ==] 0xc042017810}
+[2018-07-19 10:00:38] C:/work/goproj/src/game/web/server/web_handler.go:43 [INF] [80 41 127 168 133 17 230 68 75 68 109 0 183 126 23 88 115 246 225 251 93 173 25 35 109 35 155 100 4 133 188 222 99 241 39 87 246 168 156 190 251 192 100 169 38 1 146 30 221 26 155 60 75 171 166 241 225 67 115 226 184 201 251 185 255 5 97 226 111 190 141 44 5 26 224 40 135 215 127 48 104 19 235 114 139 6 70 127 212 94 106 27 151 187 65 206 89 151 68 206 188 20 209 85 155 198 121 255 206 171 110 8],[27 236 88 1 136 221 72 55 213 213 127 239 193 145 201 170],[176 183 52 213 198 233 108 255 45 160 178 48 136 147 0 101]
+[2018-07-19 10:00:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-980.3µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:sLc01cbpbP8toLIwiJMAZQ== encryptedData:UCl/qIUR5kRLRG0At34XWHP24ftdrRkjbSObZASFvN5j8SdX9qicvvvAZKkmAZIe3RqbPEurpvHhQ3PiuMn7uf8FYeJvvo0sBRrgKIfXfzBoE+tyiwZGf9ReahuXu0HOWZdEzrwU0VWbxnn/zqtuCA==]
+
+[2018-07-19 10:10:02] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 10:10:09] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0421400d0 0xc04213c000 map[code:0813rkHQ1fC8J81gRlIQ1aU3HQ13rkHG] 0xc0420bf730}
+[2018-07-19 10:10:09] C:/work/goproj/src/game/web/server/web_handler.go:52 [INF] params : map[code:0813rkHQ1fC8J81gRlIQ1aU3HQ13rkHG]
+[2018-07-19 10:10:09] C:/work/goproj/src/game/web/server/web_handler.go:54 [INF] params : 0813rkHQ1fC8J81gRlIQ1aU3HQ13rkHG
+[2018-07-19 10:10:09] C:/work/goproj/src/game/web/server/web_handler.go:84 [INF] ret:{"session_key":"7adO1Eh1HP96CE9lSfkzjA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:10:09] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-271.3907ms-Params: map[code:0813rkHQ1fC8J81gRlIQ1aU3HQ13rkHG]
+
+[2018-07-19 10:10:10] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422621a0 0xc042266000 map[encryptedData:18qm8JkzrxLpyd/v76k3BJtPXqvyOJpzHHjE+14BERFMsep8zKf2j8RWEIgSr6OGxKlKVl4ayU/O/e9ERWiF+Pvg5Tw15uyEtMqdSD+k96eghXk+8XS1VEVNG6TfHwpcq2T52nI3aowTGBekd+O6jw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:ss8vouevTyqExexJHS928w==] 0xc0420bf730}
+[2018-07-19 10:10:10] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:%!(EXTRA string=7adO1Eh1HP96CE9lSfkzjA==)
+[2018-07-19 10:10:10] C:/work/goproj/src/game/web/server/web_handler.go:44 [INF] [215 202 166 240 153 51 175 18 233 201 223 239 239 169 55 4 155 79 94 171 242 56 154 115 28 120 196 251 94 1 17 17 76 177 234 124 204 167 246 143 196 86 16 136 18 175 163 134 196 169 74 86 94 26 201 79 206 253 239 68 69 104 133 248 251 224 229 60 53 230 236 132 180 202 157 72 63 164 247 167 160 133 121 62 241 116 181 84 69 77 27 164 223 31 10 92 171 100 249 218 114 55 106 140 19 24 23 164 119 227 186 143],[237 167 78 212 72 117 28 255 122 8 79 101 73 249 51 140],[178 207 47 162 231 175 79 42 132 197 236 73 29 47 118 243]
+[2018-07-19 10:10:10] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996.4µs-Params: map[encryptedData:18qm8JkzrxLpyd/v76k3BJtPXqvyOJpzHHjE+14BERFMsep8zKf2j8RWEIgSr6OGxKlKVl4ayU/O/e9ERWiF+Pvg5Tw15uyEtMqdSD+k96eghXk+8XS1VEVNG6TfHwpcq2T52nI3aowTGBekd+O6jw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:ss8vouevTyqExexJHS928w==]
+
+[2018-07-19 10:10:30] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211a680 0xc0420fa2d0 map[code:021bOaqP0Dci0a2cSwpP0DIbqP0bOaqu] 0xc0420bf730}
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:52 [INF] params : map[code:021bOaqP0Dci0a2cSwpP0DIbqP0bOaqu]
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:54 [INF] params : 021bOaqP0Dci0a2cSwpP0DIbqP0bOaqu
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:84 [INF] ret:{"session_key":"7adO1Eh1HP96CE9lSfkzjA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:10:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-237.4743ms-Params: map[code:021bOaqP0Dci0a2cSwpP0DIbqP0bOaqu]
+
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211b380 0xc0420fa4b0 map[iv:4mwSWTGBgxVFnp1VcaXIFg== encryptedData:CeiFjOo664dYhqcxZRUmnqX7FKF2ioLDNFBKWMFY6KEfk5rpQ7AsGgNRd/rJvhsCfhbmhHsdjTbylo7MRPJ5vd+1458R6c3ehgYArjqljfT6DELjQ0u2KWO+M6iEK6O9DA8IiaOBzo8CPC/BADkuog== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420bf730}
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:7adO1Eh1HP96CE9lSfkzjA==
+[2018-07-19 10:10:35] C:/work/goproj/src/game/web/server/web_handler.go:44 [INF] [9 232 133 140 234 58 235 135 88 134 167 49 101 21 38 158 165 251 20 161 118 138 130 195 52 80 74 88 193 88 232 161 31 147 154 233 67 176 44 26 3 81 119 250 201 190 27 2 126 22 230 132 123 29 141 54 242 150 142 204 68 242 121 189 223 181 227 159 17 233 205 222 134 6 0 174 58 165 141 244 250 12 66 227 67 75 182 41 99 190 51 168 132 43 163 189 12 15 8 137 163 129 206 143 2 60 47 193 0 57 46 162],[237 167 78 212 72 117 28 255 122 8 79 101 73 249 51 140],[226 108 18 89 49 129 131 21 69 158 157 85 113 165 200 22]
+[2018-07-19 10:10:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-979.4µs-Params: map[iv:4mwSWTGBgxVFnp1VcaXIFg== encryptedData:CeiFjOo664dYhqcxZRUmnqX7FKF2ioLDNFBKWMFY6KEfk5rpQ7AsGgNRd/rJvhsCfhbmhHsdjTbylo7MRPJ5vd+1458R6c3ehgYArjqljfT6DELjQ0u2KWO+M6iEK6O9DA8IiaOBzo8CPC/BADkuog== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:30:06] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 10:30:11] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0421084e0 0xc0420da2d0 map[code:06167f2D16Owc400JS2D1Mac2D167f2F] 0xc042017810}
+[2018-07-19 10:30:11] C:/work/goproj/src/game/web/server/web_handler.go:52 [INF] params : map[code:06167f2D16Owc400JS2D1Mac2D167f2F]
+[2018-07-19 10:30:11] C:/work/goproj/src/game/web/server/web_handler.go:54 [INF] params : 06167f2D16Owc400JS2D1Mac2D167f2F
+[2018-07-19 10:30:12] C:/work/goproj/src/game/web/server/web_handler.go:84 [INF] ret:{"session_key":"g2S5w4O\/xeaGSfoSko5aNg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:30:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-351.5766ms-Params: map[code:06167f2D16Owc400JS2D1Mac2D167f2F]
+
+[2018-07-19 10:30:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422161a0 0xc04221a000 map[iv:Lyvg9+QoRfIUS6MrKPr56g== encryptedData:+YiabWBdy6/K69S23Ie9xEJA8Ds3kIooOK6wXiFGUBdQxYaPEhc+1JTSzxOBMMy5gvKIYbvFS4bttq5s/T9k96JkFM9If2dpJnC23YCJC9dMgGqt2w8iEZbchiug0IzdUFP7yRRg+vp/Suv1jpzezQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 10:30:12] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:g2S5w4O/xeaGSfoSko5aNg==
+[2018-07-19 10:30:12] C:/work/goproj/src/game/web/server/web_handler.go:44 [INF] [249 136 154 109 96 93 203 175 202 235 212 182 220 135 189 196 66 64 240 59 55 144 138 40 56 174 176 94 33 70 80 23 80 197 134 143 18 23 62 212 148 210 207 19 129 48 204 185 130 242 136 97 187 197 75 134 237 182 174 108 253 63 100 247 162 100 20 207 72 127 103 105 38 112 182 221 128 137 11 215 76 128 106 173 219 15 34 17 150 220 134 43 160 208 140 221 80 83 251 201 20 96 250 250 127 74 235 245 142 156 222 205],[131 100 185 195 131 191 197 230 134 73 250 18 146 142 90 54],[47 43 224 247 228 40 69 242 20 75 163 43 40 250 249 234]
+[2018-07-19 10:30:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Lyvg9+QoRfIUS6MrKPr56g== encryptedData:+YiabWBdy6/K69S23Ie9xEJA8Ds3kIooOK6wXiFGUBdQxYaPEhc+1JTSzxOBMMy5gvKIYbvFS4bttq5s/T9k96JkFM9If2dpJnC23YCJC9dMgGqt2w8iEZbchiug0IzdUFP7yRRg+vp/Suv1jpzezQ==]
+
+[2018-07-19 10:37:10] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 10:37:16] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c750 0xc0420fe2d0 map[code:0019UkHq0XRccp16aZHq0uP2Hq09UkHT] 0xc0420c1730}
+[2018-07-19 10:37:16] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0019UkHq0XRccp16aZHq0uP2Hq09UkHT]
+[2018-07-19 10:37:16] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0019UkHq0XRccp16aZHq0uP2Hq09UkHT
+[2018-07-19 10:37:16] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"wrMM1bqG+vJvyj+oBI70VA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:37:16] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-172.6543ms-Params: map[code:0019UkHq0XRccp16aZHq0uP2Hq09UkHT]
+
+[2018-07-19 10:37:17] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc04222e000 map[encryptedData:mW0G0U0Yd7uOVnKhlqwFpph3/WmC1nAzO1jYsqyxBJCdJ9oIFJc89KYDOdi7i3dpHbLA7Qj4EFoe/9B3PLTP49f1FcGILn9E6SmicF4B+iWZcyiSSBgEC5zS7sfTzWfgn4ERzNiZd/aZeKRnf6iLyA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:z7UlwlfhXNw7EnsToMCwog==] 0xc0420c1730}
+[2018-07-19 10:37:17] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:wrMM1bqG+vJvyj+oBI70VA==
+[2018-07-19 10:37:17] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531967840,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:37:17] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:z7UlwlfhXNw7EnsToMCwog== encryptedData:mW0G0U0Yd7uOVnKhlqwFpph3/WmC1nAzO1jYsqyxBJCdJ9oIFJc89KYDOdi7i3dpHbLA7Qj4EFoe/9B3PLTP49f1FcGILn9E6SmicF4B+iWZcyiSSBgEC5zS7sfTzWfgn4ERzNiZd/aZeKRnf6iLyA==]
+
+[2018-07-19 10:42:34] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223a0d0 0xc0420fe4b0 map[code:011kymnI0rwTbh2t4YpI0ILcnI0kymnv] 0xc0420c1730}
+[2018-07-19 10:42:34] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011kymnI0rwTbh2t4YpI0ILcnI0kymnv]
+[2018-07-19 10:42:34] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011kymnI0rwTbh2t4YpI0ILcnI0kymnv
+[2018-07-19 10:42:34] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:42:34] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-347.5815ms-Params: map[code:011kymnI0rwTbh2t4YpI0ILcnI0kymnv]
+
+[2018-07-19 10:42:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223a820 0xc0422460f0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:KxU3EeSbTChn0+iNWYJ2/w== encryptedData:1qi+wwk+Q9DEoV5F850XHQWeLVDYIx8DNr8Gm1IKSk9UIra8U5AVVi4+JzS+5PdU86vGboQ8pjnkey9CVgH/WdfnXYV7VdHG/iTAF8MieuuB7FQnmM+mFlQ0vSkOI2G5MqIIMxuKUIjKg/lCH6+ECw==] 0xc0420c1730}
+[2018-07-19 10:42:35] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:42:35] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968160,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:42:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-1.0001ms-Params: map[iv:KxU3EeSbTChn0+iNWYJ2/w== encryptedData:1qi+wwk+Q9DEoV5F850XHQWeLVDYIx8DNr8Gm1IKSk9UIra8U5AVVi4+JzS+5PdU86vGboQ8pjnkey9CVgH/WdfnXYV7VdHG/iTAF8MieuuB7FQnmM+mFlQ0vSkOI2G5MqIIMxuKUIjKg/lCH6+ECw== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223add0 0xc0422461e0 map[code:011NJdP72aT2KR0QmXN72YNrP72NJdPD] 0xc0420c1730}
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011NJdP72aT2KR0QmXN72YNrP72NJdPD]
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011NJdP72aT2KR0QmXN72YNrP72NJdPD
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:42:42] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-90.7628ms-Params: map[code:011NJdP72aT2KR0QmXN72YNrP72NJdPD]
+
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223af70 0xc0422463c0 map[encryptedData:4+ivfrQFRrh1v74POy8GM2RenpNgZ1th2HJtjV75g3kF1OvmdY2MRXzqb4311oPjUanTyiZTO0TZl/cUVViQB3fsAFY7PDkoLz5wgVRtV4ApkMfqXN/o/GUEGwoIEfFW1+rjunaZ6vbut1X/ha/PRw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Z5bmZdRzO3lKcGkATUtl9Q==] 0xc0420c1730}
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:42:42] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968168,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:42:42] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Z5bmZdRzO3lKcGkATUtl9Q== encryptedData:4+ivfrQFRrh1v74POy8GM2RenpNgZ1th2HJtjV75g3kF1OvmdY2MRXzqb4311oPjUanTyiZTO0TZl/cUVViQB3fsAFY7PDkoLz5wgVRtV4ApkMfqXN/o/GUEGwoIEfFW1+rjunaZ6vbut1X/ha/PRw==]
+
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223b520 0xc0422464b0 map[code:011KRVwQ0daxT82aiZzQ0IiZwQ0KRVwi] 0xc0420c1730}
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011KRVwQ0daxT82aiZzQ0IiZwQ0KRVwi]
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011KRVwQ0daxT82aiZzQ0IiZwQ0KRVwi
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:42:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-94.5932ms-Params: map[code:011KRVwQ0daxT82aiZzQ0IiZwQ0KRVwi]
+
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223b6c0 0xc042246690 map[encryptedData:1pykTg3x22yL4zVvbugFft7c7qtCBN4mvqezmIRsItLDMx55LKmsYwVl6QvcbKdH2ONpQlSQe4NyVITkVix2EgV/leemWy3/j3PI8AxJe2Gj7Bgu7m6jxqvgsbbvQgkhUpYQDg+v9tpF6W5bXGDl3g== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:LcYyjfumkr+YXZg4DJ+h8A==] 0xc0420c1730}
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:42:48] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968174,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:42:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-994.5µs-Params: map[encryptedData:1pykTg3x22yL4zVvbugFft7c7qtCBN4mvqezmIRsItLDMx55LKmsYwVl6QvcbKdH2ONpQlSQe4NyVITkVix2EgV/leemWy3/j3PI8AxJe2Gj7Bgu7m6jxqvgsbbvQgkhUpYQDg+v9tpF6W5bXGDl3g== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:LcYyjfumkr+YXZg4DJ+h8A==]
+
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223bc70 0xc042246780 map[code:071aOQcM0YKQy42HLKfM0Z2EcM0aOQc1] 0xc0420c1730}
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071aOQcM0YKQy42HLKfM0Z2EcM0aOQc1]
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071aOQcM0YKQy42HLKfM0Z2EcM0aOQc1
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:42:57] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-89.0586ms-Params: map[code:071aOQcM0YKQy42HLKfM0Z2EcM0aOQc1]
+
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223be10 0xc042246960 map[iv:P4/5g98hPDZaJOMDBUPBfA== encryptedData:4gOZAeurv0lFVQzs89+5JZS76G1+vHlpR0Ds/2dpbijFWb4lL7Hml/UMDPaCeT6txh2KlolV3+i4BUzLBXtVDflTQ4BQ6DwtLMC56BYCAaWaLXB4N+Q5MokGAEPrFfhKQpN+yuFmGN9oRt2abmplZQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:42:57] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968183,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:42:57] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-984.4µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:P4/5g98hPDZaJOMDBUPBfA== encryptedData:4gOZAeurv0lFVQzs89+5JZS76G1+vHlpR0Ds/2dpbijFWb4lL7Hml/UMDPaCeT6txh2KlolV3+i4BUzLBXtVDflTQ4BQ6DwtLMC56BYCAaWaLXB4N+Q5MokGAEPrFfhKQpN+yuFmGN9oRt2abmplZQ==]
+
+[2018-07-19 10:43:11] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422ac410 0xc042246a50 map[code:0812a41S0VPAG82bYZ1S0wvL0S02a41z] 0xc0420c1730}
+[2018-07-19 10:43:11] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0812a41S0VPAG82bYZ1S0wvL0S02a41z]
+[2018-07-19 10:43:11] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0812a41S0VPAG82bYZ1S0wvL0S02a41z
+[2018-07-19 10:43:11] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:43:11] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-39.8238ms-Params: map[code:0812a41S0VPAG82bYZ1S0wvL0S02a41z]
+
+[2018-07-19 10:43:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422ac5b0 0xc042246c30 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:MJnnJSnnck26EMigp8XNbQ== encryptedData:0d5RgjBpqUDAgff62aPHSH3yyhqyDHf1ZRqKPZc0lO0wKa55LSzAtab1Xr1aRjvq/wUlCabnrVOgLgQTq/KthWDh/USJ3m3jRlG9urWsHvGuxY6VfPbCYXLi2dDHAm8u7wfeycQ/9ZQzefsJglI1Jg==] 0xc0420c1730}
+[2018-07-19 10:43:12] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:43:12] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968197,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:43:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:MJnnJSnnck26EMigp8XNbQ== encryptedData:0d5RgjBpqUDAgff62aPHSH3yyhqyDHf1ZRqKPZc0lO0wKa55LSzAtab1Xr1aRjvq/wUlCabnrVOgLgQTq/KthWDh/USJ3m3jRlG9urWsHvGuxY6VfPbCYXLi2dDHAm8u7wfeycQ/9ZQzefsJglI1Jg==]
+
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422acb60 0xc042246d20 map[code:011O9dju1LULmb0NChhu1O2Wiu1O9dj5] 0xc0420c1730}
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011O9dju1LULmb0NChhu1O2Wiu1O9dj5]
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011O9dju1LULmb0NChhu1O2Wiu1O9dj5
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:43:14] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-48.6072ms-Params: map[code:011O9dju1LULmb0NChhu1O2Wiu1O9dj5]
+
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422cc0d0 0xc0422c6000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:AySzOud0/I3p7Gkuv/oESA== encryptedData:Nh19deQ4Nl721jlgv5YYNcjli/T/AN4vfuzRgPKsuDCwNAhdNs7zvgpgnvf75EvAgJUTUpkRQBPTIxwdApziY/DbwEPqtvGGf9OT60eti20ESIzVeowZdd1xS50ZzmYYtzeXbtiWNggXSQFqxfOyJg==] 0xc0420c1730}
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:43:14] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968199,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:43:14] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:AySzOud0/I3p7Gkuv/oESA== encryptedData:Nh19deQ4Nl721jlgv5YYNcjli/T/AN4vfuzRgPKsuDCwNAhdNs7zvgpgnvf75EvAgJUTUpkRQBPTIxwdApziY/DbwEPqtvGGf9OT60eti20ESIzVeowZdd1xS50ZzmYYtzeXbtiWNggXSQFqxfOyJg==]
+
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a750 0xc04222e1e0 map[code:081cYnGW1sMUET08hCDW1ahnGW1cYnGl] 0xc0420c1730}
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:081cYnGW1sMUET08hCDW1ahnGW1cYnGl]
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 081cYnGW1sMUET08hCDW1ahnGW1cYnGl
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"BZpwA\/3y+KdkkVeWTMC44Q==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:43:51] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-191.1937ms-Params: map[code:081cYnGW1sMUET08hCDW1ahnGW1cYnGl]
+
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422acd00 0xc042246f00 map[iv:m6J2Y4bIka0jmcAA/v+dpw== encryptedData:Ow4zL4wIG5q6+NlAlvdblXTX79xN/o4G2FCqAVbFsRx7NvQYufcvbg0b2HkiCujbZ1xNpyfAZyQqANeHL54wfUjZntFBlKx16dlDVUjAZwthAtXw0KZ4wA1ANacYDu/hOBqal1OF7eJ43ZBIikWlYA== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:BZpwA/3y+KdkkVeWTMC44Q==
+[2018-07-19 10:43:51] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968237,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:43:51] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[iv:m6J2Y4bIka0jmcAA/v+dpw== encryptedData:Ow4zL4wIG5q6+NlAlvdblXTX79xN/o4G2FCqAVbFsRx7NvQYufcvbg0b2HkiCujbZ1xNpyfAZyQqANeHL54wfUjZntFBlKx16dlDVUjAZwthAtXw0KZ4wA1ANacYDu/hOBqal1OF7eJ43ZBIikWlYA== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:44:42] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422cc680 0xc0422c60f0 map[code:061MXgdH0Oqbdi2njT9H0dhjdH0MXgdv] 0xc0420c1730}
+[2018-07-19 10:44:42] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061MXgdH0Oqbdi2njT9H0dhjdH0MXgdv]
+[2018-07-19 10:44:42] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061MXgdH0Oqbdi2njT9H0dhjdH0MXgdv
+[2018-07-19 10:44:43] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:44:43] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-152.6129ms-Params: map[code:061MXgdH0Oqbdi2njT9H0dhjdH0MXgdv]
+
+[2018-07-19 10:44:43] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422cc8f0 0xc0422c62d0 map[iv:vgWIMX9jrffia17QoDUE8w== encryptedData:ive3IuwZwSdnln+v5PtOAxs1tmNlpAaPCyXHN0bbnFOQXp+Hwazg89DKE34llPwAywc7leAxEyY6kWk0yYhf+J3nYrR+/VuUtSpq4p7Puk2QA3a7uJdZVAQdCBP3mnIJxBDF/IU1VMHiLXSys7L/Tw== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:44:43] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:44:43] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968289,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:44:43] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-995.6µs-Params: map[iv:vgWIMX9jrffia17QoDUE8w== encryptedData:ive3IuwZwSdnln+v5PtOAxs1tmNlpAaPCyXHN0bbnFOQXp+Hwazg89DKE34llPwAywc7leAxEyY6kWk0yYhf+J3nYrR+/VuUtSpq4p7Puk2QA3a7uJdZVAQdCBP3mnIJxBDF/IU1VMHiLXSys7L/Tw== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211d450 0xc0420fe5a0 map[code:011HbGvU0uz0YW1Z0JuU0MvmvU0HbGv2] 0xc0420c1730}
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011HbGvU0uz0YW1Z0JuU0MvmvU0HbGv2]
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011HbGvU0uz0YW1Z0JuU0MvmvU0HbGv2
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:45:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-72.7987ms-Params: map[code:011HbGvU0uz0YW1Z0JuU0MvmvU0HbGv2]
+
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422ad790 0xc042246ff0 map[iv:RoeZKD4DT3z0JDoh2UvgoQ== encryptedData:+p062qOYaFZl6YeDX0yhb/TM2IzggtUvMAksUr3ycf8N7L4FWrtWW6Ho3ixPielQEjgwDAkWlbygYfxMxVcVjR/k3SOva+rjCvuehhQ4TowluZsC5HWRxOR2UKpKk9J4Bmtrrj8J85NlAIMqP4nVWA== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:45:12] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968318,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:45:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:RoeZKD4DT3z0JDoh2UvgoQ== encryptedData:+p062qOYaFZl6YeDX0yhb/TM2IzggtUvMAksUr3ycf8N7L4FWrtWW6Ho3ixPielQEjgwDAkWlbygYfxMxVcVjR/k3SOva+rjCvuehhQ4TowluZsC5HWRxOR2UKpKk9J4Bmtrrj8J85NlAIMqP4nVWA==]
+
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422cd380 0xc0422c63c0 map[code:0710F8qK15LpL40ezfoK1PyQpK10F8qK] 0xc0420c1730}
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0710F8qK15LpL40ezfoK1PyQpK10F8qK]
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0710F8qK15LpL40ezfoK1PyQpK10F8qK
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:45:59] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-55.8172ms-Params: map[code:0710F8qK15LpL40ezfoK1PyQpK10F8qK]
+
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422cdad0 0xc0422c65a0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5/cal+h/2RMQwSPQouWXhg== encryptedData:RXij5BjRaWsiPckc/Xsv+RzrDHUuGYCfwTRDklKMVHAuJGWJCfdVThmf4zFOnZpmG+Qhqbf2CT6IrV77q3iKZh2wThLBP9VnsoUg52gdpwbicKQr2esSHVjeZ+t/pZLEVpMcVCbvayaa2UtiZZk/9g==] 0xc0420c1730}
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:45:59] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968365,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:45:59] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5/cal+h/2RMQwSPQouWXhg== encryptedData:RXij5BjRaWsiPckc/Xsv+RzrDHUuGYCfwTRDklKMVHAuJGWJCfdVThmf4zFOnZpmG+Qhqbf2CT6IrV77q3iKZh2wThLBP9VnsoUg52gdpwbicKQr2esSHVjeZ+t/pZLEVpMcVCbvayaa2UtiZZk/9g==]
+
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a20d0 0xc0422c6690 map[code:061YZOTw1MDm3a0mC5Vw1MuUTw1YZOTF] 0xc0420c1730}
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061YZOTw1MDm3a0mC5Vw1MuUTw1YZOTF]
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061YZOTw1MDm3a0mC5Vw1MuUTw1YZOTF
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:46:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-74.8223ms-Params: map[code:061YZOTw1MDm3a0mC5Vw1MuUTw1YZOTF]
+
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a2270 0xc0422c6870 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Qr6SlyLShrImN8iJfdf97g== encryptedData:OWxxvCZcXssifmwie66OLy49ceCde2w0LsCTPuwc0KA8yGSHYX1fXVIbYDDJGGDr7cvc96F/hSaTWEpQYngD1T9YYbU4/5tqDnwBWjPJR9t0b5Mkze3syvIwgYMomb0ucNcULa6Y1f6FDgmeJSCqHw==] 0xc0420c1730}
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:46:02] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968369,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:46:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.8µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Qr6SlyLShrImN8iJfdf97g== encryptedData:OWxxvCZcXssifmwie66OLy49ceCde2w0LsCTPuwc0KA8yGSHYX1fXVIbYDDJGGDr7cvc96F/hSaTWEpQYngD1T9YYbU4/5tqDnwBWjPJR9t0b5Mkze3syvIwgYMomb0ucNcULa6Y1f6FDgmeJSCqHw==]
+
+[2018-07-19 10:46:05] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a2820 0xc0422c6960 map[code:011TFWgZ1zPHq11abihZ12b8hZ1TFWgl] 0xc0420c1730}
+[2018-07-19 10:46:05] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011TFWgZ1zPHq11abihZ12b8hZ1TFWgl]
+[2018-07-19 10:46:05] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011TFWgZ1zPHq11abihZ12b8hZ1TFWgl
+[2018-07-19 10:46:05] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:46:05] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-43.9422ms-Params: map[code:011TFWgZ1zPHq11abihZ12b8hZ1TFWgl]
+
+[2018-07-19 10:46:06] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a29c0 0xc0422c6b40 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:rit1P1IQ5DCGqvfjuHBUNw== encryptedData:f9v04RAkibcKHCQmPjwVl/c/AgfdS5laqFhhnv3+YUYQlRn+pE1GQuWpV/ilAHVLYovdu1azUjR1DP/0fcIDEOA1PNh3b/c/HqMmCTG5OnON4HQ9YEVfbliF5HZ+w4ZWxcqTZndaD49ij4X/rPqEWQ==] 0xc0420c1730}
+[2018-07-19 10:46:06] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:46:06] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968372,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:46:06] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[iv:rit1P1IQ5DCGqvfjuHBUNw== encryptedData:f9v04RAkibcKHCQmPjwVl/c/AgfdS5laqFhhnv3+YUYQlRn+pE1GQuWpV/ilAHVLYovdu1azUjR1DP/0fcIDEOA1PNh3b/c/HqMmCTG5OnON4HQ9YEVfbliF5HZ+w4ZWxcqTZndaD49ij4X/rPqEWQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a2f70 0xc0422c6c30 map[code:021rHvjK1vzeJ40FzkiK1ebqjK1rHvjb] 0xc0420c1730}
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:021rHvjK1vzeJ40FzkiK1ebqjK1rHvjb]
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 021rHvjK1vzeJ40FzkiK1ebqjK1rHvjb
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zrouDpqILfPKaauOFgKLVw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:46:18] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-57.817ms-Params: map[code:021rHvjK1vzeJ40FzkiK1ebqjK1rHvjb]
+
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423a3110 0xc0422c6e10 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:t5JKYRTWPdA0DQ3cjR1/1g== encryptedData:q+yWBdCbwF+DnkKW+GdxeL9Wv/ME6fPyhcH356Y2IUTev1J+87CNOWLhcNTLEeFEWtWLHU8JTbabbJTl+hXJHfCTd9k5qCuA//WYZzV5Sr9goTQOKWksMymuKFD4lH8mW2gCy65H3ffQHAAE5Rq2sg==] 0xc0420c1730}
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zrouDpqILfPKaauOFgKLVw==
+[2018-07-19 10:46:18] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968384,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:46:18] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.2µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:t5JKYRTWPdA0DQ3cjR1/1g== encryptedData:q+yWBdCbwF+DnkKW+GdxeL9Wv/ME6fPyhcH356Y2IUTev1J+87CNOWLhcNTLEeFEWtWLHU8JTbabbJTl+hXJHfCTd9k5qCuA//WYZzV5Sr9goTQOKWksMymuKFD4lH8mW2gCy65H3ffQHAAE5Rq2sg==]
+
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422add40 0xc0422470e0 map[code:0716lY620ogdQE1UII320eTU6206lY6j] 0xc0420c1730}
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0716lY620ogdQE1UII320eTU6206lY6j]
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0716lY620ogdQE1UII320eTU6206lY6j
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"84oPIh4T2ZQ79NI\/kWbubQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:48:42] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-216.4203ms-Params: map[code:0716lY620ogdQE1UII320eTU6206lY6j]
+
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211d6c0 0xc0420fe780 map[iv:fEScZf5wn7BNI4ORmAJzWA== encryptedData:t6moVMJchsxLptN6cSscKx08UJz4CF6/WV2YsxbXmAebVSPpyQ1B+SXWm2uAHnhi/WP4xPCWT00tc0hmho2K+1c04kMj/hUaHevHpl0ab+2OAkXvFIqgEIarJiReiLfrjR9GKv/4EADyPlo7nLv//Q== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:84oPIh4T2ZQ79NI/kWbubQ==
+[2018-07-19 10:48:42] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968529,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:48:42] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-1.0144ms-Params: map[encryptedData:t6moVMJchsxLptN6cSscKx08UJz4CF6/WV2YsxbXmAebVSPpyQ1B+SXWm2uAHnhi/WP4xPCWT00tc0hmho2K+1c04kMj/hUaHevHpl0ab+2OAkXvFIqgEIarJiReiLfrjR9GKv/4EADyPlo7nLv//Q== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:fEScZf5wn7BNI4ORmAJzWA==]
+
+[2018-07-19 10:49:44] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211dc70 0xc0420fe870 map[code:071lQnSG00ftGj24xhUG0ptuSG0lQnS4] 0xc0420c1730}
+[2018-07-19 10:49:44] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071lQnSG00ftGj24xhUG0ptuSG0lQnS4]
+[2018-07-19 10:49:44] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071lQnSG00ftGj24xhUG0ptuSG0lQnS4
+[2018-07-19 10:49:44] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"84oPIh4T2ZQ79NI\/kWbubQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:49:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-211.9767ms-Params: map[code:071lQnSG00ftGj24xhUG0ptuSG0lQnS4]
+
+[2018-07-19 10:49:45] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222aea0 0xc04222e3c0 map[iv:oPx6ng+BBQDtyh699tO1Mg== encryptedData:5U0rrK/puhsP9rZLBLm4W9wypFIghErBkqKUebeVClvHBS3Ak/aZyB/YJwCjI8cIKCaIkL256A9dUFc/6EzQbwDksQqS9NhXCwoAG+gp3uj+ITNMbyWJwU90MXQAILS6S9exKRRnzLg2n5v5ikcHNA== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:49:45] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:84oPIh4T2ZQ79NI/kWbubQ==
+[2018-07-19 10:49:45] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968592,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:49:45] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[iv:oPx6ng+BBQDtyh699tO1Mg== encryptedData:5U0rrK/puhsP9rZLBLm4W9wypFIghErBkqKUebeVClvHBS3Ak/aZyB/YJwCjI8cIKCaIkL256A9dUFc/6EzQbwDksQqS9NhXCwoAG+gp3uj+ITNMbyWJwU90MXQAILS6S9exKRRnzLg2n5v5ikcHNA== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b450 0xc04222e4b0 map[code:011e4crd0TjZvt1pwWpd0QASqd0e4crx] 0xc0420c1730}
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011e4crd0TjZvt1pwWpd0QASqd0e4crx]
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011e4crd0TjZvt1pwWpd0QASqd0e4crx
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"84oPIh4T2ZQ79NI\/kWbubQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:49:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-60.8554ms-Params: map[code:011e4crd0TjZvt1pwWpd0QASqd0e4crx]
+
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b5f0 0xc04222e690 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:TbF8tuPe62w9hjnWzwI5ZQ== encryptedData:K7dhaYV7ABFigiXtOnZ0VILZRy1CpbbnE4gpfwmgfgQVZJI58iE7Qr06QO273Tt0cv0V6j0HG6cXIu6ECPk9/+M1DjKWQVnKEFMuIb6nY+MRhZR3K4eTkRM2A3IcX/Xq3UY52CpnZXMJyu19LdY2aw==] 0xc0420c1730}
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:84oPIh4T2ZQ79NI/kWbubQ==
+[2018-07-19 10:49:48] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968595,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:49:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996.7µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:TbF8tuPe62w9hjnWzwI5ZQ== encryptedData:K7dhaYV7ABFigiXtOnZ0VILZRy1CpbbnE4gpfwmgfgQVZJI58iE7Qr06QO273Tt0cv0V6j0HG6cXIu6ECPk9/+M1DjKWQVnKEFMuIb6nY+MRhZR3K4eTkRM2A3IcX/Xq3UY52CpnZXMJyu19LdY2aw==]
+
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ce4e0 0xc0422472c0 map[code:061ul2Li0aFl3o1ReNKi0hGKKi0ul2LT] 0xc0420c1730}
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061ul2Li0aFl3o1ReNKi0hGKKi0ul2LT]
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061ul2Li0aFl3o1ReNKi0hGKKi0ul2LT
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"84oPIh4T2ZQ79NI\/kWbubQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:50:17] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-240.5973ms-Params: map[code:061ul2Li0aFl3o1ReNKi0hGKKi0ul2LT]
+
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ce750 0xc0422474a0 map[iv:ETgPvwwn/t+q96g/MV2dBg== encryptedData:qCX9teK0Ls9ud1b5UITbTw2cNEe3zBweHBg3k+4lgMurgRIHgFQb3iXLAStZ08HhsTFqg8XtxNKjZUMmQAFm60st1oxck9nyJoI2x2eYNOmzgvLNBNXXmarXEfZXPGSrs4Bwo6DdnCUZ9FCKXZ5o6w== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:84oPIh4T2ZQ79NI/kWbubQ==
+[2018-07-19 10:50:17] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968624,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:50:17] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:ETgPvwwn/t+q96g/MV2dBg== encryptedData:qCX9teK0Ls9ud1b5UITbTw2cNEe3zBweHBg3k+4lgMurgRIHgFQb3iXLAStZ08HhsTFqg8XtxNKjZUMmQAFm60st1oxck9nyJoI2x2eYNOmzgvLNBNXXmarXEfZXPGSrs4Bwo6DdnCUZ9FCKXZ5o6w==]
+
+[2018-07-19 10:50:45] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ced00 0xc042247590 map[code:021qWeUh0BbjZx18VkUh0usdUh0qWeUi] 0xc0420c1730}
+[2018-07-19 10:50:45] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:021qWeUh0BbjZx18VkUh0usdUh0qWeUi]
+[2018-07-19 10:50:45] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 021qWeUh0BbjZx18VkUh0usdUh0qWeUi
+[2018-07-19 10:50:46] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:50:46] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-194.7206ms-Params: map[code:021qWeUh0BbjZx18VkUh0usdUh0qWeUi]
+
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c1a0 0xc04222e0f0 map[code:071Wq4pV133PdV0QvOmV1N73pV1Wq4ph] 0xc0420c1730}
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071Wq4pV133PdV0QvOmV1N73pV1Wq4ph]
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071Wq4pV133PdV0QvOmV1N73pV1Wq4ph
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:50:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-98.8488ms-Params: map[code:071Wq4pV133PdV0QvOmV1N73pV1Wq4ph]
+
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c340 0xc04222e2d0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:WGd6B5nWsn3YsnCzLctCHQ== encryptedData:e1aCjN6DOYXWH6RFODihsVgXp8Ve48Qj8s/2Keab0NVF8g/kCrF91csNGCr4fe+VPIFgwJejYlb8mkuq2YdvVr1oSMonylZFJaB5AOX0oAFC3ZvyInz36jzFm/KVA3DdFW8WzF2Wbo44/Kti7GZYxg==] 0xc0420c1730}
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:MqFdoyJervQtQQc6SVyIlQ==
+[2018-07-19 10:50:48] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968655,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:50:48] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:WGd6B5nWsn3YsnCzLctCHQ== encryptedData:e1aCjN6DOYXWH6RFODihsVgXp8Ve48Qj8s/2Keab0NVF8g/kCrF91csNGCr4fe+VPIFgwJejYlb8mkuq2YdvVr1oSMonylZFJaB5AOX0oAFC3ZvyInz36jzFm/KVA3DdFW8WzF2Wbo44/Kti7GZYxg==]
+
+[2018-07-19 10:51:58] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:081wqwRc1Phseu0r0MPc1RLERc1wqwRA] 0xc0420c1730}
+[2018-07-19 10:51:58] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:081wqwRc1Phseu0r0MPc1RLERc1wqwRA]
+[2018-07-19 10:51:58] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 081wqwRc1Phseu0r0MPc1RLERc1wqwRA
+[2018-07-19 10:51:58] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:51:58] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-67.8353ms-Params: map[code:081wqwRc1Phseu0r0MPc1RLERc1wqwRA]
+
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a8f0 0xc0420fe3c0 map[code:011GxzY20r0CYD1OyDY20MOxY20GxzY4] 0xc0420c1730}
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011GxzY20r0CYD1OyDY20MOxY20GxzY4]
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011GxzY20r0CYD1OyDY20MOxY20GxzY4
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:51:59] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-41.4787ms-Params: map[code:011GxzY20r0CYD1OyDY20MOxY20GxzY4]
+
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222aa90 0xc0420fe5a0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:klPAckiFC1rGONgzYRF7Ag== encryptedData:n49VKR9XXFLDMshAaphlkJCaLd3Ysq1kgdNKIU5TttwxsmThbaQ7+B06CjOzfdE6urIMKD9U6azFQDeTf+KYhA+9PyI5zCHuUAetSs4hgWw1+nFucprloQR1mCerg39PGXtU+7B4k5nkGt50+DiQZQ==] 0xc0420c1730}
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:MqFdoyJervQtQQc6SVyIlQ==
+[2018-07-19 10:51:59] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968727,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:51:59] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-998.2µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:klPAckiFC1rGONgzYRF7Ag== encryptedData:n49VKR9XXFLDMshAaphlkJCaLd3Ysq1kgdNKIU5TttwxsmThbaQ7+B06CjOzfdE6urIMKD9U6azFQDeTf+KYhA+9PyI5zCHuUAetSs4hgWw1+nFucprloQR1mCerg39PGXtU+7B4k5nkGt50+DiQZQ==]
+
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211ca90 0xc04222e3c0 map[code:001TISDp08Zsoq1FaIFp00FBDp0TISDG] 0xc0420c1730}
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001TISDp08Zsoq1FaIFp00FBDp0TISDG]
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001TISDp08Zsoq1FaIFp00FBDp0TISDG
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:52:26] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-505.9839ms-Params: map[code:001TISDp08Zsoq1FaIFp00FBDp0TISDG]
+
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ce5b0 0xc042246000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:VFSQsA1GLpGj1R3a4bPL3w== encryptedData:KRm09flNmtnqcx4iicjBQXS0tW6KxBfNi3GkLpSUjoB0NuJ8/s7oyMBvzImIqcFhD0YIcHwMEOkuL2IWK5KkJaOGfA6rdibdPRSIP9bEKvG2zunWs4sqeAen+VhH+Govf8QF6xcVW1HwN/40NY5uDQ==] 0xc0420c1730}
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:MqFdoyJervQtQQc6SVyIlQ==
+[2018-07-19 10:52:26] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968754,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:52:26] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-999.5µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:VFSQsA1GLpGj1R3a4bPL3w== encryptedData:KRm09flNmtnqcx4iicjBQXS0tW6KxBfNi3GkLpSUjoB0NuJ8/s7oyMBvzImIqcFhD0YIcHwMEOkuL2IWK5KkJaOGfA6rdibdPRSIP9bEKvG2zunWs4sqeAen+VhH+Govf8QF6xcVW1HwN/40NY5uDQ==]
+
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ceb60 0xc0422460f0 map[code:001sPmqg28hVkB0qpdog2Yc6qg2sPmqg] 0xc0420c1730}
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001sPmqg28hVkB0qpdog2Yc6qg2sPmqg]
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001sPmqg28hVkB0qpdog2Yc6qg2sPmqg
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"MqFdoyJervQtQQc6SVyIlQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:52:45] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-85.8207ms-Params: map[code:001sPmqg28hVkB0qpdog2Yc6qg2sPmqg]
+
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423ceea0 0xc0422462d0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:V6tRhoT6Q1Ih4XxcRw8otQ== encryptedData:ZRb8hd52aL1zXuRgV5JlH6Tvb2fD1sAGvmf4kDTgNQE6WCmxGL0GPTjOh8NSR4V82h8yBIp6NwgM7TN2Kd+0/U2DzGRPQR1+h5ChSZY13BflEBsGqvEBq/6b4FU/Cl6DA64Coc0mIaZ8jL3Mo67+SA==] 0xc0420c1730}
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:MqFdoyJervQtQQc6SVyIlQ==
+[2018-07-19 10:52:45] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968772,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:52:45] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[encryptedData:ZRb8hd52aL1zXuRgV5JlH6Tvb2fD1sAGvmf4kDTgNQE6WCmxGL0GPTjOh8NSR4V82h8yBIp6NwgM7TN2Kd+0/U2DzGRPQR1+h5ChSZY13BflEBsGqvEBq/6b4FU/Cl6DA64Coc0mIaZ8jL3Mo67+SA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:V6tRhoT6Q1Ih4XxcRw8otQ==]
+
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0423cf450 0xc0422463c0 map[code:001JNAj22YPR6X0ATVj22OOTj22JNAjq] 0xc0420c1730}
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001JNAj22YPR6X0ATVj22OOTj22JNAjq]
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001JNAj22YPR6X0ATVj22OOTj22JNAjq
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"vWUnkyABseVHl8ML1MFfpg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:52:49] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-63.8669ms-Params: map[code:001JNAj22YPR6X0ATVj22OOTj22JNAjq]
+
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[encryptedData:TekDEiLNADht9Pj1TI88GYDXYWewK0wDSEMCPbOluBvbXSXEoQyftmhx7iZjrIrRGWKD/mo/6gHmj1wjJ2fMwN0ATq6GUL5HAUCfCBZHLtooytQ3iK1bDJj/zfNpAJKtofzV9QCE56v9ZhnQgboFUA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Uda6m9fya132C5+tgEwlJw==] 0xc0420c1730}
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:vWUnkyABseVHl8ML1MFfpg==
+[2018-07-19 10:52:49] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968777,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:52:49] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-1.0072ms-Params: map[encryptedData:TekDEiLNADht9Pj1TI88GYDXYWewK0wDSEMCPbOluBvbXSXEoQyftmhx7iZjrIrRGWKD/mo/6gHmj1wjJ2fMwN0ATq6GUL5HAUCfCBZHLtooytQ3iK1bDJj/zfNpAJKtofzV9QCE56v9ZhnQgboFUA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Uda6m9fya132C5+tgEwlJw==]
+
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a750 0xc0420fe2d0 map[code:011k0lgL0X6Xu62XJCiL0qotgL0k0lgk] 0xc0420c1730}
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011k0lgL0X6Xu62XJCiL0qotgL0k0lgk]
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011k0lgL0X6Xu62XJCiL0qotgL0k0lgk
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"vWUnkyABseVHl8ML1MFfpg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:53:00] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-78.3132ms-Params: map[code:011k0lgL0X6Xu62XJCiL0qotgL0k0lgk]
+
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a8f0 0xc0420fe4b0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:9X7Mk4JTENDONKO0k8Ma/A== encryptedData:MZ1282kQb2EPTOyEn6MonGVaAgRxJ8L7hJ/8E4OzGeA3+sx+zptdiMN4NfW8FUgTL6kWl+vSLVoijYFc247OhcxMV6sLRz7+BSijruuCMEqe2Z5GFC7Trj46eoXEbKFpDetgOs1Gwo6fTH1rtd0UaA==] 0xc0420c1730}
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:vWUnkyABseVHl8ML1MFfpg==
+[2018-07-19 10:53:00] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968787,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:53:00] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.9µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:9X7Mk4JTENDONKO0k8Ma/A== encryptedData:MZ1282kQb2EPTOyEn6MonGVaAgRxJ8L7hJ/8E4OzGeA3+sx+zptdiMN4NfW8FUgTL6kWl+vSLVoijYFc247OhcxMV6sLRz7+BSijruuCMEqe2Z5GFC7Trj46eoXEbKFpDetgOs1Gwo6fTH1rtd0UaA==]
+
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222aea0 0xc0420fe5a0 map[code:061SSTd92UtmlQ0uNFf92ALtd92SSTdd] 0xc0420c1730}
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061SSTd92UtmlQ0uNFf92ALtd92SSTdd]
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061SSTd92UtmlQ0uNFf92ALtd92SSTdd
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"vWUnkyABseVHl8ML1MFfpg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:53:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-66.6842ms-Params: map[code:061SSTd92UtmlQ0uNFf92ALtd92SSTdd]
+
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b040 0xc0420fe780 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:d57X6VmZpei6c+Zb0GpakA== encryptedData:YRTAxYzEZoQiUtu3qkKOnKWYNS7XtXoMqS2fhBudJCIGNs3XicQYDLPN/Bw3Qc4QJm78NaWhIMWVfUAdqTrJqPmWkSlJ3yGGvjCo6jBGX4mRaZ/sQKQ2MY2QeHzSGtZSJh7aU/+90ul9X4RJ5SUDAg==] 0xc0420c1730}
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:vWUnkyABseVHl8ML1MFfpg==
+[2018-07-19 10:53:13] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968800,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:53:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:d57X6VmZpei6c+Zb0GpakA== encryptedData:YRTAxYzEZoQiUtu3qkKOnKWYNS7XtXoMqS2fhBudJCIGNs3XicQYDLPN/Bw3Qc4QJm78NaWhIMWVfUAdqTrJqPmWkSlJ3yGGvjCo6jBGX4mRaZ/sQKQ2MY2QeHzSGtZSJh7aU/+90ul9X4RJ5SUDAg==]
+
+[2018-07-19 10:53:37] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0420460d0 0xc04222e000 map[code:011GbrgD0fx3me2R4uiD0pBcgD0Gbrgc] 0xc0420c1730}
+[2018-07-19 10:53:37] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011GbrgD0fx3me2R4uiD0pBcgD0Gbrgc]
+[2018-07-19 10:53:37] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011GbrgD0fx3me2R4uiD0pBcgD0Gbrgc
+[2018-07-19 10:53:38] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"vWUnkyABseVHl8ML1MFfpg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 10:53:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-194.1432ms-Params: map[code:011GbrgD0fx3me2R4uiD0pBcgD0Gbrgc]
+
+[2018-07-19 10:53:38] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b5f0 0xc0420fe870 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:OCBIUOvPkkDBxRzccNiMig== encryptedData:mu/phzZpcDIzK7vut55rVWma5sKlYBmqBMhM+DLFv/80YetsUAIMpzeByLBaS0okwC34pfIZLOSpj/EW+GqwfWwQMMLVKrC9/fDxe52JeKHxHwnzp4kEKhV6syomcSbdovSWGAEqaSFgmEuyHl7HRQ==] 0xc0420c1730}
+[2018-07-19 10:53:38] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:vWUnkyABseVHl8ML1MFfpg==
+[2018-07-19 10:53:38] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531968826,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 10:53:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-998.3µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:OCBIUOvPkkDBxRzccNiMig== encryptedData:mu/phzZpcDIzK7vut55rVWma5sKlYBmqBMhM+DLFv/80YetsUAIMpzeByLBaS0okwC34pfIZLOSpj/EW+GqwfWwQMMLVKrC9/fDxe52JeKHxHwnzp4kEKhV6syomcSbdovSWGAEqaSFgmEuyHl7HRQ==]
+
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:011YsvMq05YPfp1Z96Lq0gzAMq0YsvMe] 0xc0420c1730}
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011YsvMq05YPfp1Z96Lq0gzAMq0YsvMe]
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011YsvMq05YPfp1Z96Lq0gzAMq0YsvMe
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:00:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-192.2166ms-Params: map[code:011YsvMq05YPfp1Z96Lq0gzAMq0YsvMe]
+
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0420460d0 0xc0422ba000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:/VNEfPNzm2RsuJycIvxrzQ== encryptedData:KrxSoOqO7CgKKvz5nh7f9J4lEd5drJPpZE/R80CmJDgd7nwtv8iGmFAw6MejWDSPy8IGw28aJW2xXcBCmjJRsLyc6BaqUtS001Ahp4KFK/3rdz9mtIv/lIwFnHzvs7rxXNSaVEY9rcjEVyAImaDHDA==] 0xc0420c1730}
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:00:56] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969266,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:00:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996.3µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:/VNEfPNzm2RsuJycIvxrzQ== encryptedData:KrxSoOqO7CgKKvz5nh7f9J4lEd5drJPpZE/R80CmJDgd7nwtv8iGmFAw6MejWDSPy8IGw28aJW2xXcBCmjJRsLyc6BaqUtS001Ahp4KFK/3rdz9mtIv/lIwFnHzvs7rxXNSaVEY9rcjEVyAImaDHDA==]
+
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042046680 0xc0422ba0f0 map[code:081UO1kO0Zwefb2qklnO0DK7kO0UO1ku] 0xc0420c1730}
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:081UO1kO0Zwefb2qklnO0DK7kO0UO1ku]
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 081UO1kO0Zwefb2qklnO0DK7kO0UO1ku
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:01:00] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-88.2946ms-Params: map[code:081UO1kO0Zwefb2qklnO0DK7kO0UO1ku]
+
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042046820 0xc0422ba2d0 map[encryptedData:szOL2b86kpE37xyEZVWanqC9GZ6joC7L3mGBkZhj2xcpvY6Su1M0Gxv4JY3pl2h45SaTe9cv2+FndJ/8SKijqc5dg3M9rxqaF3z9j3N1Ki+SMiRzBBCCBFPKH8qcuEcob7YN8C5OPR7EB1BrOrPOnw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:aF40znWpi+Mv649GL9alTQ==] 0xc0420c1730}
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:01:00] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969270,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:01:00] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[encryptedData:szOL2b86kpE37xyEZVWanqC9GZ6joC7L3mGBkZhj2xcpvY6Su1M0Gxv4JY3pl2h45SaTe9cv2+FndJ/8SKijqc5dg3M9rxqaF3z9j3N1Ki+SMiRzBBCCBFPKH8qcuEcob7YN8C5OPR7EB1BrOrPOnw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:aF40znWpi+Mv649GL9alTQ==]
+
+[2018-07-19 11:01:25] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042046f70 0xc0422ba4b0 map[code:001y8h0s1rlSKm06vwZr1jOo0s1y8h0n] 0xc0420c1730}
+[2018-07-19 11:01:25] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001y8h0s1rlSKm06vwZr1jOo0s1y8h0n]
+[2018-07-19 11:01:25] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001y8h0s1rlSKm06vwZr1jOo0s1y8h0n
+[2018-07-19 11:01:25] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:01:25] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-124.5238ms-Params: map[code:001y8h0s1rlSKm06vwZr1jOo0s1y8h0n]
+
+[2018-07-19 11:01:26] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c0d0 0xc042090000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:PUYjmNk67+xhP9BQlJzVtg== encryptedData:i1foT01Ias+BbLV6j/KYZdtxlSDY0uoZFWaPfcMHzfUtZk4oy8/1lecXXfgLD1W6eDcBRi+sDTSK5FtG3eLmaGPoSij5tQ5Xh3e3FpgVYhe8DWBCGbSJ109cANjh06D5KWEzoX5Uy3y/+DlebEUmAQ==] 0xc0420c1730}
+[2018-07-19 11:01:26] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:01:26] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969295,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:01:26] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-995.9µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:PUYjmNk67+xhP9BQlJzVtg== encryptedData:i1foT01Ias+BbLV6j/KYZdtxlSDY0uoZFWaPfcMHzfUtZk4oy8/1lecXXfgLD1W6eDcBRi+sDTSK5FtG3eLmaGPoSij5tQ5Xh3e3FpgVYhe8DWBCGbSJ109cANjh06D5KWEzoX5Uy3y/+DlebEUmAQ==]
+
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:011wC7uw0QTdyj1oGftw029buw0wC7up] 0xc0420c1730}
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011wC7uw0QTdyj1oGftw029buw0wC7up]
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011wC7uw0QTdyj1oGftw029buw0wC7up
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:02:08] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-120.4491ms-Params: map[code:011wC7uw0QTdyj1oGftw029buw0wC7up]
+
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a8f0 0xc0420fe3c0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5q9/wwsSKlll5y9j9FSnDw== encryptedData:g5gs+BhDcPFDf9h9fAKVBUJEEp1ZQ84duvB0tWNgdUts8OvYjuM9y74VTP5tzO2DtmDt62OVoWG2YGUjelXIflxMu3eCIA1y4S2yG4ZE36Ii3KAs1No8fWdbrTw7juBwWEHHBKITqjRoDNMCJlSppQ==] 0xc0420c1730}
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:02:08] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969338,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:02:08] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5q9/wwsSKlll5y9j9FSnDw== encryptedData:g5gs+BhDcPFDf9h9fAKVBUJEEp1ZQ84duvB0tWNgdUts8OvYjuM9y74VTP5tzO2DtmDt62OVoWG2YGUjelXIflxMu3eCIA1y4S2yG4ZE36Ii3KAs1No8fWdbrTw7juBwWEHHBKITqjRoDNMCJlSppQ==]
+
+[2018-07-19 11:02:17] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222aea0 0xc0420fe4b0 map[code:0817dbpg1wbYly0Lmvlg1Cvopg17dbpP] 0xc0420c1730}
+[2018-07-19 11:02:17] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0817dbpg1wbYly0Lmvlg1Cvopg17dbpP]
+[2018-07-19 11:02:17] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0817dbpg1wbYly0Lmvlg1Cvopg17dbpP
+[2018-07-19 11:02:18] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:02:18] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-47.3411ms-Params: map[code:0817dbpg1wbYly0Lmvlg1Cvopg17dbpP]
+
+[2018-07-19 11:02:18] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b040 0xc0420fe690 map[iv:6hPsD8x8vfEvZZjSrEzASg== encryptedData:LkB0qd6aRgDe7ve5PdEsv0cgIX2X2C2eIaWH8bTFjLe3E/xPFJblDfX+fl6AAvbzmR5s3vhZzB5OvuID6kQFZy+FAEQEbf/UUbMUqXdqlG9rY8fd4TRjmRjIBrqPE80xfnTvxqhjIQO03LIP9k60VQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 11:02:18] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:02:18] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969348,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:02:18] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-996.6µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:6hPsD8x8vfEvZZjSrEzASg== encryptedData:LkB0qd6aRgDe7ve5PdEsv0cgIX2X2C2eIaWH8bTFjLe3E/xPFJblDfX+fl6AAvbzmR5s3vhZzB5OvuID6kQFZy+FAEQEbf/UUbMUqXdqlG9rY8fd4TRjmRjIBrqPE80xfnTvxqhjIQO03LIP9k60VQ==]
+
+[2018-07-19 11:02:51] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b5f0 0xc0420fe780 map[code:011ozYsc0ARNLu1I1yrc0Xl4tc0ozYsN] 0xc0420c1730}
+[2018-07-19 11:02:51] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011ozYsc0ARNLu1I1yrc0Xl4tc0ozYsN]
+[2018-07-19 11:02:51] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011ozYsc0ARNLu1I1yrc0Xl4tc0ozYsN
+[2018-07-19 11:02:52] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"faQLugH5qSVH4rBn544U2g==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:02:52] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-483.9028ms-Params: map[code:011ozYsc0ARNLu1I1yrc0Xl4tc0ozYsN]
+
+[2018-07-19 11:02:52] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c680 0xc042154000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:uCHm/3aPfftPKefQkbpxTA== encryptedData:QmI7uiV7Sz0AEsTCBCwYtWejXTISJNfTDKRsgwzjTF3WRUVbEqyn0AJhtVPP0cQ02sRnHyqjUK5cLJlmnyPpQ9VEqhon2SBWRVNV+u+shiAlEgp+QbIFNs1cr7DtR/hb2zG1iIEzAc/9G0DLr+E1Ww==] 0xc0420c1730}
+[2018-07-19 11:02:52] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:faQLugH5qSVH4rBn544U2g==
+[2018-07-19 11:02:52] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969382,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:02:52] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:uCHm/3aPfftPKefQkbpxTA== encryptedData:QmI7uiV7Sz0AEsTCBCwYtWejXTISJNfTDKRsgwzjTF3WRUVbEqyn0AJhtVPP0cQ02sRnHyqjUK5cLJlmnyPpQ9VEqhon2SBWRVNV+u+shiAlEgp+QbIFNs1cr7DtR/hb2zG1iIEzAc/9G0DLr+E1Ww==]
+
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:0114bzDQ06fET82bYNAQ04GKDQ04bzDg] 0xc0420c1730}
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0114bzDQ06fET82bYNAQ04GKDQ04bzDg]
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0114bzDQ06fET82bYNAQ04GKDQ04bzDg
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"yQPcQB3TqlUVKyDSwXJ1kw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:07:52] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-284.3642ms-Params: map[code:0114bzDQ06fET82bYNAQ04GKDQ04bzDg]
+
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a8f0 0xc0420fe3c0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:14dKaukxGmLNuJRU+BPUTA== encryptedData:0Xe1B6CiSyqBIn3RcRArctMJGrGXV+1ei2jHQgx+21XjCfBwWK359IXwBJUr4rEGENH6DtIS0PirGvDHdPxKLbM8IOTrYeoRi8ZZRIoo8w485HgpaXUSvcqo6F6siEnR9h8RLxtP2S4RGHmtjxpEnw==] 0xc0420c1730}
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:yQPcQB3TqlUVKyDSwXJ1kw==
+[2018-07-19 11:07:52] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969683,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:07:52] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.4µs-Params: map[iv:14dKaukxGmLNuJRU+BPUTA== encryptedData:0Xe1B6CiSyqBIn3RcRArctMJGrGXV+1ei2jHQgx+21XjCfBwWK359IXwBJUr4rEGENH6DtIS0PirGvDHdPxKLbM8IOTrYeoRi8ZZRIoo8w485HgpaXUSvcqo6F6siEnR9h8RLxtP2S4RGHmtjxpEnw== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:09:43] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:0119ydbV1MZfEW0W5oaV14I3bV19ydb0] 0xc0420c1730}
+[2018-07-19 11:09:43] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0119ydbV1MZfEW0W5oaV14I3bV19ydb0]
+[2018-07-19 11:09:43] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0119ydbV1MZfEW0W5oaV14I3bV19ydb0
+[2018-07-19 11:09:43] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"yQPcQB3TqlUVKyDSwXJ1kw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:09:43] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-158.7734ms-Params: map[code:0119ydbV1MZfEW0W5oaV14I3bV19ydb0]
+
+[2018-07-19 11:09:44] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c0d0 0xc04216c000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:+fTSm3C3JnfVqgjPBazz4w== encryptedData:unXKZu+8Q9Rn5lgYnuDmsTC48U2l8MVsHRHc8VnKtp0vpG5FTpEd/ibhKnXyfOEhgqYfDsH9JlqzpLPOkkKCtqRbXrrHOfxUjvmnRoXQQnGGdNhyfP4YtlCk/t+KwIJvOp6EePn4qktWjninjrHxIA==] 0xc0420c1730}
+[2018-07-19 11:09:44] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:yQPcQB3TqlUVKyDSwXJ1kw==
+[2018-07-19 11:09:44] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969795,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:09:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[encryptedData:unXKZu+8Q9Rn5lgYnuDmsTC48U2l8MVsHRHc8VnKtp0vpG5FTpEd/ibhKnXyfOEhgqYfDsH9JlqzpLPOkkKCtqRbXrrHOfxUjvmnRoXQQnGGdNhyfP4YtlCk/t+KwIJvOp6EePn4qktWjninjrHxIA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:+fTSm3C3JnfVqgjPBazz4w==]
+
+[2018-07-19 11:09:48] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c750 0xc04216c0f0 map[code:021vKyCn1tD1qi0xxUDn1gXlCn1vKyCw] 0xc0420c1730}
+[2018-07-19 11:09:48] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:021vKyCn1tD1qi0xxUDn1gXlCn1vKyCw]
+[2018-07-19 11:09:48] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 021vKyCn1tD1qi0xxUDn1gXlCn1vKyCw
+[2018-07-19 11:09:49] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"yQPcQB3TqlUVKyDSwXJ1kw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:09:49] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-86.6374ms-Params: map[code:021vKyCn1tD1qi0xxUDn1gXlCn1vKyCw]
+
+[2018-07-19 11:09:49] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a8f0 0xc0420fe3c0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:MsfKU3+iUskBLc4CMnvKIw== encryptedData:CVzljGh4bk3fJYqv+Excu8AR2jLVGT2RArWqT7RXR/WJCauHac25dePMttgpgq88hrF250s2p77yBX9FaXoG18CafubmcHmxXII+PLknpNL0iSxqUKsv5AZhCBixhrKWXIDSLeodfdOKnPShVfgZKg==] 0xc0420c1730}
+[2018-07-19 11:09:49] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:yQPcQB3TqlUVKyDSwXJ1kw==
+[2018-07-19 11:09:49] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969800,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:09:49] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:MsfKU3+iUskBLc4CMnvKIw== encryptedData:CVzljGh4bk3fJYqv+Excu8AR2jLVGT2RArWqT7RXR/WJCauHac25dePMttgpgq88hrF250s2p77yBX9FaXoG18CafubmcHmxXII+PLknpNL0iSxqUKsv5AZhCBixhrKWXIDSLeodfdOKnPShVfgZKg==]
+
+[2018-07-19 11:10:01] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222aea0 0xc0420fe5a0 map[code:071osOyu1AuJic0W1hAu1p3Fyu1osOy8] 0xc0420c1730}
+[2018-07-19 11:10:01] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071osOyu1AuJic0W1hAu1p3Fyu1osOy8]
+[2018-07-19 11:10:01] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071osOyu1AuJic0W1hAu1p3Fyu1osOy8
+[2018-07-19 11:10:02] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"i8bR8k3SXK09h6o9UwtEVA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:10:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-65.8648ms-Params: map[code:071osOyu1AuJic0W1hAu1p3Fyu1osOy8]
+
+[2018-07-19 11:10:02] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b040 0xc0420fe780 map[] 0xc0420c1730}
+[2018-07-19 11:10:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-GET /api/login-997.7µs
+[2018-07-19 11:10:02] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222b380 0xc0420fe870 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:O4YC2tnO/Vv56J8zpuzp3A== encryptedData:ydif79FcCh8Zh7PdaoRG41m7GhlxCfK8m7S0pNQjtftIJLQEDk1XAvfjBGdbzF4i7PhFUmOBUFOhn1E3plBUBKrgAbEaaTd/YJJLCuBYewcmG7cxsfnmWMd4+7XDvdjzWU5ntNvJaxowOkCv/HaOrQ==] 0xc0420c1730}
+[2018-07-19 11:10:02] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:i8bR8k3SXK09h6o9UwtEVA==
+[2018-07-19 11:10:02] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969813,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:10:02] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:O4YC2tnO/Vv56J8zpuzp3A== encryptedData:ydif79FcCh8Zh7PdaoRG41m7GhlxCfK8m7S0pNQjtftIJLQEDk1XAvfjBGdbzF4i7PhFUmOBUFOhn1E3plBUBKrgAbEaaTd/YJJLCuBYewcmG7cxsfnmWMd4+7XDvdjzWU5ntNvJaxowOkCv/HaOrQ==]
+
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0420460d0 0xc0422f6000 map[code:061xbNdH1fNa4907hEcH1vC2eH1xbNde] 0xc0420c1730}
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061xbNdH1fNa4907hEcH1vC2eH1xbNde]
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061xbNdH1fNa4907hEcH1vC2eH1xbNde
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"i8bR8k3SXK09h6o9UwtEVA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:10:31] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-223.4225ms-Params: map[code:061xbNdH1fNa4907hEcH1vC2eH1xbNde]
+
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042046820 0xc0422f61e0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:e+HiBddn1DIodANhkjNf3Q== encryptedData:wRnT7kg3qSS4u/dM8oi6l4NjPOVZh8Vw+XNrlhu0a/qdyvysl/JdLpOFveHLO+KwY/aD1jlVCdFjHczAnlff0vKqVP79/AeA5LGa9l/CqOd0xmDhc2p1T9DOo8G7muV2j5BbYAbyYCACTc6P8BnTsg==] 0xc0420c1730}
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:i8bR8k3SXK09h6o9UwtEVA==
+[2018-07-19 11:10:31] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969843,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:10:31] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-999.2µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:e+HiBddn1DIodANhkjNf3Q== encryptedData:wRnT7kg3qSS4u/dM8oi6l4NjPOVZh8Vw+XNrlhu0a/qdyvysl/JdLpOFveHLO+KwY/aD1jlVCdFjHczAnlff0vKqVP79/AeA5LGa9l/CqOd0xmDhc2p1T9DOo8G7muV2j5BbYAbyYCACTc6P8BnTsg==]
+
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c9c0 0xc0422f63c0 map[code:071bfx3M15HHP5122k1M1vTO3M1bfx3G] 0xc0420c1730}
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071bfx3M15HHP5122k1M1vTO3M1bfx3G]
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071bfx3M15HHP5122k1M1vTO3M1bfx3G
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"i8bR8k3SXK09h6o9UwtEVA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:10:55] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-181.6342ms-Params: map[code:071bfx3M15HHP5122k1M1vTO3M1bfx3G]
+
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042046f70 0xc0422f64b0 map[iv:6OA/73K4IXyuJuN/GuAHqQ== encryptedData:iwttdA7LLHeYcSfmXApUaTvtimPQW2VG9zZOu7N5DrceiPwnHcxKzbf+hHqYbf4Zs8YC1tQQ750CJZfTLKrtWrmK3pl9DJJQWjSk5KvUNFgiQ8Vr4+lPdW5QYL4zT53xHdA1wGjAPw4ocjSHwAKxoA== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:i8bR8k3SXK09h6o9UwtEVA==
+[2018-07-19 11:10:55] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969867,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:10:55] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[iv:6OA/73K4IXyuJuN/GuAHqQ== encryptedData:iwttdA7LLHeYcSfmXApUaTvtimPQW2VG9zZOu7N5DrceiPwnHcxKzbf+hHqYbf4Zs8YC1tQQ750CJZfTLKrtWrmK3pl9DJJQWjSk5KvUNFgiQ8Vr4+lPdW5QYL4zT53xHdA1wGjAPw4ocjSHwAKxoA== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a1a0 0xc0420fe0f0 map[code:071PtF592UYMGQ0lnm6924mA592PtF5M] 0xc0420c1730}
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071PtF592UYMGQ0lnm6924mA592PtF5M]
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071PtF592UYMGQ0lnm6924mA592PtF5M
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"i8bR8k3SXK09h6o9UwtEVA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-208.5894ms-Params: map[code:071PtF592UYMGQ0lnm6924mA592PtF5M]
+
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04222a410 0xc0420fe3c0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:WamhR9ZGe/cmiQcCycvakw== encryptedData:kCTaIlG9Os9dCuCbNa/zQlc32W4fqsZ9emS1CEne67MVFe3Z5Zvy3qJyXJpM6FSiXDZq6lwsVqVKe5xxZG2ufH0emZk6eYTcgFIOv0m4exk4mdejDO/x3dYT0uWW/PZSnlqpd24+q/fn+FoLJNiLPQ==] 0xc0420c1730}
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:i8bR8k3SXK09h6o9UwtEVA==
+[2018-07-19 11:11:38] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969910,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:11:38] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-999.3µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:WamhR9ZGe/cmiQcCycvakw== encryptedData:kCTaIlG9Os9dCuCbNa/zQlc32W4fqsZ9emS1CEne67MVFe3Z5Zvy3qJyXJpM6FSiXDZq6lwsVqVKe5xxZG2ufH0emZk6eYTcgFIOv0m4exk4mdejDO/x3dYT0uWW/PZSnlqpd24+q/fn+FoLJNiLPQ==]
+
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211c680 0xc0420fe5a0 map[code:021Bg0ai2EnNAH0w8rbi293Z9i2Bg0aP] 0xc0420c1730}
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:021Bg0ai2EnNAH0w8rbi293Z9i2Bg0aP]
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 021Bg0ai2EnNAH0w8rbi293Z9i2Bg0aP
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"Gg3astOLX40BI1G5Qc1Weg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:12:16] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-69.8808ms-Params: map[code:021Bg0ai2EnNAH0w8rbi293Z9i2Bg0aP]
+
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211cf70 0xc04202e0f0 map[iv:UDq9jRaam0bcnbUyr/lloQ== encryptedData:wj/bxlom3q1nPD7f+uYBvIgGSMW2vyW9TUW0wv71f/xmOzyOAgwsho0+yyIeP8hBIfFdNsUCQRRGKmb3gItZqb9FwSq3tpbJ+KNAc+ck8pfC2jVhgfRnF1I1n7HCNvVWaX+M3eRffB0sbLgdLk+KGD5JjDOV2MGu+avIo/78qV5/rQIui80Kr41S3bpDXZW99Dd3cVptqQ2F9BvGdGqk0I7GeGSrauGNvBVNocc8AFlL4ORQi/wIunvKdfkCkv0fYqTSe0Z0LV2qOerqhILg/mk74ACqICPE68C3rZGfXD9f3QnjgJ2f64mLTfcJvR+v+WXWdgpqO3WCev1e8hNfurHDSHLp00+xyMQMS+OeqSUgO8U4uki/8ycnjUGW51g9QBmw0n3xl9p4p7fcDyLDTOI9agYUQmndbPHQqbaoHkoNInixYldyWS+gM9z0wkQ2KyDP1u3nWbbwaIxV60MfY5Z7+1Rrk+7dIiw3fvLhN3Q= signature:19acb878f9a71aaee040e1bb29e2f08171824d5d openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc0420c1730}
+[2018-07-19 11:12:16] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-0s-Params: map[encryptedData:wj/bxlom3q1nPD7f+uYBvIgGSMW2vyW9TUW0wv71f/xmOzyOAgwsho0+yyIeP8hBIfFdNsUCQRRGKmb3gItZqb9FwSq3tpbJ+KNAc+ck8pfC2jVhgfRnF1I1n7HCNvVWaX+M3eRffB0sbLgdLk+KGD5JjDOV2MGu+avIo/78qV5/rQIui80Kr41S3bpDXZW99Dd3cVptqQ2F9BvGdGqk0I7GeGSrauGNvBVNocc8AFlL4ORQi/wIunvKdfkCkv0fYqTSe0Z0LV2qOerqhILg/mk74ACqICPE68C3rZGfXD9f3QnjgJ2f64mLTfcJvR+v+WXWdgpqO3WCev1e8hNfurHDSHLp00+xyMQMS+OeqSUgO8U4uki/8ycnjUGW51g9QBmw0n3xl9p4p7fcDyLDTOI9agYUQmndbPHQqbaoHkoNInixYldyWS+gM9z0wkQ2KyDP1u3nWbbwaIxV60MfY5Z7+1Rrk+7dIiw3fvLhN3Q= signature:19acb878f9a71aaee040e1bb29e2f08171824d5d openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:UDq9jRaam0bcnbUyr/lloQ==]
+
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04211d110 0xc04202e1e0 map[encryptedData:jwAgBQjH8D2orSFmuTeAV82rSe2Jr4j0JlAFyFVxfszpf6gQDibATnqSDzubY+HwSa2/D/a936jFRkRgppj99T1XQ63eStObrO6YEg1j6ubomS/yprmWiJOtmqqDESEZyjSp3OoyNKmLiGiHlmmILA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Bhj7NBpeXFdmyq19u7o/yg==] 0xc0420c1730}
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:Gg3astOLX40BI1G5Qc1Weg==
+[2018-07-19 11:12:16] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969948,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:12:16] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.7µs-Params: map[encryptedData:jwAgBQjH8D2orSFmuTeAV82rSe2Jr4j0JlAFyFVxfszpf6gQDibATnqSDzubY+HwSa2/D/a936jFRkRgppj99T1XQ63eStObrO6YEg1j6ubomS/yprmWiJOtmqqDESEZyjSp3OoyNKmLiGiHlmmILA== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Bhj7NBpeXFdmyq19u7o/yg==]
+
+[2018-07-19 11:12:40] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:12:43] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042100750 0xc0420e22d0 map[code:011MLXNx0rJY8i1dYePx0dTiOx0MLXNu] 0xc042017810}
+[2018-07-19 11:12:43] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011MLXNx0rJY8i1dYePx0dTiOx0MLXNu]
+[2018-07-19 11:12:43] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011MLXNx0rJY8i1dYePx0dTiOx0MLXNu
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042100f70 0xc0420e24b0 map[encryptedData:i9VOBn1N3Z5UdT5v3uOKi44D1vTSkD0hQGE9PqXeBc7RpPqGu6Jrxzvk3OhOOQR86VXQHOpnYFVuYgtu8sKtZ/T6K6wx6VMESaVRGjwg6SoBFJtIDTEmOEW+SnjJreAKWrn200AO3lWyApPyslErGzQoVnpeCtYTPjABqNF8SooHObtlezdAG+wzV8Tq+d+w4NBOkSG0pi4ZdrOuuWhpbcMOloxmzRp4f1+IQkbt2QB/odxOhao9Lpg1eA7ksBTvzhasswghicEXTN+48CflQG2IZm23RmNrZ7y6u13ckhi+r2VcZhlUM/9lgw9LKPOwbXQj/8/q1NakLwweP7mWlCIcJrWD5N5WoxR2el0DUcfiyyFWWntzGjWlNcn2WmI/64QQgc+60VjGSUvlCCTMcuBsAj0FyGmb7rWqh1TkYqiCVlfHcgs9EzCnw6pguiKLKtmg/F8VTM9PbAQGyBVKfHHs/8uJLe0CfCGELuPH3JU= signature:19acb878f9a71aaee040e1bb29e2f08171824d5d openid:null iv:pI2arioNxPkVJAVp5rrxDA==] 0xc042017810}
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:19acb878f9a71aaee040e1bb29e2f08171824d5d
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:177 [INF] Handler crashed with error :runtime error: integer divide by zero
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=479)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=458)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/panic.go%!(EXTRA int=41)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/common/utils/crypt_aes.go%!(EXTRA int=26)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/web/server/web_handler.go%!(EXTRA int=105)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=480)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=630)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/reflect/asm_amd64.s%!(EXTRA int=29)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=480)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=434)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/reflect/value.go%!(EXTRA int=302)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=187)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=140)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=87)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/work/goproj/src/game/common/server/web/service_server.go%!(EXTRA int=84)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2022)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=2202)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/net/http/server.go%!(EXTRA int=1579)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:183 [INF] C:/Go/src/runtime/asm_amd64.s%!(EXTRA int=2086)
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-6.9869ms-Params: map[openid:null iv:pI2arioNxPkVJAVp5rrxDA== encryptedData:i9VOBn1N3Z5UdT5v3uOKi44D1vTSkD0hQGE9PqXeBc7RpPqGu6Jrxzvk3OhOOQR86VXQHOpnYFVuYgtu8sKtZ/T6K6wx6VMESaVRGjwg6SoBFJtIDTEmOEW+SnjJreAKWrn200AO3lWyApPyslErGzQoVnpeCtYTPjABqNF8SooHObtlezdAG+wzV8Tq+d+w4NBOkSG0pi4ZdrOuuWhpbcMOloxmzRp4f1+IQkbt2QB/odxOhao9Lpg1eA7ksBTvzhasswghicEXTN+48CflQG2IZm23RmNrZ7y6u13ckhi+r2VcZhlUM/9lgw9LKPOwbXQj/8/q1NakLwweP7mWlCIcJrWD5N5WoxR2el0DUcfiyyFWWntzGjWlNcn2WmI/64QQgc+60VjGSUvlCCTMcuBsAj0FyGmb7rWqh1TkYqiCVlfHcgs9EzCnw6pguiKLKtmg/F8VTM9PbAQGyBVKfHHs/8uJLe0CfCGELuPH3JU= signature:19acb878f9a71aaee040e1bb29e2f08171824d5d]
+
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"Gg3astOLX40BI1G5Qc1Weg==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-282.8258ms-Params: map[code:011MLXNx0rJY8i1dYePx0dTiOx0MLXNu]
+
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04223c0d0 0xc042236000 map[encryptedData:nsYwP2rmYqtZS/k+8vSQsIoKFnFPy0TSmcRJdhHNt6HvyOFkyQ+bdrl2EZFo2gUtwq7ep3YUagoC+fwf1HSEcHhSpK6ZO4YWMcvGY9bT/4HP1/l1qdyXnol0e5GWQ7ZzI0xErVgsA9qrnNQMw6Ewrw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:VwPkKqTT/NyeI6DD2xHwmA==] 0xc042017810}
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:Gg3astOLX40BI1G5Qc1Weg==
+[2018-07-19 11:12:44] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531969976,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:12:44] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-737µs-Params: map[encryptedData:nsYwP2rmYqtZS/k+8vSQsIoKFnFPy0TSmcRJdhHNt6HvyOFkyQ+bdrl2EZFo2gUtwq7ep3YUagoC+fwf1HSEcHhSpK6ZO4YWMcvGY9bT/4HP1/l1qdyXnol0e5GWQ7ZzI0xErVgsA9qrnNQMw6Ewrw== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:VwPkKqTT/NyeI6DD2xHwmA==]
+
+[2018-07-19 11:14:15] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:14:20] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042108410 0xc0420d62d0 map[code:061M0AmN0E8Sl32POxkN0nhGmN0M0AmF] 0xc042017810}
+[2018-07-19 11:14:20] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:061M0AmN0E8Sl32POxkN0nhGmN0M0AmF]
+[2018-07-19 11:14:20] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 061M0AmN0E8Sl32POxkN0nhGmN0M0AmF
+[2018-07-19 11:14:20] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422420d0 0xc04223c000 map[openid:null iv:JYxhEkWHS96RdUQ16aLA0w== encryptedData:HKRKI+Ox84m6Gan3LKbF3fEq9r72R2xmGHDBOG+YTvAGg6wRyzfKU+vXksAv1wr8Pb2mKr6E1fjPefCjuyTIiVXWVImI2djx24pydote+YyWSeRQvnFO8J8AnkPU+wWQcg8Srq/ZD0td49mKLGoJ7kHpcTC9wkaadF2d10EmFDP5wQMn0588qHtAZuFQVB1OUiRF0nYG0d+4xb/VmbtqJ3f1I72Dk/Wde40aDZ+uiuUX8bRLxQARXaCx4g1EzPWAkNstk8XNCPwsaIx/e3zawNApyYYnFXhrOyQCiAt+1rYSuk0/Ou5+NHmZtjPjwtgzSfjn/kP0vjjppKaklX1NM2WWD7FAaziZeo8rL9vsWiE6m2WXqSoZr28kh4L7yqrL+u4oVBwadvfn1zEkOjpW6vswhk9c3vBTbx1mZjJUQzMvB2Ys7d9RTnupLmhKcW8dDX8n9YDfxp9M7nYcDRSuqGxArLVtDrVp5E7PNllNeBI= signature:edee81587730819703ff3acca597e72ef02d9110] 0xc042017810}
+[2018-07-19 11:15:49] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:15:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0421200d0 0xc04211a000 map[code:011wG1i02p3huZ002ni02Xs6i02wG1iK] 0xc042017810}
+[2018-07-19 11:15:55] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011wG1i02p3huZ002ni02Xs6i02wG1iK]
+[2018-07-19 11:15:55] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011wG1i02p3huZ002ni02Xs6i02wG1iK
+[2018-07-19 11:15:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04216c5b0 0xc042180000 map[openid:null iv:sqpNLISWXlb8OA4f/H54ng== encryptedData:JfNYzF2ua2DbyHHvfY/RV6Y98PbYMsyYeTTGhHejvBZDoXMSMTnl8jl147sA1y57zdTWXYmd3+f6vC6IhLPewFI8KPB5SK9QqweU5mo6SPMEhMCd9O+E525Df8/fgSS02o2ZCzmNLbWSH1XVcwwo3UNQ4waf8yyU4BuWLxuggIIaeksNzqxzehBX6JdWBA9Km2PpRLdsn5xmOjRnHJ0OYh2dI6NNXELFKpSKYvJ9nhguRVpnNcMEk+O7g92JmvNdgKuOu9Y1CItLYKuZjb+geWAi1JeaDoumBtHF/xpR1C9vL3wIZ3GpukNM4Pe97aaCKrkVIt+PXdpnJn9Bz6kpEjz2Ro3ON1a8f4LMin5e6yyWzEIErCUJQ1r5QNFgBSiZVD3Y26bSLWa7Ib6rkvDM/gWvKYgvZZ0w0Xqqj2ir4knbRpshmjKgt7huM9H30j6s+D9qOhyRsFJ1FDBewCuy3SvxsjWtV/vFM8rL0HO/Zso= signature:edee81587730819703ff3acca597e72ef02d9110] 0xc042017810}
+[2018-07-19 11:19:23] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210e270 0xc0420e22d0 map[code:071w4tVe20MgwB0vEXUe2qYwVe2w4tVz] 0xc042017810}
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071w4tVe20MgwB0vEXUe2qYwVe2w4tVz]
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071w4tVe20MgwB0vEXUe2qYwVe2w4tVz
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"HnZT5N30Of703264J5v2Og==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:19:34] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-373.471ms-Params: map[code:071w4tVe20MgwB0vEXUe2qYwVe2w4tVz]
+
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210eb60 0xc0420e24b0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:0o3pfSqSWkkqXW7LqGphvA== encryptedData:ykn93Qxqm5dxqUbNcoO6/deAQBFHP7Bfb5ABbBC6r7EhpgYmeReSmaCCkjpue/7/dGO/o26jkTs9cBFb6PuF5mJikzqZjO2sLz9PQRhRWDJsETuCf7RegfNTKsIph1mf0QRa1KAPNOdEPdeSd/sZwg==] 0xc042017810}
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:HnZT5N30Of703264J5v2Og==
+[2018-07-19 11:19:34] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970388,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:19:34] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:0o3pfSqSWkkqXW7LqGphvA== encryptedData:ykn93Qxqm5dxqUbNcoO6/deAQBFHP7Bfb5ABbBC6r7EhpgYmeReSmaCCkjpue/7/dGO/o26jkTs9cBFb6PuF5mJikzqZjO2sLz9PQRhRWDJsETuCf7RegfNTKsIph1mf0QRa1KAPNOdEPdeSd/sZwg==]
+
+[2018-07-19 11:19:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210f110 0xc0420e25a0 map[signature:5e4b7cbee63621bd1da84f5d4c1a24fae30c5596 openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:tybh9fxIiX6ozzSsH4hsgA== encryptedData:iUrpOMvdBuopbCJx41Emi2wJetTr6c/qxfSEn6tAYWnZBMmo00ikMnLplKpqiK76MAfxreMpIu9swX9BvVozcqi8HkyJVMiQmuJ5jwQnbCpiONUNnVrt+aI7VzpwrikpN9s6g2T+daZfotaSUG8GOAWECbTkKmlkmqim4ct/sffl504sSr7WG8NoTviIETK0j/FXHF4gxOYTta7maPKcUudnuSaibAh6GNPo8Y2AJjFwQKYZHbRgcIK7rk+boU9IjjfXRhizU+nZUuqKUtAeFFtLvBpaG8HjQUk4RkgBS6iYLmW9YSKg6y0MKV+Wea2TAvb+gZoGZReV+kDAKiIN31VV3zz7m0iE7GpUaE49IWOI4xThHnV9Ki4PKxAq6q2zIULXOz17UCwiSU3ZgzfsNORs1mbqb7NKWVFBHyJjIUSN3ru0DsHnpzfHKJhc8Yt6o+EsUh60OvpHcbqbVYsFN+rsWWzg/Qc9vQXwLCvlhuA=] 0xc042017810}
+[2018-07-19 11:19:35] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:5e4b7cbee63621bd1da84f5d4c1a24fae30c5596
+[2018-07-19 11:19:35] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970389,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:19:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-1.993ms-Params: map[encryptedData:iUrpOMvdBuopbCJx41Emi2wJetTr6c/qxfSEn6tAYWnZBMmo00ikMnLplKpqiK76MAfxreMpIu9swX9BvVozcqi8HkyJVMiQmuJ5jwQnbCpiONUNnVrt+aI7VzpwrikpN9s6g2T+daZfotaSUG8GOAWECbTkKmlkmqim4ct/sffl504sSr7WG8NoTviIETK0j/FXHF4gxOYTta7maPKcUudnuSaibAh6GNPo8Y2AJjFwQKYZHbRgcIK7rk+boU9IjjfXRhizU+nZUuqKUtAeFFtLvBpaG8HjQUk4RkgBS6iYLmW9YSKg6y0MKV+Wea2TAvb+gZoGZReV+kDAKiIN31VV3zz7m0iE7GpUaE49IWOI4xThHnV9Ki4PKxAq6q2zIULXOz17UCwiSU3ZgzfsNORs1mbqb7NKWVFBHyJjIUSN3ru0DsHnpzfHKJhc8Yt6o+EsUh60OvpHcbqbVYsFN+rsWWzg/Qc9vQXwLCvlhuA= signature:5e4b7cbee63621bd1da84f5d4c1a24fae30c5596 openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:tybh9fxIiX6ozzSsH4hsgA==]
+
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210f2b0 0xc0420e2780 map[code:001JQoQl0WVyek1tO8Ol02BnQl0JQoQK] 0xc042017810}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001JQoQl0WVyek1tO8Ol02BnQl0JQoQK]
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001JQoQl0WVyek1tO8Ol02BnQl0JQoQK
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zd1\/9Z24xvr2DLrNymX5cQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-131.9396ms-Params: map[code:001JQoQl0WVyek1tO8Ol02BnQl0JQoQK]
+
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210fa00 0xc0420e2960 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:fg9Tz6lPghWIwnvTFnt7hw== encryptedData:R9Q6yR4Cvc+LP8gBKUzxnf13dzKVnboh7ffxGlAtk8+ZDqS5+iSvtVbRLd/mVue9ZfUEuoGrC/qcXAjybmQKPywHLRrnchK+B1Smh5XOR5w58A7omgyHFUJ134KYQ4Wly+2ZBObY3Td1kAP/i7juGQ==] 0xc042017810}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zd1/9Z24xvr2DLrNymX5cQ==
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970453,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[iv:fg9Tz6lPghWIwnvTFnt7hw== encryptedData:R9Q6yR4Cvc+LP8gBKUzxnf13dzKVnboh7ffxGlAtk8+ZDqS5+iSvtVbRLd/mVue9ZfUEuoGrC/qcXAjybmQKPywHLRrnchK+B1Smh5XOR5w58A7omgyHFUJ134KYQ4Wly+2ZBObY3Td1kAP/i7juGQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042266000 0xc0420e2a50 map[iv:UxPrRMXz+tCf2KbPYS9RFQ== encryptedData:QRAkemto62tF4CUPekZnIyPwBlXprLWfjYpjt02Vlx9/lvtlivGqTs2ErkzeVCTIjW1Pm50YZ83gBhqvTL8uCy6HZczT0HB30/jrf5+zkmxPnMX67YloXnZUI+LmisbmjRdzW3dG/ydB4H88/7KSf/2KBp0TMlfZbtm0zqcLcjQ8D1ozBxRnM0g7G9D/aoyH90xCBin4wetVl6wGkpB3mPAzcG037A2VhdYMBzEHrSvywaqHRBEX5+GHIdXW7J5Uc7Qy07m8LlpiAhGgtYP9x+1+4AZ0O6fWGRouYxPhc2pYKxmI3NMdOLXakC8BkhKsCO+f/Tx1HOQasO8CSvN2VdxmhJeOes92rLNvuNbkMTUjb8UIL/smUor3yXIA5RVG99Sh5s26U7NU45t2N96Z5PTn8HOB/uxhYkK4ZuNEESbQGusa5zgStao+iGQFqymJ3IzYOITScKSQwTWpZX2qmmVqJm9TWbjuO8RszoNc2/k= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:22baa01225bac2a4070668874dc8acc702233248
+[2018-07-19 11:20:39] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970454,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:20:39] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-997.3µs-Params: map[iv:UxPrRMXz+tCf2KbPYS9RFQ== encryptedData:QRAkemto62tF4CUPekZnIyPwBlXprLWfjYpjt02Vlx9/lvtlivGqTs2ErkzeVCTIjW1Pm50YZ83gBhqvTL8uCy6HZczT0HB30/jrf5+zkmxPnMX67YloXnZUI+LmisbmjRdzW3dG/ydB4H88/7KSf/2KBp0TMlfZbtm0zqcLcjQ8D1ozBxRnM0g7G9D/aoyH90xCBin4wetVl6wGkpB3mPAzcG037A2VhdYMBzEHrSvywaqHRBEX5+GHIdXW7J5Uc7Qy07m8LlpiAhGgtYP9x+1+4AZ0O6fWGRouYxPhc2pYKxmI3NMdOLXakC8BkhKsCO+f/Tx1HOQasO8CSvN2VdxmhJeOes92rLNvuNbkMTUjb8UIL/smUor3yXIA5RVG99Sh5s26U7NU45t2N96Z5PTn8HOB/uxhYkK4ZuNEESbQGusa5zgStao+iGQFqymJ3IzYOITScKSQwTWpZX2qmmVqJm9TWbjuO8RszoNc2/k= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:21:19] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213e5b0 0xc042270000 map[code:081KzVda2RIfyP0TSLea26Jzda2KzVdW] 0xc042017810}
+[2018-07-19 11:21:19] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:081KzVda2RIfyP0TSLea26Jzda2KzVdW]
+[2018-07-19 11:21:19] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 081KzVda2RIfyP0TSLea26Jzda2KzVdW
+[2018-07-19 11:21:19] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zd1\/9Z24xvr2DLrNymX5cQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:21:19] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-254.3255ms-Params: map[code:081KzVda2RIfyP0TSLea26Jzda2KzVdW]
+
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422b20d0 0xc0422ac000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Gp352aoQB5i9i/XchF9gQg== encryptedData:SJVEANI0YPbtRjpL8fEdl4mCD2N0rVBiD4Pe+Z51Nd1Rr2nAx6QfUIc1kME+ByrzqGWmilolfCrKMnwO9ZXZnr94iBTO/3WWXhbwyDkIi1lL0ea4GNY+9Vy8S5H6qKOOh6H9anAjEX3vHUa/jCZGqA==] 0xc042017810}
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zd1/9Z24xvr2DLrNymX5cQ==
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970494,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:21:20] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-1.0023ms-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Gp352aoQB5i9i/XchF9gQg== encryptedData:SJVEANI0YPbtRjpL8fEdl4mCD2N0rVBiD4Pe+Z51Nd1Rr2nAx6QfUIc1kME+ByrzqGWmilolfCrKMnwO9ZXZnr94iBTO/3WWXhbwyDkIi1lL0ea4GNY+9Vy8S5H6qKOOh6H9anAjEX3vHUa/jCZGqA==]
+
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422b2680 0xc0422ac0f0 map[iv:4wBq/OL85DwaRn4oLHvZUw== encryptedData:IgseCJKSahfp1ul35Bb0wXmoWr2dRH7D45RHcattjGezvr3+cnZCAVN/+bsOlvrUIXeBhlqB1Pm0y9bdHL/4ZXWLqijDDdrvei9Nwv5WShJPthfO6/KITX2yWgtTN/ENGUNWHjzcEk6TL+6pXSBnK2ulFAwBvT1wgvZwYEOgXl3DoH7LXFqan4fQqpQce/kXfiEcDPynC80AJi7bDK8wNfvEgnn0Sx8FXkEyFZHBhV2y5Hu0i9gZ7N9SEKQhIiSfyCtx3xnzS57qZ4xvkT3aGoQeRCbcxOVK1xL7HdWOYJhpMC4pkHBu4hhx1IJPTp08CQ61lDOLfs/h1iMQPHnWIutWaeCxjobTaIWTLUusDm6FPejGWEE6aRs/w8Eq+6UtnQaguNbimiIiBPGAwFRsxJ5qSjoT4Fq7f31D67PMccS8MairXCqS9sJs4VwBoA/4reaNyDQECqkI769siCbmDW27o6BNqXVWuY3Alq6h1VY= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:22baa01225bac2a4070668874dc8acc702233248
+[2018-07-19 11:21:20] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970494,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:21:20] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-0s-Params: map[iv:4wBq/OL85DwaRn4oLHvZUw== encryptedData:IgseCJKSahfp1ul35Bb0wXmoWr2dRH7D45RHcattjGezvr3+cnZCAVN/+bsOlvrUIXeBhlqB1Pm0y9bdHL/4ZXWLqijDDdrvei9Nwv5WShJPthfO6/KITX2yWgtTN/ENGUNWHjzcEk6TL+6pXSBnK2ulFAwBvT1wgvZwYEOgXl3DoH7LXFqan4fQqpQce/kXfiEcDPynC80AJi7bDK8wNfvEgnn0Sx8FXkEyFZHBhV2y5Hu0i9gZ7N9SEKQhIiSfyCtx3xnzS57qZ4xvkT3aGoQeRCbcxOVK1xL7HdWOYJhpMC4pkHBu4hhx1IJPTp08CQ61lDOLfs/h1iMQPHnWIutWaeCxjobTaIWTLUusDm6FPejGWEE6aRs/w8Eq+6UtnQaguNbimiIiBPGAwFRsxJ5qSjoT4Fq7f31D67PMccS8MairXCqS9sJs4VwBoA/4reaNyDQECqkI769siCbmDW27o6BNqXVWuY3Alq6h1VY= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:21:50] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210c410 0xc0420e22d0 map[code:011IDUUh1a0v9x0lpPWh1UoIUh1IDUUF] 0xc042017810}
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011IDUUh1a0v9x0lpPWh1UoIUh1IDUUF]
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011IDUUh1a0v9x0lpPWh1UoIUh1IDUUF
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zd1\/9Z24xvr2DLrNymX5cQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:21:54] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-293.6349ms-Params: map[code:011IDUUh1a0v9x0lpPWh1UoIUh1IDUUF]
+
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213e680 0xc042224000 map[iv:52R3aTy4TYD6qdJSJJBh/g== encryptedData:NCNxE1cJ1O4ivfkO6PCXv8L5AhH4BDbKFvhEdVqmP9QT8lo+346soMBNgjHcV3KCG8yzamugi/aQzsuuGs2Ga4O8z7SoiuEnVqzyHKeA5MU4ebRO21IAnanvjtEeofr62uGCyfKR4+i53omNRtSxRg== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zd1/9Z24xvr2DLrNymX5cQ==
+[2018-07-19 11:21:54] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970529,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:21:54] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.3µs-Params: map[iv:52R3aTy4TYD6qdJSJJBh/g== encryptedData:NCNxE1cJ1O4ivfkO6PCXv8L5AhH4BDbKFvhEdVqmP9QT8lo+346soMBNgjHcV3KCG8yzamugi/aQzsuuGs2Ga4O8z7SoiuEnVqzyHKeA5MU4ebRO21IAnanvjtEeofr62uGCyfKR4+i53omNRtSxRg== openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:21:55] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213ec30 0xc0422240f0 map[encryptedData:8JVK8D/59wTQm0+MUxGWVEBh0WPvC+cTME4HoZzJepBwemdOR1ZsXWWZieZ2xhgzkVifkthLHxD2BrMnTG9U3MiAnGL5QYVYdN+sKkU6npZgMgOauFUEBmEH3Ra6kFUpZwHcnzgn2xrK8PxW77OKQ/TeTsqbIGzYTfij6fnMhkh5ubGUSAm/iwowU3C7HNC9ZGmli/rS/Wl4hBuEEoBZUIwOPtWasY6lQONtFzUhEqPveGXBhKF5+Hpt7MTcrF+nf2YTOugQxLbjaaQ77ScJ75IW7CxpO6Qf1yblvOENxXsREbdBKHqy04boiRfxvvE49bPhvgoWyXOo9TMY8cY5t8UCI6XUN9xxHVosDcqE85GtqjrtgOYRQ9PeY7OpBvHvlwyL6S8S6AK5BDMum5K4lyVpXyLWVbsul0npdcdXLWj/S/TKOiG6+Vl5h0dV4ibN7FdJs/ForU37TizimFSXk765u0+3lGa1Qi4Ihd0dKgg= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:C0CYgcjDY/du4EuRzoV3MQ==] 0xc042017810}
+[2018-07-19 11:21:55] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:22baa01225bac2a4070668874dc8acc702233248
+[2018-07-19 11:21:55] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970529,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:21:55] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-997.4µs-Params: map[encryptedData:8JVK8D/59wTQm0+MUxGWVEBh0WPvC+cTME4HoZzJepBwemdOR1ZsXWWZieZ2xhgzkVifkthLHxD2BrMnTG9U3MiAnGL5QYVYdN+sKkU6npZgMgOauFUEBmEH3Ra6kFUpZwHcnzgn2xrK8PxW77OKQ/TeTsqbIGzYTfij6fnMhkh5ubGUSAm/iwowU3C7HNC9ZGmli/rS/Wl4hBuEEoBZUIwOPtWasY6lQONtFzUhEqPveGXBhKF5+Hpt7MTcrF+nf2YTOugQxLbjaaQ77ScJ75IW7CxpO6Qf1yblvOENxXsREbdBKHqy04boiRfxvvE49bPhvgoWyXOo9TMY8cY5t8UCI6XUN9xxHVosDcqE85GtqjrtgOYRQ9PeY7OpBvHvlwyL6S8S6AK5BDMum5K4lyVpXyLWVbsul0npdcdXLWj/S/TKOiG6+Vl5h0dV4ibN7FdJs/ForU37TizimFSXk765u0+3lGa1Qi4Ihd0dKgg= signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:C0CYgcjDY/du4EuRzoV3MQ==]
+
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213edd0 0xc0422241e0 map[code:011AEjaa1aUWwQ12iP7a1tdvaa1AEja9] 0xc042017810}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011AEjaa1aUWwQ12iP7a1tdvaa1AEja9]
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011AEjaa1aUWwQ12iP7a1tdvaa1AEja9
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zd1\/9Z24xvr2DLrNymX5cQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-40.8908ms-Params: map[code:011AEjaa1aUWwQ12iP7a1tdvaa1AEja9]
+
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213ef70 0xc0422243c0 map[iv:/VgACn2Of5daTkIgkxR38Q== encryptedData:l8Uricbh+Zm+FKUnQdqSjVLj0TXkjyGRMvsV5C38FAahpKRPYQJP7XRpeKZ54q9ObsHo5sepDRZsFoMP+yeIlwZjE6KiKtNz2R+vC2aya3nX82g2iBJTyUQgyoAhXRwgDDS174nauyTq8cQMkTeJ0Q== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zd1/9Z24xvr2DLrNymX5cQ==
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970547,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-987.5µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:/VgACn2Of5daTkIgkxR38Q== encryptedData:l8Uricbh+Zm+FKUnQdqSjVLj0TXkjyGRMvsV5C38FAahpKRPYQJP7XRpeKZ54q9ObsHo5sepDRZsFoMP+yeIlwZjE6KiKtNz2R+vC2aya3nX82g2iBJTyUQgyoAhXRwgDDS174nauyTq8cQMkTeJ0Q==]
+
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213f520 0xc0422244b0 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:gMEZpzAGuPbxpWEe2mzCLA== encryptedData:6EdTTzV9iNZh4H8riwbHhISdHm14lqE2ahLbTHSdUEWsWYa+rnha3OpRyCxAMGsRLQwaSS+nL23wVyK+kY9bQkfopst6RmooDnjLpRqFVlxWoVhWrJHWlG4op0RLIDoM2FjH3OJz+KuBWmZN7EOfOUAbpKwSvudvqUeWIeAGNkM/KCtea3xlRpxh8Vi8dQxzEZ2pHbclshR+RzOU3ohi/qChL89e9R7Dl8+7lPdXuVQb4vJ0FrxbuTwKhmzBhGcgCUROLbYCfkhtYPR7rIAN209XZKJEddbE8oB8ax/eGWfI6zLeClTpVZvYljUO3pNRQPQpFQXUncL6KLMOsSeeB/xnUBLtvmxEAEiWchSyHhIdhk+jcXE+eSSdIMTf23q+Ev4a+XImnb5cZx/9qbv9enHptgLD9raqRgF3SCtGNtDUqLhp9gC+sm0vjg4gBUc4EMSrKBC8oTkwT+zN1ExkMhmvuQF47aSmhX3m5G6ZWt0= signature:22baa01225bac2a4070668874dc8acc702233248] 0xc042017810}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:22baa01225bac2a4070668874dc8acc702233248
+[2018-07-19 11:22:12] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970547,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:22:12] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-0s-Params: map[signature:22baa01225bac2a4070668874dc8acc702233248 openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:gMEZpzAGuPbxpWEe2mzCLA== encryptedData:6EdTTzV9iNZh4H8riwbHhISdHm14lqE2ahLbTHSdUEWsWYa+rnha3OpRyCxAMGsRLQwaSS+nL23wVyK+kY9bQkfopst6RmooDnjLpRqFVlxWoVhWrJHWlG4op0RLIDoM2FjH3OJz+KuBWmZN7EOfOUAbpKwSvudvqUeWIeAGNkM/KCtea3xlRpxh8Vi8dQxzEZ2pHbclshR+RzOU3ohi/qChL89e9R7Dl8+7lPdXuVQb4vJ0FrxbuTwKhmzBhGcgCUROLbYCfkhtYPR7rIAN209XZKJEddbE8oB8ax/eGWfI6zLeClTpVZvYljUO3pNRQPQpFQXUncL6KLMOsSeeB/xnUBLtvmxEAEiWchSyHhIdhk+jcXE+eSSdIMTf23q+Ev4a+XImnb5cZx/9qbv9enHptgLD9raqRgF3SCtGNtDUqLhp9gC+sm0vjg4gBUc4EMSrKBC8oTkwT+zN1ExkMhmvuQF47aSmhX3m5G6ZWt0=]
+
+[2018-07-19 11:22:26] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213f6c0 0xc0422245a0 map[code:071qKKwp1jKcip0KgKyp1lwJwp1qKKwD] 0xc042017810}
+[2018-07-19 11:22:26] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:071qKKwp1jKcip0KgKyp1lwJwp1qKKwD]
+[2018-07-19 11:22:26] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 071qKKwp1jKcip0KgKyp1lwJwp1qKKwD
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"zd1\/9Z24xvr2DLrNymX5cQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:22:27] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-104.729ms-Params: map[code:071qKKwp1jKcip0KgKyp1lwJwp1qKKwD]
+
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213f860 0xc042224780 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:hzLiEGP7IMsBRkiRrEUzCg== encryptedData:wuDbLziHN5z0wPMGY1ewm/+QzrJ4djEGrPnJ+8F5U5tWM/3aUK2dFhGUm501nrwWx3h6qlH5212PbB1Ezjw+350iqfdvbRHLHB4wrXr8uaJGv1sg/eC4BAGAHwdDMTcqYNeGvtngDdWW1qV2FvxiuQ==] 0xc042017810}
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:zd1/9Z24xvr2DLrNymX5cQ==
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970561,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:22:27] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:hzLiEGP7IMsBRkiRrEUzCg== encryptedData:wuDbLziHN5z0wPMGY1ewm/+QzrJ4djEGrPnJ+8F5U5tWM/3aUK2dFhGUm501nrwWx3h6qlH5212PbB1Ezjw+350iqfdvbRHLHB4wrXr8uaJGv1sg/eC4BAGAHwdDMTcqYNeGvtngDdWW1qV2FvxiuQ==]
+
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04213fe10 0xc042224870 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:nyQ7UsD4TKbpkDEPtttY2g== encryptedData:lGjWPhU6broUAuFzlcIpJS19ph2opmEn8XZ2UCITU0S3T8tyZKA5NUj2QMBHJCemoAD+yx0HLrnQwIFGu071UPovMAanJsSs7t+dT0yMCsfXvsLHwweQYMZ+ysdHTi2XmhE6TeYqaeIRaI/UmtfAdKBGlmSe88+8uTBXV/zR1BnnP/uOjI23HTovhZlTqJBbO5ou1pY/LdRYfZJAdBgWGY/ua/ImLUlj0QG5V/C9lby6ugej2HUVj8OqNRp1BXXCN/Il9AJCA3kcYz8ety5xQcsmk3oeNU0RkRopHxBQ3FRAbShzLMkJycMJedXRS174fCCFQAWWKiprC9PruuHP//ibZdxKwR/JgFq1oaZDu6FnY7fND7mim+2glF+loMxmjUALHrUqnqvJRJxi9UjvCUTZuTa/H96QutooBhzGHC5Ha2ngm8UzSFP8cxpB5dXBQYfUrEH+L0CaDUyXmCBdLrvvPuZ5T1FcxgemE2bazcU= signature:22baa01225bac2a4070668874dc8acc702233248] 0xc042017810}
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:22baa01225bac2a4070668874dc8acc702233248
+[2018-07-19 11:22:27] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970562,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:22:27] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-0s-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:nyQ7UsD4TKbpkDEPtttY2g== encryptedData:lGjWPhU6broUAuFzlcIpJS19ph2opmEn8XZ2UCITU0S3T8tyZKA5NUj2QMBHJCemoAD+yx0HLrnQwIFGu071UPovMAanJsSs7t+dT0yMCsfXvsLHwweQYMZ+ysdHTi2XmhE6TeYqaeIRaI/UmtfAdKBGlmSe88+8uTBXV/zR1BnnP/uOjI23HTovhZlTqJBbO5ou1pY/LdRYfZJAdBgWGY/ua/ImLUlj0QG5V/C9lby6ugej2HUVj8OqNRp1BXXCN/Il9AJCA3kcYz8ety5xQcsmk3oeNU0RkRopHxBQ3FRAbShzLMkJycMJedXRS174fCCFQAWWKiprC9PruuHP//ibZdxKwR/JgFq1oaZDu6FnY7fND7mim+2glF+loMxmjUALHrUqnqvJRJxi9UjvCUTZuTa/H96QutooBhzGHC5Ha2ngm8UzSFP8cxpB5dXBQYfUrEH+L0CaDUyXmCBdLrvvPuZ5T1FcxgemE2bazcU= signature:22baa01225bac2a4070668874dc8acc702233248]
+
+[2018-07-19 11:23:32] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210cc30 0xc0420e24b0 map[code:0012tdVx0Dcegi1LEDVx0mdfVx02tdVY] 0xc042017810}
+[2018-07-19 11:23:32] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:0012tdVx0Dcegi1LEDVx0mdfVx02tdVY]
+[2018-07-19 11:23:32] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 0012tdVx0Dcegi1LEDVx0mdfVx02tdVY
+[2018-07-19 11:23:32] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"vJdcLxcPuDB96uA0FysJFw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:23:32] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-231.6414ms-Params: map[code:0012tdVx0Dcegi1LEDVx0mdfVx02tdVY]
+
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422aa000 0xc042224a50 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:NBEVhFDYFlXZWBgOZ4bkyQ== encryptedData:UD85ekMYol3Q0Mm4opeN6t+5UBRfJ1kmM/tSMZrKO73sOn8h4kbZGiADqwZjkWkeQiM9bOZvxWOyTe0ko9BAFVIkazjpXCXY7N2nz+ngVIEAB5bNPmx9njb/ZLqXlrzOF+5RyUzvuMptMss8mmS+mA==] 0xc042017810}
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:vJdcLxcPuDB96uA0FysJFw==
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531970627,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:23:33] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-498.5µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:NBEVhFDYFlXZWBgOZ4bkyQ== encryptedData:UD85ekMYol3Q0Mm4opeN6t+5UBRfJ1kmM/tSMZrKO73sOn8h4kbZGiADqwZjkWkeQiM9bOZvxWOyTe0ko9BAFVIkazjpXCXY7N2nz+ngVIEAB5bNPmx9njb/ZLqXlrzOF+5RyUzvuMptMss8mmS+mA==]
+
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422aa5b0 0xc042224b40 map[iv:hbJrr6BUhErXau8og1vNkg== encryptedData:ff4Gfu90lgpNtQIp3tjJYDH6QxBdsKaB/5KHiOH8G2i+aRW0qK7xupLjGmlEzH0WcZBKetektHdaCZTBrxuRdfzn1dkBvJJmfBArH/JejCRoAitihkD2bDTLY6oAjCBhF6qMhRcZB69n2S29eXRgar20goEZ/Bw/QejSuhav9fyG9Rc9ivRwQeuTCstb/wN4TuPQvjQethk0wrWOwQNE7n52yZw/BFffkUhG2v4t0yRKXa1bgrTeCmsBf/cKDxumKIl2O/EcvcLvHzrAo3Y80JiYIw1VEhbq1MircPpijDvwtViirjXcUpS2n7iUgENNmSALGnllUdOsCSBgUg4oBL3KW91Lnj+ekAAH1DrU61I8Z2oXcoJ4FxsiC+L968THezwbkBb8NJiOseL++Rv7ecTGANcLTq3pPFlmJq2MzOsbrmMcQgsbSow32V5EXgxKnJCQKBCiYSul6n6PvH/aiPzu0hrckVM8yv0XDVAM8WE= signature:53827bf2154795361a3418a4126b0dd3b1647d35 openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:53827bf2154795361a3418a4126b0dd3b1647d35
+[2018-07-19 11:23:33] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531970628,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:23:33] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-0s-Params: map[iv:hbJrr6BUhErXau8og1vNkg== encryptedData:ff4Gfu90lgpNtQIp3tjJYDH6QxBdsKaB/5KHiOH8G2i+aRW0qK7xupLjGmlEzH0WcZBKetektHdaCZTBrxuRdfzn1dkBvJJmfBArH/JejCRoAitihkD2bDTLY6oAjCBhF6qMhRcZB69n2S29eXRgar20goEZ/Bw/QejSuhav9fyG9Rc9ivRwQeuTCstb/wN4TuPQvjQethk0wrWOwQNE7n52yZw/BFffkUhG2v4t0yRKXa1bgrTeCmsBf/cKDxumKIl2O/EcvcLvHzrAo3Y80JiYIw1VEhbq1MircPpijDvwtViirjXcUpS2n7iUgENNmSALGnllUdOsCSBgUg4oBL3KW91Lnj+ekAAH1DrU61I8Z2oXcoJ4FxsiC+L968THezwbkBb8NJiOseL++Rv7ecTGANcLTq3pPFlmJq2MzOsbrmMcQgsbSow32V5EXgxKnJCQKBCiYSul6n6PvH/aiPzu0hrckVM8yv0XDVAM8WE= signature:53827bf2154795361a3418a4126b0dd3b1647d35 openid:o92sW0ddChoEl8klIoZrT2CHTASk]
+
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc0422c20d0 0xc0422be000 map[code:021DNsld1e2frs0HSxjd1E8Bld1DNsl8] 0xc042017810}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:021DNsld1e2frs0HSxjd1E8Bld1DNsl8]
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 021DNsld1e2frs0HSxjd1E8Bld1DNsl8
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"wywnKSWvpqYSjUnT9jBmAA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-351.4528ms-Params: map[code:021DNsld1e2frs0HSxjd1E8Bld1DNsl8]
+
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210d380 0xc0420e2690 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:DwpjlKxbJ9PC6CINpeRfQA== encryptedData:jjJdlvMG0GVybeuVV8rCUQX1u2Qjb2GSWhPodTYgz6rqhDW7UX55u59zDMlxwrx1COLUbzIBW3TuakT0VdEQRaePdTtDKMMu+oefch8JNq3yeAQiWzXVlnZ2C+g9izd85s7NrU8N53R/bHQV1ezn6Q==] 0xc042017810}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:wywnKSWvpqYSjUnT9jBmAA==
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531971796,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-997.8µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:DwpjlKxbJ9PC6CINpeRfQA== encryptedData:jjJdlvMG0GVybeuVV8rCUQX1u2Qjb2GSWhPodTYgz6rqhDW7UX55u59zDMlxwrx1COLUbzIBW3TuakT0VdEQRaePdTtDKMMu+oefch8JNq3yeAQiWzXVlnZ2C+g9izd85s7NrU8N53R/bHQV1ezn6Q==]
+
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210d930 0xc0420e2780 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:V6JgQybslkOMBeGxzWyUJw== encryptedData:1AlvS9IoSsA9lTR1yPS4kHLF2MwIWGXHttVC8v1LDb1KhX6+TtjnvJc0X9jJnkqZD1d1jMuQ2BTDK9tB07XN1TC6FUhCwaOrGaePVOlNksQmL3Mo+nHk2qLg86gxhXp5ri5TnWWc+XW/Y34BypYXivDjGs3UujjQjzh8YNZZJvWuKHoqvAwRvzu9G3ByXmh5dD+BQXzliF/KFk9JBqyircFX8Mg0obICqWctkytXG9FM92A77F5VPG1OSja/kpSZdNHWApakUvwN0ctY9n7d5gct69zFCxxeue6+D3JCpxOLr203WTdY+MDG3DAkjjBwBKFpa4s9kvd6/jHYHletqBFCot0dq378ZU7PvTwOVDp82vg1ZvkAd6nLhaQ7pYTI8fh9i8nu0AlhaDutT2ch+94jre2u43WYFrq4/VTJjCMH5SS+I3z2lMY2f3dVaPKtYZyRXYC67RF8sg9HVOY8msXFkh3a6zsPfycO0r8olr4= signature:41e7f54577dfdc555d1d779fd04024b459cd4929 rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}] 0xc042017810}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:92 [INF] signature:41e7f54577dfdc555d1d779fd04024b459cd4929
+[2018-07-19 11:42:56] C:/work/goproj/src/game/web/server/web_handler.go:110 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531971796,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:42:56] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-998.1µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:V6JgQybslkOMBeGxzWyUJw== encryptedData:1AlvS9IoSsA9lTR1yPS4kHLF2MwIWGXHttVC8v1LDb1KhX6+TtjnvJc0X9jJnkqZD1d1jMuQ2BTDK9tB07XN1TC6FUhCwaOrGaePVOlNksQmL3Mo+nHk2qLg86gxhXp5ri5TnWWc+XW/Y34BypYXivDjGs3UujjQjzh8YNZZJvWuKHoqvAwRvzu9G3ByXmh5dD+BQXzliF/KFk9JBqyircFX8Mg0obICqWctkytXG9FM92A77F5VPG1OSja/kpSZdNHWApakUvwN0ctY9n7d5gct69zFCxxeue6+D3JCpxOLr203WTdY+MDG3DAkjjBwBKFpa4s9kvd6/jHYHletqBFCot0dq378ZU7PvTwOVDp82vg1ZvkAd6nLhaQ7pYTI8fh9i8nu0AlhaDutT2ch+94jre2u43WYFrq4/VTJjCMH5SS+I3z2lMY2f3dVaPKtYZyRXYC67RF8sg9HVOY8msXFkh3a6zsPfycO0r8olr4= signature:41e7f54577dfdc555d1d779fd04024b459cd4929 rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}]
+
+[2018-07-19 11:43:22] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210e1a0 0xc0420e22d0 map[code:011Y7iRc144Gmu0daTNc13eeRc1Y7iR5] 0xc042017810}
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011Y7iRc144Gmu0daTNc13eeRc1Y7iR5]
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011Y7iRc144Gmu0daTNc13eeRc1Y7iR5
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"wywnKSWvpqYSjUnT9jBmAA==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:43:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-274.2128ms-Params: map[code:011Y7iRc144Gmu0daTNc13eeRc1Y7iR5]
+
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210ea90 0xc0420e24b0 map[iv:Pzwfu5bO3rAiwb8gTGiACg== encryptedData:SOAO66B2GCD5AYlfMnLb8mY+V7nJzVdDJCGZIaerVxvi6A0kly1hPeCNbN81YEQmjXV8cnJSUF6vTLLHGo09cYR7NKaK21K1+4UgCzyIsay5TQ0czsxqQUTRsX0BrXt2jdC6pvqQg1gdRkaELKd9JQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk] 0xc042017810}
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:wywnKSWvpqYSjUnT9jBmAA==
+[2018-07-19 11:43:35] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531971835,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:43:35] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-0s-Params: map[encryptedData:SOAO66B2GCD5AYlfMnLb8mY+V7nJzVdDJCGZIaerVxvi6A0kly1hPeCNbN81YEQmjXV8cnJSUF6vTLLHGo09cYR7NKaK21K1+4UgCzyIsay5TQ0czsxqQUTRsX0BrXt2jdC6pvqQg1gdRkaELKd9JQ== openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:Pzwfu5bO3rAiwb8gTGiACg==]
+
+[2018-07-19 11:43:36] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210f040 0xc0420e25a0 map[encryptedData:8Fu01NqQJhz0fpH0V5P2ML5dwAF9lo0r9zhjXzhtodcDODBg60ctPslCopzK5SBJ4w9hbDfsHBiAVtznNHric+MpNsz7gVO25C4ddDMP0qB2yadKb+GZk7Z+AJNKEhx+GjizGrS1xX9Pi/joQtZo6VOFSg2TtnnHZqyYapFlAVftVcdce7sLfXW1HiAr78trkUCEgN+UA02VZ9tAQXYnL7X4ynaGXUF+dZItnGTcefzpwVJPQVdvVxRWNDb5MM2L0eMaGmm6il6+NKxtIrPddgqdEpdHF8o4HRZSvrow9mmaF76An4/reGsj3QId3yia5RFR2jgwx2RzWPZhhJti5MdnNooXmiYqv9RtYSefixYnWygFsIpczxPDFyePD+GB5FeYrEqDH1Ou6UewD5PsqcVx9HWdvDtG+N2MZuCcYBDn/eSYwXyDso/yHiH+gvGQdPxyZ9GXZ6/W0tga2iufiLZ4e5Q+rjNlYM6/ssGIEHk= signature:41e7f54577dfdc555d1d779fd04024b459cd4929 rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"} openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:h/nmgytrwOiV/KHDHqIJ2w==] 0xc042017810}
+[2018-07-19 11:43:36] C:/work/goproj/src/game/web/server/web_handler.go:93 [INF] signature:41e7f54577dfdc555d1d779fd04024b459cd4929
+[2018-07-19 11:43:36] C:/work/goproj/src/game/web/server/web_handler.go:94 [INF] rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}
+[2018-07-19 11:43:36] C:/work/goproj/src/game/web/server/web_handler.go:113 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531971835,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:43:36] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-997.9µs-Params: map[encryptedData:8Fu01NqQJhz0fpH0V5P2ML5dwAF9lo0r9zhjXzhtodcDODBg60ctPslCopzK5SBJ4w9hbDfsHBiAVtznNHric+MpNsz7gVO25C4ddDMP0qB2yadKb+GZk7Z+AJNKEhx+GjizGrS1xX9Pi/joQtZo6VOFSg2TtnnHZqyYapFlAVftVcdce7sLfXW1HiAr78trkUCEgN+UA02VZ9tAQXYnL7X4ynaGXUF+dZItnGTcefzpwVJPQVdvVxRWNDb5MM2L0eMaGmm6il6+NKxtIrPddgqdEpdHF8o4HRZSvrow9mmaF76An4/reGsj3QId3yia5RFR2jgwx2RzWPZhhJti5MdnNooXmiYqv9RtYSefixYnWygFsIpczxPDFyePD+GB5FeYrEqDH1Ou6UewD5PsqcVx9HWdvDtG+N2MZuCcYBDn/eSYwXyDso/yHiH+gvGQdPxyZ9GXZ6/W0tga2iufiLZ4e5Q+rjNlYM6/ssGIEHk= signature:41e7f54577dfdc555d1d779fd04024b459cd4929 rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"} openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:h/nmgytrwOiV/KHDHqIJ2w==]
+
+[2018-07-19 11:50:06] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042041ee0 0xc0420e82d0 map[code:001CN9qC0Cym7f2snIoC0oy3qC0CN9qL] 0xc042017810}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:001CN9qC0Cym7f2snIoC0oy3qC0CN9qL]
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 001CN9qC0Cym7f2snIoC0oy3qC0CN9qL
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"Oq0VWdA82GGEFmlJP8pLfQ==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-257.5602ms-Params: map[code:001CN9qC0Cym7f2snIoC0oy3qC0CN9qL]
+
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042144680 0xc042232000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:O5lR+a6XIi7fNkUBQRb3iw== encryptedData:wglxJWa9dv3/lOpZMLu1hjLxLfpWBP26Ue18g/ajMg+bg+1J8f9ZZGy5Y+9Ct8uhtSb5v8UtrRuizccVEMlbBGdGf5NGdW33ZXSY+w5n/ybgfxpNwwfQatKnEYgO7J7JtlKFfuIBP891TFEA9iiJqA==] 0xc042017810}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:Oq0VWdA82GGEFmlJP8pLfQ==
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531972234,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-994µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:O5lR+a6XIi7fNkUBQRb3iw== encryptedData:wglxJWa9dv3/lOpZMLu1hjLxLfpWBP26Ue18g/ajMg+bg+1J8f9ZZGy5Y+9Ct8uhtSb5v8UtrRuizccVEMlbBGdGf5NGdW33ZXSY+w5n/ybgfxpNwwfQatKnEYgO7J7JtlKFfuIBP891TFEA9iiJqA==]
+
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042144c30 0xc0422320f0 map[rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"} openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:FXER1hPpemhWpiud9s04VA== encryptedData:xkc0ntMnF/sNt54kHo9piral1viQsEGJInNyaTWkpSGy/8yA4OMChXaGpXgmx1TF94VXgHtojb6CKhbxtjoBN8IcYcYpei2gGrNkqFkwVbXL1NAsfoTB/JqQxSqoOZYMdGJR+xwx4IPhxK8maCdB/qt+iRluBbLVHXcKxwHBW1f+pxDYU2hkOu/u3Ol607sf6c0l0YAEAApG8T4FLMRn2S3U2ghc8oM2tdVMRmNeIC3/oHVtcfFxYTA/DJZin4gF4F9uA+t61vBXRFj1H5R3hkWpzsLYrDf14+kEcegeMqmn+YOOLFSYaDf6HlhqlyYW/CZdVfzJjaADRKC2NwwSYhVmh2vb7XY4T9Mr48nPxxS0c27V0G+Um4zYDO4w5QAo8F2xx2BPeSB00lPI02/np6sndpmTK7Df/rPcTxL0bPo1F7cvHMIbnptgUKLye0FtGKuYFyW9OilpR/qk40GugGZ7FSplRyUKKzmqUNhTUJU= signature:005bdb2cd30b39810749d696e3cb57cdc2b0ad75] 0xc042017810}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:93 [INF] signature:005bdb2cd30b39810749d696e3cb57cdc2b0ad75
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:94 [INF] rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}
+[2018-07-19 11:50:13] C:/work/goproj/src/game/web/server/web_handler.go:97 [INF] signature:005bdb2cd30b39810749d696e3cb57cdc2b0ad75  signature2: [�,�9�I֖��W�°�u
+[2018-07-19 11:50:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-1.9707ms-Params: map[signature:005bdb2cd30b39810749d696e3cb57cdc2b0ad75 rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"} openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:FXER1hPpemhWpiud9s04VA== encryptedData:xkc0ntMnF/sNt54kHo9piral1viQsEGJInNyaTWkpSGy/8yA4OMChXaGpXgmx1TF94VXgHtojb6CKhbxtjoBN8IcYcYpei2gGrNkqFkwVbXL1NAsfoTB/JqQxSqoOZYMdGJR+xwx4IPhxK8maCdB/qt+iRluBbLVHXcKxwHBW1f+pxDYU2hkOu/u3Ol607sf6c0l0YAEAApG8T4FLMRn2S3U2ghc8oM2tdVMRmNeIC3/oHVtcfFxYTA/DJZin4gF4F9uA+t61vBXRFj1H5R3hkWpzsLYrDf14+kEcegeMqmn+YOOLFSYaDf6HlhqlyYW/CZdVfzJjaADRKC2NwwSYhVmh2vb7XY4T9Mr48nPxxS0c27V0G+Um4zYDO4w5QAo8F2xx2BPeSB00lPI02/np6sndpmTK7Df/rPcTxL0bPo1F7cvHMIbnptgUKLye0FtGKuYFyW9OilpR/qk40GugGZ7FSplRyUKKzmqUNhTUJU=]
+
+[2018-07-19 11:52:07] C:/work/goproj/src/game/common/server/web/service_server.go:59 [INF] listen tcp, port=:8080
+[2018-07-19 11:52:12] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc04210a270 0xc0420e02d0 map[code:011oYXi20iymrD1O7Zj20WNSi20oYXiV] 0xc042017810}
+[2018-07-19 11:52:12] C:/work/goproj/src/game/web/server/web_handler.go:53 [INF] params : map[code:011oYXi20iymrD1O7Zj20WNSi20oYXiV]
+[2018-07-19 11:52:12] C:/work/goproj/src/game/web/server/web_handler.go:55 [INF] params : 011oYXi20iymrD1O7Zj20WNSi20oYXiV
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:85 [INF] ret:{"session_key":"f0Bo96aNSGPBYpQCggSWPw==","openid":"o92sW0ddChoEl8klIoZrT2CHTASk"}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/openid-342.1002ms-Params: map[code:011oYXi20iymrD1O7Zj20WNSi20oYXiV]
+
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042148680 0xc042164000 map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5UxZ4mRSWCV4x9IOaFl/nQ== encryptedData:9Dq5NCMhRooyjErS6FBG1aYola0y340YIgIqd4u/aZ9bnWKOMX7J4XIvcBwfQL7mdFnBmdVx1I8zAw8pYSO1hSIY2AnNqNasMozXSWcNadPhAuXHVEWXdH8410Cs+Vw+iVFWK/vFHECTkBFw8Y0W7Q==] 0xc042017810}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:32 [INF] sessiongKey:f0Bo96aNSGPBYpQCggSWPw==
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:50 [INF] ret:{"openGId":"tG92sW0atTBr_ES073PsnuSpIgD9M","watermark":{"timestamp":1531972355,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/aes-995.5µs-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:5UxZ4mRSWCV4x9IOaFl/nQ== encryptedData:9Dq5NCMhRooyjErS6FBG1aYola0y340YIgIqd4u/aZ9bnWKOMX7J4XIvcBwfQL7mdFnBmdVx1I8zAw8pYSO1hSIY2AnNqNasMozXSWcNadPhAuXHVEWXdH8410Cs+Vw+iVFWK/vFHECTkBFw8Y0W7Q==]
+
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:27 [INF] ctx : &{0xc042148c30 0xc0421640f0 map[rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"} openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:vFpVF6rzjhqwzP4uOBn8mg== encryptedData:xwytIjLMpKGMopVpIi8HZQbrXkQC8Q3FmMIVHZty+WbH/KMYdh/LjBi3hbg7w9+6waak7cAC8//qhsYA+9sof3O1f64qcQKW2cbA+UjLFofjvVroOek/Sow2IS04hiYbKxv2P6x7+wUqAl6Zz6YrN/lLPTk3YcjrsWxoy//5uKD7HIMN1FKavV5QeiQg9IZAeqe8ds/jeQGfMORSiVct6wHa9XQdggX8yb/VUqUQVZ78+9CYVFdpXhTHJlC0hOwzpdJf1BtZ0O2JG5jX6BYQZVk1d9Gt2Psfu1hFu5NoN3JnZ9/iD8sI5HbdiKEhgcXz95Ez6O7mI3XeDhsONlDy9yAxVL0d2IB6+yqbB+yMS42LDIoOHCy9Z1z9NqFKSAH+eYnHD3bFZB1bcQch2CoFz1ojM6nqD9AAkfUDhtmtMr3HakA7gEgGDgo2QeJX2F2LtqynlTgbG/sPuLv0K4hXrT+AYyxWH3ePAZijqIKlLIM= signature:a9b588b49e60f86875ddfc9baa31d70f22358a2e] 0xc042017810}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:93 [INF] signature:a9b588b49e60f86875ddfc9baa31d70f22358a2e
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:94 [INF] rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:97 [INF] signature:a9b588b49e60f86875ddfc9baa31d70f22358a2e  signature2:a9b588b49e60f86875ddfc9baa31d70f22358a2e
+[2018-07-19 11:52:13] C:/work/goproj/src/game/web/server/web_handler.go:119 [INF] ret:{"openId":"o92sW0ddChoEl8klIoZrT2CHTASk","nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132","watermark":{"timestamp":1531972355,"appid":"wxbfdac7331dafd481"}}
+[2018-07-19 11:52:13] C:/work/goproj/src/game/common/server/web/service_server.go:217 [INF] 192.168.1.188-POST /api/login-11.9486ms-Params: map[openid:o92sW0ddChoEl8klIoZrT2CHTASk iv:vFpVF6rzjhqwzP4uOBn8mg== encryptedData:xwytIjLMpKGMopVpIi8HZQbrXkQC8Q3FmMIVHZty+WbH/KMYdh/LjBi3hbg7w9+6waak7cAC8//qhsYA+9sof3O1f64qcQKW2cbA+UjLFofjvVroOek/Sow2IS04hiYbKxv2P6x7+wUqAl6Zz6YrN/lLPTk3YcjrsWxoy//5uKD7HIMN1FKavV5QeiQg9IZAeqe8ds/jeQGfMORSiVct6wHa9XQdggX8yb/VUqUQVZ78+9CYVFdpXhTHJlC0hOwzpdJf1BtZ0O2JG5jX6BYQZVk1d9Gt2Psfu1hFu5NoN3JnZ9/iD8sI5HbdiKEhgcXz95Ez6O7mI3XeDhsONlDy9yAxVL0d2IB6+yqbB+yMS42LDIoOHCy9Z1z9NqFKSAH+eYnHD3bFZB1bcQch2CoFz1ojM6nqD9AAkfUDhtmtMr3HakA7gEgGDgo2QeJX2F2LtqynlTgbG/sPuLv0K4hXrT+AYyxWH3ePAZijqIKlLIM= signature:a9b588b49e60f86875ddfc9baa31d70f22358a2e rawData:{"nickName":"最爱傻妞","gender":1,"language":"zh_CN","city":"Po","province":"Shanghai","country":"China","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eptAGc9FdJ2J39KqvIznGGCbgmIWk9z0AI8CSciaSbKCaKyvemicdCkBeQPqOTD7q8XJvNwjMicpsKFw/132"}]
+
