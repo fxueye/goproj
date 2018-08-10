@@ -36,7 +36,9 @@ func (s *WxService) OnWxInitSucces() {
 	}
 }
 func (s *WxService) OnMessage(m *wx.Message) {
-
+	if s.handlerGuest(m) {
+		return
+	}
 	if s.handlerReceptionMsg(m) {
 		return
 	}
@@ -48,9 +50,6 @@ func (s *WxService) OnMessage(m *wx.Message) {
 	friendNickName := s.GetNickName(m.FromUserName)
 	if utils.IsInStringArray(config.Special, friendNickName) {
 		log.Infof("特殊帐号消息: %v", friendNickName)
-		return
-	}
-	if s.handlerGuest(m) {
 		return
 	}
 
