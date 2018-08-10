@@ -34,7 +34,7 @@ func Init() {
 	Instance.RegServ(WXSERVICE, wxInstance)
 	// Instance.RegServ(WEBSERVICE, webInstance)
 
-	Instance.RegSigCallback(GWOnSignal)
+	Instance.RegSigCallback(OnSignal)
 }
 func ShowStack() {
 	buf := make([]byte, 1<<20)

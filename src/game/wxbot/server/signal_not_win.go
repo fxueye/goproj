@@ -7,7 +7,7 @@ import (
 	"syscall"
 )
 
-func GWOnSignal(sig os.Signal) {
+func OnSignal(sig os.Signal) {
 	switch sig {
 	case syscall.SIGUSR1:
 		{

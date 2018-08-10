@@ -6,6 +6,6 @@ import (
 	"os"
 )
 
-func GWOnSignal(sig os.Signal) {
+func OnSignal(sig os.Signal) {
 
 }
