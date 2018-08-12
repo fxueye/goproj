@@ -1,12 +1,12 @@
 package center
+
 import (
-	server "game/server/server"
+	server "game/center/server"
 	"os"
 
 	log "github.com/cihub/seelog"
 	"github.com/pkg/profile"
 )
-
 
 var (
 	prof interface {

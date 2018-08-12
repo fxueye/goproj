@@ -29,10 +29,10 @@ func Init() {
 	}
 	conf.LoadConfig("json", "config/wx_config.json", &config)
 	wxInstance = newWxService(config.LoginUrl, config.QrcodeDir)
-	// webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
+	webInstance = newWebService(config.WebConfig.ServerPort, config.WebConfig.StaticDir)
 
 	Instance.RegServ(WXSERVICE, wxInstance)
-	// Instance.RegServ(WEBSERVICE, webInstance)
+	Instance.RegServ(WEBSERVICE, webInstance)
 
 	Instance.RegSigCallback(OnSignal)
 }

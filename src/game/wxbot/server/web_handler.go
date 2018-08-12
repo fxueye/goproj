@@ -18,8 +18,8 @@ type WebHandler struct{}
 // 	return "hello " + val + "\n"
 // }
 func (*WebHandler) Api(ctx *web.Context) {
-	log.Infof("ctx : %v", ctx)
-	ctx.Write([]byte("hello 2"))
+
+	ctx.Write([]byte(""))
 }
 func (*WebHandler) Test(w http.ResponseWriter, r *http.Request) {
 	log.Info("text")
