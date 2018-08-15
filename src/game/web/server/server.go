@@ -3,7 +3,6 @@ package server
 import (
 	conf "game/common/config"
 	"game/common/server"
-
 	// log "github.com/cihub/seelog"
 )
 
