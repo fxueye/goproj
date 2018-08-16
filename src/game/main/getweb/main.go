@@ -118,6 +118,28 @@ func getPageAllData(outPath, baseUrl, webUrl string) {
 		}
 		content := string(ret)
 		createFile(oPath, content)
+		//TODO get css img
+		// allImg := getAllImg(content)
+		// fmt.Printf("allImg:%v\n", allImg)
+		// for _, path := range allImg {
+		// 	urlPath := path
+		// 	oPath := path
+		// 	index := strings.Index(path, "http")
+		// 	if index == -1 {
+		// 		urlPath = fmt.Sprintf("%s/%s", baseUrl, path)
+		// 		oPath = fmt.Sprintf("%s%s", outPath, path)
+		// 	} else {
+		// 		oPath = fmt.Sprintf("%s/images/%s", outPath, filepath.Base(path))
+		// 	}
+		// 	ret, err = http.Get(urlPath, nil)
+		// 	if err != nil {
+		// 		fmt.Printf("%v", err)
+		// 		continue
+		// 	}
+		// 	content := string(ret)
+		// 	createFile(oPath, content)
+		// }
+
 	}
 	allImg := getAllImg(content)
 	fmt.Printf("allImg:%v\n", allImg)
@@ -152,6 +174,7 @@ func getPageAllData(outPath, baseUrl, webUrl string) {
 	}
 
 }
+
 func IsExist(path string) bool {
 	_, err := os.Stat(path)
 	return err == nil || os.IsExist(err)
@@ -198,13 +221,18 @@ func getAllUrl(content string) []string {
 	return find
 }
 func getAllImg(content string) []string {
-	re := regexp.MustCompile(`<img src="(/.*?)">`)
+	re := regexp.MustCompile(`<img src="(/.*?)".*?>`)
 	finds := re.FindAllStringSubmatch(content, -1)
 	var find []string
 	for _, f := range finds {
 		find = append(find, f[1])
 	}
 	re = regexp.MustCompile(`background:#[\s\d]{6} url\((../images/[\s\S][.jpg|.png])\)`)
+	finds = re.FindAllStringSubmatch(content, -1)
+	for _, f := range finds {
+		find = append(find, f[1])
+	}
+	re = regexp.MustCompile(`<input type="image" .*? src="(/.*?)"/>`)
 	finds = re.FindAllStringSubmatch(content, -1)
 	for _, f := range finds {
 		find = append(find, f[1])
