@@ -1,1 +1,2 @@
 [15:31:39] service_server.go:41 [INF] listen tcp, port=:8080
+[15:57:45] service_server.go:41 [INF] listen tcp, port=:8000
