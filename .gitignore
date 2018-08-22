@@ -1,6 +1,0 @@
-bin/
-pkg/
-logs/
-debug
-src/game/main/center/logs/
-src/game/main/gateway/logs/
