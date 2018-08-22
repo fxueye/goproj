@@ -1,0 +1,9 @@
+{
+    "ServerVersion":"1.0.0",
+    "ServerPort":8888,
+    "PackLimit":20,
+    "RPCTimeOut":30,
+	"DesKey":"cAn!s&Ak",
+	"SendChanLimit":400,
+	"RecvChanLimit":400
+}

@@ -1,0 +1,40 @@
+{
+    "QrcodeDir":"./qrcode",
+    "GroupMsg":false,
+    "ForwardUserNames":["长慧"],
+    "LoginUrl":"https://login.weixin.qq.com",
+    "Special":["newsapp", "filehelper", "weibo", "qqmail","fmessage", "tmessage", "qmessage", "qqsync","floatbottle", "lbsapp", "shakeapp", "medianote","qqfriend", "readerapp", "blogapp", "facebookapp","masssendapp", "meishiapp", "feedsapp", "voip","blogappweixin", "brandsessionholder", "weixin","weixinreminder", "officialaccounts", "wxitil","notification_messages", "wxid_novlwrv3lqwv11","gh_22b87fa7cb3c", "userexperience_alarm"],
+    "EmailConfig":{
+        "EmailAcc":"568669736@qq.com",
+        "EmailPassword":"skw0103",
+        "SmtpServer":"smtp.exmail.qq.com:25",
+        "ToEmail":["281431280@qq.com"]
+    },
+    "WebConfig":{
+        "ServerPort":8080,
+        "StaticDir":"./static"
+    },
+    "TextConfig":[
+        "群:[%s]:[%s]:\n%s",
+        "客人:%s:\n%s",
+        "客人:%s:\n 图片消息",
+        "客人:%s:\n 图片消息",
+        "客人:%s:\n 语音消息",
+        "客人:%s:\n 语音消息",
+        "客人:%s:\n 表情消息",
+        "客人:%s:\n 表情消息",
+        "客人:%s:\n 表情消息",
+        "客人:%s:\n 表情消息",
+        "客人:%s:\n 链接消息",
+        "客人:%s:\n 链接消息",
+        "小手机有人在使用微信!\n",
+        "小手机有人在使用微信!\n",
+        "[%s]已成为客服！",
+        "开始接待：%s",
+        "结束接待：%s",
+        "[%s]开始接待[%s]",
+        "微信客服助手帮助\na:xxx --添加接待员xxx\nr:xxx --开始接待xxx\ne: --结束接待\nh: --帮助",
+        "未接待客人！",
+        "已经有接待员在接待中..."
+    ]
+}
