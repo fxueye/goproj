@@ -1,4 +1,0 @@
-[15:30:22] service_server.go:59 [INF] listen tcp, port=:8080
-[15:30:22] service_server.go:607 [INF] Please open img E:\work\goproj\src\game\main\wxbot\qrcode\qrcode.jpg
-[15:30:32] service_server.go:59 [INF] listen tcp, port=:8080
-[15:30:32] service_server.go:607 [INF] Please open img E:\work\goproj\src\game\main\wxbot\qrcode\qrcode.jpg

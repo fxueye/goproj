@@ -1,6 +1,6 @@
-bin/*
+bin/
 pkg/
-logs/*
-debug*
-src/game/main/center/logs/*
-src/game/main/gateway/logs/*
+logs/
+debug
+src/game/main/center/logs/
+src/game/main/gateway/logs/
