@@ -1,0 +1,4 @@
+[17:01:24] session.go:155 [ERR] EOF
+[17:14:34] session.go:155 [ERR] EOF
+[17:17:23] session.go:155 [ERR] read tcp 127.0.0.1:8888->127.0.0.1:55281: wsarecv: An existing connection was forcibly closed by the remote host.
+[17:29:33] session.go:155 [ERR] read tcp 127.0.0.1:8888->127.0.0.1:56012: wsarecv: An existing connection was forcibly closed by the remote host.

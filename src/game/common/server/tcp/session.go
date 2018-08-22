@@ -2,7 +2,7 @@ package tcp
 
 import (
 	"errors"
-	//	log "github.com/cihub/seelog"
+	log "github.com/cihub/seelog"
 	"net"
 	"sync"
 	"sync/atomic"
@@ -152,7 +152,7 @@ func (se *Session) readLoop() {
 
 		p, err := se.protocol.ReadPack(se)
 		if err != nil {
-			//			log.Error(err)
+			log.Error(err)
 			return
 		}
 
@@ -173,7 +173,7 @@ func (se *Session) writeLoop() {
 				return
 			}
 			if err := se.protocol.SendPack(se, p); err != nil {
-				//				log.Error(err)
+				log.Error(err)
 				return
 			}
 		}

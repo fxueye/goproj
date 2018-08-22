@@ -7,7 +7,7 @@ type ClientHandlers struct {
 	simple.SimpleInvoker
 }
 
-func ProxyHandler(cmd *simple.SimpleCmd, se *tcp.Session) {
+func ClientProxyHandler(cmd *simple.SimpleCmd, se *tcp.Session) {
 	if cmd.Opcode() < 10000 { //转发至客户端
 		
 	} else if cmd.Opcode() < 20000 { //转发至cs
