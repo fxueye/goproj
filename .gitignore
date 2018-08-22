@@ -1,4 +1,5 @@
 bin/
 ./pkg/
-logs/
+*.log.*
+*.log
 debug
