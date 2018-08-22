@@ -1,5 +1,5 @@
 bin/*
-pkg
+pkg/
 logs/*
 debug*
 src/game/main/center/logs/*
