@@ -1,0 +1,40 @@
+package wraps
+
+import (
+	rpc "tipcat.com/common/rpc/simple"
+)
+
+type {{$.Name}} struct {
+	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}{{with $gt := $.GetGoType $t}}
+	{{$n}} {{if index $.Repeats $i}}[]{{end}}{{if $.IsWrap $t}}*{{end}}{{$gt}} // {{index $.Comments $i}}{{end}}{{end}}{{end}}
+	rpc.Wrapper
+}
+
+func (w *{{$.Name}})Decode(pck *rpc.Packet) rpc.Wrapper {
+	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}{{with $gt := $.GetGoType $t}}
+	{{if index $.Repeats $i}}w.{{$n}} = make([]{{if $.IsWrap $t}}*{{end}}{{$gt}}, int(pck.PopInt16()))
+	for i := 0; i < len(w.{{$n}}); i++ {
+		{{if $.IsWrap $t}}w.{{$n}}[i] = new({{$gt}})
+		w.{{$n}}[i].Decode(pck)
+		{{else}}w.{{$n}}[i] = pck.{{$.GetGoFunc $t true}}(){{end}}
+	}
+	{{else}}{{if $.IsWrap $t}}w.{{$n}} = new({{$gt}})
+	w.{{$n}}.Decode(pck)
+	{{else}}w.{{$n}} = pck.{{$.GetGoFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}{{end}}
+	return w
+}
+
+func (w *{{$.Name}})Encode(pck *rpc.Packet) {
+	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}{{with $gt := $.GetGoType $t}}
+	{{if index $.Repeats $i}}if w.{{$n}} == nil {
+		pck.PutInt16(0)
+	} else {
+    	pck.PutInt16(int16(len(w.{{$n}})))
+    	for i := 0; i < len(w.{{$n}}); i++ {
+    		{{if $.IsWrap $t}}w.{{$n}}[i].Encode(pck);
+			{{else}}pck.{{$.GetGoFunc $t false}}(w.{{$n}}[i]){{end}}
+    	}
+    }
+	{{else}}{{if $.IsWrap $t}}w.{{$n}}.Encode(pck); {{else}}pck.{{$.GetGoFunc $t false}}(w.{{$n}}) {{end}}{{end}}{{end}}{{end}}{{end}}
+}
+

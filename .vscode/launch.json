@@ -54,16 +54,16 @@
             "showLog": true
         },
         {
-            "name": "server",
+            "name": "rpc",
             "type": "go",
             "request": "launch",
             "mode": "debug",
             "remotePath": "",
             "port": 2345,
             "host": "127.0.0.1",
-            "program": "${workspaceRoot}/src/game/main/server",
+            "program": "${workspaceRoot}/src/game/tools/rpc",
             "env": {"gopath":"${workspaceRoot}"},
-            "args": [],
+            "args": ["-I","./input","-O","./output","-T","./temp_rpc"],
             "showLog": true
         },
         {

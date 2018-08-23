@@ -1,0 +1,46 @@
+package cmds
+import (
+	"errors"
+	"fmt"
+	rpc "tipcat.com/common/rpc/simple"
+	tcp "tipcat.com/common/server/tcp"
+	{{if $.HasWrap}}wraps "tipcat.com/cmds/wraps"{{end}}
+)
+
+type I{{$.ClzName}} interface {
+	{{range $i, $data := $.Datas}}{{$data.Func}}(cmd *rpc.SimpleCmd, se *tcp.Session{{range $j, $arg := $data.Args}}, {{$arg.RpcValue}} {{if $arg.IsWrap $arg.RpcType}}*wraps.{{end}}{{$.GetGoType $arg.RpcType}}{{end}}) // {{index $data.Comment}}
+	{{end}}
+}
+
+type {{$.ClzName}}Invoker struct {
+	invoker I{{$.ClzName}}
+	defaultInvoker func(cmd *rpc.SimpleCmd, se *tcp.Session)
+	rpc.SimpleInvoker
+} 
+
+func New{{$.ClzName}}Invoker(invoker I{{$.ClzName}}, defaultInvoker func(*rpc.SimpleCmd, *tcp.Session)) *{{$.ClzName}}Invoker {
+	inv := new({{$.ClzName}}Invoker)
+	inv.invoker = invoker
+	inv.defaultInvoker = defaultInvoker
+	return inv
+} 
+
+func (this *{{$.ClzName}}Invoker) Invoke(cmd *rpc.SimpleCmd, se *tcp.Session) (err error) {
+	defer func() {
+		if e := recover(); e != nil {
+			err = error(errors.New(fmt.Sprint(e)))
+		}
+	}()
+	pack := cmd.Pack()
+	switch(cmd.Opcode()) {
+	{{range $i, $data := $.Datas}}case {{$data.Opcode}}: 
+		this.invoker.{{$data.Func}}(cmd,se{{range $j,$arg := $data.Args}}, {{if $arg.IsWrap $arg.RpcType}}new(wraps.{{$arg.RpcType}}).Decode(pack).(*wraps.{{$arg.RpcType}}){{else}}pack.{{$arg.GetGoFunc $arg.RpcType true}}(){{end}}{{end}})
+	{{end}}
+	default:
+		if this.defaultInvoker != nil {
+			this.defaultInvoker(cmd,se)
+		}
+	}
+	return nil
+}
+
