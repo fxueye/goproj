@@ -1,7 +1,7 @@
 package wraps
 
 import (
-	rpc "tipcat.com/common/rpc/simple"
+	rpc "game/common/rpc/simple"
 )
 
 type ItemDataListWrap struct {

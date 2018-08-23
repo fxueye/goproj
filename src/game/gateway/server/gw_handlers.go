@@ -8,15 +8,16 @@ type GwHandlers struct {
 	rpc.SimpleInvoker
 }
 func GwProxyHandler(req *rpc.SimpleCmd, se *tcp.Session) {
-	log.Infof("!!!!! unregister handler, opcode=%v", req.Opcode())
+	log.Infof("!!!!! unregister handler,seqId=%v, opcode=%v",req.SeqID, req.Opcode())
 
 }
 func (*GwHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *tcp.Session) {
-	log.Infof("########recv client HeartBeat, cmd=%v", cmd.Opcode())
+	log.Infof("########recv server HeartBeat,seqId=%v cmd=%v",cmd.SeqID ,cmd.Opcode())
 }
-func (*GwHandlers) GW2CS_Ping(cmd *rpc.SimpleCmd, se *tcp.Session){
+func (*GwHandlers) LoginGuest(cmd *rpc.SimpleCmd, se *tcp.Session, devID string, deviceType string, partnerID string, version string){
 
 }
-func (*GwHandlers) GW2CS_LoginGuest(cmd *rpc.SimpleCmd, se *tcp.Session, deviceID string, deviceType string, partnerID string, ip string) {
 
+func (*GwHandlers) LoginPlatform(cmd *rpc.SimpleCmd, se *tcp.Session, ptID string, account string, deviceType string, partnerID string, version string, reconnect bool, token string, extension string){
+	
 }

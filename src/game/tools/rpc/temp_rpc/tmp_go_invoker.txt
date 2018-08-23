@@ -2,9 +2,9 @@ package cmds
 import (
 	"errors"
 	"fmt"
-	rpc "tipcat.com/common/rpc/simple"
-	tcp "tipcat.com/common/server/tcp"
-	{{if $.HasWrap}}wraps "tipcat.com/cmds/wraps"{{end}}
+	rpc "game/common/rpc/simple"
+	tcp "game/common/server/tcp"
+	{{if $.HasWrap}}wraps "game/cmds/wraps"{{end}}
 )
 
 type I{{$.ClzName}} interface {

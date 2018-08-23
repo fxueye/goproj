@@ -21,7 +21,7 @@ type CS2GWService struct{
 }
 func newCS2GWService(port int) *CS2GWService{
 	serv := new(CS2GWService)
-	inv := cmd.NewServerCSCmdsInvoker(&GWHandlers{},ProxyHandler)
+	inv := cmd.NewServerGWCmdsInvoker(&GwHandlers{},ProxyHandler)
 	serv.simpleRPC = rpc.NewSimpleRPC(inv,true,time.Duration(config.RPCTimeOut) * time.Second,nil)
 	serv.TcpService = tcp.NewTcpService(
 		port,

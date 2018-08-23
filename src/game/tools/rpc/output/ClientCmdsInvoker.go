@@ -2,9 +2,9 @@ package cmds
 import (
 	"errors"
 	"fmt"
-	rpc "tipcat.com/common/rpc/simple"
-	tcp "tipcat.com/common/server/tcp"
-	wraps "tipcat.com/cmds/wraps"
+	rpc "game/common/rpc/simple"
+	tcp "game/common/server/tcp"
+	wraps "game/cmds/wraps"
 )
 
 type IClientCmds interface {

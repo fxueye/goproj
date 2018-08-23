@@ -23,7 +23,7 @@ type GatewayService struct{
 }
 func newGatewayService(port,pkgLimit int) *GatewayService{
 	serv := new(GatewayService)
-	inv := cmd.NewServerGWCmdsInvoker(&ClientHandlers{},ClientProxyHandler)
+	inv := cmd.NewClientCmdsInvoker(&ClientHandlers{},ClientProxyHandler)
 	serv.simpleRPC = rpc.NewSimpleRPC(inv,false,time.Duration(config.RPCTimeOut) * time.Second,[]byte(config.DesKey))
 	serv.TcpService = tcp.NewTcpService(
 		port,

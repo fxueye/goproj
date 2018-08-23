@@ -4,7 +4,7 @@ import (
 	"fmt"
 	rpc "game/common/rpc/simple"
 	tcp "game/common/server/tcp"
-	// wraps "game/cmds/wraps"
+	
 )
 
 type IServerCSCmds interface {
@@ -36,9 +36,8 @@ func (this *ServerCSCmdsInvoker) Invoke(cmd *rpc.SimpleCmd, se *tcp.Session) (er
 	switch(cmd.Opcode()) {
 	case 22001: 
 		this.invoker.GW2CS_Ping(cmd,se)
-	case 22004:
+	case 22004: 
 		this.invoker.GW2CS_LoginGuest(cmd,se, pack.PopString(), pack.PopString(), pack.PopString(), pack.PopString())
-	
 	
 	default:
 		if this.defaultInvoker != nil {

@@ -1,13 +1,14 @@
 package server
 import(
-	simple "game/common/rpc/simple"
+	rpc "game/common/rpc/simple"
 	tcp "game/common/server/tcp"
+	wraps "game/cmds/wraps"
 )
 type ClientHandlers struct {
-	simple.SimpleInvoker
+	rpc.SimpleInvoker
 }
 
-func ClientProxyHandler(cmd *simple.SimpleCmd, se *tcp.Session) {
+func ClientProxyHandler(cmd *rpc.SimpleCmd, se *tcp.Session) {
 	if cmd.Opcode() < 10000 { //转发至客户端
 		
 	} else if cmd.Opcode() < 20000 { //转发至cs
@@ -15,9 +16,12 @@ func ClientProxyHandler(cmd *simple.SimpleCmd, se *tcp.Session) {
 	}
 
 }
-func (*ClientHandlers) HeartBeat(cmd *simple.SimpleCmd, se *tcp.Session) {
+func(*ClientHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *tcp.Session){
 
 }
-func (*ClientHandlers) LoginGuest(cmd *simple.SimpleCmd, se *tcp.Session, deviceID string, deviceType string, partnerID string, gameversion string) {
+func(*ClientHandlers) LoginSuccess(cmd *rpc.SimpleCmd, se *tcp.Session, player *wraps.PlayerWrap, reconnect bool, extension string){
+
+}
+func(*ClientHandlers) LoginFailed(cmd *rpc.SimpleCmd, se *tcp.Session, errorCode int16, errMsg string){
 
 }

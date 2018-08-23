@@ -25,7 +25,7 @@ type GW2GSService struct{
 func newGW2GSService(name string,ip string,port int) *GW2GSService{
 	serv := new(GW2GSService)
 	serv.name = name
-	inv := cmd.NewServerCSCmdsInvoker(&GwHandlers{},GwProxyHandler)
+	inv := cmd.NewServerGWCmdsInvoker(&GwHandlers{},GwProxyHandler)
 	serv.simpleRPC = rpc.NewSimpleRPC(inv,true,time.Second * 30 ,nil)
 	serv.close = false
 	serv.ClientService = tcp.NewClientService(ip,port,time.Second * 30 ,serv.simpleRPC,serv,tcp.SessionConfig{4,4})
@@ -78,7 +78,7 @@ func (serv *GW2GSService) CheckHeartBeat(){
 			time.Sleep(time.Second)
 			continue
 		}
-		serv.simpleRPC.Send(serv.Session(),0,cmd.ServerCSCmds_GW_PING,0)
+		serv.simpleRPC.Send(serv.Session(),0,cmd.ServerGWCmds_HEART_BEAT,0)
 		time.Sleep(time.Second * 5)
 	}
 }
