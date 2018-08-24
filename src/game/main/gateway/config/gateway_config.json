@@ -1,6 +1,7 @@
 {
     "ServerVersion":"1.0.0",
     "ServerPort":8000,
+    "WsPort":8001,
     "CenterIp":"127.0.0.1",
     "CenterPort":8888,
     "PackLimit":20,
