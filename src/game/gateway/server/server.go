@@ -4,6 +4,7 @@ import (
 	conf "game/common/config"
 	"game/common/server"
 	"runtime"
+
 	log "github.com/cihub/seelog"
 )
 
@@ -12,11 +13,11 @@ type GatewayServer struct {
 }
 
 var (
-	Instance    *GatewayServer
-	config GatewayConfig
-	gwInstance *GatewayService
+	Instance      *GatewayServer
+	config        GatewayConfig
+	gwInstance    *GatewayService
 	gw2csInstance *GW2GSService
-	wsInstance *WsService
+	wsInstance    *WsService
 )
 
 func Init() {
@@ -24,12 +25,12 @@ func Init() {
 		server.NewServer(),
 	}
 	conf.LoadConfig("json", "config/gateway_config.json", &config)
-	gwInstance = newGatewayService(config.ServerPort,config.PackLimit)
-	Instance.RegServ("gw",gwInstance)
-	// gw2csInstance = newGW2GSService("gw2cs",config.CenterIp,config.CenterPort)
-	// Instance.RegServ("gw2cs",gw2csInstance)
+	gwInstance = newGatewayService(config.ServerPort, config.PackLimit)
+	Instance.RegServ("gw", gwInstance)
+	gw2csInstance = newGW2GSService("gw2cs", config.CenterIp, config.CenterPort)
+	Instance.RegServ("gw2cs", gw2csInstance)
 	wsInstance = newWsService(config.WsPort)
-	Instance.RegServ("ws",wsInstance)
+	Instance.RegServ("ws", wsInstance)
 	Instance.RegSigCallback(OnSignal)
 }
 

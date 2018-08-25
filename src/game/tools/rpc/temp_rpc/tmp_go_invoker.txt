@@ -2,30 +2,31 @@ package cmds
 import (
 	"errors"
 	"fmt"
+	"game/common/server"
 	rpc "game/common/rpc/simple"
 	tcp "game/common/server/tcp"
 	{{if $.HasWrap}}wraps "game/cmds/wraps"{{end}}
 )
 
 type I{{$.ClzName}} interface {
-	{{range $i, $data := $.Datas}}{{$data.Func}}(cmd *rpc.SimpleCmd, se *tcp.Session{{range $j, $arg := $data.Args}}, {{$arg.RpcValue}} {{if $arg.IsWrap $arg.RpcType}}*wraps.{{end}}{{$.GetGoType $arg.RpcType}}{{end}}) // {{index $data.Comment}}
+	{{range $i, $data := $.Datas}}{{$data.Func}}(cmd *rpc.SimpleCmd, se *server.Session{{range $j, $arg := $data.Args}}, {{$arg.RpcValue}} {{if $arg.IsWrap $arg.RpcType}}*wraps.{{end}}{{$.GetGoType $arg.RpcType}}{{end}}) // {{index $data.Comment}}
 	{{end}}
 }
 
 type {{$.ClzName}}Invoker struct {
 	invoker I{{$.ClzName}}
-	defaultInvoker func(cmd *rpc.SimpleCmd, se *tcp.Session)
+	defaultInvoker func(cmd *rpc.SimpleCmd, se *server.Session)
 	rpc.SimpleInvoker
 } 
 
-func New{{$.ClzName}}Invoker(invoker I{{$.ClzName}}, defaultInvoker func(*rpc.SimpleCmd, *tcp.Session)) *{{$.ClzName}}Invoker {
+func New{{$.ClzName}}Invoker(invoker I{{$.ClzName}}, defaultInvoker func(*rpc.SimpleCmd, *server.Session)) *{{$.ClzName}}Invoker {
 	inv := new({{$.ClzName}}Invoker)
 	inv.invoker = invoker
 	inv.defaultInvoker = defaultInvoker
 	return inv
 } 
 
-func (this *{{$.ClzName}}Invoker) Invoke(cmd *rpc.SimpleCmd, se *tcp.Session) (err error) {
+func (this *{{$.ClzName}}Invoker) Invoke(cmd *rpc.SimpleCmd, se *server.Session) (err error) {
 	defer func() {
 		if e := recover(); e != nil {
 			err = error(errors.New(fmt.Sprint(e)))

@@ -2,11 +2,11 @@ package simple
 
 import (
 	"encoding/binary"
-	tcp "game/common/server/tcp"
+	"game/common/server"
 )
 
 type SimpleCmd struct {
-	tcp.IPacket
+	server.IPacket
 	seqID     int16
 	opcode    int16
 	sessionID int64

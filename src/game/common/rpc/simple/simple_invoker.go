@@ -1,9 +1,7 @@
 package simple
 
-import (
-	tcp "game/common/server/tcp"
-)
+import "game/common/server"
 
 type SimpleInvoker interface {
-	Invoke(cmd *SimpleCmd, se *tcp.Session) error
+	Invoke(cmd *SimpleCmd, se *server.Session) error
 }

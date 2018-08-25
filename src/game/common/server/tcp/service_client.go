@@ -2,9 +2,9 @@ package tcp
 
 import (
 	"fmt"
+	server "game/common/server"
 	"net"
 	"time"
-	server "game/common/server"
 )
 
 type ClientService struct {
@@ -13,13 +13,13 @@ type ClientService struct {
 	host     string
 	port     int
 	timeout  time.Duration
-	protocol IProtocol
-	handler  ISessionHandler
-	session  *Session
-	seConf   SessionConfig
+	protocol server.IProtocol
+	handler  server.ISessionHandler
+	session  *server.Session
+	seConf   server.SessionConfig
 }
 
-func NewClientService(host string, port int, timeout time.Duration, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *ClientService {
+func NewClientService(host string, port int, timeout time.Duration, protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *ClientService {
 	s := new(ClientService)
 	s.host = host
 	s.port = port
@@ -30,14 +30,14 @@ func NewClientService(host string, port int, timeout time.Duration, protocol IPr
 	return s
 }
 
-func (s *ClientService) Send(p IPacket) error {
+func (s *ClientService) Send(p server.IPacket) error {
 	if s.IsClosed() || s.session == nil {
-		return ErrConnClosing
+		return server.ErrConnClosing
 	}
 	return s.session.Send(p, s.timeout)
 }
 
-func (s *ClientService) Session() *Session {
+func (s *ClientService) Session() *server.Session {
 	return s.session
 }
 
@@ -63,7 +63,7 @@ func (s *ClientService) Start() error {
 		}
 	}
 
-	s.session = NewSession(s, conn, s.protocol, s.handler, s.seConf)
+	s.session = server.NewSession(s, conn, s.protocol, s.handler, s.seConf)
 	s.session.Do()
 
 	return nil

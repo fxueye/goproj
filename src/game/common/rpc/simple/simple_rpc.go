@@ -4,14 +4,14 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"game/common/server"
+	utils "game/common/utils"
 	"io"
 	"time"
-	tcp "game/common/server/tcp"
-	utils "game/common/utils"
 )
 
 type SimpleRPC struct {
-	tcp.IProtocol
+	server.IProtocol
 	timeout       time.Duration
 	invoker       SimpleInvoker
 	desKey        []byte
@@ -30,7 +30,7 @@ func (rpc *SimpleRPC) SetTimeout(timeout time.Duration) {
 	rpc.timeout = timeout
 }
 
-func (rpc *SimpleRPC) ReadPack(se *tcp.Session) (tcp.IPacket, error) {
+func (rpc *SimpleRPC) ReadPack(se *server.Session) (server.IPacket, error) {
 	conn := se.GetConn()
 	headerBytes := make([]byte, 4)
 
@@ -53,7 +53,7 @@ func (rpc *SimpleRPC) ReadPack(se *tcp.Session) (tcp.IPacket, error) {
 	if rpc.desKey != nil {
 		var err error
 		//		fmt.Println(len(buffBody))
-		buffBody, err = utils.DesDecrypt(buffBody, rpc.desKey,nil)
+		buffBody, err = utils.DesDecrypt(buffBody, rpc.desKey, nil)
 		if err != nil {
 			fmt.Println(err)
 			return nil, err
@@ -74,7 +74,7 @@ func (rpc *SimpleRPC) ReadPack(se *tcp.Session) (tcp.IPacket, error) {
 	return cmd, nil
 }
 
-func (rpc *SimpleRPC) SendPack(se *tcp.Session, p tcp.IPacket) error {
+func (rpc *SimpleRPC) SendPack(se *server.Session, p server.IPacket) error {
 	bs, err := p.Encode()
 	if err != nil {
 		return err
@@ -82,7 +82,7 @@ func (rpc *SimpleRPC) SendPack(se *tcp.Session, p tcp.IPacket) error {
 
 	var sendBytes []byte
 	if rpc.desKey != nil {
-		bs, err = utils.DesEncrypt(bs, rpc.desKey,nil)
+		bs, err = utils.DesEncrypt(bs, rpc.desKey, nil)
 		if err != nil {
 			fmt.Println(err)
 			return err
@@ -99,7 +99,7 @@ func (rpc *SimpleRPC) SendPack(se *tcp.Session, p tcp.IPacket) error {
 	return err
 }
 
-func (rpc *SimpleRPC) Send(se *tcp.Session, seqID int16, opcode int16, sid int64, args ...interface{}) error {
+func (rpc *SimpleRPC) Send(se *server.Session, seqID int16, opcode int16, sid int64, args ...interface{}) error {
 	if se == nil {
 		return errors.New("Session Invalid")
 	}
@@ -147,7 +147,7 @@ func (rpc *SimpleRPC) Send(se *tcp.Session, seqID int16, opcode int16, sid int64
 	return se.Send(&cmd, rpc.timeout)
 }
 
-func (rpc *SimpleRPC) Process(se *tcp.Session, p tcp.IPacket) error {
+func (rpc *SimpleRPC) Process(se *server.Session, p server.IPacket) error {
 	if cmd, ok := p.(*SimpleCmd); ok {
 		return rpc.invoker.Invoke(cmd, se)
 	}

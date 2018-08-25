@@ -4,12 +4,12 @@ import (
 	//	"container/list"
 	"fmt"
 	//	"sync"
-	tcp "game/common/server/tcp"
+	"game/common/server"
 )
 
 type PacketData struct {
-	se *tcp.Session
-	p  tcp.IPacket
+	se *server.Session
+	p  server.IPacket
 }
 
 //用于将rpc收到的packet集中处理，避免处理逻辑时考虑多线程数据访问的问题
@@ -25,7 +25,7 @@ func (pp *PacketProcesser) Init(invoker SimpleInvoker, cnt int) {
 	pp.packChan = make(chan *PacketData, cnt)
 }
 
-func (pp *PacketProcesser) AddPacket(se *tcp.Session, p tcp.IPacket) {
+func (pp *PacketProcesser) AddPacket(se *server.Session, p server.IPacket) {
 	data := &PacketData{
 		se: se,
 		p:  p,
@@ -73,7 +73,7 @@ func (pp *PacketProcesser) ProcessPacket(max int) int {
 	}
 }
 
-func (pp *PacketProcesser) Invoke(cmd *SimpleCmd, se *tcp.Session) {
+func (pp *PacketProcesser) Invoke(cmd *SimpleCmd, se *server.Session) {
 	if err := recover(); err != nil {
 		fmt.Println(err)
 		se.Close()

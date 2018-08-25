@@ -1,13 +1,13 @@
-package tcp
+package server
 
 import (
 	"errors"
-	log "github.com/cihub/seelog"
 	"net"
 	"sync"
 	"sync/atomic"
 	"time"
-	server "game/common/server"
+
+	log "github.com/cihub/seelog"
 )
 
 // Error type
@@ -29,7 +29,7 @@ type Session struct {
 	mu    sync.RWMutex //protect attrs
 	attrs map[string]interface{}
 
-	serv     server.IService
+	serv     IService
 	protocol IProtocol
 	handler  ISessionHandler
 
@@ -40,7 +40,7 @@ type Session struct {
 	recvChan  chan IPacket  // packet receive chanel
 }
 
-func NewSession(serv server.IService, conn *net.TCPConn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
+func NewSession(serv IService, conn *net.TCPConn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
 	se := new(Session)
 	se.conn = conn
 	se.attrs = make(map[string]interface{})

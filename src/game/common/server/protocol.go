@@ -1,6 +1,4 @@
-package tcp
-
-import ()
+package server
 
 type IPacket interface {
 	Decode([]byte) error

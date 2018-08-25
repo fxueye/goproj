@@ -2,10 +2,11 @@ package tcp
 
 import (
 	"fmt"
-	log "github.com/cihub/seelog"
+	server "game/common/server"
 	"net"
 	"time"
-	server "game/common/server"
+
+	log "github.com/cihub/seelog"
 )
 
 type TcpService struct {
@@ -14,12 +15,12 @@ type TcpService struct {
 	port          int
 	acceptTimeout time.Duration
 	listener      *net.TCPListener
-	protocol      IProtocol
-	handler       ISessionHandler
-	seConf        SessionConfig
+	protocol      server.IProtocol
+	handler       server.ISessionHandler
+	seConf        server.SessionConfig
 }
 
-func NewTcpService(port int, acceptTimeout time.Duration, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *TcpService {
+func NewTcpService(port int, acceptTimeout time.Duration, protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *TcpService {
 	s := new(TcpService)
 	s.port = port
 	s.acceptTimeout = acceptTimeout
@@ -59,7 +60,7 @@ func (s *TcpService) Start() error {
 			if err != nil {
 				continue
 			}
-			NewSession(s, conn, s.protocol, s.handler, s.seConf).Do()
+			server.NewSession(s, conn, s.protocol, s.handler, s.seConf).Do()
 		}
 	})
 	return nil
