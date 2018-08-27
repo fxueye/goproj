@@ -23,9 +23,10 @@ type WsService struct {
 	seConf        server.SessionConfig
 }
 
-func newWsService(port int) *WsService {
+func newWsService(port int, acceptTimeout time.Duration) *WsService {
 	serv := new(WsService)
-	serv.WebService = web.NewWebService(port, time.Second, "")
+	serv.acceptTimeout = acceptTimeout
+	serv.WebService = web.NewWebService(port, serv.acceptTimeout, "")
 	return serv
 }
 func (s *WsService) Start() error {

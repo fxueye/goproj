@@ -8,6 +8,7 @@ import (
 	"time"
 
 	log "github.com/cihub/seelog"
+	"golang.org/x/net/websocket"
 )
 
 // Error type
@@ -23,8 +24,10 @@ type SessionConfig struct {
 }
 
 type Session struct {
-	Sid  int64
-	conn *net.TCPConn
+	Sid    int64
+	isWs   bool
+	conn   *net.TCPConn
+	wsconn *websocket.Conn
 
 	mu    sync.RWMutex //protect attrs
 	attrs map[string]interface{}
@@ -42,7 +45,21 @@ type Session struct {
 
 func NewSession(serv IService, conn *net.TCPConn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
 	se := new(Session)
+	se.isWs = false
 	se.conn = conn
+	se.attrs = make(map[string]interface{})
+	se.serv = serv
+	se.protocol = protocol
+	se.handler = handler
+	se.closeChan = make(chan struct{})
+	se.sendChan = make(chan IPacket, seConf.SendChanLimit)
+	se.recvChan = make(chan IPacket, seConf.RecvChanLimit)
+	return se
+}
+func NewWsSesion(serv IService, wsconn *websocket.Conn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
+	se := new(Session)
+	se.isWs = true
+	se.wsconn = wsconn
 	se.attrs = make(map[string]interface{})
 	se.serv = serv
 	se.protocol = protocol
@@ -57,8 +74,12 @@ func (se *Session) CloseChan() <-chan struct{} {
 	return se.closeChan
 }
 
-func (se *Session) GetConn() *net.TCPConn {
-	return se.conn
+func (se *Session) GetConn() interface{} {
+	if se.isWs {
+		return se.wsconn
+	} else {
+		return se.conn
+	}
 }
 
 func (se *Session) SetAttr(name string, value interface{}) {
@@ -90,7 +111,11 @@ func (se *Session) Close() {
 		close(se.closeChan)
 		close(se.sendChan)
 		close(se.recvChan)
-		se.conn.Close()
+		if se.isWs {
+			se.wsconn.Close()
+		} else {
+			se.conn.Close()
+		}
 		se.handler.OnClose(se)
 	})
 }

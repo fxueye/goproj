@@ -68,6 +68,7 @@ func (s *WebService) Start() error {
 			}
 		}()
 		s.mux.Handle("/", s)
+		s.listener.SetDeadline(time.Now().Add(s.acceptTimeout))
 		err = http.Serve(s.listener, s.mux)
 		if err != nil {
 			return
