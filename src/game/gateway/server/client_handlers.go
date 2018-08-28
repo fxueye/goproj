@@ -4,6 +4,7 @@ import (
 	wraps "game/cmds/wraps"
 	rpc "game/common/rpc/simple"
 	"game/common/server"
+	log "github.com/cihub/seelog"
 )
 
 type ClientHandlers struct {
@@ -19,7 +20,7 @@ func ClientProxyHandler(cmd *rpc.SimpleCmd, se *server.Session) {
 
 }
 func (*ClientHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) {
-
+	log.Infof("########recv client HeartBeat,seqId=%v cmd=%v", cmd.SeqID, cmd.Opcode())
 }
 func (*ClientHandlers) LoginSuccess(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap, reconnect bool, extension string) {
 
