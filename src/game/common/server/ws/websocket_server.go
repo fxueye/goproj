@@ -1,8 +1,8 @@
-package server
+package ws
 
 import (
-	"bytes"
-	"encoding/binary"
+	// "bytes"
+	// "encoding/binary"
 	"game/common/server"
 	"game/common/server/web"
 	"net"
@@ -12,7 +12,7 @@ import (
 	"golang.org/x/net/websocket"
 )
 
-type WsService struct {
+type WebsocketService struct {
 	*web.WebService
 
 	port          int
@@ -23,39 +23,40 @@ type WsService struct {
 	seConf        server.SessionConfig
 }
 
-func newWsService(port int, acceptTimeout time.Duration) *WsService {
-	serv := new(WsService)
-	serv.acceptTimeout = acceptTimeout
-	serv.WebService = web.NewWebService(port, serv.acceptTimeout, "")
-	return serv
+func NewWebsocketService(port int, acceptTimeout time.Duration,protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *WebsocketService {
+	s := new(WebsocketService)
+	s.acceptTimeout = acceptTimeout
+	s.WebService = web.NewWebService(port, s.acceptTimeout, "")
+	s.protocol = protocol
+	s.handler = handler
+	s.seConf = seConf
+	return s
 }
-func (s *WsService) Start() error {
+func (s *WebsocketService) Start() error {
 	s.Websocket("/", websocket.Handler(s.handler_webSocket))
 	return s.WebService.Start()
 }
 
-func (s *WsService) handler_webSocket(ws *websocket.Conn) {
-	for {
-		var data []byte
-		err := websocket.Message.Receive(ws, &data)
-		if err != nil {
-			log.Errorf("%v", err)
-			break
-		}
-		buff := bytes.NewBuffer(data)
-		var i int32
-		binary.Read(buff, binary.BigEndian, &i)
-		var b bool
-		binary.Read(buff, binary.BigEndian, b)
-		log.Infof("%v\n", i)
-		log.Infof("%v\n", b)
-		s.OnReceive(ws, data)
-	}
-}
-func (s *WsService) OnReceive(ws *websocket.Conn, data []byte) {
-	// buffer *bytes.Buffer
-	err := websocket.Message.Send(ws, data)
-	if err != nil {
-		log.Errorf("%v", err)
-	}
+func (s *WebsocketService) handler_webSocket(ws *websocket.Conn) {
+	log.Infof("new ws conn ip :%v", ws.RemoteAddr())
+
+	se := server.NewWsSesion(s, ws, s.protocol, s.handler, s.seConf)
+	se.Do();
+	for !se.IsClosed() {}
+	// for {
+	// 	var data []byte
+	// 	err := websocket.Message.Receive(ws, &data)
+	// 	if err != nil {
+	// 		log.Errorf("%v", err)
+	// 		break
+	// 	}
+	// 	buff := bytes.NewBuffer(data)
+	// 	var i int32
+	// 	binary.Read(buff, binary.BigEndian, &i)
+	// 	var b bool
+	// 	binary.Read(buff, binary.BigEndian, b)
+	// 	log.Infof("%v\n", i)
+	// 	log.Infof("%v\n", b)
+	// 	s.OnReceive(ws, data)
+	// }
 }

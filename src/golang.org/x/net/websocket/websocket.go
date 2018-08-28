@@ -99,8 +99,8 @@ type serverHandshaker interface {
 	// handshake response back to client.
 	AcceptHandshake(buf *bufio.Writer) (err error)
 
-	// NewServerConn creates a new WebSocket connection.
 	NewServerConn(buf *bufio.ReadWriter, rwc io.ReadWriteCloser, request *http.Request) (conn *Conn)
+	// NewServerConn creates a new WebSocket connection.
 }
 
 // frameReader is an interface to read a WebSocket frame.

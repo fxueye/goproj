@@ -1,6 +1,7 @@
 package server
 
 import (
+	"net"
 	cmd "game/cmds"
 	rpc "game/common/rpc/simple"
 	"game/common/server"
@@ -41,7 +42,7 @@ func newGatewayService(port, pkgLimit int) *GatewayService {
 	return serv
 }
 func (serv *GatewayService) OnConnect(se *server.Session) bool {
-	log.Debugf("on connected, addr = %v", se.GetConn().RemoteAddr())
+	log.Debugf("on connected, addr = %v", se.GetConn().(*net.TCPConn).RemoteAddr())
 	seId := atomic.AddInt64(&serv.sessionId, 1)
 	se.Sid = seId
 
@@ -71,7 +72,7 @@ func (serv *GatewayService) OnConnect(se *server.Session) bool {
 	return true
 }
 func (serv *GatewayService) OnClose(se *server.Session) {
-	log.Debugf("on close, addr = %v sid[%v]", se.GetConn().RemoteAddr(), se.Sid)
+	log.Debugf("on close, addr = %v sid[%v]", se.GetConn().(*net.TCPConn).RemoteAddr(), se.Sid)
 	serv.sessLock.Lock()
 	defer serv.sessLock.Unlock()
 	delete(serv.sessions, se.Sid)
@@ -89,7 +90,7 @@ func (serv *GatewayService) OnMessage(se *server.Session, p server.IPacket) bool
 		if serv.pkgLimit > 0 {
 			if pkgcnt, y := se.GetAttr("pkgcnt"); y {
 				if pkgcnt.(int) > serv.pkgLimit*CHECK_INTERNAL {
-					log.Errorf("To many packet addr[%v] pkgcnt[%v]", se.GetConn().RemoteAddr(), pkgcnt.(int))
+					log.Errorf("To many packet addr[%v] pkgcnt[%v]", se.GetConn().(*net.TCPConn).RemoteAddr(), pkgcnt.(int))
 					se.Close()
 					return false
 				}

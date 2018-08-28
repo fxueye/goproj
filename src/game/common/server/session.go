@@ -25,7 +25,7 @@ type SessionConfig struct {
 
 type Session struct {
 	Sid    int64
-	isWs   bool
+	IsWs   bool
 	conn   *net.TCPConn
 	wsconn *websocket.Conn
 
@@ -45,7 +45,7 @@ type Session struct {
 
 func NewSession(serv IService, conn *net.TCPConn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
 	se := new(Session)
-	se.isWs = false
+	se.IsWs = false
 	se.conn = conn
 	se.attrs = make(map[string]interface{})
 	se.serv = serv
@@ -58,7 +58,7 @@ func NewSession(serv IService, conn *net.TCPConn, protocol IProtocol, handler IS
 }
 func NewWsSesion(serv IService, wsconn *websocket.Conn, protocol IProtocol, handler ISessionHandler, seConf SessionConfig) *Session {
 	se := new(Session)
-	se.isWs = true
+	se.IsWs = true
 	se.wsconn = wsconn
 	se.attrs = make(map[string]interface{})
 	se.serv = serv
@@ -75,7 +75,7 @@ func (se *Session) CloseChan() <-chan struct{} {
 }
 
 func (se *Session) GetConn() interface{} {
-	if se.isWs {
+	if se.IsWs {
 		return se.wsconn
 	} else {
 		return se.conn
@@ -111,7 +111,7 @@ func (se *Session) Close() {
 		close(se.closeChan)
 		close(se.sendChan)
 		close(se.recvChan)
-		if se.isWs {
+		if se.IsWs {
 			se.wsconn.Close()
 		} else {
 			se.conn.Close()

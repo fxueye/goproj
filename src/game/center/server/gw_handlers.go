@@ -24,7 +24,7 @@ func ProxyHandler(cmd *rpc.SimpleCmd, se *server.Session) {
 	}
 }
 func (*GwHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) {
-	log.Infof("########recv client HeartBeat,seqId=%v, cmd=%v", cmd.SeqID, cmd.Opcode())
+	// log.Infof("########recv client HeartBeat,seqId=%v, cmd=%v", cmd.SeqID, cmd.Opcode())
 	cs2GwInstance.simpleRPC.Send(se, cmd.SeqID(), cmds.ServerGWCmds_HEART_BEAT, 0)
 }
 func (*GwHandlers) LoginGuest(cmd *rpc.SimpleCmd, se *server.Session, devID string, deviceType string, partnerID string, version string) {

@@ -1,6 +1,7 @@
 package simple
 
 import (
+	"net"
 	"encoding/binary"
 	"errors"
 	"fmt"
@@ -8,6 +9,8 @@ import (
 	utils "game/common/utils"
 	"io"
 	"time"
+	"golang.org/x/net/websocket"
+	// log "github.com/cihub/seelog"
 )
 
 type SimpleRPC struct {
@@ -31,24 +34,52 @@ func (rpc *SimpleRPC) SetTimeout(timeout time.Duration) {
 }
 
 func (rpc *SimpleRPC) ReadPack(se *server.Session) (server.IPacket, error) {
-	conn := se.GetConn()
-	headerBytes := make([]byte, 4)
+	temp := se.GetConn()
 
-	// read length
-	if _, err := io.ReadFull(conn, headerBytes); err != nil {
-		return nil, err
+	headerBytes := make([]byte, 4)
+	var wsconn *websocket.Conn
+
+	var conn *net.TCPConn
+	if se.IsWs{
+		wsconn = temp.(*websocket.Conn)
+		
+		// if err := websocket.Message.Receive(wsconn, &data) ; err != nil{
+		// 	log.Errorf("data :%v", err)
+		// 	return nil,err
+		// }
+		// log.Infof("data :%v", data)
+		// read length
+		if _, err := io.ReadFull(wsconn, headerBytes); err != nil {
+			return nil, err
+		}
+
+	}else{
+		conn = temp.(*net.TCPConn)
+		// read length
+		if _, err := io.ReadFull(conn, headerBytes); err != nil {
+			return nil, err
+		}
 	}
+
 	bodyLen := int(binary.LittleEndian.Uint32(headerBytes))
+
+	buffBody := make([]byte, int(bodyLen))
 
 	if bodyLen > PACKET_MAX_LEN || bodyLen < 0 {
 		return nil, errors.New("the size of packet is larger than the limit")
 	}
 
 	// read body
-	buffBody := make([]byte, int(bodyLen))
-	if _, err := io.ReadFull(conn, buffBody); err != nil {
-		return nil, err
+	if se.IsWs{
+		if _, err := io.ReadFull(wsconn, buffBody); err != nil {
+			return nil, err
+		}
+	}else{
+		if _, err := io.ReadFull(conn, buffBody); err != nil {
+			return nil, err
+		}
 	}
+
 
 	if rpc.desKey != nil {
 		var err error
@@ -95,8 +126,15 @@ func (rpc *SimpleRPC) SendPack(se *server.Session, p server.IPacket) error {
 		binary.LittleEndian.PutUint32(sendBytes[:4], uint32(len(bs)))
 		copy(sendBytes[4:], bs)
 	}
-	_, err = se.GetConn().Write(sendBytes)
-	return err
+	if se.IsWs{
+		err = websocket.Message.Send(se.GetConn().(*websocket.Conn),sendBytes);
+		return err
+		// _, err = se.GetConn().(*websocket.Conn).Write(sendBytes)
+	}else{
+		_, err = se.GetConn().(*net.TCPConn).Write(sendBytes)
+		return err
+	}
+	return nil
 }
 
 func (rpc *SimpleRPC) Send(se *server.Session, seqID int16, opcode int16, sid int64, args ...interface{}) error {

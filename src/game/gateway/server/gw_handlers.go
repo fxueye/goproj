@@ -16,7 +16,7 @@ func GwProxyHandler(req *rpc.SimpleCmd, se *server.Session) {
 
 }
 func (*GwHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) {
-	log.Infof("########recv server HeartBeat,seqId=%v cmd=%v", cmd.SeqID, cmd.Opcode())
+	// log.Infof("########recv server HeartBeat,seqId=%v cmd=%v", cmd.SeqID, cmd.Opcode())
 }
 func (*GwHandlers) LoginGuest(cmd *rpc.SimpleCmd, se *server.Session, devID string, deviceType string, partnerID string, version string) {
 

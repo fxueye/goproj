@@ -29,7 +29,7 @@ func Init() {
 	Instance.RegServ("gw", gwInstance)
 	gw2csInstance = newGW2GSService("gw2cs", config.CenterIp, config.CenterPort)
 	Instance.RegServ("gw2cs", gw2csInstance)
-	wsInstance = newWsService(config.WsPort)
+	wsInstance = newWsService(config.WsPort,config.PackLimit)
 	Instance.RegServ("ws", wsInstance)
 	Instance.RegSigCallback(OnSignal)
 }

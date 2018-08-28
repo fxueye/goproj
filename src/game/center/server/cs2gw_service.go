@@ -1,6 +1,7 @@
 package server
 
 import (
+	"net"
 	cmd "game/cmds"
 	rpc "game/common/rpc/simple"
 	"game/common/server"
@@ -36,7 +37,7 @@ func newCS2GWService(port int) *CS2GWService {
 	return serv
 }
 func (serv *CS2GWService) OnConnect(se *server.Session) bool {
-	log.Debugf("on connnected ,addr = %v", se.GetConn().RemoteAddr().String())
+	log.Debugf("on connnected ,addr = %v", se.GetConn().(*net.TCPConn).RemoteAddr().String())
 	seId := atomic.AddInt64(&serv.sessionId, 1)
 	se.Sid = seId
 	serv.sessLock.Lock()

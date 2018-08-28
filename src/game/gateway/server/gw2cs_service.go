@@ -1,6 +1,7 @@
 package server
 
 import (
+	"net"
 	cmd "game/cmds"
 	rpc "game/common/rpc/simple"
 	"game/common/server"
@@ -61,7 +62,7 @@ func (serv *GW2GSService) Close() {
 	serv.close = true
 }
 func (serv *GW2GSService) OnConnect(se *server.Session) bool {
-	log.Infof("[%s] connect to server, addr=%v", serv.name, se.GetConn().RemoteAddr())
+	log.Infof("[%s] connect to server, addr=%v", serv.name, se.GetConn().(*net.TCPConn).RemoteAddr())
 	serv.msgTime = time.Now()
 	// serv.simpleRPC.Send()
 	serv.goHeart.Do(func() {
