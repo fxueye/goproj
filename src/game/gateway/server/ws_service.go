@@ -82,19 +82,19 @@ func (serv *WsService) OnMessage(se *server.Session, p server.IPacket) bool {
 	}()
 	if cmd, ok := p.(*rpc.SimpleCmd); ok {
 		cmd.SetSID(se.Sid)
-		se.SetAttr("heartbeat", time.Now())
-		if serv.pkgLimit > 0 {
-			if pkgcnt, y := se.GetAttr("pkgcnt"); y {
-				if pkgcnt.(int) > serv.pkgLimit*CHECK_INTERNAL {
-					log.Errorf("To many packet addr[%v] pkgcnt[%v]", se.GetConn().(*websocket.Conn).RemoteAddr(), pkgcnt.(int))
-					se.Close()
-					return false
-				}
-				se.SetAttr("pkgcnt", pkgcnt.(int)+1)
-			} else {
-				se.SetAttr("pkgcnt", 1)
-			}
-		}
+		// se.SetAttr("heartbeat", time.Now())
+		// if serv.pkgLimit > 0 {
+		// 	if pkgcnt, y := se.GetAttr("pkgcnt"); y {
+		// 		if pkgcnt.(int) > serv.pkgLimit*CHECK_INTERNAL {
+		// 			log.Errorf("To many packet addr[%v] pkgcnt[%v]", se.GetConn().(*websocket.Conn).RemoteAddr(), pkgcnt.(int))
+		// 			se.Close()
+		// 			return false
+		// 		}
+		// 		se.SetAttr("pkgcnt", pkgcnt.(int)+1)
+		// 	} else {
+		// 		se.SetAttr("pkgcnt", 1)
+		// 	}
+		// }
 		serv.simpleRPC.Process(se, p)
 	} else {
 		log.Debug("not simplecmd Message!")

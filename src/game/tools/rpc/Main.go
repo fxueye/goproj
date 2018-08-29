@@ -96,10 +96,10 @@ func CreateRPCFiles() {
 		}
 
 		data := ParseRPCFile(fmt.Sprintf("%s%c%s", inputPath, os.PathSeparator, fi.Name()), clzName)
-		if(strings.Index(clzName,"Client") >= 0){
-			CreateFile(fmt.Sprintf("%s%c%sCodes.cs", outputPath, os.PathSeparator, clzName),
-			fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_cs_opcode.txt"), data)
-		}
+		// if(strings.Index(clzName,"Client") >= 0){
+		CreateFile(fmt.Sprintf("%s%c%sCodes.cs", outputPath, os.PathSeparator, clzName),
+		fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_cs_opcode.txt"), data)
+		// }
 		
 		CreateFile(fmt.Sprintf("%s%c%sCodes.go", outputPath, os.PathSeparator, clzName),
 			fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_go_opcode.txt"), data)

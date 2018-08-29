@@ -9,7 +9,7 @@ import (
 )
 
 type IClientCmds interface {
-	HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) // 心跳
+	HeartBeat(cmd *rpc.SimpleCmd, se *server.Session, msg string) // 心跳
 	LoginSuccess(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap, reconnect bool, extension string) // 登录成功
 	LoginFailed(cmd *rpc.SimpleCmd, se *server.Session, errorCode int16, errMsg string) // 登录失败（1 用户不存在，2  密码错误， 3 禁止登陆）
 	
@@ -37,7 +37,7 @@ func (this *ClientCmdsInvoker) Invoke(cmd *rpc.SimpleCmd, se *server.Session) (e
 	pack := cmd.Pack()
 	switch(cmd.Opcode()) {
 	case 0: 
-		this.invoker.HeartBeat(cmd,se)
+		this.invoker.HeartBeat(cmd,se, pack.PopString())
 	case 1: 
 		this.invoker.LoginSuccess(cmd,se, new(wraps.PlayerWrap).Decode(pack).(*wraps.PlayerWrap), pack.PopBool(), pack.PopString())
 	case 2: 
