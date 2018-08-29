@@ -131,8 +131,8 @@ func (rpc *SimpleRPC) SendPack(se *server.Session, p server.IPacket) error {
 	}
 	if se.IsWs{
 		err = websocket.Message.Send(se.GetConn().(*websocket.Conn),sendBytes);
-		return err
 		// _, err = se.GetConn().(*websocket.Conn).Write(sendBytes)
+		return err
 	}else{
 		_, err = se.GetConn().(*net.TCPConn).Write(sendBytes)
 		return err

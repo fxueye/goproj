@@ -1,6 +1,7 @@
 package server
 
 import (
+	cmds "game/cmds"
 	wraps "game/cmds/wraps"
 	rpc "game/common/rpc/simple"
 	"game/common/server"
@@ -21,6 +22,7 @@ func ClientProxyHandler(cmd *rpc.SimpleCmd, se *server.Session) {
 }
 func (*ClientHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) {
 	log.Infof("########recv client HeartBeat,seqId=%v cmd=%v", cmd.SeqID, cmd.Opcode())
+	wsInstance.simpleRPC.Send(se, cmd.SeqID(), cmds.ClientCmds_HEART_BEAT, 0)
 }
 func (*ClientHandlers) LoginSuccess(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap, reconnect bool, extension string) {
 

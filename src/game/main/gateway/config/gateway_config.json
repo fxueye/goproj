@@ -4,7 +4,7 @@
     "WsPort":8001,
     "CenterIp":"127.0.0.1",
     "CenterPort":8888,
-    "PackLimit":20,
+    "PackLimit":200,
     "RPCTimeOut":30,
 	"DesKey":"cAn!s&Ak",
 	"SendChanLimit":400,
