@@ -1,0 +1,83 @@
+namespace Game
+{
+	public interface I{{$.ClzName}} 
+	{
+		{{range $i, $data := $.Datas}}void {{$data.Func}}(Command cmd{{range $j, $arg := $data.Args}}, {{$arg.RpcType}} {{$arg.RpcValue}}{{end}}); // {{index $data.Comment}}
+		{{end}}
+	}
+	
+    public class {{$.ClzName}}Invoker : IInvoker
+    {
+        I{{$.ClzName}} _cmds = null;
+		Action<short> _onCmdInvoked = null;
+        public {{$.ClzName}}Invoker(I{{$.ClzName}} cmds)
+        {
+            _cmds = cmds;
+        }
+		public void SetOnCmdInvoked(Action<short> onCmdInvoked)
+		{
+			_onCmdInvoked = onCmdInvoked;
+		}
+
+        public void Invoke(Command cmd)
+        {
+        	try
+        	{
+        		Packet pack = cmd.Pack;
+	        	switch (cmd.Opcode)
+	            {
+	            	{{range $i, $data := $.Datas}}case (short){{$data.Opcode}}: _cmds.{{$data.Func}}(cmd{{range $j,$arg := $data.Args}}, {{if $arg.IsWrap $arg.RpcType}}({{$arg.RpcType}})PackUtil.Unpack(typeof({{$arg.RpcType}}), pack){{else}}pack.{{$arg.GetCSFunc $arg.RpcType true}}(){{end}}{{end}}); break;
+	            	{{end}}
+	            }
+				if (_onCmdInvoked != null)
+					_onCmdInvoked(cmd.Opcode);
+        	}
+        	catch(Exception e)
+        	{
+				L.Error("invoke error, opcode=" + cmd.Opcode);
+        		L.Exception(e.Message, e);
+        	}
+		}
+    }
+}
+
+
+using System;
+using Common.Net.Simple;
+
+namespace Game 
+{
+	public class {{$.Name}} : IWrapper
+	{	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+		public {{$t}}{{if index $.Repeats $i}}[]{{end}} {{$n}}; // {{index $.Comments $i}}{{end}}{{end}}
+		
+		public void Decode(Packet pck)
+		{	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+			{{if index $.Repeats $i}}{{$n}} = new {{$t}}[pck.GetShort()];
+			for (int i = 0; i < {{$n}}.Length; i++)
+			{
+				{{if $.IsWrap $t}}{{$n}}[i] = new {{$t}}();
+				{{$n}}[i].Decode(pck);
+				{{else}}{{$n}}[i] = pck.{{$.GetTSFunc $t true}}();{{end}}
+			}
+			{{else}}{{if $.IsWrap $t}}{{$n}} = new {{$t}}();
+			{{$n}}.Decode(pck);
+			{{else}}{{$n}} = pck.{{$.GetTSFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}
+		}
+		
+        public void Encode(Packet pck)
+        {	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+        	{{if index $.Repeats $i}}if ({{$n}} == null) pck.PutShort((short)0); 
+        	else
+        	{
+	        	pck.PutShort((short){{$n}}.Length);
+	        	for(int i = 0; i < {{$n}}.Length; i++)
+	        	{
+	        		{{if $.IsWrap $t}}{{$n}}[i].Encode(pck);
+					{{else}}pck.{{$.GetTSFunc $t false}}({{$n}}[i]);{{end}}
+	        	}
+	        }
+        	{{else}}{{if $.IsWrap $t}}{{$n}}.Encode(pck); {{else}}pck.{{$.GetTSFunc $t false}}({{$n}}); {{end}}{{end}}{{end}}{{end}}
+        }
+	}
+}

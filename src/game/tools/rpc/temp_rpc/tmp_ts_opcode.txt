@@ -1,0 +1,5 @@
+class {{$.ClzName}}Codes
+{
+	{{range $i, $data := $.Datas}}public static {{$data.OpDef}}:number = {{$data.Opcode}}; // {{index $data.Comment}}
+	{{end}}
+}

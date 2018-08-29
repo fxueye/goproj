@@ -1,0 +1,29 @@
+interface I{{$.ClzName}}
+{
+	{{range $i, $data := $.Datas}}{{$data.Func}}(cmd:Net.Simple.Command{{range $j, $arg := $data.Args}}, {{$arg.RpcValue}}:{{$arg.GetTSType $arg.RpcType}} {{end}}); // {{index $data.Comment}}
+	{{end}}
+}
+class {{$.ClzName}}Invoker implements Net.Simple.IInvoker {
+	private _cmds:I{{$.ClzName}} = null;
+	private _onCmdInvoked:Function = null;
+	private _obj:any = null;
+	public constructor(cmds:I{{$.ClzName}}) {
+		this._cmds = cmds;
+	}
+	public SetOnCmdInvoked(func:Function,obj:any){
+		this._onCmdInvoked = func;
+		this._obj = obj;
+	}
+	public Invoke(cmd:Net.Simple.Command):void{
+		var pack = cmd.Pack;
+		switch(cmd.Opcode){
+			{{range $i, $data := $.Datas}}case {{$data.Opcode}}: _cmds.{{$data.Func}}(cmd{{range $j,$arg := $data.Args}}, new {{if $arg.IsWrap $arg.RpcType}}{{$arg.RpcType}}().Decode(pack){{else}}pack.{{$arg.GetTSFunc $arg.RpcType true}}(){{end}}{{end}}); break;
+			{{end}}
+		}
+		if(this._onCmdInvoked != null && this._obj != null){
+			this._onCmdInvoked.call(this._obj,cmd.Opcode);
+
+		}
+	}	
+
+}

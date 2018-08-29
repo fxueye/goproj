@@ -3,12 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/tealeg/xlsx"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
 	"text/template"
+
+	"github.com/tealeg/xlsx"
 )
 
 type RPCData struct {
@@ -97,16 +98,16 @@ func CreateRPCFiles() {
 
 		data := ParseRPCFile(fmt.Sprintf("%s%c%s", inputPath, os.PathSeparator, fi.Name()), clzName)
 		// if(strings.Index(clzName,"Client") >= 0){
-		CreateFile(fmt.Sprintf("%s%c%sCodes.cs", outputPath, os.PathSeparator, clzName),
-		fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_cs_opcode.txt"), data)
+		CreateFile(fmt.Sprintf("%s%c%sCodes.ts", outputPath, os.PathSeparator, clzName),
+			fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_ts_opcode.txt"), data)
 		// }
-		
+
 		CreateFile(fmt.Sprintf("%s%c%sCodes.go", outputPath, os.PathSeparator, clzName),
 			fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_go_opcode.txt"), data)
 
 		if strings.Index(clzName, "Client") >= 0 {
-			CreateFile(fmt.Sprintf("%s%c%sInvoker.cs", outputPath, os.PathSeparator, clzName),
-				fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_cs_invoker.txt"), data)
+			CreateFile(fmt.Sprintf("%s%c%sInvoker.ts", outputPath, os.PathSeparator, clzName),
+				fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_ts_invoker.txt"), data)
 			CreateFile(fmt.Sprintf("%s%c%sInvoker.go", outputPath, os.PathSeparator, clzName),
 				fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_go_invoker.txt"), data)
 		}
@@ -137,7 +138,7 @@ func CreateWrapFiles() {
 
 		data := ParseWrapFile(fmt.Sprintf("%s%c%s", input, os.PathSeparator, fi.Name()), clzName)
 		CreateFile(fmt.Sprintf("%s%c%s%c%s.cs", outputPath, os.PathSeparator, "wrap", os.PathSeparator, clzName),
-			fmt.Sprintf("%s%c%s", tmpWrapPath, os.PathSeparator, "tmp_cs.txt"), data)
+			fmt.Sprintf("%s%c%s", tmpWrapPath, os.PathSeparator, "tmp_ts.txt"), data)
 
 		CreateFile(fmt.Sprintf("%s%c%s%c%s.go", outputPath, os.PathSeparator, "wrap", os.PathSeparator, clzName),
 			fmt.Sprintf("%s%c%s", tmpWrapPath, os.PathSeparator, "tmp_go.txt"), data)
@@ -216,7 +217,7 @@ func ParseRPCFile(path string, clzName string) *RPCData {
 		}
 		opcode, err := row.Cells[0].Int()
 		if err != nil {
-			fmt.Printf("%v\n",clzName)
+			fmt.Printf("%v\n", clzName)
 			panic(err)
 		}
 		opdef := row.Cells[1].Value
@@ -267,6 +268,24 @@ func getGoType(t string) string {
 	}
 
 }
+func getTsType(t string) string {
+	switch t {
+	case "bool":
+		return "boolean"
+	case "long":
+		return "number"
+	case "short":
+		return "number"
+	case "int":
+		return "number"
+	case "float":
+		return "number"
+	case "string":
+		return "string"
+	default:
+		return t
+	}
+}
 func (*RPCData) GetGoType(t string) string {
 	return getGoType(t)
 }
@@ -275,13 +294,16 @@ func (*WrapData) GetGoType(t string) string {
 	return getGoType(t)
 }
 
-func (*RPCDataArg) GetCSFunc(t string, isGet bool) string {
-	return getCSFunc(t, isGet)
+func (*RPCDataArg) GetTSFunc(t string, isGet bool) string {
+	return getTSFunc(t, isGet)
 }
-func (*WrapData) GetCSFunc(t string, isGet bool) string {
-	return getCSFunc(t, isGet)
+func (*RPCDataArg) GetTSType(t string) string {
+	return getTsType(t)
 }
-func getCSFunc(t string, isGet bool) string {
+func (*WrapData) GetTSFunc(t string, isGet bool) string {
+	return getTSFunc(t, isGet)
+}
+func getTSFunc(t string, isGet bool) string {
 	switch t {
 	case "bool":
 		if isGet {

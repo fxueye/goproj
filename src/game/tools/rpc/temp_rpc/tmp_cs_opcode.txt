@@ -1,8 +1,0 @@
-namespace Game 
-{
-	public class {{$.ClzName}}Codes
-	{
-		{{range $i, $data := $.Datas}}public const short {{$data.OpDef}} = (short){{$data.Opcode}}; // {{index $data.Comment}}
-		{{end}}
-	}
-}

@@ -14,11 +14,11 @@ namespace Game
 			{
 				{{if $.IsWrap $t}}{{$n}}[i] = new {{$t}}();
 				{{$n}}[i].Decode(pck);
-				{{else}}{{$n}}[i] = pck.{{$.GetCSFunc $t true}}();{{end}}
+				{{else}}{{$n}}[i] = pck.{{$.GetTSFunc $t true}}();{{end}}
 			}
 			{{else}}{{if $.IsWrap $t}}{{$n}} = new {{$t}}();
 			{{$n}}.Decode(pck);
-			{{else}}{{$n}} = pck.{{$.GetCSFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}
+			{{else}}{{$n}} = pck.{{$.GetTSFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}
 		}
 		
         public void Encode(Packet pck)
@@ -30,10 +30,10 @@ namespace Game
 	        	for(int i = 0; i < {{$n}}.Length; i++)
 	        	{
 	        		{{if $.IsWrap $t}}{{$n}}[i].Encode(pck);
-					{{else}}pck.{{$.GetCSFunc $t false}}({{$n}}[i]);{{end}}
+					{{else}}pck.{{$.GetTSFunc $t false}}({{$n}}[i]);{{end}}
 	        	}
 	        }
-        	{{else}}{{if $.IsWrap $t}}{{$n}}.Encode(pck); {{else}}pck.{{$.GetCSFunc $t false}}({{$n}}); {{end}}{{end}}{{end}}{{end}}
+        	{{else}}{{if $.IsWrap $t}}{{$n}}.Encode(pck); {{else}}pck.{{$.GetTSFunc $t false}}({{$n}}); {{end}}{{end}}{{end}}{{end}}
         }
 	}
 }
