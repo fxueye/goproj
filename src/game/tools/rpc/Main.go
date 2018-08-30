@@ -115,6 +115,8 @@ func CreateRPCFiles() {
 		if strings.Index(clzName, "Server") >= 0 {
 			CreateFile(fmt.Sprintf("%s%c%sInvoker.go", outputPath, os.PathSeparator, clzName),
 				fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_go_invoker.txt"), data)
+			CreateFile(fmt.Sprintf("%s%c%sPacketGen.ts", outputPath, os.PathSeparator, clzName),
+				fmt.Sprintf("%s%c%s", tmpRpcPath, os.PathSeparator, "tmp_ts_packet_gen.txt"), data)
 		}
 	}
 }
@@ -273,7 +275,7 @@ func getTsType(t string) string {
 	case "bool":
 		return "boolean"
 	case "long":
-		return "number"
+		return "Long"
 	case "short":
 		return "number"
 	case "int":
@@ -288,6 +290,9 @@ func getTsType(t string) string {
 }
 func (*RPCData) GetGoType(t string) string {
 	return getGoType(t)
+}
+func (*RPCData) GetTSType(t string) string {
+	return getTsType(t)
 }
 
 func (*WrapData) GetGoType(t string) string {

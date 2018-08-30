@@ -10,7 +10,7 @@ import (
 	"io"
 	"time"
 	"golang.org/x/net/websocket"
-	log "github.com/cihub/seelog"
+	// log "github.com/cihub/seelog"
 )
 
 type SimpleRPC struct {
@@ -52,7 +52,7 @@ func (rpc *SimpleRPC) ReadPack(se *server.Session) (server.IPacket, error) {
 		if _, err := io.ReadFull(wsconn, headerBytes); err != nil {
 			return nil, err
 		}
-		log.Infof("headerBytes :%v", headerBytes)
+		
 
 
 	}else{
@@ -76,7 +76,7 @@ func (rpc *SimpleRPC) ReadPack(se *server.Session) (server.IPacket, error) {
 		if _, err := io.ReadFull(wsconn, buffBody); err != nil {
 			return nil, err
 		}
-		log.Infof("buffBody :%v", buffBody)
+		
 	}else{
 		if _, err := io.ReadFull(conn, buffBody); err != nil {
 			return nil, err

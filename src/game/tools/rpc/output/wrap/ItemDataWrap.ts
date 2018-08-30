@@ -2,7 +2,7 @@ class ItemDataWrap extends Net.Simple.IWrapper {
 	
 	public ItemID:number; // 道具ID
 	public Count:number; // 道具数量
-	public LastUpdateTime:number; // 最后一次更新时间
+	public LastUpdateTime:Long; // 最后一次更新时间
 	public constructor() {
 		super();
 	}

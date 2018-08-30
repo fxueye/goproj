@@ -1,0 +1,10 @@
+class {{$.ClzName}}PackGen{
+    {{range $i, $data := $.Datas}}public static {{$data.Func}}Packet(seqID:number{{range $j, $arg := $data.Args}}, {{$arg.RpcValue}}:{{if $arg.IsWrap $arg.RpcType}}{{end}}{{$.GetTSType $arg.RpcType}}{{end}}):Net.Simple.Packet{
+        var pack = new Net.Simple.Packet();
+		pack.PutShort(seqID);
+		pack.PutShort({{$data.Opcode}});
+        {{range $j,$arg := $data.Args}}{{if $arg.IsWrap $arg.RpcType}}{{$arg.RpcValue}}.Encode(pack){{else}}pack.{{$arg.GetTSFunc $arg.RpcType false}}({{$arg.RpcValue}}){{end}};{{end}}
+        return pack;
+    }
+	{{end}}
+}

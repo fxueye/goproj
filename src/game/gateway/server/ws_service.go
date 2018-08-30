@@ -24,7 +24,7 @@ type WsService struct {
 
 func newWsService(port int, pkgLimit int) *WsService {
 	serv := new(WsService)
-	inv := cmd.NewClientCmdsInvoker(&ClientHandlers{}, ClientProxyHandler)
+	inv := cmd.NewServerGWCmdsInvoker(&ClientHandlers{}, ClientProxyHandler)
 	serv.simpleRPC = rpc.NewSimpleRPC(inv, false, time.Duration(config.RPCTimeOut)*time.Second, nil)
 	serv.WebsocketService = ws.NewWebsocketService(
 		port, 

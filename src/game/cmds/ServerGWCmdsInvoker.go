@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"game/common/server"
 	rpc "game/common/rpc/simple"
-	tcp "game/common/server/tcp"
-	
+	//tcp "game/common/server/tcp"
+	wraps "game/cmds/wraps"
 )
 
 type IServerGWCmds interface {
-	HeartBeat(cmd *rpc.SimpleCmd, se *server.Session) // 心跳
+	HeartBeat(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap) // 心跳
 	LoginGuest(cmd *rpc.SimpleCmd, se *server.Session, devID string, deviceType string, partnerID string, version string) // 登录
 	LoginPlatform(cmd *rpc.SimpleCmd, se *server.Session, ptID string, account string, deviceType string, partnerID string, version string, reconnect bool, token string, extension string) // 登录(ptID平台）
 	
@@ -37,7 +37,7 @@ func (this *ServerGWCmdsInvoker) Invoke(cmd *rpc.SimpleCmd, se *server.Session) 
 	pack := cmd.Pack()
 	switch(cmd.Opcode()) {
 	case 0: 
-		this.invoker.HeartBeat(cmd,se)
+		this.invoker.HeartBeat(cmd,se, new(wraps.PlayerWrap).Decode(pack).(*wraps.PlayerWrap))
 	case 10001: 
 		this.invoker.LoginGuest(cmd,se, pack.PopString(), pack.PopString(), pack.PopString(), pack.PopString())
 	case 10002: 

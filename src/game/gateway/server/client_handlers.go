@@ -6,6 +6,7 @@ import (
 	rpc "game/common/rpc/simple"
 	"game/common/server"
 	log "github.com/cihub/seelog"
+	"time"
 )
 
 type ClientHandlers struct {
@@ -20,14 +21,18 @@ func ClientProxyHandler(cmd *rpc.SimpleCmd, se *server.Session) {
 	}
 
 }
-func (*ClientHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session,msg string) {
-	log.Infof("########recv client HeartBeat,seqId=%v cmd=%v msg=%v", cmd.SeqID, cmd.Opcode(),msg)
-	wsInstance.simpleRPC.Send(se, cmd.SeqID(), cmds.ClientCmds_HEART_BEAT, 0)
+
+func (*ClientHandlers) HeartBeat(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap) {
+	log.Infof("!!!!! HeartBeat handler,seqId=%v, opcode=%v ,guid=%v ,createTime=%v", cmd.SeqID, cmd.Opcode(),player.GUID,player.CreateTime)
+	wsInstance.simpleRPC.Send(se, 0, cmds.ClientCmds_HEART_BEAT, 0,"你好!")
+	var p = new(wraps.PlayerWrap)
+	p.GUID = "10001";
+	p.CreateTime = time.Now().Unix()
+	wsInstance.simpleRPC.Send(se,0,cmds.ClientCmds_LOGIN_SUCCESS,0,p,false,"")
+}
+func (*ClientHandlers) LoginGuest(cmd *rpc.SimpleCmd, se *server.Session, devID string, deviceType string, partnerID string, version string) {
 
 }
-func (*ClientHandlers) LoginSuccess(cmd *rpc.SimpleCmd, se *server.Session, player *wraps.PlayerWrap, reconnect bool, extension string) {
-
-}
-func (*ClientHandlers) LoginFailed(cmd *rpc.SimpleCmd, se *server.Session, errorCode int16, errMsg string) {
+func (*ClientHandlers) LoginPlatform(cmd *rpc.SimpleCmd, se *server.Session, ptID string, account string, deviceType string, partnerID string, version string, reconnect bool, token string, extension string) {
 
 }
