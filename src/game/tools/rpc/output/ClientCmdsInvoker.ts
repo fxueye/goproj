@@ -19,9 +19,9 @@ class ClientCmdsInvoker implements Net.Simple.IInvoker {
 	public Invoke(cmd:Net.Simple.Command):void{
 		var pack = cmd.Pack;
 		switch(cmd.Opcode){
-			case 0: _cmds.HeartBeat(cmd, new pack.GetString()); break;
-			case 1: _cmds.LoginSuccess(cmd, new PlayerWrap().Decode(pack), new pack.GetBool(), new pack.GetString()); break;
-			case 2: _cmds.LoginFailed(cmd, new pack.GetShort(), new pack.GetString()); break;
+			case 0: this._cmds.HeartBeat(cmd, pack.GetString()); break;
+			case 1: this._cmds.LoginSuccess(cmd, new PlayerWrap().Decode(pack), pack.GetBool(), pack.GetString()); break;
+			case 2: this._cmds.LoginFailed(cmd, pack.GetShort(), pack.GetString()); break;
 			
 		}
 		if(this._onCmdInvoked != null && this._obj != null){

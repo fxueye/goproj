@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"game/common/server"
 	rpc "game/common/rpc/simple"
-	// tcp "game/common/server/tcp"
+	tcp "game/common/server/tcp"
 	
 )
 

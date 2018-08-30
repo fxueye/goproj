@@ -137,7 +137,7 @@ func CreateWrapFiles() {
 		}
 
 		data := ParseWrapFile(fmt.Sprintf("%s%c%s", input, os.PathSeparator, fi.Name()), clzName)
-		CreateFile(fmt.Sprintf("%s%c%s%c%s.cs", outputPath, os.PathSeparator, "wrap", os.PathSeparator, clzName),
+		CreateFile(fmt.Sprintf("%s%c%s%c%s.ts", outputPath, os.PathSeparator, "wrap", os.PathSeparator, clzName),
 			fmt.Sprintf("%s%c%s", tmpWrapPath, os.PathSeparator, "tmp_ts.txt"), data)
 
 		CreateFile(fmt.Sprintf("%s%c%s%c%s.go", outputPath, os.PathSeparator, "wrap", os.PathSeparator, clzName),
@@ -298,6 +298,9 @@ func (*RPCDataArg) GetTSFunc(t string, isGet bool) string {
 	return getTSFunc(t, isGet)
 }
 func (*RPCDataArg) GetTSType(t string) string {
+	return getTsType(t)
+}
+func (*WrapData) GetTSType(t string) string {
 	return getTsType(t)
 }
 func (*WrapData) GetTSFunc(t string, isGet bool) string {

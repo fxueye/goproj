@@ -17,7 +17,7 @@ class {{$.ClzName}}Invoker implements Net.Simple.IInvoker {
 	public Invoke(cmd:Net.Simple.Command):void{
 		var pack = cmd.Pack;
 		switch(cmd.Opcode){
-			{{range $i, $data := $.Datas}}case {{$data.Opcode}}: _cmds.{{$data.Func}}(cmd{{range $j,$arg := $data.Args}}, new {{if $arg.IsWrap $arg.RpcType}}{{$arg.RpcType}}().Decode(pack){{else}}pack.{{$arg.GetTSFunc $arg.RpcType true}}(){{end}}{{end}}); break;
+			{{range $i, $data := $.Datas}}case {{$data.Opcode}}: this._cmds.{{$data.Func}}(cmd{{range $j,$arg := $data.Args}}, {{if $arg.IsWrap $arg.RpcType}}new {{$arg.RpcType}}().Decode(pack){{else}}pack.{{$arg.GetTSFunc $arg.RpcType true}}(){{end}}{{end}}); break;
 			{{end}}
 		}
 		if(this._onCmdInvoked != null && this._obj != null){

@@ -1,39 +1,36 @@
-using System;
-using Common.Net.Simple;
-
-namespace Game 
-{
-	public class {{$.Name}} : IWrapper
-	{	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
-		public {{$t}}{{if index $.Repeats $i}}[]{{end}} {{$n}}; // {{index $.Comments $i}}{{end}}{{end}}
-		
-		public void Decode(Packet pck)
-		{	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
-			{{if index $.Repeats $i}}{{$n}} = new {{$t}}[pck.GetShort()];
-			for (int i = 0; i < {{$n}}.Length; i++)
-			{
-				{{if $.IsWrap $t}}{{$n}}[i] = new {{$t}}();
-				{{$n}}[i].Decode(pck);
-				{{else}}{{$n}}[i] = pck.{{$.GetTSFunc $t true}}();{{end}}
-			}
-			{{else}}{{if $.IsWrap $t}}{{$n}} = new {{$t}}();
-			{{$n}}.Decode(pck);
-			{{else}}{{$n}} = pck.{{$.GetTSFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}
-		}
-		
-        public void Encode(Packet pck)
-        {	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
-        	{{if index $.Repeats $i}}if ({{$n}} == null) pck.PutShort((short)0); 
-        	else
-        	{
-	        	pck.PutShort((short){{$n}}.Length);
-	        	for(int i = 0; i < {{$n}}.Length; i++)
-	        	{
-	        		{{if $.IsWrap $t}}{{$n}}[i].Encode(pck);
-					{{else}}pck.{{$.GetTSFunc $t false}}({{$n}}[i]);{{end}}
-	        	}
-	        }
-        	{{else}}{{if $.IsWrap $t}}{{$n}}.Encode(pck); {{else}}pck.{{$.GetTSFunc $t false}}({{$n}}); {{end}}{{end}}{{end}}{{end}}
-        }
+class {{$.Name}} extends Net.Simple.IWrapper {
+	{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+	public {{$n}}:{{if index $.Repeats $i}}Array<{{$.GetTSType $t}}>{{else}}{{$.GetTSType $t}}{{end}}; // {{index $.Comments $i}}{{end}}{{end}}
+	public constructor() {
+		super();
 	}
+	Decode(pck:Net.Simple.Packet):{{$.Name}}{
+		{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+		{{if index $.Repeats $i}}this.{{$n}} = new Array<{{$t}}>();
+		for (var i = 0,len = this.{{$n}}.length; i < len; i++)
+		{
+			{{if $.IsWrap $t}}this.{{$n}}[i] = new {{$t}}();
+			this.{{$n}}[i].Decode(pck);
+			{{else}}this.{{$n}}[i] = pck.{{$.GetTSFunc $t true}}();{{end}}
+		}
+		{{else}}{{if $.IsWrap $t}}this.{{$n}} = new {{$t}}();
+		this.{{$n}}.Decode(pck);
+		{{else}}this.{{$n}} = pck.{{$.GetTSFunc $t true}}(); {{end}}{{end}}{{end}}{{end}}
+		return this;
+	}
+    Encode(pck:Net.Simple.Packet){
+		{{range $i, $t := $.Types}}{{with $n := index $.Values $i}}
+    	{{if index $.Repeats $i}}if (this.{{$n}} == null) pck.PutShort(0); 
+    	else
+    	{
+        	pck.PutShort(this.{{$n}}.length);
+        	for(var i = 0,len = this.{{$n}}.length; i < len; i++)
+        	{
+        		{{if $.IsWrap $t}}this.{{$n}}[i].Encode(pck);
+				{{else}}pck.{{$.GetTSFunc $t false}}(this.{{$n}}[i]);{{end}}
+        	}
+        }
+    	{{else}}{{if $.IsWrap $t}}this.{{$n}}.Encode(pck); {{else}}pck.{{$.GetTSFunc $t false}}(this.{{$n}}); {{end}}{{end}}{{end}}{{end}}
+	}
+
 }
