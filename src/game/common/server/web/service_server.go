@@ -56,7 +56,7 @@ func (s *WebService) Start() error {
 	if err != nil {
 		return err
 	}
-	log.Infof("listen tcp, port=%v", serverAddr)
+	log.Infof("listen web tcp, port=%v", serverAddr)
 	s.BaseService.Start()
 	s.AsyncDo(func() {
 		defer func() {
