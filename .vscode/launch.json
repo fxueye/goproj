@@ -41,6 +41,19 @@
             "showLog": true
         },
         {
+            "name": "wxtaoke",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "remotePath": "",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "program": "${workspaceRoot}/src/game/main/wxtaoke",
+            "env": {"gopath":"${workspaceRoot}"},
+            "args": [],
+            "showLog": true
+        },
+        {
             "name": "web",
             "type": "go",
             "request": "launch",
@@ -64,19 +77,6 @@
             "program": "${workspaceRoot}/src/game/tools/rpc",
             "env": {"gopath":"${workspaceRoot}"},
             "args": ["-I","./input","-O","./output","-T","./temp_rpc"],
-            "showLog": true
-        },
-        {
-            "name": "client",
-            "type": "go",
-            "request": "launch",
-            "mode": "debug",
-            "remotePath": "",
-            "port": 2345,
-            "host": "127.0.0.1",
-            "program": "${workspaceRoot}/src/game/main/client",
-            "env": {"gopath":"${workspaceRoot}"},
-            "args": [],
             "showLog": true
         }
     ]
