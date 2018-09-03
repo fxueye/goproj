@@ -20,17 +20,24 @@ var (
 	openid2SessionKey = make(map[string]string)
 )
 func (*WebHandler) Session(ctx *web.Context,val string) string{
-	sessionKey:= ctx.Params["session_key"]
+	sessionKey:= ctx.Params["sessionKey"]
 	openId:= ctx.Params["openId"]
-	sessionOldKey:=""
-	if _,ok := openid2SessionKey[openId]; ok {
-		sessionOldKey = openid2SessionKey[openId]
-	}
-	mu.Lock()
-	defer mu.Unlock()
-	openid2SessionKey[openId] = sessionKey
-
+	sessionOldKey:= read(openId)
+	write(openId,sessionKey)
 	return sessionOldKey
+}
+func read(openId string)string{
+	defer mu.Unlock()
+	mu.Lock()
+	if _,ok := openid2SessionKey[openId]; ok {
+		return openid2SessionKey[openId]
+	}
+	return ""
+}
+func write(openId,sessionKey string){
+	defer mu.Unlock()
+	mu.Lock()
+	openid2SessionKey[openId] = sessionKey
 }
 func (*WebHandler) Api(ctx *web.Context, val string) string {
 	log.Infof("ctx : %v", ctx)
@@ -40,21 +47,22 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 			return ret(-1,"prams len is 0","")
 		}
 		code := ctx.Params["code"]
-		openid := getOpenId(code)
-		if openid == "" {
+		openId := getOpenId(code)
+		if openId == "" {
 			return ret(-1,"not get opnid ","")
 		}
 		iv := ctx.Params["iv"]
 		encryptedData := ctx.Params["encryptedData"]
 		signature := ctx.Params["signature"]
 		rawData := ctx.Params["rawData"]
-		hstr := fmt.Sprintf("%s%s", rawData, openid2SessionKey[openid])
+		sessionKey := read(openId)
+		hstr := fmt.Sprintf("%s%s", rawData, sessionKey)
 		signature2 := utils.Sha1(hstr)
 		if signature != signature2 {
 			log.Errorf("signature:%s != signature2:%s", signature, signature2)
 			return ret(-1,"signature != signature2 ","")
 		}
-		aesKey, err := base64.StdEncoding.DecodeString(openid2SessionKey[openid])
+		aesKey, err := base64.StdEncoding.DecodeString(sessionKey)
 		if err != nil {
 			log.Errorf("%v", err)
 			return ret(-1,"aesKey error","")
@@ -108,11 +116,9 @@ func getOpenId(code string) string{
 			return ""
 		}
 		sessionKey := retMap["session_key"].(string)
-		openid := retMap["openid"].(string)
-		mu.Lock()
-		defer mu.Unlock()
-		openid2SessionKey[openid] = sessionKey
-		return openid
+		openId := retMap["openid"].(string)
+		write(openId,sessionKey)
+		return openId
 }
 
 func ret(code int,msg string,data interface{}) string{
