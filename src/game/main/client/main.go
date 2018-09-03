@@ -4,7 +4,6 @@ import (
 
 	"fmt"
 	"os"
-	"strconv"
 	"time"
 
 	"math/rand"
@@ -43,8 +42,9 @@ func Send(i int){
 	fmt.Printf("ret:%v\n",str)
 }
 
+
 func GetSession() string {
-	return strconv.FormatInt(time.Now().Unix(), 10)
+	return fmt.Sprintf("%v%v",time.Now().Unix(),rand.Intn(99999) +100000 )
 }
 func checkError(err error) {
 	if err != nil {
