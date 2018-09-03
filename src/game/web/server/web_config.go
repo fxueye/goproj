@@ -5,4 +5,6 @@ type WebConfig struct {
 	ServerPort    int
 	StaticDir     string
 	WeiAppid 	  string
+	WeiSecret     string
+	WeiApiUrl     string
 }

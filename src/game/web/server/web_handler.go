@@ -1,11 +1,11 @@
 package server
 
 import (
+	"encoding/json"
 	"encoding/base64"
 	"fmt"
 	"game/common/server/web"
 	"game/common/utils"
-	"net/http"
 
 	log "github.com/cihub/seelog"
 )
@@ -15,52 +15,65 @@ type WebHandler struct{}
 var (
 	// wx8844e8b0bc33183b
 	//1fe0ca7dc36651f64fc7de3fbeaafadd
-	appid             = "wxbfdac7331dafd481"
-	secret            = "c96533730072f3a9be92900b5f453f95"
-	apiUrl            = "https://api.weixin.qq.com/sns/jscode2session"
 	openid2SessionKey = make(map[string]string)
 )
 
-// func (*WebHandler) Api(val string) string {
-// 	log.Infof("ctx : %v", ctx)
-// 	return "hello " + val + "\n"
-// }
 func (*WebHandler) Api(ctx *web.Context, val string) string {
 	log.Infof("ctx : %v", ctx)
-	if val == "aes" {
+	
+	if val == "login" {
+		if len(ctx.Params) == 0{
+			return ret(-1,"prams len is 0","")
+		}
+		code := ctx.Params["code"]
+		openid := getOpenId(code)
+		if openid == "" {
+			return ret(-1,"not get opnid ","")
+		}
 		iv := ctx.Params["iv"]
-		openid := ctx.Params["openid"]
 		encryptedData := ctx.Params["encryptedData"]
-		log.Infof("sessiongKey:%v", openid2SessionKey[openid])
+		signature := ctx.Params["signature"]
+		rawData := ctx.Params["rawData"]
+		hstr := fmt.Sprintf("%s%s", rawData, openid2SessionKey[openid])
+		signature2 := utils.Sha1(hstr)
+		if signature != signature2 {
+			log.Errorf("signature:%s != signature2:%s", signature, signature2)
+			return ret(-1,"signature != signature2 ","")
+		}
 		aesKey, err := base64.StdEncoding.DecodeString(openid2SessionKey[openid])
 		if err != nil {
 			log.Errorf("%v", err)
-			return ""
+			return ret(-1,"aesKey error","")
 		}
 		aesIv, err := base64.StdEncoding.DecodeString(iv)
 		if err != nil {
-			log.Errorf("%v", err)
-			return ""
+			return ret(-1,"aesIv error","")
 		}
 		dataBytes, err := base64.StdEncoding.DecodeString(encryptedData)
-		// log.Infof("%v,%v,%v", dataBytes, aesKey, aesIv)
-		ret, err := utils.AesDecrypt(dataBytes, aesKey, aesIv)
+		userInfoMap := make(map[string]interface{})
+		userInfo, err := utils.AesDecrypt(dataBytes, aesKey, aesIv)
 		if err != nil {
 			log.Errorf("%v", err)
-			return ""
+			return ret(-1,"AesDecrypt error","")
 		}
-		log.Infof("ret:%v", string(ret))
-		return string(ret)
-	} else if val == "openid" {
-		log.Infof("params : %v", ctx.Params)
-		code := ctx.Params["code"]
+		err = json.Unmarshal(userInfo,&userInfoMap)
+		if err != nil{
+			return	ret(-1,"userinfo json Unmarshal error","")
+		}
+		return ret(0,"",userInfoMap)
+
+	}
+	return ""
+}
+func getOpenId(code string) string{
 		log.Infof("params : %v", code)
 		params := make(map[string]interface{})
-		params["appid"] = appid
-		params["secret"] = secret
+		params["appid"] = config.WeiAppid
+		params["secret"] = config.WeiSecret
 		params["js_code"] = code
 		params["grant_type"] = "authorization_code"
-		ret, err := utils.HttpGet(apiUrl, params)
+		ret, err := utils.HttpGet(config.WeiApiUrl, params)
+		log.Infof("ret:%v",ret)
 		retMap := make(map[string]interface{})
 		if err != nil {
 			log.Errorf("%+v", err)
@@ -83,50 +96,14 @@ func (*WebHandler) Api(ctx *web.Context, val string) string {
 		sessionKey := retMap["session_key"].(string)
 		openid := retMap["openid"].(string)
 		openid2SessionKey[openid] = sessionKey
-
-		log.Infof("ret:%v", ret)
-		return fmt.Sprintf(`{"openid":"%s"}`, openid)
-	} else if val == "login" {
-		iv := ctx.Params["iv"]
-		openid := ctx.Params["openid"]
-		encryptedData := ctx.Params["encryptedData"]
-		signature := ctx.Params["signature"]
-		rawData := ctx.Params["rawData"]
-		hstr := fmt.Sprintf("%s%s", rawData, openid2SessionKey[openid])
-		signature2 := utils.Sha1(hstr)
-		if signature != signature2 {
-			log.Errorf("signature:%s != signature2:%s", signature, signature2)
-			return ""
-		}
-		aesKey, err := base64.StdEncoding.DecodeString(openid2SessionKey[openid])
-		if err != nil {
-			log.Errorf("%v", err)
-			return ""
-		}
-		aesIv, err := base64.StdEncoding.DecodeString(iv)
-		if err != nil {
-			log.Errorf("%v", err)
-			return ""
-		}
-		dataBytes, err := base64.StdEncoding.DecodeString(encryptedData)
-		// log.Infof("%v,%v,%v", dataBytes, aesKey, aesIv)
-		ret, err := utils.AesDecrypt(dataBytes, aesKey, aesIv)
-		if err != nil {
-			log.Errorf("%v", err)
-			return ""
-		}
-		log.Infof("ret:%v", string(ret))
-		return string(ret)
-
-	}
-	return ""
+		return openid
 }
 
-// func (*WebHandler) Api(ctx *web.Context) {
-// 	log.Infof("ctx : %v", ctx)
-// 	ctx.Write([]byte("hello 2"))
-// }
-func (*WebHandler) Test(w http.ResponseWriter, r *http.Request) {
-	log.Info("text")
-	w.Write([]byte("hello"))
+func ret(code int,msg string,data interface{}) string{
+	ret := make(map[string]interface{})
+	ret["code"] = -1;
+	ret["msg"] = msg;
+	ret["data"] = data;
+	str,_ := json.Marshal(ret)
+	return string(str)
 }

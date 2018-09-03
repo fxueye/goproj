@@ -2,6 +2,8 @@
     "ServerVersion":"1.0.0",
 	"ServerPort":8080,
 	"StaticDir":"./static",
-	"WeAppid":"wxbfdac7331dafd481"
+	"WeiAppid":"wx8844e8b0bc33183b",
+	"WeiSecret":"1fe0ca7dc36651f64fc7de3fbeaafadd",
+	"WeiApiUrl":"https://api.weixin.qq.com/sns/jscode2session"
 
 }
