@@ -1,6 +1,7 @@
 package server
 
 import (
+	"sync"
 	"encoding/json"
 	"encoding/base64"
 	"fmt"
@@ -15,9 +16,22 @@ type WebHandler struct{}
 var (
 	// wx8844e8b0bc33183b
 	//1fe0ca7dc36651f64fc7de3fbeaafadd
+	mu sync.RWMutex
 	openid2SessionKey = make(map[string]string)
 )
+func (*WebHandler) Session(ctx *web.Context,val string) string{
+	sessionKey:= ctx.Params["session_key"]
+	openId:= ctx.Params["openId"]
+	sessionOldKey:=""
+	if _,ok := openid2SessionKey[openId]; ok {
+		sessionOldKey = openid2SessionKey[openId]
+	}
+	mu.Lock()
+	defer mu.Unlock()
+	openid2SessionKey[openId] = sessionKey
 
+	return sessionOldKey
+}
 func (*WebHandler) Api(ctx *web.Context, val string) string {
 	log.Infof("ctx : %v", ctx)
 	
@@ -95,13 +109,15 @@ func getOpenId(code string) string{
 		}
 		sessionKey := retMap["session_key"].(string)
 		openid := retMap["openid"].(string)
+		mu.Lock()
+		defer mu.Unlock()
 		openid2SessionKey[openid] = sessionKey
 		return openid
 }
 
 func ret(code int,msg string,data interface{}) string{
 	ret := make(map[string]interface{})
-	ret["code"] = -1;
+	ret["code"] = code;
 	ret["msg"] = msg;
 	ret["data"] = data;
 	str,_ := json.Marshal(ret)

@@ -1,46 +1,31 @@
 package main
 
 import (
-	"encoding/json"
+
 	"fmt"
-	"net"
 	"os"
 	"strconv"
 	"time"
 
-	"game/common/protocol"
+	"game/common/utils"
 )
 
-type data struct {
-	ID      string
-	Session string
-	Meta    string
-	Content string
-}
+
 
 func main() {
-	server := "127.0.0.1:1200"
-	tcpAddr, err := net.ResolveTCPAddr("tcp", server)
-	checkError(err)
-	conn, err := net.DialTCP("tcp", nil, tcpAddr)
-	checkError(err)
-	send(conn)
-	os.Exit(0)
-}
-func send(conn net.Conn) {
-	defer conn.Close()
-	for i := 0; i < 100; i++ {
-		session := GetSession()
-		dt := new(data)
-		dt.ID = strconv.Itoa(i)
-		dt.Session = session
-		dt.Content = "content"
-		dt.Meta = "golang"
-		words, err := json.Marshal(dt)
-		checkError(err)
-		conn.Write(protocol.Enpack(words))
+	for{
+		for i := 0; i < 1000; i++{
+			params := make(map[string]interface{})
+			params["sessionKey"] = GetSession()
+			params["openId"] = i
+			str,_ := utils.HttpGet("http://192.168.1.188:8080/Session",params)
+			fmt.Printf("ret:%v",str)
+		}
+		time.Sleep(time.Microsecond * 200)
 	}
+	
 }
+
 func GetSession() string {
 	return strconv.FormatInt(time.Now().Unix(), 10)
 }

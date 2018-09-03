@@ -27,14 +27,12 @@ func MakeGetParams(params map[string]interface{}) (string, error) {
 	}
 	retStr := ""
 	sort.Strings(keys)
+	var pstrs []string
 	for j := 0; j < len(keys); j++ {
 		key := keys[j]
-		if j == 0 {
-			retStr += "" + key + "=" + params[key].(string)
-		} else {
-			retStr += "&" + key + "=" + params[key].(string)
-		}
+		pstrs = append(pstrs,fmt.Sprintf("%v=%v",key,params[key]))
 	}
+	retStr = strings.Join(pstrs,"&")
 	return retStr, nil
 }
 func HttpGet(baseUrl string, params map[string]interface{}) (string, error) {
