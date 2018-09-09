@@ -280,6 +280,10 @@ func (s *WxService) handlerReceptionMsg(m *wx.Message) bool {
 			} else {
 				s.SendMsg(recUser.UserName, "add failed timer type error!")
 			}
+			return true
+		case "send cou to groups":
+			s.SendCouToGroup()
+			return true
 		case "h": //帮助
 			msg := fmt.Sprintf(config.TextConfig[18])
 			s.SendMsg(recUser.UserName, msg)
