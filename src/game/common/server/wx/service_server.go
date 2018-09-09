@@ -11,6 +11,8 @@ import (
 	"game/common/utils"
 	"io"
 	"io/ioutil"
+	"math/rand"
+	"mime/multipart"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -31,6 +33,7 @@ var (
 	ErrNotLogin              = errors.New("Not Login")
 	ErrLoginTimeout          = errors.New("Login Timeout")
 	ErrWaitingForConfirm     = errors.New("Waiting For Confirm")
+	ErrNoCookie              = errors.New("No Cookie ")
 )
 
 type syncStatus struct {
@@ -57,16 +60,20 @@ type WxService struct {
 	publicUsers  map[string]*User            //公众号／服务号
 	specialUsers map[string]*User            //特殊账号
 	qrcodeDir    string
+	tempImgDir   string
 	handler      IMessgeHandler
 	special      map[string]interface{}
 	cmds         *list.List
+	mediaCount   int
+	wxFilehost   string
+	wxPushurl    string
 }
 type IMessgeHandler interface {
 	OnMessage(*Message)
 	OnWxInitSucces()
 }
 
-func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeHandler) *WxService {
+func NewWxService(loginUrl, qrcodeDir, tempImgDir string, special []string, handler IMessgeHandler) *WxService {
 	s := new(WxService)
 	s.httpClient = NewClient()
 	s.secret = &wxSecret{}
@@ -81,10 +88,13 @@ func NewWxService(loginUrl, qrcodeDir string, special []string, handler IMessgeH
 	s.specialUsers = make(map[string]*User)
 
 	s.qrcodeDir = qrcodeDir
+	s.tempImgDir = tempImgDir
+
 	s.handler = handler
 	s.loginUrl = loginUrl
 	s.special = make(map[string]interface{})
 	s.cmds = list.New()
+	s.mediaCount = 0
 	for _, str := range special {
 		s.special[str] = str
 	}
@@ -242,6 +252,11 @@ func (s *WxService) GetNickName(userName string) string {
 		return u.NickName
 	}
 }
+
+func (s *WxService) LoginUser() *User {
+	return s.user
+}
+
 func (s *WxService) GetGroup(userName string) (*User, error) {
 	g, ok := s.groups[userName]
 	if ok {
@@ -515,6 +530,7 @@ func (s *WxService) NewLoginPage(newLoginUri string) error {
 		log.Infof("HTTP GET err: %s", err.Error())
 		return err
 	}
+	// log.Infof("secret:%v", string(b))
 	err = xml.Unmarshal(b, s.secret)
 	if err != nil {
 		log.Infof("parse wxSecret from xml failed: %v", err)
@@ -525,6 +541,7 @@ func (s *WxService) NewLoginPage(newLoginUri string) error {
 		s.secret.BaseUri = newLoginUri[:strings.LastIndex(newLoginUri, "/")]
 		s.secret.Host = u.Host
 		s.secret.DeviceID = "e" + RandNumbers(15)
+		s.initHost()
 		return nil
 	} else {
 		return errors.New("Get wxSecret Error")
@@ -601,7 +618,7 @@ func (s *WxService) WaitingForLoginConfirm(uuid string) (string, error) {
 func (s *WxService) ShowQRcodeUrl(uuid string) error {
 	uri := fmt.Sprintf("%s/qrcode/%s", s.loginUrl, uuid)
 	if s.qrcodeDir != "" {
-		path, err := s.getImg(uri)
+		path, err := s.getQrcode(uri)
 		path, _ = filepath.Abs(path)
 		if err == nil {
 			log.Infof("Please open img %s", path)
@@ -611,7 +628,7 @@ func (s *WxService) ShowQRcodeUrl(uuid string) error {
 	log.Info("Please open link in browser: " + uri)
 	return nil
 }
-func (s *WxService) getImg(uri string) (string, error) {
+func (s *WxService) getQrcode(uri string) (string, error) {
 	if !utils.DirExists(s.qrcodeDir) {
 		err := os.MkdirAll(s.qrcodeDir, 0755)
 		if err != nil {
@@ -627,6 +644,23 @@ func (s *WxService) getImg(uri string) (string, error) {
 	}
 	name = "qrcode"
 	path := fmt.Sprintf("%s/%s.jpg", s.qrcodeDir, name)
+	out, err := os.Create(path)
+	defer out.Close()
+	b, err := s.httpClient.Get(uri, &url.Values{})
+	_, err = io.Copy(out, bytes.NewReader(b))
+	return path, err
+
+}
+
+func (s *WxService) GetImg(uri string) (string, error) {
+	if !utils.DirExists(s.tempImgDir) {
+		err := os.MkdirAll(s.tempImgDir, 0755)
+		if err != nil {
+			return "", err
+		}
+	}
+	_, fileName := filepath.Split(uri)
+	path := fmt.Sprintf("%s/%s", s.tempImgDir, fileName)
 	out, err := os.Create(path)
 	defer out.Close()
 	b, err := s.httpClient.Get(uri, &url.Values{})
@@ -658,6 +692,134 @@ func (s *WxService) getUuid() (string, error) {
 func (s *WxService) SendMsgToMyself(msg string) error {
 	return s.SendMsg(s.user.UserName, msg)
 }
+
+func (s *WxService) UploadMedia(filePath string) (r UploadMediaResponse, e error) {
+	imgUpurl := fmt.Sprintf("https://%s/cgi-bin/mmwebwx-bin/webwxuploadmedia?f=json", s.wxFilehost)
+	s.mediaCount += 1
+	mimeType := GetMimeType(filePath)
+	if mimeType == "" {
+		mimeType = "text/plain"
+	}
+	mediaType := "pic"
+	strs := strings.Split(mimeType, "/")
+	if strs[0] == "image" {
+		mediaType = "pic"
+	} else {
+		mediaType = "doc"
+	}
+	lastModifieDate := utils.WebTime(time.Now().UTC())
+	fileSize := getFileSize(filePath)
+
+	clientMediaId := fmt.Sprintf("%v%v", time.Now().Unix(), rand.Intn(10000)*10000)
+	webwx_data_ticket := ""
+	for _, v := range s.httpClient.Cookies() {
+		if v.Name == "webwx_data_ticket" {
+			webwx_data_ticket = v.Value
+			break
+		}
+	}
+	if webwx_data_ticket == "" {
+		log.Error("No Cookie\n")
+		e = ErrNoCookie
+		return
+	}
+	requestMap := map[string]interface{}{
+		"BaseRequest":   s.baseRequest,
+		"ClientMediaId": clientMediaId,
+		"TotalLen":      fileSize,
+		"StartPos":      0,
+		"DataLen":       fileSize,
+		"MediaType":     4,
+	}
+	temp, _ := json.Marshal(requestMap)
+	uploadmediarequest := string(temp)
+
+	bodyBuf := &bytes.Buffer{}
+	bodyWriter := multipart.NewWriter(bodyBuf)
+
+	fileWriter, _ := bodyWriter.CreateFormFile("filename", filePath)
+
+	fd, _ := os.Open(filePath)
+	defer fd.Close()
+	fields := map[string]string{
+		"id":                 fmt.Sprintf("WU_FILE_%v", s.mediaCount),
+		"name":               filePath,
+		"type":               mimeType,
+		"lastModifieDate":    lastModifieDate,
+		"size":               fmt.Sprintf("%v", fileSize),
+		"mediatype":          mediaType,
+		"uploadmediarequest": uploadmediarequest,
+		"webwx_data_ticket":  webwx_data_ticket,
+		"pass_ticket":        s.secret.PassTicket,
+	}
+	written, _ := io.Copy(fileWriter, fd)
+	log.Infof("written:%v", written)
+	for k, v := range fields {
+		bodyWriter.WriteField(k, v)
+	}
+	contentType := bodyWriter.FormDataContentType()
+	bodyWriter.Close()
+	headers := map[string]string{
+		"Host": s.wxFilehost,
+		// "User-Agent":      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36",
+		"Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+		"Accept-Language": "en-US,en;q=0.5",
+		"Accept-Encoding": "gzip, deflate",
+		"Referer":         s.secret.BaseUri,
+		"Content-Type":    contentType,
+		"Origin":          s.secret.BaseUri,
+		"Connection":      "keep-alive",
+		"Pragma":          "no-cache",
+		"Cache-Control":   "no-cache",
+	}
+	b, err := s.httpClient.PostBytes(imgUpurl, bodyBuf.Bytes(), headers)
+	if err != nil {
+		log.Error(err)
+		return
+	}
+	err = json.Unmarshal(b, &r)
+	if err != nil {
+		log.Error("%v", err)
+		e = err
+		return
+	}
+
+	return
+}
+
+func (s *WxService) SendImg(userName, filePath string) error {
+	r, err := s.UploadMedia(filePath)
+	if err != nil {
+		return err
+	}
+	mediaId := r.MediaId
+	return s.SendMsgimg(userName, mediaId)
+}
+
+func (s *WxService) SendMsgimg(userName, mediaId string) error {
+	values := &url.Values{}
+	values.Set("fun", "async")
+	values.Set("f", "json")
+	values.Set("pass_ticket", s.secret.PassTicket)
+	url := fmt.Sprintf("%s/webwxsendmsgimg?%s", s.secret.BaseUri, values.Encode())
+	msgId := fmt.Sprintf("%d%s", Timestamp()*1000, RandNumbers(4))
+	b, err := s.httpClient.PostJson(url, map[string]interface{}{
+		"BaseRequest": s.baseRequest,
+		"Msg": map[string]interface{}{
+			"Type":         3,
+			"MediaId":      mediaId,
+			"FromUserName": s.user.UserName,
+			"ToUserName":   userName,
+			"LocalID":      msgId,
+			"ClientMsgId":  msgId,
+		},
+	})
+	if err != nil {
+		return err
+	}
+	return s.CheckCode(b, "发送消息失败")
+}
+
 func (s *WxService) SendMsg(userName, msg string) error {
 	values := &url.Values{}
 	values.Set("pass_ticket", s.secret.PassTicket)
@@ -679,4 +841,26 @@ func (s *WxService) SendMsg(userName, msg string) error {
 		return err
 	}
 	return s.CheckCode(b, "发送消息失败")
+}
+func (s *WxService) GetGroups() map[string]*User {
+	return s.groups
+}
+func (s *WxService) GetUsers() map[string]*User {
+	return s.contacts
+}
+
+func (s *WxService) initHost() {
+	if strings.Index(s.secret.BaseUri, "wx2.qq.com") > -1 {
+		s.wxFilehost, s.wxPushurl = "file.wx2.qq.com", "webpush.wx2.qq.com"
+	} else if strings.Index(s.secret.BaseUri, "wx8.qq.com") > -1 {
+		s.wxFilehost, s.wxPushurl = "file.wx8.qq.com", "webpush.wx8.qq.com"
+	} else if strings.Index(s.secret.BaseUri, "qq.com") > -1 {
+		s.wxFilehost, s.wxPushurl = "file.wx.qq.com", "webpush.wx.qq.com"
+	} else if strings.Index(s.secret.BaseUri, "web2.wechat.com") > -1 {
+		s.wxFilehost, s.wxPushurl = "file.web2.wechat.com", "webpush.web2.wechat.com"
+	} else if strings.Index(s.secret.BaseUri, "wechat.com") > -1 {
+		s.wxFilehost, s.wxPushurl = "file.web.wechat.com", "webpush.web.wechat.com"
+	} else {
+		s.wxFilehost, s.wxPushurl = "file.wx.qq.com", "webpush.wx.qq.com"
+	}
 }

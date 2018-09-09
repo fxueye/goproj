@@ -82,6 +82,11 @@ type SyncResponse struct {
 	MsgList      []*Message    `json:"AddMsgList"`
 }
 
+type UploadMediaResponse struct {
+	BaseResponse *BaseResponse `json:"BaseResponse"`
+	MediaId      string        `json:"MediaId"`
+}
+
 type ContactResponse struct {
 	BaseResponse *BaseResponse `json:"BaseResponse"`
 	MemberCount  int64         `json:"MemberCount"`

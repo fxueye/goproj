@@ -14,6 +14,7 @@ import (
 type Client struct {
 	client    *http.Client
 	userAgent string
+	cookies   []*http.Cookie
 }
 
 type Header map[string]string
@@ -38,12 +39,21 @@ func NewClient() *Client {
 		userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36",
 	}
 }
-
+func (c *Client) Cookies() []*http.Cookie {
+	// for _, v := range c.cookies {
+	// 	log.Infof("name:%v value:%v \n", v.Name, v.Value)
+	// }
+	return c.cookies
+}
 func (c *Client) Get(url string, data *url.Values) ([]byte, error) {
 	if data != nil {
 		url = url + "?" + data.Encode()
 	}
 	return c.fetch("GET", url, []byte(""), Header{})
+}
+
+func (c *Client) PostBytes(url string, bytes []byte, header map[string]string) ([]byte, error) {
+	return c.fetch("POST", url, bytes, header)
 }
 
 func (c *Client) Post(url string, data *url.Values) ([]byte, error) {
@@ -64,6 +74,10 @@ func (c *Client) fetchReponse(method string, uri string, body []byte, headers ma
 		return nil, err
 	}
 	req.Header.Set("User-Agent", c.userAgent)
+	if c.cookies == nil {
+		c.cookies = c.client.Jar.Cookies(req.URL)
+	}
+
 	for k, v := range headers {
 		req.Header.Set(k, v)
 	}
@@ -75,6 +89,7 @@ func (c *Client) fetch(method string, uri string, body []byte, headers Header) (
 	if err != nil {
 		return nil, err
 	}
+
 	defer resp.Body.Close()
 
 	b, err := ioutil.ReadAll(resp.Body)

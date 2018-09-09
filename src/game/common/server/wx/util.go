@@ -2,6 +2,7 @@ package wx
 
 import (
 	"math/rand"
+	"os"
 	"strconv"
 	"time"
 )
@@ -51,4 +52,13 @@ func randStringBytesMaskImprSrc(n int, letters string) string {
 	}
 
 	return string(b)
+}
+func getFileSize(filePath string) int64 {
+	file, err := os.Open(filePath)
+	defer file.Close()
+	if err != nil {
+		return 0
+	}
+	len, _ := file.Seek(0, os.SEEK_END)
+	return len
 }

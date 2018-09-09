@@ -1,8 +1,13 @@
 {
     "QrcodeDir":"./qrcode",
-    "GroupMsg":false,
+    "TempImgDir":"./temp",
     "ControllerUserNames":["最爱傻妞"],
-    "Groups":[""],
+    "AppKey":"25020656",
+    "AppSecret":"b55ca6e32d45ecb35d41e72de4728232",
+    "AppPid":"mm_50731949_69400120_14155250061",
+    "Groups":["精选母婴"],
+    "KeyWords":["母婴","美食","家居","美妆","服装"],
+    "SendTimer":["11 01","10 00","11 00","12 00","16 00","19 00","20 00"],
     "LoginUrl":"https://login.weixin.qq.com",
     "Special":["newsapp", "filehelper", "weibo", "qqmail","fmessage", "tmessage", "qmessage", "qqsync","floatbottle", "lbsapp", "shakeapp", "medianote","qqfriend", "readerapp", "blogapp", "facebookapp","masssendapp", "meishiapp", "feedsapp", "voip","blogappweixin", "brandsessionholder", "weixin","weixinreminder", "officialaccounts", "wxitil","notification_messages", "wxid_novlwrv3lqwv11","gh_22b87fa7cb3c", "userexperience_alarm"],
     "EmailConfig":{
@@ -30,7 +35,7 @@
         "开始接待：%s",
         "结束接待：%s",
         "[%s]开始接待[%s]",
-        "微信淘客助手帮助\na:xxx --成为发布员\nh: --帮助",
+        "微信淘客助手帮助\nadd user:xxx --成为发布员\nadd group:xxx --添加转发群\nadd timer:xx xx --添加推送时间\nget groups:xxx --获取所有群\nget users:xxx --获取所有好友\nsend com:xxxx --发送群消息\nh: --帮助",
         "未接待客人！",
         "已经有接待员在接待中..."
     ]
