@@ -35,7 +35,7 @@
         "开始接待：%s",
         "结束接待：%s",
         "[%s]开始接待[%s]",
-        "微信淘客助手帮助\nadd user:xxx --成为发布员\nadd group:xxx --添加转发群\nadd timer:xx xx --添加推送时间\nget groups:xxx --获取所有群\nget users:xxx --获取所有好友\nsend com:xxxx --发送群消息\nh: --帮助",
+        "微信淘客助手帮助\nadd user:xxx --成为发布员\nadd group:xxx --添加转发群\nadd timer:xx xx --添加推送时间\nget groups:xxx --获取所有群\nget users:xxx --获取所有好友\nsend cou:xxxx --发送群消息\nget cou:xxxx --获取一条\nh: --帮助",
         "未接待客人！",
         "已经有接待员在接待中..."
     ]
