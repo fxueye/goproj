@@ -250,18 +250,25 @@ func (s *WxService) handlerReceptionMsg(m *wx.Message) bool {
 			return true
 		case "get cou":
 			couMap := GetCoupon("")
+			// log.Infof("%v", couMap)
 			data := couMap["data"].(map[string]interface{})
-			imgStr := data["small_images"].(string)
-			var smallImages []string
-			err := json.Unmarshal([]byte(imgStr), &smallImages)
-			path, err := s.GetImg(smallImages[0])
-			if err != nil {
-				log.Error(err)
-				return false
-			}
-			err = s.SendImg(recUser.UserName, path)
-			if err == nil {
-				os.Remove(path)
+			// imgStr := data["small_images"].(string)
+			picUrl := data["pict_url"].(string)
+			// var smallImages []string
+			// err := json.Unmarshal([]byte(imgStr), &smallImages)
+			// if err != nil {
+			// 	return false
+			// }
+			if picUrl != "" {
+				path, err := s.GetImg(picUrl)
+				if err != nil {
+					log.Error(err)
+					return false
+				}
+				err = s.SendImg(recUser.UserName, path)
+				if err == nil {
+					os.Remove(path)
+				}
 			}
 			coupon := MakeCouponStr(couMap)
 			s.SendMsg(recUser.UserName, coupon)

@@ -191,6 +191,7 @@ func (s *WxService) Listening() error {
 	}
 	for {
 		syncStatus, err := s.SyncCheck()
+		log.Infof("syncStatus:%v", syncStatus)
 		if err != nil {
 			log.Errorf("sync check error: %s", err.Error())
 			time.Sleep(3 * time.Second)

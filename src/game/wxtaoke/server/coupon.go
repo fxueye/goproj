@@ -58,7 +58,7 @@ func MakeCouponStr(retMap map[string]interface{}) string {
 		log.Errorf("%v", err)
 		return ""
 	}
-	originaPrice := fmt.Sprintf("%v", zkp-couponPrice)
+	originaPrice := fmt.Sprintf("%.2f", zkp-couponPrice)
 	couponStr := fmt.Sprintf(message, title, zkFinalPrice, arr[1], originaPrice, tpwd)
 	return couponStr
 }
