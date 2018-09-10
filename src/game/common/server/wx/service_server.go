@@ -144,6 +144,7 @@ func (s *WxService) Start() error {
 		if run {
 			err := s.Listening()
 			if err != nil {
+				log.Error(err)
 				return
 			}
 		}
@@ -790,6 +791,7 @@ func (s *WxService) UploadMedia(filePath string) (r UploadMediaResponse, e error
 func (s *WxService) SendImg(userName, filePath string) error {
 	r, err := s.UploadMedia(filePath)
 	if err != nil {
+		log.Error(err)
 		return err
 	}
 	mediaId := r.MediaId
@@ -815,6 +817,7 @@ func (s *WxService) SendMsgimg(userName, mediaId string) error {
 		},
 	})
 	if err != nil {
+		log.Error(err)
 		return err
 	}
 	return s.CheckCode(b, "发送消息失败")

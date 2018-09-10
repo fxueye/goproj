@@ -12,8 +12,8 @@
     "Special":["newsapp", "filehelper", "weibo", "qqmail","fmessage", "tmessage", "qmessage", "qqsync","floatbottle", "lbsapp", "shakeapp", "medianote","qqfriend", "readerapp", "blogapp", "facebookapp","masssendapp", "meishiapp", "feedsapp", "voip","blogappweixin", "brandsessionholder", "weixin","weixinreminder", "officialaccounts", "wxitil","notification_messages", "wxid_novlwrv3lqwv11","gh_22b87fa7cb3c", "userexperience_alarm"],
     "EmailConfig":{
         "EmailAcc":"568669736@qq.com",
-        "EmailPassword":"skw0103",
-        "SmtpServer":"smtp.exmail.qq.com:25",
+        "EmailPassword":"jyskjugscvgpbcde",
+        "SmtpServer":"smtp.qq.com:587",
         "ToEmail":["281431280@qq.com"]
     },
     "TextConfig":[
