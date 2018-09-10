@@ -341,7 +341,16 @@ func (s *WxService) nextTime(v int64) int64 {
 }
 func (s *WxService) SendCouToGroup() {
 	couMap := GetCoupon("")
+	if couMap == nil {
+		return
+	}
+	if _, ok := couMap["data"]; !ok {
+		return
+	}
 	data := couMap["data"].(map[string]interface{})
+	if _, ok := data["small_images"]; !ok {
+		return
+	}
 	imgStr := data["small_images"].(string)
 	var smallImages []string
 	err := json.Unmarshal([]byte(imgStr), &smallImages)
