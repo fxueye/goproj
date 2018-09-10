@@ -251,9 +251,7 @@ func (s *WxService) handlerReceptionMsg(m *wx.Message) bool {
 		case "get cou":
 			couMap := GetCoupon("")
 			// log.Infof("%v", couMap)
-			data := couMap["data"].(map[string]interface{})
-			// imgStr := data["small_images"].(string)
-			picUrl := data["pict_url"].(string)
+			picUrl := s.getPicUrl(couMap)
 			// var smallImages []string
 			// err := json.Unmarshal([]byte(imgStr), &smallImages)
 			// if err != nil {
@@ -345,6 +343,16 @@ func (s *WxService) timerCheck() {
 }
 func (s *WxService) nextTime(v int64) int64 {
 	return time.Unix(v, 0).Add(time.Hour * 24).Unix()
+}
+func (s *WxService) getPicUrl(couMap map[string]interface{}) string {
+	if _, ok := couMap["data"]; !ok {
+		return ""
+	}
+	data := couMap["data"].(map[string]interface{})
+	if _, ok := data["pict_url"]; !ok {
+		return ""
+	}
+	return data["pict_url"].(string)
 }
 func (s *WxService) SendCouToGroup() {
 	couMap := GetCoupon("")
