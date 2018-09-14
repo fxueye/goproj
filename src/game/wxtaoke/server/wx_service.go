@@ -250,18 +250,23 @@ func (s *WxService) handlerReceptionMsg(m *wx.Message) bool {
 			return true
 		case "get cou":
 			couMap := GetCoupon("")
-			data := couMap["data"].(map[string]interface{})
-			imgStr := data["small_images"].(string)
-			var smallImages []string
-			err := json.Unmarshal([]byte(imgStr), &smallImages)
-			path, err := s.GetImg(smallImages[0])
-			if err != nil {
-				log.Error(err)
-				return false
-			}
-			err = s.SendImg(recUser.UserName, path)
-			if err == nil {
-				os.Remove(path)
+			// log.Infof("%v", couMap)
+			picUrl := s.getPicUrl(couMap)
+			// var smallImages []string
+			// err := json.Unmarshal([]byte(imgStr), &smallImages)
+			// if err != nil {
+			// 	return false
+			// }
+			if picUrl != "" {
+				path, err := s.GetImg(picUrl)
+				if err != nil {
+					log.Error(err)
+					return false
+				}
+				err = s.SendImg(recUser.UserName, path)
+				if err == nil {
+					os.Remove(path)
+				}
 			}
 			coupon := MakeCouponStr(couMap)
 			s.SendMsg(recUser.UserName, coupon)
@@ -338,6 +343,16 @@ func (s *WxService) timerCheck() {
 }
 func (s *WxService) nextTime(v int64) int64 {
 	return time.Unix(v, 0).Add(time.Hour * 24).Unix()
+}
+func (s *WxService) getPicUrl(couMap map[string]interface{}) string {
+	if _, ok := couMap["data"]; !ok {
+		return ""
+	}
+	data := couMap["data"].(map[string]interface{})
+	if _, ok := data["pict_url"]; !ok {
+		return ""
+	}
+	return data["pict_url"].(string)
 }
 func (s *WxService) SendCouToGroup() {
 	couMap := GetCoupon("")
