@@ -1,6 +1,7 @@
 package ws
 
 import (
+	"crypto/tls"
 	// "bytes"
 	// "encoding/binary"
 	"game/common/server"
@@ -23,10 +24,10 @@ type WebsocketService struct {
 	seConf        server.SessionConfig
 }
 
-func NewWebsocketService(port int, acceptTimeout time.Duration, protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *WebsocketService {
+func NewWebsocketService(port int, acceptTimeout time.Duration, protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig, tlsConfig *tls.Config) *WebsocketService {
 	s := new(WebsocketService)
 	s.acceptTimeout = acceptTimeout
-	s.WebService = web.NewWebService(port, s.acceptTimeout, "", nil)
+	s.WebService = web.NewWebService(port, s.acceptTimeout, "", tlsConfig)
 	s.protocol = protocol
 	s.handler = handler
 	s.seConf = seConf
