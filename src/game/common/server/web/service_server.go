@@ -2,6 +2,7 @@ package web
 
 import (
 	"bytes"
+	"crypto/tls"
 	"fmt"
 	"game/common/server"
 	"game/common/utils"
@@ -15,8 +16,6 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/net/websocket"
-
 	log "github.com/cihub/seelog"
 )
 
@@ -25,10 +24,11 @@ type WebService struct {
 
 	port          int
 	acceptTimeout time.Duration
-	listener      *net.TCPListener
+	listener      net.Listener
 	StaticDir     string
 	routes        []route
 	mux           *http.ServeMux
+	tlsConfig     *tls.Config
 }
 
 type route struct {
@@ -39,20 +39,22 @@ type route struct {
 	httpHandler http.Handler
 }
 
-func NewWebService(port int, acceptTimeout time.Duration, staticDir string) *WebService {
+func NewWebService(port int, acceptTimeout time.Duration, staticDir string, tlsConfig *tls.Config) *WebService {
 	s := new(WebService)
 	s.port = port
 	s.acceptTimeout = acceptTimeout
 	s.StaticDir = staticDir
 	s.mux = http.NewServeMux()
+	s.tlsConfig = tlsConfig
 	return s
 }
-func (s *WebService) Start() error {
-	serverAddr, err := net.ResolveTCPAddr("tcp", fmt.Sprintf(":%d", s.port))
-	if err != nil {
-		return err
+func (s *WebService) Start() (err error) {
+	serverAddr := fmt.Sprintf(":%d", s.port)
+	if s.tlsConfig != nil {
+		s.listener, err = tls.Listen("tcp", serverAddr, s.tlsConfig)
+	} else {
+		s.listener, err = net.Listen("tcp", serverAddr)
 	}
-	s.listener, err = net.ListenTCP("tcp", serverAddr)
 	if err != nil {
 		return err
 	}
@@ -170,6 +172,7 @@ func (s *WebService) routeHandler(req *http.Request, w http.ResponseWriter) (unu
 	return
 
 }
+
 func (s *WebService) safelyCall(function reflect.Value, args []reflect.Value) (resp []reflect.Value, e interface{}) {
 	defer func() {
 		if err := recover(); err != nil {
@@ -272,9 +275,9 @@ func (s *WebService) Handle(route string, method string, httpHandler http.Handle
 }
 
 //Adds a handler for websockets. Only for webserver mode. Will have no effect when running as FCGI or SCGI.
-func (s *WebService) Websocket(route string, httpHandler websocket.Handler) {
-	s.addRoute(route, "GET", httpHandler)
-}
+// func (s *WebService) Websocket(route string, httpHandler websocket.Handler) {
+// 	s.addRoute(route, "GET", httpHandler)
+// }
 
 func requiresContext(handlerType reflect.Type) bool {
 	//if the method doesn't take arguments, no
