@@ -17,25 +17,10 @@ type WebHandler struct{}
 var (
 	// wx8844e8b0bc33183b
 	//1fe0ca7dc36651f64fc7de3fbeaafadd
-	aesKey            = []byte("abcdefghi@qq.com")
-	aesIv             = []byte("123456789@qq.com")
 	mu                sync.RWMutex
 	openid2SessionKey = make(map[string]string)
 )
 
-func (*WebHandler) Session(ctx *web.Context, val string) string {
-	sessionKey := ctx.Params["sessionKey"]
-	openId := ctx.Params["openId"]
-
-	sessionKeyEncrypt := read(openId)
-	if sessionKeyEncrypt != "" {
-		sessionOldKey, _ := utils.AesDecrypt([]byte(sessionKeyEncrypt), aesKey, aesIv)
-		return string(sessionOldKey)
-	}
-	sessionKeyEn, _ := utils.AesEncrypt([]byte(sessionKey), aesKey, aesIv)
-	write(openId, string(sessionKeyEn))
-	return ""
-}
 func read(openId string) string {
 	defer mu.Unlock()
 	mu.Lock()

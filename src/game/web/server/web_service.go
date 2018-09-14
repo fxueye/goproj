@@ -14,7 +14,7 @@ type WebService struct {
 
 func newWebService(port int, staticDir string) *WebService {
 	serv := new(WebService)
-	serv.WebService = web.NewWebService(port, time.Second, staticDir)
+	serv.WebService = web.NewWebService(port, time.Second, staticDir, nil)
 	return serv
 }
 func (s *WebService) Start() error {
