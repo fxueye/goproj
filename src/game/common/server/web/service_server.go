@@ -17,6 +17,7 @@ import (
 	"time"
 
 	log "github.com/cihub/seelog"
+	"golang.org/x/net/websocket"
 )
 
 type WebService struct {
@@ -274,10 +275,10 @@ func (s *WebService) Handle(route string, method string, httpHandler http.Handle
 	s.addRoute(route, method, httpHandler)
 }
 
-//Adds a handler for websockets. Only for webserver mode. Will have no effect when running as FCGI or SCGI.
-// func (s *WebService) Websocket(route string, httpHandler websocket.Handler) {
-// 	s.addRoute(route, "GET", httpHandler)
-// }
+// Adds a handler for websockets. Only for webserver mode. Will have no effect when running as FCGI or SCGI.
+func (s *WebService) Websocket(route string, httpHandler websocket.Handler) {
+	s.addRoute(route, "GET", httpHandler)
+}
 
 func requiresContext(handlerType reflect.Type) bool {
 	//if the method doesn't take arguments, no

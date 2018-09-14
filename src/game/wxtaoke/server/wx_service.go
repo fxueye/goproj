@@ -1,7 +1,6 @@
 package server
 
 import (
-	"encoding/json"
 	"fmt"
 	"game/common/server/wx"
 	"game/common/utils"
@@ -356,25 +355,16 @@ func (s *WxService) getPicUrl(couMap map[string]interface{}) string {
 }
 func (s *WxService) SendCouToGroup() {
 	couMap := GetCoupon("")
-	if couMap == nil {
-		return
+	picUrl := s.getPicUrl(couMap)
+	if picUrl != "" {
+		path, err := s.GetImg(picUrl)
+		if err != nil {
+			log.Error(err)
+			return
+		}
+		s.sendProGroupsImg(path)
+		os.Remove(path)
 	}
-	if _, ok := couMap["data"]; !ok {
-		return
-	}
-	data := couMap["data"].(map[string]interface{})
-	if _, ok := data["small_images"]; !ok {
-		return
-	}
-	imgStr := data["small_images"].(string)
-	var smallImages []string
-	err := json.Unmarshal([]byte(imgStr), &smallImages)
-	path, err := s.GetImg(smallImages[0])
-	if err != nil {
-		log.Error(err)
-		return
-	}
-	s.sendProGroupsImg(path)
 	coupon := MakeCouponStr(couMap)
 	s.sendProGroups(coupon)
 	log.Infof("%v", coupon)

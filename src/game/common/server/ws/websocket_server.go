@@ -23,10 +23,10 @@ type WebsocketService struct {
 	seConf        server.SessionConfig
 }
 
-func NewWebsocketService(port int, acceptTimeout time.Duration,protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *WebsocketService {
+func NewWebsocketService(port int, acceptTimeout time.Duration, protocol server.IProtocol, handler server.ISessionHandler, seConf server.SessionConfig) *WebsocketService {
 	s := new(WebsocketService)
 	s.acceptTimeout = acceptTimeout
-	s.WebService = web.NewWebService(port, s.acceptTimeout, "")
+	s.WebService = web.NewWebService(port, s.acceptTimeout, "", nil)
 	s.protocol = protocol
 	s.handler = handler
 	s.seConf = seConf
@@ -41,8 +41,9 @@ func (s *WebsocketService) handler_webSocket(ws *websocket.Conn) {
 	log.Infof("new ws conn ip :%v", ws.RemoteAddr())
 
 	se := server.NewWsSesion(s, ws, s.protocol, s.handler, s.seConf)
-	se.Do();
-	for !se.IsClosed() {}
+	se.Do()
+	for !se.IsClosed() {
+	}
 	// for {
 	// 	var data []byte
 	// 	err := websocket.Message.Receive(ws, &data)
