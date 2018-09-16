@@ -10,7 +10,6 @@ import (
 	"game/common/server"
 	"game/common/utils"
 	"io"
-	"io/ioutil"
 	"math/rand"
 	"mime/multipart"
 	"net/url"
@@ -460,6 +459,7 @@ func (s *WxService) GetContacts() error {
 
 	for _, u := range r.MemberList {
 		s.members[u.UserName] = u
+		log.Infof("member:%v", u.NickName)
 		if u.VerifyFlag&8 != 0 {
 			s.publicUsers[u.UserName] = u
 		} else if _, ok := s.special[u.UserName]; ok {
@@ -469,22 +469,6 @@ func (s *WxService) GetContacts() error {
 		} else {
 			s.contacts[u.UserName] = u
 		}
-	}
-	return nil
-}
-
-//更新联系人
-func (s *WxService) updateContacts(us []*User) error {
-	for _, u := range us {
-		s.contacts[u.UserName] = u
-	}
-	b, err := json.Marshal(us)
-	if err != nil {
-		log.Errorf("save contacts json encode error:", err)
-	}
-	err = ioutil.WriteFile("wx-contacts.json", b, 0644)
-	if err != nil {
-		log.Errorf("save json write to file error:", err)
 	}
 	return nil
 }
