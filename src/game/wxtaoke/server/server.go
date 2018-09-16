@@ -1,9 +1,11 @@
 package server
 
 import (
+	"fmt"
 	conf "game/common/config"
 	"game/common/server"
 	"game/common/utils"
+	"net/http"
 	"runtime"
 
 	log "github.com/cihub/seelog"
@@ -27,9 +29,14 @@ func Init() {
 	}
 	conf.LoadConfig("json", "config/wx_config.json", &config)
 	wxInstance = newWxService(config.LoginUrl, config.QrcodeDir, config.TempImgDir)
-
+	go WebService(config.QrcodeDir)
 	Instance.RegServ(WXSERVICE, wxInstance)
 	Instance.RegSigCallback(OnSignal)
+}
+func WebService(path string) {
+	http.Handle("/", http.FileServer(http.Dir(path)))
+	log.Infof("server start on:%d", config.WebPort)
+	http.ListenAndServe(fmt.Sprintf(":%d", config.WebPort), nil)
 }
 func ShowStack() {
 	buf := make([]byte, 1<<20)

@@ -1,6 +1,7 @@
 package server
 
 type WxConfig struct {
+	WebPort             int
 	QrcodeDir           string
 	TempImgDir          string
 	ControllerUserNames []string
